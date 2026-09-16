@@ -327,7 +327,7 @@ async def chat_interactive(request: Request, chat: ChatMessage):
             dashboard_url = "/portal/marketplace/sales_forecasting"
             reply_text = (
                 "🔒 **Locked Problem 1: Sales Forecasting ($1,000/month)**\n\n"
-                "DXI pipeline initialized. Target Variables locked:\n"
+                "DXI pipeline initialized. Business Outcome Variables locked:\n"
                 "• Forecasted Demand Quantity\n"
                 "• Minimal Loss(actual - Predicted)\n\n"
                 "Executive Dashboard is now unlocked!\n\n"
@@ -339,7 +339,7 @@ async def chat_interactive(request: Request, chat: ChatMessage):
             dashboard_url = "/portal/marketplace/demand_planning"
             reply_text = (
                 "🔒 **Locked Problem 2: Demand Planning ($1,000/month)**\n\n"
-                "DXI pipeline initialized. Target Variables locked:\n"
+                "DXI pipeline initialized. Business Outcome Variables locked:\n"
                 "• global_plan_demand_quantity\n"
                 "• lead_time\n"
                 "• weightage_list_price\n"
@@ -354,7 +354,7 @@ async def chat_interactive(request: Request, chat: ChatMessage):
             dashboard_url = "/portal/marketplace/procurement"
             reply_text = (
                 "🔒 **Locked Problem 3: Procurement ($1,000/month)**\n\n"
-                "DXI pipeline initialized. Target Variables locked:\n"
+                "DXI pipeline initialized. Business Outcome Variables locked:\n"
                 "• Price, ORDER_VALIDATION, MULTIPLE VENDORS, PROCUREMENT_VALIDATION\n\n"
                 "Executive Dashboard is now unlocked!\n\n"
                 "👉 Click **Executive Dashboard** on the right sidebar or menu to view your purchase orders."
@@ -511,7 +511,7 @@ async def chat_upload_dataset(request: Request, file: UploadFile = File(...)):
     bot_msg_2 = {
         "sender": "bot",
         "type": "text",
-        "text": "Next you’ll pick one customer problem (catalog 1-3). We’ll lock the target and features automatically."
+        "text": "Next you’ll pick one customer problem (catalog 1-3). We’ll lock the business outcome and features automatically."
     }
 
     # Bot Message 3: EDA completed for your uploaded dataset
@@ -529,26 +529,26 @@ async def chat_upload_dataset(request: Request, file: UploadFile = File(...)):
             "⚙️ **Schema confirmed (Problem Build)**\n"
             f"• Rows: {row_count:,} · Columns: {col_count} (all rows kept)\n"
             f"• Primary Key: {pk}\n"
-            "• Next: Pick one customer problem — we lock the target and features, then Build."
+            "• Next: Pick one customer problem — we lock the business outcome and features, then Build."
         )
     }
 
     # Bot Message 5: 3 Order Execution Problems Catalog
     catalog_text = (
         "Pick one customer problem ($1,000/month). This locks that problem only, runs DXI once, and opens its Executive dashboard when available.\n"
-        "Full data · no balancing · Top Features + Target DT / correlation / 3-level improvement.\n\n"
+        "Full data · no balancing · Top Features + Business Outcome DT / correlation / 3-level improvement.\n\n"
         "1. Sales Forecasting\n"
         "$1,000/month\n"
         "Predict future SKU order demand, peak seasonality, and promotional surges using adaptive multi-regressor forecasting.\n"
-        "Target: Forecasted Demand Quantity · Minimal Loss(actual - Predicted)\n\n"
+        "Business Outcome: Forecasted Demand Quantity · Minimal Loss(actual - Predicted)\n\n"
         "2. Demand Planning\n"
         "$1,000/month\n"
         "Calculate multi-channel demand projections, supplier lead times, weighted list prices, and vendor defect rates.\n"
-        "Target: global_plan_demand_quantity · lead_time · weightage_list_price · vendor_count · vendor_defect_rate\n\n"
+        "Business Outcome: global_plan_demand_quantity · lead_time · weightage_list_price · vendor_count · vendor_defect_rate\n\n"
         "3. Procurement\n"
         "$1,000/month\n"
         "Evaluate multiple vendor pricing, automate order validations, and execute compliant purchase orders.\n"
-        "Target: Price, ORDER_VALIDATION, MULTIPLE VENDORS, PROCUREMENT_VALIDATION\n\n"
+        "Business Outcome: Price, ORDER_VALIDATION, MULTIPLE VENDORS, PROCUREMENT_VALIDATION\n\n"
         "➡ Type 1–3 to lock that problem and continue."
     )
     bot_msg_5 = {
@@ -810,12 +810,12 @@ async def chat_assistant(chat: ChatMessage):
             f"• <strong>Quality-Adjusted NRQ</strong>: <strong>{s2.get('quality_adjusted_nrq', 13131):,.0f} units</strong>."
         )
 
-    # 2. 5 Core Targets
-    elif any(k in q for k in ["5 core", "targets", "target variables", "5 targets", "stage 2"]):
+    # 2. 5 Core Business Outcomes
+    elif any(k in q for k in ["5 core", "outcomes", "business outcomes", "target variables", "5 targets", "targets", "stage 2"]):
         reply = (
-            f"🎯 <strong>The 5 Core Demand Planning Target Variables (Stage 2):</strong><br><br>"
+            f"🎯 <strong>The 5 Core Demand Planning Business Outcomes (Stage 2):</strong><br><br>"
             f"1. <strong>global_plan_demand_quantity</strong>: <strong>{s2.get('global_plan_demand_quantity', 44096):,.0f} units</strong> (30-day S&OP horizon, Trend ratio 0.85, 5% buffer)<br>"
-            f"2. <strong>lead_time</strong>: <strong>{s2.get('lead_time', 7)} days</strong> (ML RandomForest Regressor: {s2.get('lead_time_ml_exact', 6.65):.2f}d, P90 SLA: {s2.get('lead_time_p90_sla', 9.0):.0f}d)<br>"
+            f"2. <strong>lead_time</strong>: <strong>{s2.get('lead_time', 7)} days</strong> (Ensemble Regressor: {s2.get('lead_time_ml_exact', 6.65):.2f}d, P90 SLA: {s2.get('lead_time_p90_sla', 9.0):.0f}d)<br>"
             f"3. <strong>weightage_list_price</strong>: <strong>€{s2.get('weightage_list_price', 6.24):.2f} / unit</strong> (Volume-weighted across channels)<br>"
             f"4. <strong>vendor_count</strong>: <strong>{s2.get('vendor_count', 60)} approved active suppliers</strong><br>"
             f"5. <strong>vendor_defect_rate</strong>: <strong>{s2.get('vendor_defect_rate_percent', 1.64):.2f}%</strong> (Defect adjustment: 1.0167x)"
@@ -828,7 +828,7 @@ async def chat_assistant(chat: ChatMessage):
             f"Our Multi-Criteria Decision Analysis evaluates: <em>40% Price + 30% Lead Time + 20% Reliability + 10% Margin</em>.<br><br>"
             f"• <strong>Primary Supplier (Rank 1) — S014</strong>:<br>"
             f"&nbsp;&nbsp;- Composite Score: <strong>0.6475</strong> (Highest rank)<br>"
-            f"&nbsp;&nbsp;- ML Predicted Cost: €3.75 / unit (Lowest cost in supplier set)<br>"
+            f"&nbsp;&nbsp;- Predicted Cost: €3.75 / unit (Lowest cost in supplier set)<br>"
             f"&nbsp;&nbsp;- Lead Time: 6.5 days | Reliability: 96.9%<br>"
             f"&nbsp;&nbsp;- <strong>Volume Allocation: 70.3% (9,250 units)</strong> = €34,687.50<br><br>"
             f"• <strong>Secondary Supplier (Rank 2) — S015</strong>:<br>"
