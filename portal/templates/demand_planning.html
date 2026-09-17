@@ -1393,20 +1393,20 @@
         <a href="/portal/marketplace/sales_forecasting" class="menu-stage-title-link" title="View Sales Forecasting Executive Dashboard">
           <span>1. Sales Forecasting</span>
         </a>
-        <div class="menu-target-link" title="Forecasted Demand Quantity">
+        <a href="/portal/marketplace/sales_forecasting?target=target1" class="menu-target-link" title="Forecast/Predict Sales (Quantity)">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Forecasted Demand Quantity</span>
+            <span class="menu-target-name">Forecast/Predict Sales (Quantity)</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
-        </div>
-        <div class="menu-target-link" title="Minimal Loss (actual - Predicted)">
+        </a>
+        <a href="/portal/marketplace/sales_forecasting?target=target2" class="menu-target-link" title="Minimize Actual vs Predicted Sales Difference (%)">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Minimal Loss (actual - Predicted)</span>
+            <span class="menu-target-name">Minimize Actual vs Predicted Sales Difference (%)</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
-        </div>
+        </a>
       </div>
 
       <!-- 2. Demand Planning (Current active stage) -->
@@ -1534,19 +1534,19 @@
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill" onclick="switchDemandView('target1', document.querySelectorAll('.dash-tab-pill')[1])" style="cursor:pointer;" title="View global_plan_demand_quantity dashboard">
-                <span>🎯 <strong>global_plan_demand_quantity (units)</strong></span>
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle><circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle><circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle></svg>Business Outcome 1: <strong>global_plan_demand_quantity (units)</strong></span>
               </div>
               <div class="hero-target-pill" onclick="switchDemandView('target2', document.querySelectorAll('.dash-tab-pill')[2])" style="cursor:pointer;" title="View lead_time dashboard">
-                <span>⏱️ <strong>lead_time (days)</strong></span>
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle><circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle><circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle></svg>Business Outcome 2: <strong>lead_time (days)</strong></span>
               </div>
               <div class="hero-target-pill" onclick="switchDemandView('target3', document.querySelectorAll('.dash-tab-pill')[3])" style="cursor:pointer;" title="View weightage_list_price dashboard">
-                <span>💶 <strong>weightage_list_price (€)</strong></span>
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle><circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle><circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle></svg>Business Outcome 3: <strong>weightage_list_price (€)</strong></span>
               </div>
               <div class="hero-target-pill" onclick="switchDemandView('target4', document.querySelectorAll('.dash-tab-pill')[4])" style="cursor:pointer;" title="View vendor_count dashboard">
-                <span>🏭 <strong>vendor_count (count)</strong></span>
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle><circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle><circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle></svg>Business Outcome 4: <strong>vendor_count (count)</strong></span>
               </div>
               <div class="hero-target-pill" onclick="switchDemandView('target5', document.querySelectorAll('.dash-tab-pill')[5])" style="cursor:pointer;" title="View vendor_defect_rate dashboard">
-                <span>🛡️ <strong>vendor_defect_rate (%)</strong></span>
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle><circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle><circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle></svg>Business Outcome 5: <strong>vendor_defect_rate (%)</strong></span>
               </div>
             </div>
           </div>
@@ -2446,7 +2446,7 @@
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
-                <span>🎯 <strong>global_plan_demand_quantity (units)</strong></span>
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle><circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle><circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle></svg>Business Outcome: <strong>global_plan_demand_quantity (units)</strong></span>
               </div>
             </div>
           </div>
@@ -2882,7 +2882,7 @@
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
-                <span>⏱️ <strong>lead_time (days)</strong></span>
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle><circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle><circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle></svg>Business Outcome: <strong>lead_time (days)</strong></span>
               </div>
             </div>
           </div>
@@ -3318,7 +3318,7 @@
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
-                <span>💶 <strong>weightage_list_price (€)</strong></span>
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle><circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle><circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle></svg>Business Outcome: <strong>weightage_list_price (€)</strong></span>
               </div>
             </div>
           </div>
@@ -3754,7 +3754,7 @@
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
-                <span>🏭 <strong>vendor_count (count)</strong></span>
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle><circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle><circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle></svg>Business Outcome: <strong>vendor_count (count)</strong></span>
               </div>
             </div>
           </div>
@@ -4208,7 +4208,7 @@
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
-                <span>🛡️ <strong>vendor_defect_rate (%)</strong></span>
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;"><circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle><circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle><circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle></svg>Business Outcome: <strong>vendor_defect_rate (%)</strong></span>
               </div>
             </div>
           </div>
