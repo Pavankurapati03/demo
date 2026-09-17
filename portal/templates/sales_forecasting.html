@@ -860,61 +860,116 @@
     </div>
 
     <div class="menu-drawer-content">
-      <a href="javascript:void(0)" class="menu-nav-item active">
+      <!-- Top Demo item -->
+      <a href="/portal/marketplace" class="menu-nav-item">
         <span class="menu-dot"></span>
         <span class="menu-item-name">Demo UI core analysis</span>
       </a>
 
-      <a href="javascript:void(0)" class="menu-nav-item">
-        <span class="menu-dot"></span>
-        <span class="menu-item-name">Demo UI customer problems</span>
-      </a>
-
+      <!-- Horizontal Divider Line -->
       <hr class="menu-divider">
 
+      <!-- Order Execution Section -->
       <div class="menu-group-header">
         <span class="menu-dot"></span>
         <span class="menu-group-title">Order Execution</span>
       </div>
 
-      <a href="javascript:void(0)" class="menu-sub-link">
-        <span class="menu-dot"></span>
-        <span>Executive summary</span>
-      </a>
-
-      <!-- 1. Sales forecasting -->
+      <!-- 1. Sales Forecasting (Current active stage) -->
       <div class="menu-stage-section">
-        <div class="menu-stage-row">
-          <span class="menu-stage-label">1. Sales forecasting</span>
-          <span class="menu-stage-price">$1000/Month</span>
-        </div>
-        <a href="/portal/marketplace/sales_forecasting" class="menu-sub-link">
-          <span class="menu-dot"></span>
-          <span>Executive dashboard</span>
+        <a href="/portal/marketplace/sales_forecasting" class="menu-stage-title-link" style="color: #2563eb; background-color: #eef2ff;" title="View Sales Forecasting Executive Dashboard">
+          <span>1. Sales Forecasting</span>
         </a>
+        <div class="menu-target-link" title="Forecasted Demand Quantity">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">Forecasted Demand Quantity</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
+        </div>
+        <div class="menu-target-link" title="Minimal Loss (actual - Predicted)">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">Minimal Loss (actual - Predicted)</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
+        </div>
       </div>
 
       <!-- 2. Demand Planning -->
       <div class="menu-stage-section">
-        <div class="menu-stage-row">
-          <span class="menu-stage-label">2. Demand Planning</span>
-          <span class="menu-stage-price">$1000/Month</span>
-        </div>
-        <a href="/portal/marketplace/demand_planning" class="menu-sub-link">
-          <span class="menu-dot"></span>
-          <span>Executive dashboard</span>
+        <a href="/portal/marketplace/demand_planning" class="menu-stage-title-link" title="View Demand Planning Executive Dashboard">
+          <span>2. Demand Planning</span>
+        </a>
+        <a href="/portal/marketplace/demand_planning?target=target1" class="menu-target-link" title="global_plan_demand_quantity">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">global_plan_demand_quantity</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
+        </a>
+        <a href="/portal/marketplace/demand_planning?target=target2" class="menu-target-link" title="lead_time">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">lead_time</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
+        </a>
+        <a href="/portal/marketplace/demand_planning?target=target3" class="menu-target-link" title="weightage_list_price">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">weightage_list_price</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
+        </a>
+        <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link" title="vendor_count">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">vendor_count</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
+        </a>
+        <a href="/portal/marketplace/demand_planning?target=target5" class="menu-target-link" title="vendor_defect_rate">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">vendor_defect_rate</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
         </a>
       </div>
 
       <!-- 3. Procurement -->
       <div class="menu-stage-section">
-        <div class="menu-stage-row">
-          <span class="menu-stage-label">3. Procurement</span>
-          <span class="menu-stage-price">$1000/Month</span>
-        </div>
-        <a href="/portal/marketplace/procurement" class="menu-sub-link">
-          <span class="menu-dot"></span>
-          <span>Executive dashboard</span>
+        <a href="/portal/marketplace/procurement" class="menu-stage-title-link" title="View Procurement Executive Dashboard">
+          <span>3. Procurement</span>
+        </a>
+        <a href="/portal/marketplace/procurement?target=target1" class="menu-target-link" title="purchase_cost">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">purchase_cost</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
+        </a>
+        <a href="/portal/marketplace/procurement?target=target2" class="menu-target-link" title="is_reorder_required">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">is_reorder_required</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
+        </a>
+        <a href="/portal/marketplace/procurement?target=target3" class="menu-target-link" title="is_preferred_supplier">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">is_preferred_supplier</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
+        </a>
+        <a href="/portal/marketplace/procurement?target=target4" class="menu-target-link" title="is_po_compliant">
+          <div class="menu-target-name-wrap">
+            <span class="menu-dot"></span>
+            <span class="menu-target-name">is_po_compliant</span>
+          </div>
+          <span class="menu-target-price">$1000/Month</span>
         </a>
       </div>
     </div>
