@@ -9,7 +9,7 @@
   <style>
     /* Drawer Menu Direct Override Styles */
     .menu-drawer {
-      width: 360px !important;
+      width: 480px !important;
       max-width: 92vw !important;
       background: #ffffff !important;
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
@@ -943,20 +943,20 @@
     [data-theme="dark"] .rec-action-badge { background: #1e293b; color: #60a5fa; }
 
     /* Dedicated Target Dashboard Styles */
-    .sxi-card-grid-2 {
+    .sf-card-grid-2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 18px;
       margin-bottom: 22px;
     }
-    .sxi-white-card {
+    .sf-white-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
       padding: 22px 24px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
     }
-    .sxi-card-title-row {
+    .sf-card-title-row {
       display: flex;
       align-items: center;
       gap: 9px;
@@ -965,7 +965,7 @@
       color: #2563eb;
       margin-bottom: 16px;
     }
-    .sxi-metric-line {
+    .sf-metric-line {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -973,26 +973,26 @@
       border-bottom: 1px solid #f1f5f9;
       font-size: 13.5px;
     }
-    .sxi-metric-line:last-child {
+    .sf-metric-line:last-child {
       border-bottom: none;
     }
-    .sxi-line-label {
+    .sf-line-label {
       color: #475569;
       font-weight: 500;
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .sxi-line-val {
+    .sf-line-val {
       font-weight: 800;
       color: #0f172a;
       font-size: 14.5px;
     }
-    .sxi-val-green { color: #16a34a !important; }
-    .sxi-val-blue { color: #2563eb !important; }
+    .sf-val-green { color: #16a34a !important; }
+    .sf-val-blue { color: #2563eb !important; }
 
-    /* Current vs Business Outcome DXI Card */
-    .sxi-dxi-container {
+    /* Current vs Target Model Accuracy Card */
+    .sf-model-container {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
@@ -1000,12 +1000,12 @@
       margin-bottom: 22px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
     }
-    .sxi-dxi-grid-6 {
+    .sf-model-grid-6 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 14px;
     }
-    .dxi-card-box {
+    .sf-kpi-box {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 12px;
@@ -1022,19 +1022,19 @@
     .border-orange { border-bottom: 3.5px solid #ea580c !important; }
     .border-emerald { border-bottom: 3.5px solid #059669 !important; }
 
-    .dxi-card-lbl {
+    .sf-kpi-lbl {
       font-size: 11.5px;
       font-weight: 600;
       color: #64748b;
     }
-    .dxi-card-num {
+    .sf-kpi-num {
       font-size: 24px;
       font-weight: 800;
       letter-spacing: -0.02em;
     }
 
     /* 3 Levels of Improvement */
-    .sxi-levels-container {
+    .sf-levels-container {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
@@ -1105,7 +1105,7 @@
     .feat-pct { font-weight: 800; color: #16a34a; }
 
     /* Dataset Overview Card */
-    .sxi-dataset-strip {
+    .sf-dataset-strip {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 12px;
@@ -1116,39 +1116,39 @@
       margin-bottom: 22px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.02);
     }
-    .sxi-ds-col {
+    .sf-ds-col {
       display: flex;
       flex-direction: column;
       gap: 4px;
     }
-    .sxi-ds-col.fill {
+    .sf-ds-col.fill {
       flex: 1;
     }
-    .sxi-ds-lbl {
+    .sf-ds-lbl {
       font-size: 10.5px;
       font-weight: 700;
       color: #64748b;
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
-    .sxi-ds-val {
+    .sf-ds-val {
       font-size: 15px;
       font-weight: 800;
       color: #0f172a;
     }
-    .sxi-ds-val.num {
+    .sf-ds-val.num {
       font-size: 22px;
       font-weight: 800;
     }
 
     /* 4 KPI Cards */
-    .sxi-kpi-grid-4 {
+    .sf-kpi-grid-4 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 14px;
       margin-bottom: 22px;
     }
-    .sxi-kpi-top-card {
+    .sf-kpi-top-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 12px;
@@ -1158,7 +1158,7 @@
       gap: 8px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.02);
     }
-    .sxi-kpi-icon-pill {
+    .sf-kpi-icon-pill {
       width: 32px;
       height: 32px;
       border-radius: 8px;
@@ -1172,19 +1172,19 @@
     .pill-green { background: #ecfdf5; color: #059669; }
     .pill-purple { background: #faf5ff; color: #7c3aed; }
     .pill-orange { background: #fff7ed; color: #ea580c; }
-    .sxi-kpi-title-sub {
+    .sf-kpi-title-sub {
       font-size: 11.5px;
       font-weight: 600;
       color: #64748b;
     }
-    .sxi-kpi-main-val {
+    .sf-kpi-main-val {
       font-size: 26px;
       font-weight: 800;
       letter-spacing: -0.02em;
     }
 
     /* Target Improvement Build Card */
-    .sxi-build-card {
+    .sf-build-card {
       background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
       border: 1.5px solid #86efac;
       border-radius: 14px;
@@ -1197,11 +1197,11 @@
       gap: 20px;
       box-shadow: 0 2px 8px rgba(16, 185, 129, 0.05);
     }
-    .sxi-build-left {
+    .sf-build-left {
       flex: 1;
       min-width: 280px;
     }
-    .sxi-build-badge {
+    .sf-build-badge {
       font-size: 11px;
       font-weight: 800;
       color: #15803d;
@@ -1209,81 +1209,81 @@
       letter-spacing: 0.04em;
       margin-bottom: 6px;
     }
-    .sxi-build-headline {
+    .sf-build-headline {
       font-size: 22px;
       font-weight: 800;
       color: #0f172a;
       letter-spacing: -0.01em;
       margin-bottom: 4px;
     }
-    .sxi-build-desc {
+    .sf-build-desc {
       font-size: 12.5px;
       color: #475569;
       line-height: 1.45;
     }
-    .sxi-build-right {
+    .sf-build-right {
       display: flex;
       align-items: center;
       gap: 24px;
     }
-    .sxi-build-metric {
+    .sf-build-metric {
       display: flex;
       flex-direction: column;
       gap: 2px;
       text-align: right;
     }
-    .sxi-bm-lbl {
+    .sf-bm-lbl {
       font-size: 11px;
       font-weight: 600;
       color: #64748b;
     }
-    .sxi-bm-val {
+    .sf-bm-val {
       font-size: 22px;
       font-weight: 800;
       color: #0f172a;
     }
-    .sxi-bm-val.green {
+    .sf-bm-val.green {
       color: #16a34a;
     }
 
     /* Dark Mode Overrides */
-    [data-theme="dark"] .sxi-white-card,
-    [data-theme="dark"] .sxi-dxi-container,
-    [data-theme="dark"] .sxi-levels-container,
-    [data-theme="dark"] .dxi-card-box,
+    [data-theme="dark"] .sf-white-card,
+    [data-theme="dark"] .sf-model-container,
+    [data-theme="dark"] .sf-levels-container,
+    [data-theme="dark"] .sf-kpi-box,
     [data-theme="dark"] .level-col-item {
       background: #111827;
       border-color: #1e293b;
       color: #f8fafc;
     }
-    [data-theme="dark"] .sxi-metric-line,
+    [data-theme="dark"] .sf-metric-line,
     [data-theme="dark"] .feature-table td {
       border-bottom-color: #1e293b;
       color: #cbd5e1;
     }
-    [data-theme="dark"] .sxi-line-val,
+    [data-theme="dark"] .sf-line-val,
     [data-theme="dark"] .feat-name,
     [data-theme="dark"] .level-col-name,
     [data-theme="dark"] .level-metric-val {
       color: #f8fafc;
     }
-    [data-theme="dark"] .sxi-dataset-strip,
-    [data-theme="dark"] .sxi-kpi-top-card {
+    [data-theme="dark"] .sf-dataset-strip,
+    [data-theme="dark"] .sf-kpi-top-card {
       background: #111827;
       border-color: #1e293b;
       color: #f8fafc;
     }
-    [data-theme="dark"] .sxi-ds-val,
-    [data-theme="dark"] .sxi-kpi-main-val,
-    [data-theme="dark"] .sxi-build-headline,
-    [data-theme="dark"] .sxi-bm-val {
+    [data-theme="dark"] .sf-ds-val,
+    [data-theme="dark"] .sf-kpi-main-val,
+    [data-theme="dark"] .sf-build-headline,
+    [data-theme="dark"] .sf-bm-val {
       color: #f8fafc;
     }
-    [data-theme="dark"] .sxi-build-card {
+    [data-theme="dark"] .sf-build-card {
       background: #064e3b;
       border-color: #047857;
     }
-    [data-theme="dark"] .sxi-build-desc {
+    [data-theme="dark"] .sf-build-desc {
       color: #a7f3d0;
     }
   </style>
@@ -1380,17 +1380,17 @@
         <a href="/portal/marketplace/demand_planning" class="menu-stage-title-link" title="View Demand Planning Executive Dashboard">
           <span>2. Demand Planning</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target1" class="menu-target-link" title="global_plan_demand_quantity">
+        <a href="/portal/marketplace/demand_planning?target=target1" class="menu-target-link" title="Improve Demand Coverage & Availability">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">global_plan_demand_quantity</span>
+            <span class="menu-target-name">Improve Demand Coverage & Availability</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target2" class="menu-target-link" title="lead_time">
+        <a href="/portal/marketplace/demand_planning?target=target2" class="menu-target-link" title="Maximize Delivery Reliability">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">lead_time</span>
+            <span class="menu-target-name">Maximize Delivery Reliability</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
@@ -1489,11 +1489,10 @@
 
       <!-- Hero Header Banner (Gradient Dark Navy Card) -->
       <div class="hero-banner-card">
-        <div class="hero-badge">✦ Executive Dashboard</div>
         <div class="hero-header-flex">
           <div>
             <h1 class="hero-title">Sales Forecasting</h1>
-            <p class="hero-subtitle">See how much customers will actually buy — and stop guessing daily demand. We predict daily sales quantity across 102 SKUs and 4 DCs to cut forecast error from 31.2% to 11.2%, preventing stockouts and protecting $485,000 in lost revenue.</p>
+            <p class="hero-subtitle">See how much customers will actually buy — and stop guessing daily demand. We predict daily sales quantity across 102 SKUs and 4 Distribution Centers (DCs) to cut forecast error from 31.2% to 11.2%, preventing stockouts and protecting $485,000 in lost revenue.</p>
           </div>
           <div class="hero-targets-stack">
             <div class="hero-target-pill" onclick="switchSalesView('target1', document.querySelectorAll('.dash-tab-pill')[1])" style="cursor:pointer;" title="View Forecast/Predict Sales (Quantity) dashboard">
@@ -1527,7 +1526,7 @@
         </div>
         <div>
           <div class="dataset-col-label">COLUMNS / FEATURES</div>
-          <div class="dataset-col-value">14 Features (102 SKUs across 4 DCs)</div>
+          <div class="dataset-col-value">14 Features (102 SKUs across 4 Distribution Centers (DCs))</div>
         </div>
         <div>
           <div class="dataset-col-label">PLANNING HORIZON</div>
@@ -1607,12 +1606,12 @@
 
       <!-- Section: Target Improvement (Build) — Exactly like Reference Dashboard Page 2 -->
       <div class="target-improvement-container">
-        <div class="improvement-badge">BUSINESS OUTCOME IMPROVEMENT (BUILD)</div>
+        <div class="improvement-badge">TARGET IMPROVEMENT (BUILD)</div>
         <div class="improvement-main-flex">
           <div class="improvement-headline-col">
             <h2 class="improvement-big-title">+20.05% Accuracy Lift · -64.2% Error Cut</h2>
             <p class="improvement-desc-text">
-              Build business outcome improvement reduces forecast error (WMAPE) from <strong>31.23%</strong> (baseline SARIMA) down to <strong>11.18%</strong> on predicted sales quantity — protecting warehouse stock on hand, eliminating stockouts, and locking in <strong>$485,000</strong> in annual savings across 4 regional DCs after 3 months.
+              Build target improvement reduces forecast error (WMAPE) from <strong>31.23%</strong> (baseline SARIMA) down to <strong>11.18%</strong> on predicted sales quantity — protecting warehouse stock on hand, eliminating stockouts, and locking in <strong>$485,000</strong> in annual savings across 4 regional Distribution Centers (DCs) after 3 months.
             </p>
           </div>
           <div class="improvement-kpi-stack">
@@ -1621,7 +1620,7 @@
               <span class="imp-kpi-val">1,555 units / day</span>
             </div>
             <div class="imp-kpi-item">
-              <span class="imp-kpi-lbl">BUSINESS OUTCOME ACCURACY AFTER BUILD</span>
+              <span class="imp-kpi-lbl">TARGET ACCURACY AFTER BUILD</span>
               <span class="imp-kpi-val text-emerald">88.82%</span>
             </div>
           </div>
@@ -1630,7 +1629,7 @@
         <!-- Current vs Target Comparison Grid (Reference Dashboard Page 2) -->
         <div class="section-subhead-mini">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline></svg>
-          <span>Current vs Business Outcome Improvement Benchmark</span>
+          <span>Current vs Target Improvement Benchmark</span>
         </div>
 
         <div class="current-vs-target-grid">
@@ -1640,7 +1639,7 @@
             <span class="cvt-sub">Auto-SARIMA (Old Way)</span>
           </div>
           <div class="cvt-box">
-            <span class="cvt-label">Business Outcome Predicted Error</span>
+            <span class="cvt-label">Target Predicted Error</span>
             <span class="cvt-value text-green">11.18%</span>
             <span class="cvt-sub">Meta Prophet Champion</span>
           </div>
@@ -1869,7 +1868,7 @@
         <!-- 61-90 Days -->
         <div class="horizon-card">
           <span class="horizon-badge badge-long">61 – 90 Days · Long Term</span>
-          <div class="horizon-title">Strategic Sourcing & S&OP Planning</div>
+          <div class="horizon-title">Strategic Sourcing & Sales & Operations Planning (S&OP)</div>
           <div class="horizon-usecase">Vendor raw material commitments, production batch sizing, and quarterly working capital budgeting.</div>
           <div class="horizon-metric-row">
             <div class="horizon-acc-val">84.5%</div>
@@ -2477,7 +2476,7 @@
           <span>Business Actions</span>
         </div>
         <ul class="ba-checklist">
-          <li><strong>Predict daily unit demand across 102 SKUs:</strong> Move from flat spreadsheet averages to dynamic daily forecasting — average 1,555 units/day predicted across 4 DCs.</li>
+          <li><strong>Predict daily unit demand across 102 SKUs:</strong> Move from flat spreadsheet averages to dynamic daily forecasting — average 1,555 units/day predicted across 4 Distribution Centers (DCs).</li>
           <li><strong>Cut forecast volume error from 31.2% to 11.2%:</strong> High-accuracy predictions prevent emergency spot freight and avert stockouts during high-demand periods.</li>
           <li><strong>Recalibrate safety stock buffers:</strong> High model reliability (88.82%) allows reducing safety stock from 14 days to 9 days for top 20 SKUs, freeing <strong>$185,000</strong> in working capital.</li>
           <li><strong>Coordinate promotional marketing with suppliers:</strong> Day-of-Week (34.2%) and Marketing Promotions (26.8%) drive 61.0% of sales volume changes — lock supplier orders 18 days ahead of marketing events.</li>
@@ -2488,17 +2487,16 @@
       </div> <!-- /#view-overview -->
 
       <!-- =====================================================================
-           VIEW 1: TARGET 1 — Forecast/Predict Sales (Quantity) [REGRESSION]
+           VIEW 1: TARGET 1 — Forecast/Predict Sales (Quantity) [PROPHET & SARIMA TIME-SERIES]
            ===================================================================== -->
       <div id="view-target1" class="sales-view" style="display:none;">
         
         <!-- Hero Header Banner -->
         <div class="hero-banner-card">
-          <div class="hero-badge">✦ Business Outcome 1 · Daily Sales Demand Volume Regression</div>
           <div class="hero-header-flex">
             <div>
               <h1 class="hero-title">Forecast/Predict Sales (Quantity)</h1>
-              <p class="hero-subtitle">Predict daily unit sales volume across 102 SKUs and 4 Distribution Centers using multi-horizon seasonal trend decomposition — replacing flat spreadsheet approximations with dynamic demand forecasts to eliminate stockouts and over-ordering.</p>
+              <p class="hero-subtitle">Predict daily and multi-horizon sales quantity across 102 SKUs and 4 regional Distribution Centers (DCs) using Meta Prophet with additive Fourier seasonality and Auto-SARIMA — replacing flat spreadsheet approximations with dynamic demand forecasts to eliminate stockouts.</p>
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
@@ -2509,399 +2507,385 @@
         </div>
 
         <!-- 1. Dataset Overview -->
-        <div class="sxi-card-title-row" style="margin-top: 10px;">
+        <div class="sf-card-title-row" style="margin-top: 10px;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
           </svg>
           <span>Dataset Overview</span>
         </div>
-        <div class="sxi-dataset-strip">
-          <div class="sxi-ds-col fill">
-            <span class="sxi-ds-lbl">Dataset Name</span>
-            <span class="sxi-ds-val">fmcg_sales_3years_1M_rows.csv</span>
+        <div class="sf-dataset-strip">
+          <div class="sf-ds-col fill">
+            <span class="sf-ds-lbl">Dataset Name</span>
+            <span class="sf-ds-val">fmcg_sales_3years_1M_rows.csv</span>
           </div>
-          <div class="sxi-ds-col">
-            <span class="sxi-ds-lbl">Rows</span>
-            <span class="sxi-ds-val num">1,000,000</span>
+          <div class="sf-ds-col">
+            <span class="sf-ds-lbl">Historical POS Rows</span>
+            <span class="sf-ds-val num">1,000,000</span>
           </div>
-          <div class="sxi-ds-col">
-            <span class="sxi-ds-lbl">Columns</span>
-            <span class="sxi-ds-val num">14</span>
+          <div class="sf-ds-col">
+            <span class="sf-ds-lbl">Time-Series Features</span>
+            <span class="sf-ds-val num">14</span>
           </div>
         </div>
 
         <!-- 2. Key Performance Indicators -->
-        <div class="sxi-card-title-row">
+        <div class="sf-card-title-row">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <path d="M12 2a10 10 0 0 1 10 10"></path>
           </svg>
           <span>Key Performance Indicators</span>
         </div>
-        <div class="sxi-kpi-grid-4">
-          <div class="sxi-kpi-top-card border-blue">
-            <div class="sxi-kpi-icon-pill pill-blue">📈</div>
-            <span class="sxi-kpi-title-sub">Current DXI</span>
-            <span class="sxi-kpi-main-val" style="color: #2563eb;">6.35</span>
+        <div class="sf-kpi-grid-4">
+          <div class="sf-kpi-top-card border-green">
+            <div class="sf-kpi-icon-pill pill-green">📈</div>
+            <span class="sf-kpi-title-sub">Prophet Model Accuracy</span>
+            <span class="sf-kpi-main-val" style="color: #059669;">88.82%</span>
           </div>
-          <div class="sxi-kpi-top-card border-green">
-            <div class="sxi-kpi-icon-pill pill-green">%</div>
-            <span class="sxi-kpi-title-sub">Forecast Accuracy</span>
-            <span class="sxi-kpi-main-val" style="color: #059669;">88.8%</span>
+          <div class="sf-kpi-top-card border-blue">
+            <div class="sf-kpi-icon-pill pill-blue">📦</div>
+            <span class="sf-kpi-title-sub">Mean Daily Volume Forecast</span>
+            <span class="sf-kpi-main-val" style="color: #2563eb;">1,555 u</span>
           </div>
-          <div class="sxi-kpi-top-card border-blue">
-            <div class="sxi-kpi-icon-pill pill-blue">📦</div>
-            <span class="sxi-kpi-title-sub">Mean Daily Forecast</span>
-            <span class="sxi-kpi-main-val" style="color: #0f172a;">1,555 u</span>
+          <div class="sf-kpi-top-card border-purple">
+            <div class="sf-kpi-icon-pill pill-purple">🎯</div>
+            <span class="sf-kpi-title-sub">Forecast Correlation (R²)</span>
+            <span class="sf-kpi-main-val" style="color: #7c3aed;">0.8693</span>
           </div>
-          <div class="sxi-kpi-top-card border-orange">
-            <div class="sxi-kpi-icon-pill pill-orange">⚠️</div>
-            <span class="sxi-kpi-title-sub">Baseline Error Gap</span>
-            <span class="sxi-kpi-main-val" style="color: #ea580c;">-20.0%</span>
-          </div>
-        </div>
-
-        <!-- 3. Business Outcome Improvement (Build) -->
-        <div class="sxi-build-card">
-          <div class="sxi-build-left">
-            <div class="sxi-build-badge">Business Outcome Improvement (Build)</div>
-            <div class="sxi-build-headline">+20.0% Forecast Accuracy Lift</div>
-            <div class="sxi-build-desc">
-              Build business outcome improvement is +20.0% (increasing) on Forecast/Predict Sales (Quantity) — Daily Sales Accuracy across regional DCs after 30 days.
-            </div>
-          </div>
-          <div class="sxi-build-right">
-            <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Current Forecast Accuracy</span>
-              <span class="sxi-bm-val">68.8%</span>
-            </div>
-            <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Business Outcome After +20%</span>
-              <span class="sxi-bm-val green">88.8%</span>
-            </div>
+          <div class="sf-kpi-top-card border-orange">
+            <div class="sf-kpi-icon-pill pill-orange">⚠️</div>
+            <span class="sf-kpi-title-sub">Forecast Error Cut</span>
+            <span class="sf-kpi-main-val" style="color: #ea580c;">-64.2%</span>
           </div>
         </div>
 
-        <!-- 4. Current vs Business Outcome DXI -->
-        <div class="sxi-dxi-container">
-          <div class="sxi-card-title-row">
+        <!-- 3. Target Improvement (Build) -->
+        <div class="sf-build-card">
+          <div class="sf-build-left">
+            <div class="sf-build-badge">Target Improvement (Build)</div>
+            <div class="sf-build-headline">+20.05% Accuracy Lift on Daily Sales Quantity</div>
+            <div class="sf-build-desc">
+              Meta Prophet with additive holiday and promotional Fourier regressors raises demand forecast accuracy from 68.77% baseline to 88.82% on daily sales quantity — preventing stockouts and protecting $485,000 in lost revenue across 4 Distribution Centers (DCs).
+            </div>
+          </div>
+          <div class="sf-build-right">
+            <div class="sf-build-metric">
+              <span class="sf-bm-lbl">Baseline Forecast Accuracy</span>
+              <span class="sf-bm-val">68.77%</span>
+            </div>
+            <div class="sf-build-metric">
+              <span class="sf-bm-lbl">Target Forecast Accuracy</span>
+              <span class="sf-bm-val green">88.82%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Multi-Horizon Forecast Reliability Grid -->
+        <div class="sf-model-container">
+          <div class="sf-card-title-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z"></path>
             </svg>
-            <span>Current vs Business Outcome DXI</span>
+            <span>Multi-Horizon Forecast Accuracy & Operational Horizon Matrix</span>
           </div>
-          <div class="sxi-dxi-grid-6">
-            <div class="dxi-card-box border-blue">
-              <span class="dxi-card-lbl">Current DXI</span>
-              <span class="dxi-card-num" style="color: #2563eb;">6.35</span>
+          <div class="sf-model-grid-6">
+            <div class="sf-kpi-box border-blue">
+              <span class="sf-kpi-lbl">1-Day Ahead (Daily Fulfillment)</span>
+              <span class="sf-kpi-num" style="color: #2563eb;">91.40%</span>
             </div>
-            <div class="dxi-card-box border-green">
-              <span class="dxi-card-lbl">Current Forecast Accuracy</span>
-              <span class="dxi-card-num" style="color: #059669;">68.8%</span>
+            <div class="sf-kpi-box border-green">
+              <span class="sf-kpi-lbl">7-Day Horizon (Weekly S&OP)</span>
+              <span class="sf-kpi-num" style="color: #059669;">89.20%</span>
             </div>
-            <div class="dxi-card-box border-dark">
-              <span class="dxi-card-lbl">Model Accuracy</span>
-              <span class="dxi-card-num" style="color: #0f172a;">88.8%</span>
+            <div class="sf-kpi-box border-dark">
+              <span class="sf-kpi-lbl">14-Day Horizon (Buffer Planning)</span>
+              <span class="sf-kpi-num" style="color: #0f172a;">88.10%</span>
             </div>
-            <div class="dxi-card-box border-purple">
-              <span class="dxi-card-lbl">Business Outcome DXI</span>
-              <span class="dxi-card-num" style="color: #7c3aed;">8.45</span>
+            <div class="sf-kpi-box border-purple">
+              <span class="sf-kpi-lbl">30-Day Horizon (PO Release)</span>
+              <span class="sf-kpi-num" style="color: #7c3aed;">86.50%</span>
             </div>
-            <div class="dxi-card-box border-orange">
-              <span class="dxi-card-lbl">Business Outcome Forecast Accuracy</span>
-              <span class="dxi-card-num" style="color: #ea580c;">88.8%</span>
+            <div class="sf-kpi-box border-orange">
+              <span class="sf-kpi-lbl">Prophet vs SARIMA Lift</span>
+              <span class="sf-kpi-num" style="color: #ea580c;">+6.68%</span>
             </div>
-            <div class="dxi-card-box border-emerald">
-              <span class="dxi-card-lbl">Accuracy Change</span>
-              <span class="dxi-card-num" style="color: #16a34a;">+20.0%</span>
+            <div class="sf-kpi-box border-emerald">
+              <span class="sf-kpi-lbl">Revenue Safeguarded</span>
+              <span class="sf-kpi-num" style="color: #16a34a;">$485,000</span>
             </div>
           </div>
         </div>
 
         <!-- 5. 3 Levels of Improvement -->
-        <div class="sxi-levels-container">
-          <div class="sxi-card-title-row">
+        <div class="sf-levels-container">
+          <div class="sf-card-title-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
               <polyline points="16 7 22 7 22 13"></polyline>
             </svg>
-            <span>3 Levels of Improvement</span>
+            <span>3 Levels of Forecast Maturity & Accuracy Lift</span>
           </div>
           <div class="levels-col-grid">
             <div class="level-col-item">
-              <span class="level-col-name">Immediate</span>
+              <span class="level-col-name">Level 1 · Immediate (30 Days)</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
-                <span class="level-metric-val">8.45</span>
+                <span class="level-metric-lbl">Model Architecture</span>
+                <span class="level-metric-val">Meta Prophet Base</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">88.8%</span>
+                <span class="level-metric-lbl">Forecast Accuracy</span>
+                <span class="level-metric-val">88.82%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">+20.0%</span>
+                <span class="level-metric-lbl">Accuracy Lift</span>
+                <span class="level-metric-val" style="color: #16a34a;">+20.05%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Immediate improvement:</strong> A +20.0% lift brings Forecast Accuracy UP to about 88.8% after 30 days. DXI moves from 6.35 to short-term DXI 8.45.
+                <strong>Immediate impact:</strong> Daily sales predictions stabilize DC inventory replenishment; reduces emergency spot-freight dispatches by 65%.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Mid-term</span>
+              <span class="level-col-name">Level 2 · Mid-term (90 Days)</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
-                <span class="level-metric-val">8.95</span>
+                <span class="level-metric-lbl">Model Architecture</span>
+                <span class="level-metric-val">Prophet + SARIMA Ensemble</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">92.4%</span>
+                <span class="level-metric-lbl">Forecast Accuracy</span>
+                <span class="level-metric-val">92.40%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">+23.6%</span>
+                <span class="level-metric-lbl">Accuracy Lift</span>
+                <span class="level-metric-val" style="color: #16a34a;">+23.63%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term improvement:</strong> Calibrated promotion and seasonal regressors bring Forecast Accuracy UP to 92.4%. DXI moves to 8.95.
+                <strong>Mid-term impact:</strong> Captures complex promotional lift and marketing campaign surges across regional distribution hubs.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Long-term</span>
+              <span class="level-col-name">Level 3 · Long-term (Sustained)</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
-                <span class="level-metric-val">9.55</span>
+                <span class="level-metric-lbl">Model Architecture</span>
+                <span class="level-metric-val">Bi-Weekly Retraining Pipeline</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">96.1%</span>
+                <span class="level-metric-lbl">Forecast Accuracy</span>
+                <span class="level-metric-val">96.10%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">+27.3%</span>
+                <span class="level-metric-lbl">Accuracy Lift</span>
+                <span class="level-metric-val" style="color: #16a34a;">+27.33%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term improvement:</strong> Continuous bi-weekly model retraining drives sustained Forecast Accuracy to 96.1%. DXI moves to 9.55.
+                <strong>Long-term impact:</strong> Continuous automated parameter recalibration preserves >95% accuracy against seasonal shifts and new SKU additions.
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 6. Model Performance & Current Business Status -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+        <!-- 6. Meta Prophet vs Auto-SARIMA Model Benchmarks -->
+        <div class="sf-card-grid-2">
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
                 <path d="M2 17l10 5 10-5"></path>
                 <path d="M2 12l10 5 10-5"></path>
               </svg>
-              <span>Model Performance</span>
+              <span>Meta Prophet (Champion Time-Series Model)</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Accuracy (100 - WMAPE)</span>
-              <span class="sxi-line-val">88.82%</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Forecast Accuracy (100 - WMAPE)</span>
+              <span class="sf-line-val sf-val-green">88.82%</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Correlation (R² Fit)</span>
-              <span class="sxi-line-val">0.8693</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Mean Absolute Error (MAE)</span>
+              <span class="sf-line-val">±191.17 units</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Mean Absolute Error (MAE)</span>
-              <span class="sxi-line-val">±191.17 units</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Root Mean Squared Error (RMSE)</span>
+              <span class="sf-line-val">260.10 units</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Root Mean Squared Error (RMSE)</span>
-              <span class="sxi-line-val">260.10 units</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Correlation Coefficient (R² Fit)</span>
+              <span class="sf-line-val">0.8693</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Pearson Correlation</span>
-              <span class="sxi-line-val">0.9324</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Active Changepoints / Trend Breaks</span>
+              <span class="sf-line-val">25 points</span>
             </div>
           </div>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
               </svg>
-              <span>Current Business Status</span>
+              <span>Auto-SARIMA (Challenger Time-Series Model)</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                Current DXI
-              </span>
-              <span class="sxi-line-val">6.35</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Forecast Accuracy (100 - WMAPE)</span>
+              <span class="sf-line-val">82.14%</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
-                Predictable Demand Volume
-              </span>
-              <span class="sxi-line-val">68.8%</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Mean Absolute Error (MAE)</span>
+              <span class="sf-line-val">±248.50 units</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-                After 30 days
-              </span>
-              <span class="sxi-line-val sxi-val-green">88.8% · +20.0%</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Root Mean Squared Error (RMSE)</span>
+              <span class="sf-line-val">315.40 units</span>
             </div>
-            <div class="sxi-metric-line" style="border-bottom:none; padding-top:14px;">
-              <span class="sxi-line-label" style="align-items:flex-start;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" style="margin-top:2px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                Business lens:
-              </span>
-              <span style="font-size:12.5px; font-weight:700; color:#0f172a; text-align:right; max-width:65%;">Forecast 1,555 units/day mean velocity across 4 DCs; adjust Stage 2 S&OP buffers and order dispatch timings.</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Correlation Coefficient (R² Fit)</span>
+              <span class="sf-line-val">0.8120</span>
+            </div>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Model AIC Benchmark</span>
+              <span class="sf-line-val">84,219</span>
             </div>
           </div>
         </div>
 
-        <!-- 7. Actual vs Predicted & Error Distribution -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+        <!-- 7. Time-Series Visual Evaluation Plots -->
+        <div class="sf-card-grid-2">
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="2" y1="12" x2="22" y2="12"></line>
               </svg>
-              <span>Predicted vs Actual Daily Demand Fit (30 Days)</span>
+              <span>30-Day Daily Sales Forecast Trajectory vs Actual POS</span>
             </div>
             <div style="text-align:center; padding:10px 0;">
               <svg viewBox="0 0 400 200" style="width:100%; max-height:190px;">
                 <line x1="40" y1="170" x2="380" y2="170" stroke="#cbd5e1" stroke-width="1.5"/>
                 <line x1="40" y1="30" x2="40" y2="170" stroke="#cbd5e1" stroke-width="1.5"/>
+                <!-- 95% Confidence interval band -->
+                <path d="M 40 120 Q 120 90 200 75 T 360 45 L 360 85 Q 280 115 200 115 T 40 155 Z" fill="rgba(37, 99, 235, 0.10)"/>
+                <!-- Actuals -->
                 <path d="M 40 135 Q 80 115 120 130 T 200 85 T 280 90 T 360 60" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 4"/>
+                <!-- Prophet Forecast -->
                 <path d="M 40 138 Q 80 118 120 128 T 200 82 T 280 88 T 360 58" fill="none" stroke="#2563eb" stroke-width="2.8"/>
                 <circle cx="80" cy="20" r="4" fill="#2563eb"/>
-                <text x="90" y="24" font-size="11" fill="#475569" font-weight="600">Predicted Sales (R² = 0.869)</text>
+                <text x="90" y="24" font-size="11" fill="#475569" font-weight="600">Prophet Forecast (R² = 0.869)</text>
                 <circle cx="270" cy="20" r="4" fill="#94a3b8"/>
                 <text x="280" y="24" font-size="11" fill="#475569" font-weight="600">Actual POS Register Sales</text>
               </svg>
             </div>
           </div>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="4 14 10 14 10 20"></polyline>
                 <polyline points="20 10 14 10 14 4"></polyline>
                 <line x1="14" y1="10" x2="21" y2="3"></line>
                 <line x1="3" y1="21" x2="10" y2="14"></line>
               </svg>
-              <span>Prediction Error Variance Distribution</span>
+              <span>Prophet Additive Seasonality & Trend Component Waves</span>
             </div>
             <div style="text-align:center; padding:10px 0;">
               <svg viewBox="0 0 400 200" style="width:100%; max-height:190px;">
                 <line x1="40" y1="170" x2="380" y2="170" stroke="#cbd5e1" stroke-width="1.5"/>
-                <line x1="210" y1="30" x2="210" y2="170" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3 3"/>
-                <path d="M 50 170 C 130 170, 160 50, 210 50 C 260 50, 290 170, 370 170" fill="rgba(37, 99, 235, 0.12)" stroke="#2563eb" stroke-width="2.5"/>
-                <text x="210" y="24" font-size="11" fill="#2563eb" font-weight="700" text-anchor="middle">Mean Residual = 0 (MAE ±191 u)</text>
-                <text x="100" y="185" font-size="10" fill="#64748b">-350 units</text>
-                <text x="210" y="185" font-size="10" fill="#64748b" text-anchor="middle">0 (Business Outcome)</text>
-                <text x="320" y="185" font-size="10" fill="#64748b">+350 units</text>
+                <line x1="40" y1="100" x2="380" y2="100" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3"/>
+                <!-- Weekly Seasonality Wave -->
+                <path d="M 40 110 Q 70 60 100 110 T 160 110 T 220 110 T 280 110 T 340 110" fill="none" stroke="#059669" stroke-width="2.2"/>
+                <!-- Underlying Growth Trend -->
+                <path d="M 40 150 L 360 55" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+                <text x="50" y="24" font-size="11" fill="#2563eb" font-weight="700">Growth Trend (+18.4% YoY)</text>
+                <text x="230" y="24" font-size="11" fill="#059669" font-weight="700">Weekly Seasonality (Weekend Peak)</text>
               </svg>
             </div>
           </div>
         </div>
 
-        <!-- 8. Decision Tree — Business Outcome Logic & Top 5 Drivers -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="18" cy="5" r="3"></circle>
-                <circle cx="6" cy="12" r="3"></circle>
-                <circle cx="18" cy="19" r="3"></circle>
-                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-              </svg>
-              <span>Decision Tree — Business Outcome Logic</span>
-            </div>
-            <div style="text-align:center; padding:6px 0;">
-              <svg viewBox="0 0 380 210" style="width:100%; max-height:200px;">
-                <rect x="130" y="10" width="120" height="34" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.8"/>
-                <text x="190" y="26" font-size="10" font-weight="700" fill="#1e40af" text-anchor="middle">7-Day Lag Velocity</text>
-                <text x="190" y="38" font-size="9" fill="#64748b" text-anchor="middle">&gt; 1,500 units/day?</text>
-                <line x1="160" y1="44" x2="90" y2="78" stroke="#94a3b8" stroke-width="1.5"/>
-                <line x1="220" y1="44" x2="290" y2="78" stroke="#94a3b8" stroke-width="1.5"/>
-                <text x="110" y="60" font-size="9" fill="#16a34a" font-weight="700">True</text>
-                <text x="260" y="60" font-size="9" fill="#dc2626" font-weight="700">False</text>
-                <rect x="35" y="78" width="110" height="34" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
-                <text x="90" y="93" font-size="10" font-weight="700" fill="#166534" text-anchor="middle">Promo Active &gt; 15%</text>
-                <text x="90" y="105" font-size="9" fill="#64748b" text-anchor="middle">Weekend Surge</text>
-                <rect x="235" y="78" width="110" height="34" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
-                <text x="290" y="93" font-size="10" font-weight="700" fill="#9a3412" text-anchor="middle">Weekday Base</text>
-                <text x="290" y="105" font-size="9" fill="#64748b" text-anchor="middle">Steady Rate</text>
-                <line x1="65" y1="112" x2="45" y2="145" stroke="#94a3b8" stroke-width="1.2"/>
-                <line x1="115" y1="112" x2="135" y2="145" stroke="#94a3b8" stroke-width="1.2"/>
-                <rect x="10" y="145" width="70" height="30" rx="4" fill="#2563eb" stroke="#1d4ed8"/>
-                <text x="45" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">2,150 u</text>
-                <rect x="100" y="145" width="70" height="30" rx="4" fill="#3b82f6" stroke="#2563eb"/>
-                <text x="135" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">1,780 u</text>
-                <line x1="265" y1="112" x2="245" y2="145" stroke="#94a3b8" stroke-width="1.2"/>
-                <line x1="315" y1="112" x2="335" y2="145" stroke="#94a3b8" stroke-width="1.2"/>
-                <rect x="210" y="145" width="70" height="30" rx="4" fill="#f59e0b" stroke="#d97706"/>
-                <text x="245" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">1,340 u</text>
-                <rect x="300" y="145" width="70" height="30" rx="4" fill="#94a3b8" stroke="#64748b"/>
-                <text x="335" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">980 u</text>
-              </svg>
-            </div>
-          </div>
-
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+        <!-- 8. Time-Series Exogenous Regressors & Seasonality Drivers -->
+        <div class="sf-card-grid-2">
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
                 <line x1="4" y1="22" x2="4" y2="15"></line>
               </svg>
-              <span>Feature Importance — Top 5 Drivers</span>
+              <span>Exogenous Regressors & Time-Series Drivers</span>
             </div>
             <table class="feature-table">
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Feature</th>
-                  <th>Importance</th>
+                  <th>Regressors / Seasonality Factor</th>
+                  <th>Coefficient Impact</th>
                   <th>Contribution %</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="feat-rank">1</td>
-                  <td class="feat-name">Day-of-Week Seasonality</td>
-                  <td class="feat-score">34.20</td>
+                  <td class="feat-name">Day-of-Week Seasonality (Weekend Surge)</td>
+                  <td class="feat-score">+532.4 units</td>
                   <td class="feat-pct">34.2%</td>
                 </tr>
                 <tr>
                   <td class="feat-rank">2</td>
-                  <td class="feat-name">Marketing Promotional Events</td>
-                  <td class="feat-score">26.80</td>
+                  <td class="feat-name">Marketing Promotional Regressors (Discounts)</td>
+                  <td class="feat-score">+418.1 units</td>
                   <td class="feat-pct">26.8%</td>
                 </tr>
                 <tr>
                   <td class="feat-rank">3</td>
-                  <td class="feat-name">7-Day Rolling Lag Sales</td>
-                  <td class="feat-score">19.40</td>
+                  <td class="feat-name">7-Day Rolling Lag Sales Momentum</td>
+                  <td class="feat-score">+302.5 units</td>
                   <td class="feat-pct">19.4%</td>
                 </tr>
                 <tr>
                   <td class="feat-rank">4</td>
-                  <td class="feat-name">Regional DC Allocation</td>
-                  <td class="feat-score">11.50</td>
+                  <td class="feat-name">Regional Distribution Center (DC) Allocation & Channel Mix</td>
+                  <td class="feat-score">+179.3 units</td>
                   <td class="feat-pct">11.5%</td>
                 </tr>
                 <tr>
                   <td class="feat-rank">5</td>
-                  <td class="feat-name">Holiday & Weather Indicator</td>
-                  <td class="feat-score">8.10</td>
+                  <td class="feat-name">Holiday Calendar & Climate Variations</td>
+                  <td class="feat-score">+126.2 units</td>
                   <td class="feat-pct">8.1%</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              <span>Forecast Summary & S&OP Parameters</span>
+            </div>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Mean Daily Demand</span>
+              <span class="sf-line-val">1,555 units/day</span>
+            </div>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Peak Promotional Day Demand</span>
+              <span class="sf-line-val sf-val-green">2,150 units/day</span>
+            </div>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Baseline Weekday Demand</span>
+              <span class="sf-line-val">1,120 units/day</span>
+            </div>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Recommended Safety Stock Coverage</span>
+              <span class="sf-line-val sf-val-blue">9 Days (Reduced from 14d)</span>
+            </div>
+            <div class="sf-metric-line" style="border-bottom:none; padding-top:14px;">
+              <span class="sf-line-label" style="align-items:flex-start;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" style="margin-top:2px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Operational lens:
+              </span>
+              <span style="font-size:12.5px; font-weight:700; color:#0f172a; text-align:right; max-width:65%;">High model reliability (88.82%) releases $185,000 in safety stock working capital while securing 98.5% order fulfillment.</span>
+            </div>
           </div>
         </div>
 
@@ -2917,7 +2901,7 @@
             <li><strong>Automate daily SKU-level replenishment requests:</strong> Feed daily predictions (1,555 units/day mean velocity) directly to Stage 2 Demand Planning to automate replenishment triggers.</li>
             <li><strong>Mitigate high-demand promotional surges:</strong> Advance notice of +28.4% demand surge for Brand A Cola in Week 38 allows locking supplier production slots 18 days ahead.</li>
             <li><strong>Reduce buffer holding requirements:</strong> 88.82% prediction reliability allows reducing safety coverage from 14 days down to 9 days across top 20 high-velocity SKUs.</li>
-            <li><strong>Decision Engine Summary:</strong> Accuracy: <strong>88.82%</strong> · R² Correlation: <strong>0.8693</strong> · MAE: <strong>±191.17 units</strong> · Current DXI: <strong>6.35</strong> &rarr; Business Outcome DXI: <strong>8.45</strong>.</li>
+            <li><strong>Model Performance Summary:</strong> Accuracy: <strong>88.82%</strong> · R² Correlation: <strong>0.8693</strong> · MAE: <strong>±191.17 units</strong> · RMSE: <strong>260.10 units</strong>.</li>
           </ul>
         </div>
 
@@ -2925,17 +2909,16 @@
 
 
       <!-- =====================================================================
-           VIEW 2: TARGET 2 — Minimize Actual vs Predicted Sales Difference (%) [ERROR MINIMIZATION]
+           VIEW 2: TARGET 2 — Minimize Actual vs Predicted Sales Difference (%) [PROPHET & SARIMA ERROR MINIMIZATION]
            ===================================================================== -->
       <div id="view-target2" class="sales-view" style="display:none;">
         
         <!-- Hero Header Banner -->
         <div class="hero-banner-card">
-          <div class="hero-badge">✦ Business Outcome 2 · Forecast Residual & Error Minimization</div>
           <div class="hero-header-flex">
             <div>
               <h1 class="hero-title">Minimize Actual vs Predicted Sales Difference (%)</h1>
-              <p class="hero-subtitle">Minimize absolute variance and percentage error between actual register sales and predicted order allocations — shrinking prediction error from 31.2% down to 11.2% to eliminate emergency spot freight and prevent stockouts.</p>
+              <p class="hero-subtitle">Minimize absolute variance and percentage error between actual register sales and predicted order allocations — shrinking prediction error from 31.2% down to 11.2% using Prophet changepoint smoothing and SARIMA residual analysis.</p>
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
@@ -2946,297 +2929,293 @@
         </div>
 
         <!-- 1. Dataset Overview -->
-        <div class="sxi-card-title-row" style="margin-top: 10px;">
+        <div class="sf-card-title-row" style="margin-top: 10px;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
           </svg>
           <span>Dataset Overview</span>
         </div>
-        <div class="sxi-dataset-strip">
-          <div class="sxi-ds-col fill">
-            <span class="sxi-ds-lbl">Dataset Name</span>
-            <span class="sxi-ds-val">fmcg_sales_3years_1M_rows.csv</span>
+        <div class="sf-dataset-strip">
+          <div class="sf-ds-col fill">
+            <span class="sf-ds-lbl">Dataset Name</span>
+            <span class="sf-ds-val">fmcg_sales_3years_1M_rows.csv</span>
           </div>
-          <div class="sxi-ds-col">
-            <span class="sxi-ds-lbl">Rows</span>
-            <span class="sxi-ds-val num">1,000,000</span>
+          <div class="sf-ds-col">
+            <span class="sf-ds-lbl">Historical POS Rows</span>
+            <span class="sf-ds-val num">1,000,000</span>
           </div>
-          <div class="sxi-ds-col">
-            <span class="sxi-ds-lbl">Columns</span>
-            <span class="sxi-ds-val num">14</span>
+          <div class="sf-ds-col">
+            <span class="sf-ds-lbl">Error Benchmark Window</span>
+            <span class="sf-ds-val num">3-Year Backtest</span>
           </div>
         </div>
 
         <!-- 2. Key Performance Indicators -->
-        <div class="sxi-card-title-row">
+        <div class="sf-card-title-row">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="10"></circle>
             <path d="M12 2a10 10 0 0 1 10 10"></path>
           </svg>
           <span>Key Performance Indicators</span>
         </div>
-        <div class="sxi-kpi-grid-4">
-          <div class="sxi-kpi-top-card border-blue">
-            <div class="sxi-kpi-icon-pill pill-blue">📈</div>
-            <span class="sxi-kpi-title-sub">Current DXI</span>
-            <span class="sxi-kpi-main-val" style="color: #2563eb;">6.28</span>
+        <div class="sf-kpi-grid-4">
+          <div class="sf-kpi-top-card border-green">
+            <div class="sf-kpi-icon-pill pill-green">%</div>
+            <span class="sf-kpi-title-sub">Prophet WMAPE Error</span>
+            <span class="sf-kpi-main-val" style="color: #059669;">11.18%</span>
           </div>
-          <div class="sxi-kpi-top-card border-green">
-            <div class="sxi-kpi-icon-pill pill-green">%</div>
-            <span class="sxi-kpi-title-sub">WMAPE Error</span>
-            <span class="sxi-kpi-main-val" style="color: #059669;">11.18%</span>
+          <div class="sf-kpi-top-card border-blue">
+            <div class="sf-kpi-icon-pill pill-blue">📦</div>
+            <span class="sf-kpi-title-sub">Residual Variance (Std Dev)</span>
+            <span class="sf-kpi-main-val" style="color: #2563eb;">±4.80%</span>
           </div>
-          <div class="sxi-kpi-top-card border-blue">
-            <div class="sxi-kpi-icon-pill pill-blue">📦</div>
-            <span class="sxi-kpi-title-sub">Error Variance (Std Dev)</span>
-            <span class="sxi-kpi-main-val" style="color: #0f172a;">±4.8%</span>
+          <div class="sf-kpi-top-card border-purple">
+            <div class="sf-kpi-icon-pill pill-purple">⚖️</div>
+            <span class="sf-kpi-title-sub">Tracking Signal (Bias)</span>
+            <span class="sf-kpi-main-val" style="color: #7c3aed;">+0.82</span>
           </div>
-          <div class="sxi-kpi-top-card border-orange">
-            <div class="sxi-kpi-icon-pill pill-orange">⚠️</div>
-            <span class="sxi-kpi-title-sub">Error Difference Reduction</span>
-            <span class="sxi-kpi-main-val" style="color: #ea580c;">-64.1%</span>
-          </div>
-        </div>
-
-        <!-- 3. Business Outcome Improvement (Build) -->
-        <div class="sxi-build-card">
-          <div class="sxi-build-left">
-            <div class="sxi-build-badge">Business Outcome Improvement (Build)</div>
-            <div class="sxi-build-headline">-20.0% Forecast Error Reduction</div>
-            <div class="sxi-build-desc">
-              Build business outcome improvement is -20.0% (decreasing) on Minimize Actual vs Predicted Sales Difference (%) — Forecast Error Percentage across regional DCs after 30 days.
-            </div>
-          </div>
-          <div class="sxi-build-right">
-            <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Current Error Difference</span>
-              <span class="sxi-bm-val">31.2%</span>
-            </div>
-            <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Business Outcome After -20%</span>
-              <span class="sxi-bm-val green">11.2%</span>
-            </div>
+          <div class="sf-kpi-top-card border-orange">
+            <div class="sf-kpi-icon-pill pill-orange">⚠️</div>
+            <span class="sf-kpi-title-sub">Total Error Reduction</span>
+            <span class="sf-kpi-main-val" style="color: #ea580c;">-64.2%</span>
           </div>
         </div>
 
-        <!-- 4. Current vs Business Outcome DXI -->
-        <div class="sxi-dxi-container">
-          <div class="sxi-card-title-row">
+        <!-- 3. Target Improvement (Build) -->
+        <div class="sf-build-card">
+          <div class="sf-build-left">
+            <div class="sf-build-badge">Target Improvement (Build)</div>
+            <div class="sf-build-headline">-20.05% Forecast Error Difference Cut</div>
+            <div class="sf-build-desc">
+              Residual variance calibration reduces forecast error percentage from 31.23% down to 11.18% — compressing error variance and safeguarding $485,000 in prevented stockouts and buffer waste across 4 Distribution Centers (DCs).
+            </div>
+          </div>
+          <div class="sf-build-right">
+            <div class="sf-build-metric">
+              <span class="sf-bm-lbl">Baseline Forecast Error</span>
+              <span class="sf-bm-val">31.23%</span>
+            </div>
+            <div class="sf-build-metric">
+              <span class="sf-bm-lbl">Target Error Difference</span>
+              <span class="sf-bm-val green">11.18%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Error Containment & Loss Prevention Grid -->
+        <div class="sf-model-container">
+          <div class="sf-card-title-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z"></path>
             </svg>
-            <span>Current vs Business Outcome DXI</span>
+            <span>Forecast Error Containment & Model Comparison Matrix</span>
           </div>
-          <div class="sxi-dxi-grid-6">
-            <div class="dxi-card-box border-blue">
-              <span class="dxi-card-lbl">Current DXI</span>
-              <span class="dxi-card-num" style="color: #2563eb;">6.28</span>
+          <div class="sf-model-grid-6">
+            <div class="sf-kpi-box border-blue">
+              <span class="sf-kpi-lbl">Baseline Spreadsheet Error</span>
+              <span class="sf-kpi-num" style="color: #2563eb;">31.23%</span>
             </div>
-            <div class="dxi-card-box border-green">
-              <span class="dxi-card-lbl">Current Error Difference</span>
-              <span class="dxi-card-num" style="color: #059669;">31.2%</span>
+            <div class="sf-kpi-box border-green">
+              <span class="sf-kpi-lbl">Prophet Champion Error</span>
+              <span class="sf-kpi-num" style="color: #059669;">11.18%</span>
             </div>
-            <div class="dxi-card-box border-dark">
-              <span class="dxi-card-lbl">Model Residual Fit</span>
-              <span class="dxi-card-num" style="color: #0f172a;">0.881</span>
+            <div class="sf-kpi-box border-dark">
+              <span class="sf-kpi-lbl">Auto-SARIMA Baseline Error</span>
+              <span class="sf-kpi-num" style="color: #0f172a;">17.86%</span>
             </div>
-            <div class="dxi-card-box border-purple">
-              <span class="dxi-card-lbl">Business Outcome DXI</span>
-              <span class="dxi-card-num" style="color: #7c3aed;">8.52</span>
+            <div class="sf-kpi-box border-purple">
+              <span class="sf-kpi-lbl">Total Error Cut</span>
+              <span class="sf-kpi-num" style="color: #7c3aed;">-20.05%</span>
             </div>
-            <div class="dxi-card-box border-orange">
-              <span class="dxi-card-lbl">Business Outcome Error Difference</span>
-              <span class="dxi-card-num" style="color: #ea580c;">11.2%</span>
+            <div class="sf-kpi-box border-orange">
+              <span class="sf-kpi-lbl">Tracking Signal Control</span>
+              <span class="sf-kpi-num" style="color: #ea580c;">+0.82 TS</span>
             </div>
-            <div class="dxi-card-box border-emerald">
-              <span class="dxi-card-lbl">Error Reduction</span>
-              <span class="dxi-card-num" style="color: #16a34a;">-20.0%</span>
+            <div class="sf-kpi-box border-emerald">
+              <span class="sf-kpi-lbl">Capital Waste Avoided</span>
+              <span class="sf-kpi-num" style="color: #16a34a;">$485,000</span>
             </div>
           </div>
         </div>
 
         <!-- 5. 3 Levels of Improvement -->
-        <div class="sxi-levels-container">
-          <div class="sxi-card-title-row">
+        <div class="sf-levels-container">
+          <div class="sf-card-title-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
               <polyline points="16 7 22 7 22 13"></polyline>
             </svg>
-            <span>3 Levels of Improvement</span>
+            <span>3 Levels of Error & Variance Compression</span>
           </div>
           <div class="levels-col-grid">
             <div class="level-col-item">
-              <span class="level-col-name">Immediate</span>
+              <span class="level-col-name">Level 1 · Immediate (30 Days)</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
-                <span class="level-metric-val">8.52</span>
+                <span class="level-metric-lbl">Target WMAPE Error</span>
+                <span class="level-metric-val">11.18%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected error</span>
-                <span class="level-metric-val">11.2%</span>
+                <span class="level-metric-lbl">Residual Variance</span>
+                <span class="level-metric-val">±4.80%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Reduction</span>
-                <span class="level-metric-val" style="color: #16a34a;">-20.0%</span>
+                <span class="level-metric-lbl">Error Reduction</span>
+                <span class="level-metric-val" style="color: #16a34a;">-20.05%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Immediate improvement:</strong> -20.0% variance reduction drops error percentage from 31.2% down to 11.2% after 30 days. DXI moves from 6.28 to short-term DXI 8.52.
+                <strong>Immediate impact:</strong> Residual error compression shrinks daily error variance to ±4.8%, halving emergency freight costs.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Mid-term</span>
+              <span class="level-col-name">Level 2 · Mid-term (90 Days)</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
-                <span class="level-metric-val">9.08</span>
+                <span class="level-metric-lbl">Target WMAPE Error</span>
+                <span class="level-metric-val">7.60%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected error</span>
-                <span class="level-metric-val">7.6%</span>
+                <span class="level-metric-lbl">Residual Variance</span>
+                <span class="level-metric-val">±3.10%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Reduction</span>
-                <span class="level-metric-val" style="color: #16a34a;">-23.6%</span>
+                <span class="level-metric-lbl">Error Reduction</span>
+                <span class="level-metric-val" style="color: #16a34a;">-23.63%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term improvement:</strong> Error variance dampening across volatile promotional weeks brings error down to 7.6%. DXI moves to 9.08.
+                <strong>Mid-term impact:</strong> Promotional regressor smoothing eliminates high-variance spikes during marketing campaign weeks.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Long-term</span>
+              <span class="level-col-name">Level 3 · Long-term (Sustained)</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
-                <span class="level-metric-val">9.62</span>
+                <span class="level-metric-lbl">Target WMAPE Error</span>
+                <span class="level-metric-val">3.90%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected error</span>
-                <span class="level-metric-val">3.9%</span>
+                <span class="level-metric-lbl">Residual Variance</span>
+                <span class="level-metric-val">±1.70%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Reduction</span>
-                <span class="level-metric-val" style="color: #16a34a;">-27.3%</span>
+                <span class="level-metric-lbl">Error Reduction</span>
+                <span class="level-metric-val" style="color: #16a34a;">-27.33%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term improvement:</strong> Deep residual stabilization drives persistent low error variance of 3.9%. DXI reaches 9.62.
+                <strong>Long-term impact:</strong> Automated residual dampening establishes near-zero error variance, allowing automated PO generation.
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 6. Model Performance & Current Business Status -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+        <!-- 6. Residual Error Diagnostics & Model Comparison -->
+        <div class="sf-card-grid-2">
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
                 <path d="M2 17l10 5 10-5"></path>
                 <path d="M2 12l10 5 10-5"></path>
               </svg>
-              <span>Error Model Metrics</span>
+              <span>Meta Prophet Residual Diagnostics</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">WMAPE Error Difference</span>
-              <span class="sxi-line-val">11.18%</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">WMAPE Error Difference</span>
+              <span class="sf-line-val sf-val-green">11.18%</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Mean Percentage Error (MPE)</span>
-              <span class="sxi-line-val">+1.24%</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Mean Percentage Error (MPE)</span>
+              <span class="sf-line-val">+1.24%</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Mean Squared Error (MSE)</span>
-              <span class="sxi-line-val">67,652</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Mean Squared Error (MSE)</span>
+              <span class="sf-line-val">67,652</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Median Absolute Error</span>
-              <span class="sxi-line-val">±138.40 units</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Median Absolute Error</span>
+              <span class="sf-line-val">±138.40 units</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Explained Variance Score</span>
-              <span class="sxi-line-val">0.8812</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Ljung-Box Test (Residual Autocorrelation)</span>
+              <span class="sf-line-val sf-val-green">p = 0.42 (White Noise)</span>
             </div>
           </div>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
               </svg>
-              <span>Current Business Status</span>
+              <span>Auto-SARIMA Residual Diagnostics</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                Current DXI
-              </span>
-              <span class="sxi-line-val">6.28</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">WMAPE Error Difference</span>
+              <span class="sf-line-val">17.86%</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>
-                Baseline Error Variance
-              </span>
-              <span class="sxi-line-val">31.2%</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Mean Percentage Error (MPE)</span>
+              <span class="sf-line-val">+2.85%</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
-                After 30 days
-              </span>
-              <span class="sxi-line-val sxi-val-green">11.2% · -20.0%</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Mean Squared Error (MSE)</span>
+              <span class="sf-line-val">99,477</span>
             </div>
-            <div class="sxi-metric-line" style="border-bottom:none; padding-top:14px;">
-              <span class="sxi-line-label" style="align-items:flex-start;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" style="margin-top:2px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                Business lens:
-              </span>
-              <span style="font-size:12.5px; font-weight:700; color:#0f172a; text-align:right; max-width:65%;">Eliminate erratic ±31.2% error spikes; align DC safety buffers and replenishment order batch sizes.</span>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Median Absolute Error</span>
+              <span class="sf-line-val">±186.20 units</span>
+            </div>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Ljung-Box Test (Residual Autocorrelation)</span>
+              <span class="sf-line-val">p = 0.28</span>
             </div>
           </div>
         </div>
 
-        <!-- 7. Actual vs Predicted & Error Distribution -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+        <!-- 7. Actual vs Predicted Residual Variance Plots -->
+        <div class="sf-card-grid-2">
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
                 <line x1="2" y1="12" x2="22" y2="12"></line>
               </svg>
-              <span>Actual vs Predicted Residual Variance Band (±11.2%)</span>
+              <span>Actual vs Predicted Residual Error Variance Envelope (±11.2%)</span>
             </div>
             <div style="text-align:center; padding:10px 0;">
               <svg viewBox="0 0 400 200" style="width:100%; max-height:190px;">
                 <line x1="40" y1="170" x2="380" y2="170" stroke="#cbd5e1" stroke-width="1.5"/>
                 <line x1="40" y1="30" x2="40" y2="170" stroke="#cbd5e1" stroke-width="1.5"/>
+                <!-- Upper Confidence Band -->
                 <path d="M 40 100 Q 120 70 200 65 T 360 45" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <!-- Lower Confidence Band -->
                 <path d="M 40 150 Q 120 120 200 115 T 360 95" fill="none" stroke="#93c5fd" stroke-width="1.5" stroke-dasharray="3 3"/>
+                <!-- Shaded Band -->
                 <path d="M 40 100 Q 120 70 200 65 T 360 45 L 360 95 Q 280 115 200 115 T 40 150 Z" fill="rgba(37, 99, 235, 0.08)"/>
+                <!-- Mean Prediction -->
                 <path d="M 40 125 Q 120 95 200 90 T 360 70" fill="none" stroke="#2563eb" stroke-width="2.6"/>
                 <circle cx="80" cy="20" r="4" fill="#2563eb"/>
-                <text x="90" y="24" font-size="11" fill="#475569" font-weight="600">Predicted Trajectory</text>
+                <text x="90" y="24" font-size="11" fill="#475569" font-weight="600">Predicted Demand</text>
                 <circle cx="250" cy="20" r="4" fill="#93c5fd"/>
-                <text x="260" y="24" font-size="11" fill="#475569" font-weight="600">±11.2% Error Tolerance Band</text>
+                <text x="260" y="24" font-size="11" fill="#475569" font-weight="600">±11.2% Confined Error Band</text>
               </svg>
             </div>
           </div>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="4 14 10 14 10 20"></polyline>
                 <polyline points="20 10 14 10 14 4"></polyline>
                 <line x1="14" y1="10" x2="21" y2="3"></line>
                 <line x1="3" y1="21" x2="10" y2="14"></line>
               </svg>
-              <span>Forecast Error Percentage Distribution (Tight Band)</span>
+              <span>Forecast Percentage Error Distribution (Tight Zero-Centered Band)</span>
             </div>
             <div style="text-align:center; padding:10px 0;">
               <svg viewBox="0 0 400 200" style="width:100%; max-height:190px;">
                 <line x1="40" y1="170" x2="380" y2="170" stroke="#cbd5e1" stroke-width="1.5"/>
                 <line x1="210" y1="30" x2="210" y2="170" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3 3"/>
+                <!-- Narrow Gaussian error curve -->
                 <path d="M 100 170 C 160 170, 185 45, 210 45 C 235 45, 260 170, 320 170" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="2.5"/>
                 <text x="210" y="24" font-size="11" fill="#059669" font-weight="700" text-anchor="middle">Mean Difference = 0 (WMAPE 11.18%)</text>
                 <text x="140" y="185" font-size="10" fill="#64748b">-15%</text>
@@ -3247,100 +3226,90 @@
           </div>
         </div>
 
-        <!-- 8. Decision Tree — Error Logic & Top 5 Drivers -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="18" cy="5" r="3"></circle>
-                <circle cx="6" cy="12" r="3"></circle>
-                <circle cx="18" cy="19" r="3"></circle>
-                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-              </svg>
-              <span>Decision Tree — Error Containment Logic</span>
-            </div>
-            <div style="text-align:center; padding:6px 0;">
-              <svg viewBox="0 0 380 210" style="width:100%; max-height:200px;">
-                <rect x="130" y="10" width="120" height="34" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.8"/>
-                <text x="190" y="26" font-size="10" font-weight="700" fill="#1e40af" text-anchor="middle">Promo Depth &gt; 20%</text>
-                <text x="190" y="38" font-size="9" fill="#64748b" text-anchor="middle">Volatility Check</text>
-                <line x1="160" y1="44" x2="90" y2="78" stroke="#94a3b8" stroke-width="1.5"/>
-                <line x1="220" y1="44" x2="290" y2="78" stroke="#94a3b8" stroke-width="1.5"/>
-                <text x="110" y="60" font-size="9" fill="#16a34a" font-weight="700">True</text>
-                <text x="260" y="60" font-size="9" fill="#dc2626" font-weight="700">False</text>
-                <rect x="35" y="78" width="110" height="34" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
-                <text x="90" y="93" font-size="10" font-weight="700" fill="#166534" text-anchor="middle">Footfall Spike &gt; 25%</text>
-                <text x="90" y="105" font-size="9" fill="#64748b" text-anchor="middle">Surge Damping</text>
-                <rect x="235" y="78" width="110" height="34" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
-                <text x="290" y="93" font-size="10" font-weight="700" fill="#9a3412" text-anchor="middle">Regular Flow</text>
-                <text x="290" y="105" font-size="9" fill="#64748b" text-anchor="middle">Low Variance</text>
-                <line x1="65" y1="112" x2="45" y2="145" stroke="#94a3b8" stroke-width="1.2"/>
-                <line x1="115" y1="112" x2="135" y2="145" stroke="#94a3b8" stroke-width="1.2"/>
-                <rect x="10" y="145" width="70" height="30" rx="4" fill="#059669" stroke="#047857"/>
-                <text x="45" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">±6.8% err</text>
-                <rect x="100" y="145" width="70" height="30" rx="4" fill="#10b981" stroke="#059669"/>
-                <text x="135" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">±9.4% err</text>
-                <line x1="265" y1="112" x2="245" y2="145" stroke="#94a3b8" stroke-width="1.2"/>
-                <line x1="315" y1="112" x2="335" y2="145" stroke="#94a3b8" stroke-width="1.2"/>
-                <rect x="210" y="145" width="70" height="30" rx="4" fill="#3b82f6" stroke="#2563eb"/>
-                <text x="245" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">±11.2% err</text>
-                <rect x="300" y="145" width="70" height="30" rx="4" fill="#f59e0b" stroke="#d97706"/>
-                <text x="335" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">±13.8% err</text>
-              </svg>
-            </div>
-          </div>
-
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+        <!-- 8. Forecast Error & Volatility Drivers -->
+        <div class="sf-card-grid-2">
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
                 <line x1="4" y1="22" x2="4" y2="15"></line>
               </svg>
-              <span>Feature Importance — Error Variance Drivers</span>
+              <span>Forecast Error & Volatility Drivers</span>
             </div>
             <table class="feature-table">
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Feature</th>
-                  <th>Importance</th>
+                  <th>Volatility Driver</th>
+                  <th>Impact Magnitude</th>
                   <th>Contribution %</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td class="feat-rank">1</td>
-                  <td class="feat-name">Promotional Volatility Spikes</td>
-                  <td class="feat-score">36.50</td>
+                  <td class="feat-name">Promotional Trade Discount Surges</td>
+                  <td class="feat-score">±385 units</td>
                   <td class="feat-pct">36.5%</td>
                 </tr>
                 <tr>
                   <td class="feat-rank">2</td>
-                  <td class="feat-name">Weekend Customer Footfall Shift</td>
-                  <td class="feat-score">28.20</td>
+                  <td class="feat-name">Weekend Footfall & Payday Clustering</td>
+                  <td class="feat-score">±295 units</td>
                   <td class="feat-pct">28.2%</td>
                 </tr>
                 <tr>
                   <td class="feat-rank">3</td>
-                  <td class="feat-name">Intra-DC Demand Redistribution</td>
-                  <td class="feat-score">15.70</td>
+                  <td class="feat-name">Inter-DC Stockout Transfer Spillovers</td>
+                  <td class="feat-score">±165 units</td>
                   <td class="feat-pct">15.7%</td>
                 </tr>
                 <tr>
                   <td class="feat-rank">4</td>
-                  <td class="feat-name">Regional Weather Event Anomaly</td>
-                  <td class="feat-score">11.40</td>
+                  <td class="feat-name">Regional Weather & Climate Anomalies</td>
+                  <td class="feat-score">±120 units</td>
                   <td class="feat-pct">11.4%</td>
                 </tr>
                 <tr>
                   <td class="feat-rank">5</td>
-                  <td class="feat-name">Unit Price Fluctuation</td>
-                  <td class="feat-score">8.20</td>
+                  <td class="feat-name">Competitor Shelf Price Fluctuations</td>
+                  <td class="feat-score">±85 units</td>
                   <td class="feat-pct">8.2%</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          <div class="sf-white-card">
+            <div class="sf-card-title-row">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              <span>Residual Diagnostics & Loss Prevention</span>
+            </div>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Baseline Error Spread</span>
+              <span class="sf-line-val" style="color:#dc2626;">±31.23%</span>
+            </div>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Target Error Spread</span>
+              <span class="sf-line-val sf-val-green">±11.18%</span>
+            </div>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">95% Prediction Interval Width</span>
+              <span class="sf-line-val">±15.0%</span>
+            </div>
+            <div class="sf-metric-line">
+              <span class="sf-line-label">Annual Working Capital Safeguarded</span>
+              <span class="sf-line-val sf-val-blue">$485,000</span>
+            </div>
+            <div class="sf-metric-line" style="border-bottom:none; padding-top:14px;">
+              <span class="sf-line-label" style="align-items:flex-start;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" style="margin-top:2px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Loss Mitigation:
+              </span>
+              <span style="font-size:12.5px; font-weight:700; color:#0f172a; text-align:right; max-width:65%;">Compressing residual variance from ±31.2% to ±11.2% eliminates excess buffer hoarding and emergency stockout freight.</span>
+            </div>
           </div>
         </div>
 
@@ -3356,7 +3325,7 @@
             <li><strong>Dampen forecast volatility:</strong> Shrink volume error difference from 31.2% down to 11.2%, preventing bullwhip inventory swings across suppliers.</li>
             <li><strong>Protect $485,000 in lost revenue:</strong> High error containment eliminates stockouts on high-margin SKUs during high-velocity promotional weekends.</li>
             <li><strong>Compress safety stock coverage:</strong> Tightly bounded residual error (±4.8% standard deviation) enables lowering safety stock buffer from 14 days down to 9 days.</li>
-            <li><strong>Decision Engine Summary:</strong> WMAPE Error: <strong>11.18%</strong> · Explained Variance: <strong>0.881</strong> · Mean Error: <strong>0.00</strong> · Current DXI: <strong>6.28</strong> &rarr; Business Outcome DXI: <strong>8.52</strong>.</li>
+            <li><strong>Error Metrics Summary:</strong> WMAPE Error: <strong>11.18%</strong> · Explained Variance: <strong>0.8812</strong> · Mean Error: <strong>+0.04%</strong> · Residual Std: <strong>±4.80%</strong>.</li>
           </ul>
         </div>
 

@@ -9,7 +9,7 @@
   <style>
     /* Drawer Menu Direct Override Styles */
     .menu-drawer {
-      width: 360px !important;
+      width: 480px !important;
       max-width: 92vw !important;
       background: #ffffff !important;
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
@@ -168,7 +168,7 @@
       flex-shrink: 0;
     }
 
-    /* Executive Business Outcome Improvement (Build) Card (Matches Reference Dashboard Page 2) */
+    /* Executive Target Improvement (Build) Card (Matches Reference Dashboard Page 2) */
     .target-improvement-container {
       background: linear-gradient(135deg, #f0fdf4 0%, #f8fafc 100%);
       border: 1.5px solid #86efac;
@@ -551,8 +551,8 @@
     .sxi-val-green { color: #16a34a !important; }
     .sxi-val-blue { color: #2563eb !important; }
 
-    /* Current vs Business Outcome DXI Card (Screenshot 3) */
-    .sxi-dxi-container {
+    /* Current vs Target SXI Card (Screenshot 3) */
+    .sxi-container {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 14px;
@@ -560,12 +560,12 @@
       margin-bottom: 22px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
     }
-    .sxi-dxi-grid-6 {
+    .sxi-grid-6 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 14px;
     }
-    .dxi-card-box {
+    .sxi-card-box {
       background: #ffffff;
       border: 1px solid #e2e8f0;
       border-radius: 12px;
@@ -582,12 +582,12 @@
     .border-orange { border-bottom: 3.5px solid #ea580c !important; }
     .border-emerald { border-bottom: 3.5px solid #059669 !important; }
 
-    .dxi-card-lbl {
+    .sxi-card-lbl {
       font-size: 11.5px;
       font-weight: 600;
       color: #64748b;
     }
-    .dxi-card-num {
+    .sxi-card-num {
       font-size: 24px;
       font-weight: 800;
       letter-spacing: -0.02em;
@@ -873,9 +873,9 @@
 
     /* Dark Mode Overrides for SXI elements */
     [data-theme="dark"] .sxi-white-card,
-    [data-theme="dark"] .sxi-dxi-container,
+    [data-theme="dark"] .sxi-container,
     [data-theme="dark"] .sxi-levels-container,
-    [data-theme="dark"] .dxi-card-box,
+    [data-theme="dark"] .sxi-card-box,
     [data-theme="dark"] .level-col-item {
       background: #111827;
       border-color: #1e293b;
@@ -1007,17 +1007,17 @@
         <a href="/portal/marketplace/demand_planning" class="menu-stage-title-link" title="View Demand Planning Executive Dashboard">
           <span>2. Demand Planning</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target1" class="menu-target-link" title="global_plan_demand_quantity">
+        <a href="/portal/marketplace/demand_planning?target=target1" class="menu-target-link" title="Improve Demand Coverage & Availability">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">global_plan_demand_quantity</span>
+            <span class="menu-target-name">Improve Demand Coverage & Availability</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target2" class="menu-target-link" title="lead_time">
+        <a href="/portal/marketplace/demand_planning?target=target2" class="menu-target-link" title="Maximize Delivery Reliability">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">lead_time</span>
+            <span class="menu-target-name">Maximize Delivery Reliability</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
@@ -1115,7 +1115,6 @@
       <div id="view-overview" class="procurement-view">
 
       <div class="hero-banner-card">
-        <div class="hero-badge">✦ Executive Dashboard</div>
         <div class="hero-header-flex">
           <div>
             <h1 class="hero-title">Procurement Decision Engine</h1>
@@ -1186,9 +1185,9 @@
               <polyline points="16 7 22 7 22 13"></polyline>
             </svg>
           </div>
-          <div class="kpi-v2-label">Current DXI Index</div>
+          <div class="kpi-v2-label">Current SXI Index</div>
           <div class="kpi-v2-value">6.42</div>
-          <div class="kpi-v2-sub">Business Outcome DXI: <strong>8.15</strong> (+26.9% SXI Gain)</div>
+          <div class="kpi-v2-sub">Target SXI: <strong>8.15</strong> (+26.9% SXI Gain)</div>
         </div>
 
         <div class="kpi-card-v2">
@@ -1238,14 +1237,14 @@
         </div>
       </div>
 
-      <!-- Section: Business Outcome Improvement (Build) — Exactly like Reference Dashboard Page 2 -->
+      <!-- Section: Target Improvement (Build) — Exactly like Reference Dashboard Page 2 -->
       <div class="target-improvement-container">
-        <div class="improvement-badge">BUSINESS OUTCOME IMPROVEMENT (BUILD)</div>
+        <div class="improvement-badge">TARGET IMPROVEMENT (BUILD)</div>
         <div class="improvement-main-flex">
           <div class="improvement-headline-col">
             <h2 class="improvement-big-title">+18.4% Margin Efficiency · 0% Single-Source Risk</h2>
             <p class="improvement-desc-text">
-              Build business outcome improvement reduces blended purchase cost to <strong>€3.76 / unit</strong> (saving €0.56 per unit), enforces automated reorder validation before committing funds, and splits volume across top suppliers with <strong>100% audit approval</strong> after 3 months.
+              Build target improvement reduces blended purchase cost to <strong>€3.76 / unit</strong> (saving €0.56 per unit), enforces automated reorder validation before committing funds, and splits volume across top suppliers with <strong>100% audit approval</strong> after 3 months.
             </p>
           </div>
           <div class="improvement-kpi-stack">
@@ -1254,7 +1253,7 @@
               <span class="imp-kpi-val text-red">€4.32 / unit</span>
             </div>
             <div class="imp-kpi-item">
-              <span class="imp-kpi-lbl">BUSINESS OUTCOME UNIT COST (BUILD)</span>
+              <span class="imp-kpi-lbl">TARGET UNIT COST (BUILD)</span>
               <span class="imp-kpi-val text-emerald">€3.76 (-12.8%)</span>
             </div>
           </div>
@@ -1263,17 +1262,17 @@
         <!-- Current vs Target Comparison Grid (Reference Dashboard Page 2) -->
         <div class="section-subhead-mini">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline></svg>
-          <span>Current vs Business Outcome Improvement Benchmark</span>
+          <span>Current vs Target Improvement Benchmark</span>
         </div>
 
         <div class="current-vs-target-grid">
           <div class="cvt-box">
-            <span class="cvt-label">Current DXI</span>
+            <span class="cvt-label">Current SXI</span>
             <span class="cvt-value text-blue">6.42</span>
             <span class="cvt-sub">Baseline Index</span>
           </div>
           <div class="cvt-box">
-            <span class="cvt-label">Business Outcome DXI</span>
+            <span class="cvt-label">Target SXI</span>
             <span class="cvt-value text-green">8.15</span>
             <span class="cvt-sub">+26.9% SXI Lift</span>
           </div>
@@ -1315,7 +1314,7 @@
         <div class="level-box">
           <div class="level-box-header">
             <span class="level-badge badge-l1">Immediate · Days 1–30</span>
-            <span class="level-stat">DXI 6.42 → 7.20</span>
+            <span class="level-stat">SXI 6.42 → 7.20</span>
           </div>
           <div class="level-box-title">Order Trigger Automation & Safety Gate</div>
           <div class="level-box-desc">
@@ -1327,7 +1326,7 @@
         <div class="level-box">
           <div class="level-box-header">
             <span class="level-badge badge-l2">Mid-Term · Days 31–60</span>
-            <span class="level-stat">DXI 7.20 → 7.85</span>
+            <span class="level-stat">SXI 7.20 → 7.85</span>
           </div>
           <div class="level-box-title">Dynamic Price Prediction & Multi-Vendor Split</div>
           <div class="level-box-desc">
@@ -1339,11 +1338,11 @@
         <div class="level-box">
           <div class="level-box-header">
             <span class="level-badge badge-l3">Long-Term · Quarter 2+</span>
-            <span class="level-stat">DXI 7.85 → 8.15</span>
+            <span class="level-stat">SXI 7.85 → 8.15</span>
           </div>
           <div class="level-box-title">Autonomous 5-Point ERP Audit & Compliance</div>
           <div class="level-box-desc">
-            Automates end-to-end commercial compliance: verifies supplier MOQ, lead time delivery windows, and guaranteed gross margin before PO release, achieving 98.4% automated audit approvals.
+            Automates end-to-end commercial compliance: verifies supplier Minimum Order Quantity (MOQ), lead time delivery windows, and guaranteed gross margin before PO release, achieving 98.4% automated audit approvals.
           </div>
         </div>
       </div>
@@ -1560,7 +1559,7 @@
           <li><strong>Automated reorder validation:</strong> Reorder gate verifies inventory position (248 units) is below ROP (13,163 units), preventing premature capital expenditure.</li>
           <li><strong>Eliminate single-source supply disruptions:</strong> Splitting 13,150 units across Primary Supplier S014 (9,250 units · 70%) and Secondary Supplier S015 (3,900 units · 30%) completely hedges factory delay risk.</li>
           <li><strong>Autonomous 5-point audit compliance:</strong> All 5 operational and financial gates cleared — locks in <strong>€32,665.50</strong> in projected gross margin (39.8% margin).</li>
-          <li><strong>Decision Engine Summary:</strong> Prediction Accuracy: <strong>94.6%</strong> · AUC: <strong>0.91</strong> · Precision: <strong>96.2%</strong> · Recall: <strong>97.8%</strong> · Current DXI: <strong>6.42</strong> &rarr; Business Outcome DXI: <strong>8.15</strong>.</li>
+          <li><strong>Decision Engine Summary:</strong> Prediction Accuracy: <strong>94.6%</strong> · AUC: <strong>0.91</strong> · Precision: <strong>96.2%</strong> · Recall: <strong>97.8%</strong> · Current SXI: <strong>6.42</strong> &rarr; Target SXI: <strong>8.15</strong>.</li>
         </ul>
       </div>
 
@@ -1575,7 +1574,6 @@
         
         <!-- Hero Header Banner -->
         <div class="hero-banner-card">
-          <div class="hero-badge">✦ Business Outcome 1 · Unit Purchase Cost SXI Regression</div>
           <div class="hero-header-flex">
             <div>
               <h1 class="hero-title">purchase_cost (€)</h1>
@@ -1623,7 +1621,7 @@
         <div class="sxi-kpi-grid-4">
           <div class="sxi-kpi-top-card border-blue">
             <div class="sxi-kpi-icon-pill pill-blue">📈</div>
-            <span class="sxi-kpi-title-sub">Current DXI</span>
+            <span class="sxi-kpi-title-sub">Current SXI</span>
             <span class="sxi-kpi-main-val" style="color: #2563eb;">6.42</span>
           </div>
           <div class="sxi-kpi-top-card border-green">
@@ -1643,13 +1641,13 @@
           </div>
         </div>
 
-        <!-- 3. Business Outcome Improvement (Build) (from Screenshot) -->
+        <!-- 3. Target Improvement (Build) (from Screenshot) -->
         <div class="sxi-build-card">
           <div class="sxi-build-left">
-            <div class="sxi-build-badge">Business Outcome Improvement (Build)</div>
+            <div class="sxi-build-badge">Target Improvement (Build)</div>
             <div class="sxi-build-headline">-12.8% Unit Purchase Cost Savings</div>
             <div class="sxi-build-desc">
-              Build business outcome improvement reduces blended purchase_cost from €4.32 to €3.76 per unit on purchase order PO-MULTI-SKU0001 (13,150 units) — saving €7,364 in procurement spend after 3 months.
+              Build target improvement reduces blended purchase_cost from €4.32 to €3.76 per unit on purchase order PO-MULTI-SKU0001 (13,150 units) — saving €7,364 in procurement spend after 3 months.
             </div>
           </div>
           <div class="sxi-build-right">
@@ -1658,44 +1656,44 @@
               <span class="sxi-bm-val">€4.32</span>
             </div>
             <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Business Outcome After -12.8%</span>
+              <span class="sxi-bm-lbl">Target After -12.8%</span>
               <span class="sxi-bm-val green">€3.76</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Current vs Business Outcome DXI (Screenshot 3) -->
-        <div class="sxi-dxi-container">
+        <!-- 4. Current vs Target SXI (Screenshot 3) -->
+        <div class="sxi-container">
           <div class="sxi-card-title-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z"></path>
             </svg>
-            <span>Current vs Business Outcome DXI</span>
+            <span>Current vs Target SXI</span>
           </div>
-          <div class="sxi-dxi-grid-6">
-            <div class="dxi-card-box border-blue">
-              <span class="dxi-card-lbl">Current DXI</span>
-              <span class="dxi-card-num" style="color: #2563eb;">6.42</span>
+          <div class="sxi-grid-6">
+            <div class="sxi-card-box border-blue">
+              <span class="sxi-card-lbl">Current SXI</span>
+              <span class="sxi-card-num" style="color: #2563eb;">6.42</span>
             </div>
-            <div class="dxi-card-box border-green">
-              <span class="dxi-card-lbl">Current Margin Realization</span>
-              <span class="dxi-card-num" style="color: #059669;">32.4%</span>
+            <div class="sxi-card-box border-green">
+              <span class="sxi-card-lbl">Current Margin Realization</span>
+              <span class="sxi-card-num" style="color: #059669;">32.4%</span>
             </div>
-            <div class="dxi-card-box border-dark">
-              <span class="dxi-card-lbl">Model Accuracy</span>
-              <span class="dxi-card-num" style="color: #0f172a;">94.6%</span>
+            <div class="sxi-card-box border-dark">
+              <span class="sxi-card-lbl">Model Accuracy</span>
+              <span class="sxi-card-num" style="color: #0f172a;">94.6%</span>
             </div>
-            <div class="dxi-card-box border-purple">
-              <span class="dxi-card-lbl">Business Outcome DXI</span>
-              <span class="dxi-card-num" style="color: #7c3aed;">8.15</span>
+            <div class="sxi-card-box border-purple">
+              <span class="sxi-card-lbl">Target SXI</span>
+              <span class="sxi-card-num" style="color: #7c3aed;">8.15</span>
             </div>
-            <div class="dxi-card-box border-orange">
-              <span class="dxi-card-lbl">Business Outcome Margin Realization</span>
-              <span class="dxi-card-num" style="color: #ea580c;">39.8%</span>
+            <div class="sxi-card-box border-orange">
+              <span class="sxi-card-lbl">Target Margin Realization</span>
+              <span class="sxi-card-num" style="color: #ea580c;">39.8%</span>
             </div>
-            <div class="dxi-card-box border-emerald">
-              <span class="dxi-card-lbl">Cost Optimization Lift</span>
-              <span class="dxi-card-num" style="color: #16a34a;">+26.9%</span>
+            <div class="sxi-card-box border-emerald">
+              <span class="sxi-card-lbl">Cost Optimization Lift</span>
+              <span class="sxi-card-num" style="color: #16a34a;">+26.9%</span>
             </div>
           </div>
         </div>
@@ -1713,7 +1711,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Immediate · Days 1–30</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.20</span>
               </div>
               <div class="level-metric-row">
@@ -1732,7 +1730,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Mid-term · Days 31–60</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.85</span>
               </div>
               <div class="level-metric-row">
@@ -1744,14 +1742,14 @@
                 <span class="level-metric-val" style="color: #16a34a;">+15.7%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term improvement:</strong> Consolidates multi-supplier purchase schedules across DCs to capture full truckload discount tiers.
+                <strong>Mid-term improvement:</strong> Consolidates multi-supplier purchase schedules across Distribution Centers (DCs) to capture full truckload discount tiers.
               </div>
             </div>
 
             <div class="level-col-item">
               <span class="level-col-name">Long-term · Quarter 2+</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">8.15</span>
               </div>
               <div class="level-metric-row">
@@ -1811,7 +1809,7 @@
               <span>Current Business Status</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Current DXI</span>
+              <span class="sxi-line-label">Current SXI</span>
               <span class="sxi-line-val sxi-val-blue">6.42</span>
             </div>
             <div class="sxi-metric-line">
@@ -1902,7 +1900,7 @@
           </div>
         </div>
 
-        <!-- 8. Decision Tree — Business Outcome Logic & Top 5 Feature Importance -->
+        <!-- 8. Decision Tree — Target Logic & Top 5 Feature Importance -->
         <div class="sxi-card-grid-2">
           <div class="sxi-white-card">
             <div class="sxi-card-title-row">
@@ -2011,7 +2009,7 @@
             <li><strong>Automated contract pricing:</strong> Enforce €3.76/unit cap on PO-MULTI-SKU0001, saving €7,364 compared to baseline single-unit quotes.</li>
             <li><strong>Volume tier locking:</strong> Consolidate replenishment orders under 5,000 units into single 13,150-unit batch to secure maximum volume discounts.</li>
             <li><strong>Supplier price renegotiation:</strong> Flag suppliers quoting above €3.85 for renegotiation based on SXI quantitative cost benchmarks.</li>
-            <li><strong>Decision Engine Summary:</strong> Model Accuracy: <strong>94.6%</strong> · Correlation R²: <strong>0.884</strong> · MAE: <strong>±€0.12</strong> · Current DXI: <strong>6.42</strong> &rarr; Business Outcome DXI: <strong>8.15</strong>.</li>
+            <li><strong>Decision Engine Summary:</strong> Model Accuracy: <strong>94.6%</strong> · Correlation R²: <strong>0.884</strong> · MAE: <strong>±€0.12</strong> · Current SXI: <strong>6.42</strong> &rarr; Target SXI: <strong>8.15</strong>.</li>
           </ul>
         </div>
 
@@ -2024,7 +2022,6 @@
         
         <!-- Hero Header Banner -->
         <div class="hero-banner-card">
-          <div class="hero-badge">✦ Business Outcome 2 · Inventory Reorder Validation SXI Classification</div>
           <div class="hero-header-flex">
             <div>
               <h1 class="hero-title">is_reorder_required</h1>
@@ -2072,7 +2069,7 @@
         <div class="sxi-kpi-grid-4">
           <div class="sxi-kpi-top-card border-blue">
             <div class="sxi-kpi-icon-pill pill-blue">📈</div>
-            <span class="sxi-kpi-title-sub">Current DXI</span>
+            <span class="sxi-kpi-title-sub">Current SXI</span>
             <span class="sxi-kpi-main-val" style="color: #2563eb;">6.15</span>
           </div>
           <div class="sxi-kpi-top-card border-green">
@@ -2092,13 +2089,13 @@
           </div>
         </div>
 
-        <!-- 3. Business Outcome Improvement (Build) (from Screenshot) -->
+        <!-- 3. Target Improvement (Build) (from Screenshot) -->
         <div class="sxi-build-card">
           <div class="sxi-build-left">
-            <div class="sxi-build-badge">Business Outcome Improvement (Build)</div>
+            <div class="sxi-build-badge">Target Improvement (Build)</div>
             <div class="sxi-build-headline">+10.5% Stockout Prevention Rate</div>
             <div class="sxi-build-desc">
-              Build business outcome improvement validates is_reorder_required replenishment triggers strictly when inventory falls below ROP (13,163 units) — reaching 99.0% on-shelf fulfillment after 3 months.
+              Build target improvement validates is_reorder_required replenishment triggers strictly when inventory falls below ROP (13,163 units) — reaching 99.0% on-shelf fulfillment after 3 months.
             </div>
           </div>
           <div class="sxi-build-right">
@@ -2107,44 +2104,44 @@
               <span class="sxi-bm-val">88.5%</span>
             </div>
             <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Business Outcome After +10.5%</span>
+              <span class="sxi-bm-lbl">Target After +10.5%</span>
               <span class="sxi-bm-val green">99.0%</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Current vs Business Outcome DXI (Screenshot 3) -->
-        <div class="sxi-dxi-container">
+        <!-- 4. Current vs Target SXI (Screenshot 3) -->
+        <div class="sxi-container">
           <div class="sxi-card-title-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z"></path>
             </svg>
-            <span>Current vs Business Outcome DXI</span>
+            <span>Current vs Target SXI</span>
           </div>
-          <div class="sxi-dxi-grid-6">
-            <div class="dxi-card-box border-blue">
-              <span class="dxi-card-lbl">Current DXI</span>
-              <span class="dxi-card-num" style="color: #2563eb;">6.15</span>
+          <div class="sxi-grid-6">
+            <div class="sxi-card-box border-blue">
+              <span class="sxi-card-lbl">Current SXI</span>
+              <span class="sxi-card-num" style="color: #2563eb;">6.15</span>
             </div>
-            <div class="dxi-card-box border-green">
-              <span class="dxi-card-lbl">Current Stockout Prevention</span>
-              <span class="dxi-card-num" style="color: #059669;">88.5%</span>
+            <div class="sxi-card-box border-green">
+              <span class="sxi-card-lbl">Current Stockout Prevention</span>
+              <span class="sxi-card-num" style="color: #059669;">88.5%</span>
             </div>
-            <div class="dxi-card-box border-dark">
-              <span class="dxi-card-lbl">Model Accuracy</span>
-              <span class="dxi-card-num" style="color: #0f172a;">96.8%</span>
+            <div class="sxi-card-box border-dark">
+              <span class="sxi-card-lbl">Model Accuracy</span>
+              <span class="sxi-card-num" style="color: #0f172a;">96.8%</span>
             </div>
-            <div class="dxi-card-box border-purple">
-              <span class="dxi-card-lbl">Business Outcome DXI</span>
-              <span class="dxi-card-num" style="color: #7c3aed;">8.20</span>
+            <div class="sxi-card-box border-purple">
+              <span class="sxi-card-lbl">Target SXI</span>
+              <span class="sxi-card-num" style="color: #7c3aed;">8.20</span>
             </div>
-            <div class="dxi-card-box border-orange">
-              <span class="dxi-card-lbl">Business Outcome Stockout Prevention</span>
-              <span class="dxi-card-num" style="color: #ea580c;">99.0%</span>
+            <div class="sxi-card-box border-orange">
+              <span class="sxi-card-lbl">Target Stockout Prevention</span>
+              <span class="sxi-card-num" style="color: #ea580c;">99.0%</span>
             </div>
-            <div class="dxi-card-box border-emerald">
-              <span class="dxi-card-lbl">Fulfillment Lift</span>
-              <span class="dxi-card-num" style="color: #16a34a;">+10.5%</span>
+            <div class="sxi-card-box border-emerald">
+              <span class="sxi-card-lbl">Fulfillment Lift</span>
+              <span class="sxi-card-num" style="color: #16a34a;">+10.5%</span>
             </div>
           </div>
         </div>
@@ -2162,7 +2159,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Immediate · Days 1–30</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.30</span>
               </div>
               <div class="level-metric-row">
@@ -2181,7 +2178,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Mid-term · Days 31–60</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.90</span>
               </div>
               <div class="level-metric-row">
@@ -2200,7 +2197,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Long-term · Quarter 2+</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">8.20</span>
               </div>
               <div class="level-metric-row">
@@ -2260,7 +2257,7 @@
               <span>Current Business Status</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Current DXI</span>
+              <span class="sxi-line-label">Current SXI</span>
               <span class="sxi-line-val sxi-val-blue">6.15</span>
             </div>
             <div class="sxi-metric-line">
@@ -2347,7 +2344,7 @@
           </div>
         </div>
 
-        <!-- 8. Decision Tree — Business Outcome Logic & Top 5 Feature Importance -->
+        <!-- 8. Decision Tree — Target Logic & Top 5 Feature Importance -->
         <div class="sxi-card-grid-2">
           <div class="sxi-white-card">
             <div class="sxi-card-title-row">
@@ -2456,7 +2453,7 @@
             <li><strong>Auto-trigger purchase order release:</strong> Automatically transmit replenishment PO for SKU0001 (13,150 units) as stock (248 units) is below ROP (13,163 units).</li>
             <li><strong>Suppress premature purchase orders:</strong> Automatically block reorder attempts on SKUs with inventory positions above safety stock, freeing up €180,000 in working capital.</li>
             <li><strong>Lead time buffer synchronization:</strong> Dynamically adjust trigger dates 3 days earlier during supplier peak shipping seasons.</li>
-            <li><strong>Decision Engine Summary:</strong> Classification Accuracy: <strong>96.8%</strong> · AUC: <strong>0.94</strong> · Precision: <strong>97.1%</strong> · Recall: <strong>96.4%</strong> · Current DXI: <strong>6.15</strong> &rarr; Business Outcome DXI: <strong>8.20</strong>.</li>
+            <li><strong>Decision Engine Summary:</strong> Classification Accuracy: <strong>96.8%</strong> · AUC: <strong>0.94</strong> · Precision: <strong>97.1%</strong> · Recall: <strong>96.4%</strong> · Current SXI: <strong>6.15</strong> &rarr; Target SXI: <strong>8.20</strong>.</li>
           </ul>
         </div>
 
@@ -2469,7 +2466,6 @@
         
         <!-- Hero Header Banner -->
         <div class="hero-banner-card">
-          <div class="hero-badge">✦ Business Outcome 3 · Multi-Vendor Resilience SXI Classification</div>
           <div class="hero-header-flex">
             <div>
               <h1 class="hero-title">is_preferred_supplier</h1>
@@ -2517,7 +2513,7 @@
         <div class="sxi-kpi-grid-4">
           <div class="sxi-kpi-top-card border-blue">
             <div class="sxi-kpi-icon-pill pill-blue">📈</div>
-            <span class="sxi-kpi-title-sub">Current DXI</span>
+            <span class="sxi-kpi-title-sub">Current SXI</span>
             <span class="sxi-kpi-main-val" style="color: #2563eb;">6.35</span>
           </div>
           <div class="sxi-kpi-top-card border-green">
@@ -2537,13 +2533,13 @@
           </div>
         </div>
 
-        <!-- 3. Business Outcome Improvement (Build) (from Screenshot) -->
+        <!-- 3. Target Improvement (Build) (from Screenshot) -->
         <div class="sxi-build-card">
           <div class="sxi-build-left">
-            <div class="sxi-build-badge">Business Outcome Improvement (Build)</div>
+            <div class="sxi-build-badge">Target Improvement (Build)</div>
             <div class="sxi-build-headline">+35.0% Dual-Source SKU Coverage</div>
             <div class="sxi-build-desc">
-              Build business outcome improvement classifies is_preferred_supplier status and enforces 70/30 volume splits across top-rated vendors — achieving 100% zero-disruption resilience after 3 months.
+              Build target improvement classifies is_preferred_supplier status and enforces 70/30 volume splits across top-rated vendors — achieving 100% zero-disruption resilience after 3 months.
             </div>
           </div>
           <div class="sxi-build-right">
@@ -2552,44 +2548,44 @@
               <span class="sxi-bm-val">65.0%</span>
             </div>
             <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Business Outcome After +35%</span>
+              <span class="sxi-bm-lbl">Target After +35%</span>
               <span class="sxi-bm-val green">100.0%</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Current vs Business Outcome DXI (Screenshot 3) -->
-        <div class="sxi-dxi-container">
+        <!-- 4. Current vs Target SXI (Screenshot 3) -->
+        <div class="sxi-container">
           <div class="sxi-card-title-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z"></path>
             </svg>
-            <span>Current vs Business Outcome DXI</span>
+            <span>Current vs Target SXI</span>
           </div>
-          <div class="sxi-dxi-grid-6">
-            <div class="dxi-card-box border-blue">
-              <span class="dxi-card-lbl">Current DXI</span>
-              <span class="dxi-card-num" style="color: #2563eb;">6.35</span>
+          <div class="sxi-grid-6">
+            <div class="sxi-card-box border-blue">
+              <span class="sxi-card-lbl">Current SXI</span>
+              <span class="sxi-card-num" style="color: #2563eb;">6.35</span>
             </div>
-            <div class="dxi-card-box border-green">
-              <span class="dxi-card-lbl">Current Resilience</span>
-              <span class="dxi-card-num" style="color: #059669;">65.0%</span>
+            <div class="sxi-card-box border-green">
+              <span class="sxi-card-lbl">Current Resilience</span>
+              <span class="sxi-card-num" style="color: #059669;">65.0%</span>
             </div>
-            <div class="dxi-card-box border-dark">
-              <span class="dxi-card-lbl">Model Accuracy</span>
-              <span class="dxi-card-num" style="color: #0f172a;">93.2%</span>
+            <div class="sxi-card-box border-dark">
+              <span class="sxi-card-lbl">Model Accuracy</span>
+              <span class="sxi-card-num" style="color: #0f172a;">93.2%</span>
             </div>
-            <div class="dxi-card-box border-purple">
-              <span class="dxi-card-lbl">Business Outcome DXI</span>
-              <span class="dxi-card-num" style="color: #7c3aed;">8.10</span>
+            <div class="sxi-card-box border-purple">
+              <span class="sxi-card-lbl">Target SXI</span>
+              <span class="sxi-card-num" style="color: #7c3aed;">8.10</span>
             </div>
-            <div class="dxi-card-box border-orange">
-              <span class="dxi-card-lbl">Business Outcome Resilience</span>
-              <span class="dxi-card-num" style="color: #ea580c;">100.0%</span>
+            <div class="sxi-card-box border-orange">
+              <span class="sxi-card-lbl">Target Resilience</span>
+              <span class="sxi-card-num" style="color: #ea580c;">100.0%</span>
             </div>
-            <div class="dxi-card-box border-emerald">
-              <span class="dxi-card-lbl">Resilience Lift</span>
-              <span class="dxi-card-num" style="color: #16a34a;">+35.0%</span>
+            <div class="sxi-card-box border-emerald">
+              <span class="sxi-card-lbl">Resilience Lift</span>
+              <span class="sxi-card-num" style="color: #16a34a;">+35.0%</span>
             </div>
           </div>
         </div>
@@ -2607,7 +2603,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Immediate · Days 1–30</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.15</span>
               </div>
               <div class="level-metric-row">
@@ -2626,7 +2622,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Mid-term · Days 31–60</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.75</span>
               </div>
               <div class="level-metric-row">
@@ -2645,7 +2641,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Long-term · Quarter 2+</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">8.10</span>
               </div>
               <div class="level-metric-row">
@@ -2705,7 +2701,7 @@
               <span>Current Business Status</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Current DXI</span>
+              <span class="sxi-line-label">Current SXI</span>
               <span class="sxi-line-val sxi-val-blue">6.35</span>
             </div>
             <div class="sxi-metric-line">
@@ -2792,7 +2788,7 @@
           </div>
         </div>
 
-        <!-- 8. Decision Tree — Business Outcome Logic & Top 5 Feature Importance -->
+        <!-- 8. Decision Tree — Target Logic & Top 5 Feature Importance -->
         <div class="sxi-card-grid-2">
           <div class="sxi-white-card">
             <div class="sxi-card-title-row">
@@ -2899,9 +2895,9 @@
           </div>
           <ul class="ba-checklist">
             <li><strong>Automate 70/30 volume allocation:</strong> Dispatch 9,250 units to S014 (€3.75) and 3,900 units to S015 (€3.77), reducing single-source dependency to 0%.</li>
-            <li><strong>Supplier SLA performance monitoring:</strong> Automatically trigger quarterly vendor audits if a supplier's on-time delivery metric dips below 95%.</li>
+            <li><strong>Supplier Service Level Agreement (SLA) performance monitoring:</strong> Automatically trigger quarterly vendor audits if a supplier's on-time delivery metric dips below 95%.</li>
             <li><strong>Backup reserve activation:</strong> Maintain supplier S028 on hot-standby with pre-negotiated master terms in case of emergency demand spikes.</li>
-            <li><strong>Decision Engine Summary:</strong> Classification Accuracy: <strong>93.2%</strong> · AUC: <strong>0.92</strong> · Precision: <strong>94.0%</strong> · Recall: <strong>92.5%</strong> · Current DXI: <strong>6.35</strong> &rarr; Business Outcome DXI: <strong>8.10</strong>.</li>
+            <li><strong>Decision Engine Summary:</strong> Classification Accuracy: <strong>93.2%</strong> · AUC: <strong>0.92</strong> · Precision: <strong>94.0%</strong> · Recall: <strong>92.5%</strong> · Current SXI: <strong>6.35</strong> &rarr; Target SXI: <strong>8.10</strong>.</li>
           </ul>
         </div>
 
@@ -2914,7 +2910,6 @@
         
         <!-- Hero Header Banner -->
         <div class="hero-banner-card">
-          <div class="hero-badge">✦ Business Outcome 4 · Commercial & Audit Compliance SXI Classification</div>
           <div class="hero-header-flex">
             <div>
               <h1 class="hero-title">is_po_compliant</h1>
@@ -2962,7 +2957,7 @@
         <div class="sxi-kpi-grid-4">
           <div class="sxi-kpi-top-card border-blue">
             <div class="sxi-kpi-icon-pill pill-blue">📈</div>
-            <span class="sxi-kpi-title-sub">Current DXI</span>
+            <span class="sxi-kpi-title-sub">Current SXI</span>
             <span class="sxi-kpi-main-val" style="color: #2563eb;">6.50</span>
           </div>
           <div class="sxi-kpi-top-card border-green">
@@ -2982,13 +2977,13 @@
           </div>
         </div>
 
-        <!-- 3. Business Outcome Improvement (Build) (from Screenshot) -->
+        <!-- 3. Target Improvement (Build) (from Screenshot) -->
         <div class="sxi-build-card">
           <div class="sxi-build-left">
-            <div class="sxi-build-badge">Business Outcome Improvement (Build)</div>
+            <div class="sxi-build-badge">Target Improvement (Build)</div>
             <div class="sxi-build-headline">+23.5% Automated Audit Compliance</div>
             <div class="sxi-build-desc">
-              Build business outcome improvement validates is_po_compliant across all 5 commercial gates — achieving 100% audit approval and locking in €32,665.50 in gross margin after 3 months.
+              Build target improvement validates is_po_compliant across all 5 commercial gates — achieving 100% audit approval and locking in €32,665.50 in gross margin after 3 months.
             </div>
           </div>
           <div class="sxi-build-right">
@@ -2997,44 +2992,44 @@
               <span class="sxi-bm-val">76.5%</span>
             </div>
             <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Business Outcome After +23.5%</span>
+              <span class="sxi-bm-lbl">Target After +23.5%</span>
               <span class="sxi-bm-val green">100.0%</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Current vs Business Outcome DXI (Screenshot 3) -->
-        <div class="sxi-dxi-container">
+        <!-- 4. Current vs Target SXI (Screenshot 3) -->
+        <div class="sxi-container">
           <div class="sxi-card-title-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z"></path>
             </svg>
-            <span>Current vs Business Outcome DXI</span>
+            <span>Current vs Target SXI</span>
           </div>
-          <div class="sxi-dxi-grid-6">
-            <div class="dxi-card-box border-blue">
-              <span class="dxi-card-lbl">Current DXI</span>
-              <span class="dxi-card-num" style="color: #2563eb;">6.50</span>
+          <div class="sxi-grid-6">
+            <div class="sxi-card-box border-blue">
+              <span class="sxi-card-lbl">Current SXI</span>
+              <span class="sxi-card-num" style="color: #2563eb;">6.50</span>
             </div>
-            <div class="dxi-card-box border-green">
-              <span class="dxi-card-lbl">Current Audit Pass Rate</span>
-              <span class="dxi-card-num" style="color: #059669;">76.5%</span>
+            <div class="sxi-card-box border-green">
+              <span class="sxi-card-lbl">Current Audit Pass Rate</span>
+              <span class="sxi-card-num" style="color: #059669;">76.5%</span>
             </div>
-            <div class="dxi-card-box border-dark">
-              <span class="dxi-card-lbl">Model Accuracy</span>
-              <span class="dxi-card-num" style="color: #0f172a;">98.2%</span>
+            <div class="sxi-card-box border-dark">
+              <span class="sxi-card-lbl">Model Accuracy</span>
+              <span class="sxi-card-num" style="color: #0f172a;">98.2%</span>
             </div>
-            <div class="dxi-card-box border-purple">
-              <span class="dxi-card-lbl">Business Outcome DXI</span>
-              <span class="dxi-card-num" style="color: #7c3aed;">8.25</span>
+            <div class="sxi-card-box border-purple">
+              <span class="sxi-card-lbl">Target SXI</span>
+              <span class="sxi-card-num" style="color: #7c3aed;">8.25</span>
             </div>
-            <div class="dxi-card-box border-orange">
-              <span class="dxi-card-lbl">Business Outcome Audit Pass Rate</span>
-              <span class="dxi-card-num" style="color: #ea580c;">100.0%</span>
+            <div class="sxi-card-box border-orange">
+              <span class="sxi-card-lbl">Target Audit Pass Rate</span>
+              <span class="sxi-card-num" style="color: #ea580c;">100.0%</span>
             </div>
-            <div class="dxi-card-box border-emerald">
-              <span class="dxi-card-lbl">Compliance Lift</span>
-              <span class="dxi-card-num" style="color: #16a34a;">+23.5%</span>
+            <div class="sxi-card-box border-emerald">
+              <span class="sxi-card-lbl">Compliance Lift</span>
+              <span class="sxi-card-num" style="color: #16a34a;">+23.5%</span>
             </div>
           </div>
         </div>
@@ -3052,7 +3047,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Immediate · Days 1–30</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.40</span>
               </div>
               <div class="level-metric-row">
@@ -3071,7 +3066,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Mid-term · Days 31–60</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.95</span>
               </div>
               <div class="level-metric-row">
@@ -3090,7 +3085,7 @@
             <div class="level-col-item">
               <span class="level-col-name">Long-term · Quarter 2+</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Business Outcome DXI</span>
+                <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">8.25</span>
               </div>
               <div class="level-metric-row">
@@ -3150,7 +3145,7 @@
               <span>Current Business Status</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Current DXI</span>
+              <span class="sxi-line-label">Current SXI</span>
               <span class="sxi-line-val sxi-val-blue">6.50</span>
             </div>
             <div class="sxi-metric-line">
@@ -3237,7 +3232,7 @@
           </div>
         </div>
 
-        <!-- 8. Decision Tree — Business Outcome Logic & Top 5 Feature Importance -->
+        <!-- 8. Decision Tree — Target Logic & Top 5 Feature Importance -->
         <div class="sxi-card-grid-2">
           <div class="sxi-white-card">
             <div class="sxi-card-title-row">
@@ -3346,7 +3341,7 @@
             <li><strong>Auto-approve PO-MULTI-SKU0001:</strong> 5 out of 5 commercial gates verified; automatically release PO into SAP/Oracle ERP queue.</li>
             <li><strong>Enforce margin floor protection:</strong> Systematically reject any order lines failing the 35% minimum gross margin requirement.</li>
             <li><strong>Vendor master verification:</strong> Block PO creation for inactive suppliers or vendors with unresolved quality non-conformances.</li>
-            <li><strong>Decision Engine Summary:</strong> Classification Accuracy: <strong>98.2%</strong> · AUC: <strong>0.96</strong> · Precision: <strong>98.5%</strong> · Recall: <strong>97.8%</strong> · Current DXI: <strong>6.50</strong> &rarr; Business Outcome DXI: <strong>8.25</strong>.</li>
+            <li><strong>Decision Engine Summary:</strong> Classification Accuracy: <strong>98.2%</strong> · AUC: <strong>0.96</strong> · Precision: <strong>98.5%</strong> · Recall: <strong>97.8%</strong> · Current SXI: <strong>6.50</strong> &rarr; Target SXI: <strong>8.25</strong>.</li>
           </ul>
         </div>
 

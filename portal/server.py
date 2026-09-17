@@ -327,7 +327,7 @@ async def chat_interactive(request: Request, chat: ChatMessage):
             dashboard_url = "/portal/marketplace/sales_forecasting"
             reply_text = (
                 "🔒 **Locked Problem 1: Sales Forecasting ($1,000/month)**\n\n"
-                "DXI pipeline initialized. Business Outcome Variables locked:\n"
+                "SXI pipeline initialized. Business Outcome Variables locked:\n"
                 "• Forecasted Demand Quantity\n"
                 "• Minimal Loss(actual - Predicted)\n\n"
                 "Executive Dashboard is now unlocked!\n\n"
@@ -339,7 +339,7 @@ async def chat_interactive(request: Request, chat: ChatMessage):
             dashboard_url = "/portal/marketplace/demand_planning"
             reply_text = (
                 "🔒 **Locked Problem 2: Demand Planning ($1,000/month)**\n\n"
-                "DXI pipeline initialized. Business Outcome Variables locked:\n"
+                "SXI pipeline initialized. Business Outcome Variables locked:\n"
                 "• global_plan_demand_quantity\n"
                 "• lead_time\n"
                 "• weightage_list_price\n"
@@ -354,7 +354,7 @@ async def chat_interactive(request: Request, chat: ChatMessage):
             dashboard_url = "/portal/marketplace/procurement"
             reply_text = (
                 "🔒 **Locked Problem 3: Procurement ($1,000/month)**\n\n"
-                "DXI pipeline initialized. Business Outcome Variables locked:\n"
+                "SXI pipeline initialized. Business Outcome Variables locked:\n"
                 "• Price, ORDER_VALIDATION, MULTIPLE VENDORS, PROCUREMENT_VALIDATION\n\n"
                 "Executive Dashboard is now unlocked!\n\n"
                 "👉 Click **Executive Dashboard** on the right sidebar or menu to view your purchase orders."
@@ -535,7 +535,7 @@ async def chat_upload_dataset(request: Request, file: UploadFile = File(...)):
 
     # Bot Message 5: 3 Order Execution Problems Catalog
     catalog_text = (
-        "Pick one customer problem ($1,000/month). This locks that problem only, runs DXI once, and opens its Executive dashboard when available.\n"
+        "Pick one customer problem ($1,000/month). This locks that problem only, runs SXI once, and opens its Executive dashboard when available.\n"
         "Full data · no balancing · Top Features + Business Outcome DT / correlation / 3-level improvement.\n\n"
         "1. Sales Forecasting\n"
         "$1,000/month\n"
