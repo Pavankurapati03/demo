@@ -1343,7 +1343,8 @@ body {
 
 /* Hero Banner Card */
 .hero-banner-card {
-  background: linear-gradient(135deg, #071638 0%, #0c2354 50%, #153878 100%);
+  background: radial-gradient(circle at 92% 50%, rgba(37, 99, 235, 0.42) 0%, rgba(29, 78, 216, 0.20) 40%, rgba(14, 26, 62, 0) 75%),
+              linear-gradient(135deg, #070e22 0%, #0b1739 50%, #0e1e4a 100%);
   border-radius: 18px;
   padding: 34px 38px;
   color: #ffffff;
@@ -1351,6 +1352,7 @@ body {
   margin-bottom: 28px;
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
 }
 
 .hero-badge {
