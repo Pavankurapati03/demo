@@ -1111,7 +1111,8 @@
 
     .sxi-build-left {
       flex: 0 0 auto;
-      max-width: 480px;
+      max-width: 700px;
+      margin-right: 130px;
     }
 
     .sxi-build-badge {
@@ -1141,7 +1142,7 @@
     .sxi-build-right {
       display: flex;
       align-items: center;
-      gap: 78px;
+      gap: 180px;
     }
 
     .sxi-build-metric {
@@ -1385,10 +1386,10 @@
         </a>
         <a href="/portal/marketplace/procurement?target=target3" class="menu-target-link"
           onclick="switchProcurementView('target3'); toggleDashboardsMenu(); return false;"
-          title="Reduce Single-Source Supply Risk">
+          title="is_preferred_supplier">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Reduce Single-Source Supply Risk</span>
+            <span class="menu-target-name">is_preferred_supplier</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
@@ -1449,7 +1450,7 @@
                     <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
                     <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
                     <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome 1: <strong>purchase_cost (€)</strong></span>
+                  </svg>Business Outcome 1: <strong>purchase_cost ($)</strong></span>
               </div>
               <div class="hero-target-pill"
                 onclick="switchProcurementView('target2', document.querySelectorAll('.dash-tab-pill')[2])"
@@ -1551,8 +1552,8 @@
               </svg>
             </div>
             <div class="kpi-v2-label">Blended Unit Cost</div>
-            <div class="kpi-v2-value" style="color: #059669;">€3.76</div>
-            <div class="kpi-v2-sub">Down 12.8% from €4.32 baseline cost</div>
+            <div class="kpi-v2-value" style="color: #059669;">$3.76</div>
+            <div class="kpi-v2-sub">Down 12.8% from $4.32 baseline cost</div>
           </div>
 
           <div class="kpi-card-v2">
@@ -1564,7 +1565,7 @@
               </svg>
             </div>
             <div class="kpi-v2-label">Total Order Value</div>
-            <div class="kpi-v2-value">€49,390.50</div>
+            <div class="kpi-v2-value">$49,390.50</div>
             <div class="kpi-v2-sub">Committed 13,150 replenishment units</div>
           </div>
 
@@ -1577,7 +1578,7 @@
               </svg>
             </div>
             <div class="kpi-v2-label">Projected Gross Margin</div>
-            <div class="kpi-v2-value" style="color: #059669;">€32,665.50</div>
+            <div class="kpi-v2-value" style="color: #059669;">$32,665.50</div>
             <div class="kpi-v2-sub">Effective Gross Margin: <strong>39.8%</strong></div>
           </div>
 
@@ -1601,7 +1602,7 @@
             <div class="improvement-headline-col">
               <h2 class="improvement-big-title">+18.4% Margin Efficiency · 0% Single-Source Risk</h2>
               <p class="improvement-desc-text">
-                Build target improvement reduces blended purchase cost to <strong>€3.76 / unit</strong> (saving €0.56
+                Build target improvement reduces blended purchase cost to <strong>$3.76 / unit</strong> (saving $0.56
                 per unit), enforces automated reorder validation before committing funds, and splits volume across top
                 suppliers with <strong>100% audit approval</strong> after 3 months.
               </p>
@@ -1609,11 +1610,11 @@
             <div class="improvement-kpi-stack">
               <div class="imp-kpi-item">
                 <span class="imp-kpi-lbl">CURRENT UNIT COST</span>
-                <span class="imp-kpi-val text-red">€4.32 / unit</span>
+                <span class="imp-kpi-val text-red">$4.32 / unit</span>
               </div>
               <div class="imp-kpi-item">
                 <span class="imp-kpi-lbl">TARGET UNIT COST (BUILD)</span>
-                <span class="imp-kpi-val text-emerald">€3.76 (-12.8%)</span>
+                <span class="imp-kpi-val text-emerald">$3.76 (12.8% reduction)</span>
               </div>
             </div>
           </div>
@@ -1639,8 +1640,8 @@
             </div>
             <div class="cvt-box">
               <span class="cvt-label">Blended Unit Cost</span>
-              <span class="cvt-value text-emerald">€3.76</span>
-              <span class="cvt-sub">Down from €4.32 baseline</span>
+              <span class="cvt-value text-emerald">$3.76</span>
+              <span class="cvt-sub">Down from $4.32 baseline</span>
             </div>
             <div class="cvt-box">
               <span class="cvt-label">Prediction Accuracy</span>
@@ -1693,8 +1694,8 @@
             </div>
             <div class="level-box-title">Dynamic Price Prediction & Multi-Vendor Split</div>
             <div class="level-box-desc">
-              Predicts volume discount purchase costs per supplier. Allocates 70% to primary vendor S014 (€3.75) and 30%
-              to secondary vendor S015 (€3.77), eliminating single-supplier factory delay risks.
+              Predicts volume discount purchase costs per supplier. Allocates 70% to primary vendor S014 ($3.75) and 30%
+              to secondary vendor S015 ($3.77), eliminating single-supplier factory delay risks.
             </div>
           </div>
 
@@ -1753,7 +1754,7 @@
           <div class="engine-metric-card">
             <span class="engine-metric-label">PRICE CORRELATION (R²)</span>
             <span class="engine-metric-val" style="color: #2563eb;">0.884</span>
-            <span class="engine-metric-sub">Volume Cost Fit (MAE ±€0.12)</span>
+            <span class="engine-metric-sub">Volume Cost Fit (MAE ±$0.12)</span>
           </div>
         </div>
 
@@ -1790,48 +1791,48 @@
                 <td><strong>#1</strong></td>
                 <td><strong>S014</strong></td>
                 <td><strong>9.4 / 10</strong></td>
-                <td><strong>€3.75 / unit</strong></td>
+                <td><strong>$3.75 / unit</strong></td>
                 <td>6.5 Days</td>
                 <td><span style="color:#059669; font-weight:700;">96.9%</span></td>
                 <td><strong>9,250 units</strong></td>
                 <td><strong>70.3%</strong></td>
-                <td>€34,687.50</td>
+                <td>$34,687.50</td>
                 <td><span class="status-pill status-primary">Tier 1: Primary Supplier</span></td>
               </tr>
               <tr>
                 <td><strong>#2</strong></td>
                 <td><strong>S015</strong></td>
                 <td><strong>8.6 / 10</strong></td>
-                <td><strong>€3.77 / unit</strong></td>
+                <td><strong>$3.77 / unit</strong></td>
                 <td>6.6 Days</td>
                 <td><span style="color:#059669; font-weight:700;">97.8%</span></td>
                 <td><strong>3,900 units</strong></td>
                 <td><strong>29.7%</strong></td>
-                <td>€14,703.00</td>
+                <td>$14,703.00</td>
                 <td><span class="status-pill status-secondary">Tier 1: Secondary Supplier</span></td>
               </tr>
               <tr style="opacity: 0.65;">
                 <td>#3</td>
                 <td>S028</td>
                 <td>6.8 / 10</td>
-                <td>€3.80 / unit</td>
+                <td>$3.80 / unit</td>
                 <td>7.2 Days</td>
                 <td>94.1%</td>
                 <td>0 units</td>
                 <td>0.0%</td>
-                <td>€0.00</td>
+                <td>$0.00</td>
                 <td><span class="status-pill status-backup">Tier 2: Backup Reserve</span></td>
               </tr>
               <tr style="opacity: 0.5;">
                 <td>#4</td>
                 <td>S055</td>
                 <td>5.9 / 10</td>
-                <td>€3.88 / unit</td>
+                <td>$3.88 / unit</td>
                 <td>7.8 Days</td>
                 <td>91.5%</td>
                 <td>0 units</td>
                 <td>0.0%</td>
-                <td>€0.00</td>
+                <td>$0.00</td>
                 <td><span class="status-pill status-backup">Tier 3: Ineligible (High Price)</span></td>
               </tr>
             </tbody>
@@ -1885,8 +1886,8 @@
               <span class="audit-pass-badge">PASSED</span>
             </div>
             <div class="audit-title">Gross Margin Protection</div>
-            <div class="audit-detail">Purchase cost (€3.76) vs List Price (€6.24) locks in 39.8% gross margin
-              (€32,665.50 profit).</div>
+            <div class="audit-detail">Purchase cost ($3.76) vs List Price ($6.24) locks in 39.8% gross margin
+              ($32,665.50 profit).</div>
           </div>
 
           <div class="audit-card passed">
@@ -1934,15 +1935,15 @@
             <span>Business Actions</span>
           </div>
           <ul class="ba-checklist">
-            <li><strong>Predict unit purchase costs dynamically:</strong> Volume-based pricing secures €3.76/unit
-              (saving €0.56/unit compared to single-unit baseline quotes).</li>
+            <li><strong>Predict unit purchase costs dynamically:</strong> Volume-based pricing secures $3.76/unit
+              (saving $0.56/unit compared to single-unit baseline quotes).</li>
             <li><strong>Automated reorder validation:</strong> Reorder gate verifies inventory position (248 units) is
               below ROP (13,163 units), preventing premature capital expenditure.</li>
             <li><strong>Eliminate single-source supply disruptions:</strong> Splitting 13,150 units across Primary
               Supplier S014 (9,250 units · 70%) and Secondary Supplier S015 (3,900 units · 30%) completely hedges
               factory delay risk.</li>
             <li><strong>Autonomous 5-point audit compliance:</strong> All 5 operational and financial gates cleared —
-              locks in <strong>€32,665.50</strong> in projected gross margin (39.8% margin).</li>
+              locks in <strong>$32,665.50</strong> in projected gross margin (39.8% margin).</li>
             <li><strong>Decision Engine Summary:</strong> Prediction Accuracy: <strong>94.6%</strong> · AUC:
               <strong>0.91</strong> · Precision: <strong>96.2%</strong> · Recall: <strong>97.8%</strong> · Current SXI:
               <strong>6.42</strong> &rarr; Target SXI: <strong>8.15</strong>.
@@ -1955,7 +1956,7 @@
 
 
       <!-- =====================================================================
-           VIEW 1: TARGET 1 — purchase_cost (€) [REGRESSION]
+           VIEW 1: TARGET 1 — purchase_cost ($) [REGRESSION]
            ===================================================================== -->
       <div id="view-target1" class="procurement-view" style="display:none;">
 
@@ -1963,9 +1964,9 @@
         <div class="hero-banner-card">
           <div class="hero-header-flex">
             <div>
-              <h1 class="hero-title">purchase_cost (€)</h1>
+              <h1 class="hero-title">purchase_cost ($)</h1>
               <p class="hero-subtitle">Predict volume-discounted vendor unit procurement costs across replenishment
-                quantities and seasonal freight rates — securing the optimal unit price (€3.76 vs €4.32 baseline) to
+                quantities and seasonal freight rates — securing the optimal unit price ($3.76 vs $4.32 baseline) to
                 eliminate margin leakage.</p>
             </div>
             <div class="hero-targets-stack">
@@ -1976,7 +1977,7 @@
                     <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
                     <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
                     <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome: <strong>purchase_cost (€)</strong></span>
+                  </svg>Business Outcome: <strong>purchase_cost ($)</strong></span>
               </div>
             </div>
           </div>
@@ -2029,12 +2030,12 @@
           <div class="sxi-kpi-top-card border-blue">
             <div class="sxi-kpi-icon-pill pill-blue">💶</div>
             <span class="sxi-kpi-title-sub">Predicted Purchase Cost</span>
-            <span class="sxi-kpi-main-val" style="color: #0f172a;">€3.76</span>
+            <span class="sxi-kpi-main-val" style="color: #0f172a;">$3.76</span>
           </div>
           <div class="sxi-kpi-top-card border-orange">
             <div class="sxi-kpi-icon-pill pill-orange">⚠️</div>
             <span class="sxi-kpi-title-sub">Baseline Unit Cost</span>
-            <span class="sxi-kpi-main-val" style="color: #ea580c;">€4.32</span>
+            <span class="sxi-kpi-main-val" style="color: #ea580c;">$4.32</span>
           </div>
         </div>
 
@@ -2044,57 +2045,87 @@
             <div class="sxi-build-badge">Target Improvement (Build)</div>
             <div class="sxi-build-headline">-12.8% Unit Purchase Cost Savings</div>
             <div class="sxi-build-desc">
-              Build target improvement reduces blended purchase_cost from €4.32 to €3.76 per unit on purchase order
-              PO-MULTI-SKU0001 (13,150 units) — saving €7,364 in procurement spend after 3 months.
+              Build target improvement reduces blended purchase_cost from $4.32 to $3.76 per unit on purchase order
+              PO-MULTI-SKU0001 (13,150 units) — saving $7,364 in procurement spend after 3 months.
             </div>
           </div>
           <div class="sxi-build-right">
             <div class="sxi-build-metric">
               <span class="sxi-bm-lbl">Current Unit Cost</span>
-              <span class="sxi-bm-val">€4.32</span>
+              <span class="sxi-bm-val">$4.32</span>
             </div>
             <div class="sxi-build-metric">
               <span class="sxi-bm-lbl">Target After -12.8%</span>
-              <span class="sxi-bm-val green">€3.76</span>
+              <span class="sxi-bm-val green">$3.76</span>
             </div>
           </div>
         </div>
 
         <!-- 4. Current vs Target SXI (Screenshot 3) -->
-        <div class="sxi-container">
-          <div class="sxi-card-title-row">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z">
-              </path>
-            </svg>
-            <span>Current vs Target SXI</span>
+        <div class="sxi-container" style="margin-bottom: 22px;">
+          <div class="sxi-card-title-row" style="margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+            <div
+              style="width: 26px; height: 26px; border-radius: 6px; background: #ecfdf5; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Current vs Target SXI</span>
           </div>
-          <div class="sxi-grid-6">
-            <div class="sxi-card-box border-blue">
-              <span class="sxi-card-lbl">Current SXI</span>
-              <span class="sxi-card-num" style="color: #2563eb;">6.42</span>
+
+          <!-- Row 1: 3 cards -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px;">
+            <!-- Box 1: Current SXI -->
+            <div class="sxi-card-box border-blue"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #2563eb; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #2563eb; line-height: 1.2;">6.42</span>
             </div>
-            <div class="sxi-card-box border-green">
-              <span class="sxi-card-lbl">Current Margin Realization</span>
-              <span class="sxi-card-num" style="color: #059669;">32.4%</span>
+
+            <!-- Box 2: Current Unit Cost -->
+            <div class="sxi-card-box border-green"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #059669; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current Unit Cost</span>
+              <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2;">$4.32</span>
             </div>
-            <div class="sxi-card-box border-dark">
-              <span class="sxi-card-lbl">Model Accuracy</span>
-              <span class="sxi-card-num" style="color: #0f172a;">94.6%</span>
+
+            <!-- Box 3: Target SXI -->
+            <div class="sxi-card-box border-purple"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #8b5cf6; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #7c3aed; line-height: 1.2;">8.15</span>
             </div>
-            <div class="sxi-card-box border-purple">
-              <span class="sxi-card-lbl">Target SXI</span>
-              <span class="sxi-card-num" style="color: #7c3aed;">8.15</span>
+          </div>
+
+          <!-- Row 2: 2 cards -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+            <!-- Box 4: Target Unit Cost -->
+            <div class="sxi-card-box border-orange"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #ea580c; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target Unit Cost</span>
+              <span style="font-size: 24px; font-weight: 800; color: #c2410c; line-height: 1.2;">$3.76</span>
             </div>
-            <div class="sxi-card-box border-orange">
-              <span class="sxi-card-lbl">Target Margin Realization</span>
-              <span class="sxi-card-num" style="color: #ea580c;">39.8%</span>
-            </div>
-            <div class="sxi-card-box border-emerald">
-              <span class="sxi-card-lbl">Cost Optimization Lift</span>
-              <span class="sxi-card-num" style="color: #16a34a;">+26.9%</span>
+
+            <!-- Box 5: Unit Cost Reduction -->
+            <div class="sxi-card-box border-emerald"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Unit Cost Reduction</span>
+              <span
+                style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2; display: flex; align-items: center; gap: 4px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+                12.8%
+              </span>
             </div>
           </div>
         </div>
@@ -2194,11 +2225,11 @@
             </div>
             <div class="sxi-metric-line">
               <span class="sxi-line-label">Mean Absolute Error (MAE)</span>
-              <span class="sxi-line-val">±€0.12 / unit</span>
+              <span class="sxi-line-val">±$0.12 / unit</span>
             </div>
             <div class="sxi-metric-line">
               <span class="sxi-line-label">Root Mean Squared Error (RMSE)</span>
-              <span class="sxi-line-val">€0.18 / unit</span>
+              <span class="sxi-line-val">$0.18 / unit</span>
             </div>
             <div class="sxi-metric-line">
               <span class="sxi-line-label">Pearson Correlation</span>
@@ -2216,25 +2247,42 @@
               <span>Current Business Status</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Current SXI</span>
-              <span class="sxi-line-val sxi-val-blue">6.42</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                Current SXI
+              </span>
+              <span class="sxi-line-val">6.42</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Primary Metric (Unit Cost)</span>
-              <span class="sxi-line-val sxi-val-green">€3.76 / unit</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                Current Unit Cost
+              </span>
+              <span class="sxi-line-val" style="color: #ea580c;">$4.31 / unit</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">After 3 Months Projection</span>
-              <span class="sxi-line-val sxi-val-green">€3.76 (-12.8%)</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+                Target Unit Cost (3M)
+              </span>
+              <span class="sxi-line-val sxi-val-green">$3.76 / unit</span>
             </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Total Order Value (13,150 units)</span>
-              <span class="sxi-line-val">€49,390.50</span>
-            </div>
-            <div
-              style="margin-top: 14px; font-size: 12.5px; color: #475569; line-height: 1.5; background: #f8fafc; padding: 10px 14px; border-radius: 8px; border-left: 3px solid #16a34a;">
-              <strong>Business lens:</strong> Dynamic volume pricing protects against spot-buy inflation, locking in
-              €32,665.50 in gross margin on PO-MULTI-SKU0001.
+            <div class="sxi-metric-line" style="border-bottom: none; padding-top: 14px;">
+              <span class="sxi-line-label" style="align-items: flex-start;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                  style="margin-top: 2px;">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                Business lens:
+              </span>
+              <span style="font-size: 12.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 65%;">Dynamic volume pricing protects against spot-buy inflation, locking in $32,665.50 in gross margin on PO-MULTI-SKU0001.</span>
             </div>
           </div>
         </div>
@@ -2255,9 +2303,9 @@
               <svg viewBox="0 0 380 180" style="width:100%; max-height:180px;">
                 <line x1="40" y1="150" x2="360" y2="150" stroke="#cbd5e1" stroke-width="1" />
                 <line x1="40" y1="20" x2="40" y2="150" stroke="#cbd5e1" stroke-width="1" />
-                <text x="35" y="153" font-size="9" fill="#94a3b8" text-anchor="end">€3.0</text>
-                <text x="35" y="90" font-size="9" fill="#94a3b8" text-anchor="end">€4.0</text>
-                <text x="35" y="30" font-size="9" fill="#94a3b8" text-anchor="end">€5.0</text>
+                <text x="35" y="153" font-size="9" fill="#94a3b8" text-anchor="end">$3.0</text>
+                <text x="35" y="90" font-size="9" fill="#94a3b8" text-anchor="end">$4.0</text>
+                <text x="35" y="30" font-size="9" fill="#94a3b8" text-anchor="end">$5.0</text>
                 <text x="45" y="165" font-size="9" fill="#94a3b8">1k</text>
                 <text x="120" y="165" font-size="9" fill="#94a3b8">5k</text>
                 <text x="200" y="165" font-size="9" fill="#94a3b8">10k</text>
@@ -2271,7 +2319,7 @@
                 <!-- Highlight Point -->
                 <circle cx="260" cy="114" r="5" fill="#10b981" />
                 <text x="260" y="104" font-size="9" font-weight="700" fill="#059669" text-anchor="middle">PO @
-                  €3.76</text>
+                  $3.76</text>
                 <rect x="50" y="24" width="12" height="6" fill="#2563eb" />
                 <text x="66" y="30" font-size="9" fill="#475569">SXI Predicted</text>
                 <rect x="140" y="24" width="12" height="6" fill="#94a3b8" />
@@ -2306,9 +2354,9 @@
                 <rect x="285" y="134" width="18" height="16" rx="2" fill="#bfdbfe" />
                 <rect x="310" y="144" width="18" height="6" rx="2" fill="#dbeafe" />
                 <text x="194" y="165" font-size="9" font-weight="700" fill="#0f172a" text-anchor="middle">0.0 (MAE
-                  ±€0.12)</text>
-                <text x="80" y="165" font-size="9" fill="#94a3b8" text-anchor="middle">-€0.50</text>
-                <text x="310" y="165" font-size="9" fill="#94a3b8" text-anchor="middle">+€0.50</text>
+                  ±$0.12)</text>
+                <text x="80" y="165" font-size="9" fill="#94a3b8" text-anchor="middle">-$0.50</text>
+                <text x="310" y="165" font-size="9" fill="#94a3b8" text-anchor="middle">+$0.50</text>
               </svg>
             </div>
           </div>
@@ -2351,18 +2399,18 @@
                 <line x1="65" y1="112" x2="45" y2="145" stroke="#94a3b8" stroke-width="1.2" />
                 <line x1="115" y1="112" x2="135" y2="145" stroke="#94a3b8" stroke-width="1.2" />
                 <rect x="10" y="145" width="70" height="30" rx="4" fill="#16a34a" stroke="#15803d" />
-                <text x="45" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">€3.75 /
+                <text x="45" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">$3.75 /
                   u</text>
                 <rect x="100" y="145" width="70" height="30" rx="4" fill="#2563eb" stroke="#1d4ed8" />
-                <text x="135" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">€3.77 /
+                <text x="135" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">$3.77 /
                   u</text>
                 <line x1="265" y1="112" x2="245" y2="145" stroke="#94a3b8" stroke-width="1.2" />
                 <line x1="315" y1="112" x2="335" y2="145" stroke="#94a3b8" stroke-width="1.2" />
                 <rect x="210" y="145" width="70" height="30" rx="4" fill="#ea580c" stroke="#c2410c" />
-                <text x="245" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">€4.15 /
+                <text x="245" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">$4.15 /
                   u</text>
                 <rect x="300" y="145" width="70" height="30" rx="4" fill="#dc2626" stroke="#b91c1c" />
-                <text x="335" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">€4.32 /
+                <text x="335" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">$4.32 /
                   u</text>
               </svg>
             </div>
@@ -2429,17 +2477,17 @@
               stroke-linecap="round" stroke-linejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            <span>Business Actions — purchase_cost (€)</span>
+            <span>Business Actions — purchase_cost ($)</span>
           </div>
           <ul class="ba-checklist">
-            <li><strong>Automated contract pricing:</strong> Enforce €3.76/unit cap on PO-MULTI-SKU0001, saving €7,364
+            <li><strong>Automated contract pricing:</strong> Enforce $3.76/unit cap on PO-MULTI-SKU0001, saving $7,364
               compared to baseline single-unit quotes.</li>
             <li><strong>Volume tier locking:</strong> Consolidate replenishment orders under 5,000 units into single
               13,150-unit batch to secure maximum volume discounts.</li>
-            <li><strong>Supplier price renegotiation:</strong> Flag suppliers quoting above €3.85 for renegotiation
+            <li><strong>Supplier price renegotiation:</strong> Flag suppliers quoting above $3.85 for renegotiation
               based on SXI quantitative cost benchmarks.</li>
             <li><strong>Decision Engine Summary:</strong> Model Accuracy: <strong>94.6%</strong> · Correlation R²:
-              <strong>0.884</strong> · MAE: <strong>±€0.12</strong> · Current SXI: <strong>6.42</strong> &rarr; Target
+              <strong>0.884</strong> · MAE: <strong>±$0.12</strong> · Current SXI: <strong>6.42</strong> &rarr; Target
               SXI: <strong>8.15</strong>.
             </li>
           </ul>
@@ -2554,40 +2602,70 @@
         </div>
 
         <!-- 4. Current vs Target SXI (Screenshot 3) -->
-        <div class="sxi-container">
-          <div class="sxi-card-title-row">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z">
-              </path>
-            </svg>
-            <span>Current vs Target SXI</span>
+        <div class="sxi-container" style="margin-bottom: 22px;">
+          <div class="sxi-card-title-row" style="margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+            <div
+              style="width: 26px; height: 26px; border-radius: 6px; background: #ecfdf5; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Current vs Target SXI</span>
           </div>
-          <div class="sxi-grid-6">
-            <div class="sxi-card-box border-blue">
-              <span class="sxi-card-lbl">Current SXI</span>
-              <span class="sxi-card-num" style="color: #2563eb;">6.15</span>
+
+          <!-- Row 1: 3 cards -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px;">
+            <!-- Box 1: Current SXI -->
+            <div class="sxi-card-box border-blue"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #2563eb; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #2563eb; line-height: 1.2;">6.15</span>
             </div>
-            <div class="sxi-card-box border-green">
-              <span class="sxi-card-lbl">Current Stockout Prevention</span>
-              <span class="sxi-card-num" style="color: #059669;">88.5%</span>
+
+            <!-- Box 2: Current Stockout Prevention -->
+            <div class="sxi-card-box border-green"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #059669; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current Prevention Rate</span>
+              <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2;">88.5%</span>
             </div>
-            <div class="sxi-card-box border-dark">
-              <span class="sxi-card-lbl">Model Accuracy</span>
-              <span class="sxi-card-num" style="color: #0f172a;">96.8%</span>
+
+            <!-- Box 3: Target SXI -->
+            <div class="sxi-card-box border-purple"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #8b5cf6; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #7c3aed; line-height: 1.2;">8.20</span>
             </div>
-            <div class="sxi-card-box border-purple">
-              <span class="sxi-card-lbl">Target SXI</span>
-              <span class="sxi-card-num" style="color: #7c3aed;">8.20</span>
+          </div>
+
+          <!-- Row 2: 2 cards -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+            <!-- Box 4: Target Stockout Prevention -->
+            <div class="sxi-card-box border-orange"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #ea580c; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target Prevention Rate</span>
+              <span style="font-size: 24px; font-weight: 800; color: #c2410c; line-height: 1.2;">99.0%</span>
             </div>
-            <div class="sxi-card-box border-orange">
-              <span class="sxi-card-lbl">Target Stockout Prevention</span>
-              <span class="sxi-card-num" style="color: #ea580c;">99.0%</span>
-            </div>
-            <div class="sxi-card-box border-emerald">
-              <span class="sxi-card-lbl">Fulfillment Lift</span>
-              <span class="sxi-card-num" style="color: #16a34a;">+10.5%</span>
+
+            <!-- Box 5: Fulfillment Lift -->
+            <div class="sxi-card-box border-emerald"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Fulfillment Lift</span>
+              <span
+                style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2; display: flex; align-items: center; gap: 4px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="19" x2="12" y2="5"></line>
+                  <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+                10.5%
+              </span>
             </div>
           </div>
         </div>
@@ -2709,25 +2787,51 @@
               <span>Current Business Status</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Current SXI</span>
-              <span class="sxi-line-val sxi-val-blue">6.15</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                Current SXI
+              </span>
+              <span class="sxi-line-val">6.15</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Inventory Position</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                Inventory Position
+              </span>
               <span class="sxi-line-val" style="color: #dc2626;">248 units</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Reorder Point (ROP)</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                </svg>
+                Reorder Point (ROP)
+              </span>
               <span class="sxi-line-val">13,163 units</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Trigger Status</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+                Trigger Status
+              </span>
               <span class="sxi-line-val sxi-val-green">ORDER REQUIRED (1)</span>
             </div>
-            <div
-              style="margin-top: 14px; font-size: 12.5px; color: #475569; line-height: 1.5; background: #f0fdf4; padding: 10px 14px; border-radius: 8px; border-left: 3px solid #16a34a;">
-              <strong>Business lens:</strong> Validates inventory position (248 units) &le; ROP (13,163 units). Order
-              approved for immediate PO release.
+            <div class="sxi-metric-line" style="border-bottom: none; padding-top: 14px;">
+              <span class="sxi-line-label" style="align-items: flex-start;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                  style="margin-top: 2px;">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                Business lens:
+              </span>
+              <span style="font-size: 12.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 65%;">Validates inventory position (248 units) &le; ROP (13,163 units). Order approved for immediate PO release.</span>
             </div>
           </div>
         </div>
@@ -2920,7 +3024,7 @@
             <li><strong>Auto-trigger purchase order release:</strong> Automatically transmit replenishment PO for
               SKU0001 (13,150 units) as stock (248 units) is below ROP (13,163 units).</li>
             <li><strong>Suppress premature purchase orders:</strong> Automatically block reorder attempts on SKUs with
-              inventory positions above safety stock, freeing up €180,000 in working capital.</li>
+              inventory positions above safety stock, freeing up $180,000 in working capital.</li>
             <li><strong>Lead time buffer synchronization:</strong> Dynamically adjust trigger dates 3 days earlier
               during supplier peak shipping seasons.</li>
             <li><strong>Decision Engine Summary:</strong> Classification Accuracy: <strong>96.8%</strong> · AUC:
@@ -3051,42 +3155,71 @@
           </div>
         </div>
 
-        <!-- 4. Current vs Target SXI (Screenshot 3) -->
-        <div class="sxi-container">
-          <div class="sxi-card-title-row">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z">
-              </path>
-            </svg>
-            <span>Current vs Target SXI</span>
+        <!-- 4. Current vs Target SXI (Screenshot 3 Layout) -->
+        <div class="sxi-container" style="margin-bottom: 22px;">
+          <div class="sxi-card-title-row" style="margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+            <div
+              style="width: 26px; height: 26px; border-radius: 6px; background: #ecfdf5; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Current vs
+              Target SXI</span>
           </div>
-          <div class="sxi-grid-6">
-            <div class="sxi-card-box border-blue">
-              <span class="sxi-card-lbl">Current SXI</span>
-              <span class="sxi-card-num" style="color: #2563eb;">6.35</span>
+
+          <!-- Row 1: 3 cards -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px;">
+            <!-- Box 1: Current SXI -->
+            <div class="sxi-card-box border-blue"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #2563eb; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current
+                SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #2563eb; line-height: 1.2;">6.35</span>
             </div>
-            <div class="sxi-card-box border-green">
-              <span class="sxi-card-lbl">Current Disruption Risk</span>
-              <span class="sxi-card-num" style="color: #059669;">35.0%</span>
+
+            <!-- Box 2: Current Disruption Risk -->
+            <div class="sxi-card-box border-green"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current
+                Single-Source Risk</span>
+              <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2;">35.0%</span>
             </div>
-            <div class="sxi-card-box border-dark">
-              <span class="sxi-card-lbl">Model Accuracy</span>
-              <span class="sxi-card-num" style="color: #0f172a;">93.2%</span>
+
+            <!-- Box 3: Target SXI -->
+            <div class="sxi-card-box border-purple"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #8b5cf6; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target
+                SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #7c3aed; line-height: 1.2;">7.40</span>
             </div>
-            <div class="sxi-card-box border-purple">
-              <span class="sxi-card-lbl">Target SXI</span>
-              <span class="sxi-card-num" style="color: #7c3aed;">7.40</span>
+          </div>
+
+          <!-- Row 2: 2 cards (Matching Reference Screenshot layout) -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+            <!-- Box 4: Target Disruption Risk -->
+            <div class="sxi-card-box border-orange"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #ea580c; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target
+                Single-Source Risk</span>
+              <span style="font-size: 24px; font-weight: 800; color: #c2410c; line-height: 1.2;">28.0%</span>
             </div>
-            <div class="sxi-card-box border-orange">
-              <span class="sxi-card-lbl">Target Disruption Risk</span>
-              <span class="sxi-card-num" style="color: #ea580c;">28.0%</span>
-            </div>
-            <div class="sxi-card-box border-emerald">
-              <span class="sxi-card-lbl">Disruption Risk Reduction</span>
-              <span class="sxi-card-num" style="color: #16a34a; display: flex; align-items: center; gap: 4px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.8"
+
+            <!-- Box 5: Disruption Risk Reduction -->
+            <div class="sxi-card-box border-emerald"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Disruption
+                Risk Reduction</span>
+              <span
+                style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2; display: flex; align-items: center; gap: 4px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.8"
                   stroke-linecap="round" stroke-linejoin="round">
                   <line x1="12" y1="5" x2="12" y2="19"></line>
                   <polyline points="19 12 12 19 5 12"></polyline>
@@ -3099,7 +3232,7 @@
 
         <!-- 4b. Correlation Chart (Matching Reference Screenshot Layout) -->
         <div class="sxi-white-card" style="margin-top: 18px; margin-bottom: 22px;">
-          <div style="display: flex; align-items: center; gap: 8px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
               <circle cx="18" cy="5" r="3"></circle>
@@ -3110,9 +3243,6 @@
             </svg>
             <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Correlation
               Chart</span>
-          </div>
-          <div style="font-size: 13px; color: #334155; margin-top: 10px; margin-bottom: 14px; font-weight: 500;">
-            SXI vs the business outcome. Chart R² is not Model R².
           </div>
 
           <div
@@ -3175,8 +3305,8 @@
                 <!-- X-Axis Label -->
                 <text x="335" y="402" font-size="12" fill="#334155" font-weight="700" text-anchor="middle">SXI</text>
 
-                <!-- Mustard Gold Correlation Line -->
-                <line x1="70" y1="65" x2="600" y2="310" stroke="#ca8a04" stroke-width="2.2" />
+                <!-- Mustard Gold Correlation Line passing precisely through points -->
+                <line x1="70" y1="60" x2="600" y2="268" stroke="#ca8a04" stroke-width="2.2" />
 
                 <!-- Cross Mark 1: Current (SXI=6.35, risk=35.0%) -> Blue Cross -->
                 <g transform="translate(132, 84)">
@@ -3187,7 +3317,7 @@
                 </g>
 
                 <!-- Cross Mark 2: Short-term (SXI=7.40, risk=28.0%) -> Magenta Cross -->
-                <g transform="translate(318, 138)">
+                <g transform="translate(318, 157)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#c026d3" stroke-width="3.2"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#c026d3" stroke-width="3.2"
@@ -3195,7 +3325,7 @@
                 </g>
 
                 <!-- Cross Mark 3: Mid-term (SXI=7.85, risk=22.8%) -> Black Cross -->
-                <g transform="translate(397, 178)">
+                <g transform="translate(397, 188)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#000000" stroke-width="3.2"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#000000" stroke-width="3.2"
@@ -3275,7 +3405,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">20.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Short-term reduction:</strong> A 20.0% reduction cuts single-source risk from 35.0% down to
+                <strong>Short-term reduction:</strong> A 20.0% reduction brings single-source risk from 35.0% down to
                 28.0%.
                 SXI moves from 6.35 to short-term SXI 7.40.
               </div>
@@ -3336,24 +3466,45 @@
               <span>Model Performance</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Accuracy (Classification)</span>
-              <span class="sxi-line-val">93.2%</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Accuracy (Classification)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">93.2% of supplier tier & dual-sourcing
+                  qualifications match actual audit benchmarks</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #059669; font-size: 14px;">93.2%</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">AUC-ROC Score</span>
-              <span class="sxi-line-val">0.92</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">AUC-ROC Score</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">Outstanding discriminatory power
+                  separating reliable dual-source vendors from single-source risk</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #2563eb; font-size: 14px;">0.92</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Precision (Tier 1 Qualification)</span>
-              <span class="sxi-line-val">94.0%</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Precision (Tier 1 Qualification)
+                </div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">94.0% of suppliers classified as
+                  preferred qualify as reliable primary & secondary vendors</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #0f172a; font-size: 14px;">94.0%</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Recall (Risk Detection)</span>
-              <span class="sxi-line-val">92.5%</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Recall (Risk Detection)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">Detects 92.5% of high-risk single-source
+                  dependencies before supplier disruption occurs</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #0f172a; font-size: 14px;">92.5%</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">F1-Score</span>
-              <span class="sxi-line-val">0.932</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">F1-Score</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">Harmonic mean balancing tier
+                  qualification precision and risk detection recall</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #2563eb; font-size: 14px;">0.932</span>
             </div>
           </div>
 
@@ -3367,159 +3518,719 @@
               <span>Current Business Status</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Current SXI</span>
-              <span class="sxi-line-val sxi-val-blue">6.35</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                Current SXI
+              </span>
+              <span class="sxi-line-val">6.35</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Primary Supplier (S014)</span>
-              <span class="sxi-line-val sxi-val-green">9,250 units (70.3%)</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                </svg>
+                Current Single-Source Risk
+              </span>
+              <span class="sxi-line-val" style="color: #ea580c;">35.0%</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Secondary Supplier (S015)</span>
-              <span class="sxi-line-val sxi-val-blue">3,900 units (29.7%)</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Single-Source Disruption Risk</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+                Target Single-Source Risk
+              </span>
               <span class="sxi-line-val sxi-val-green">28.0%</span>
             </div>
-            <div
-              style="margin-top: 14px; font-size: 12.5px; color: #475569; line-height: 1.5; background: #eff6ff; padding: 10px 14px; border-radius: 8px; border-left: 3px solid #2563eb;">
-              <strong>Business lens:</strong> Enforces dual-source PO allocation (70/30 split) between top suppliers
-              S014 and S015, completely insulating operations from supplier disruption.
+            <div class="sxi-metric-line" style="border-bottom: none; padding-top: 14px;">
+              <span class="sxi-line-label" style="align-items: flex-start;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                  style="margin-top: 2px;">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                Business lens:
+              </span>
+              <span style="font-size: 12.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 65%;">Enforces
+                dual-source PO allocation (70/30 split) between top suppliers S014 and S015 to cut disruption risk from
+                35.0% to 28.0%.</span>
             </div>
           </div>
         </div>
 
-        <!-- 7. Visual Plots: AUC-ROC Curve & Confusion Matrix (Screenshot 1) -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                <polyline points="16 7 22 7 22 13"></polyline>
-              </svg>
-              <span>AUC / ROC Curve — Supplier Qualification</span>
-            </div>
-            <div style="text-align:center; padding: 8px 0;">
-              <svg viewBox="0 0 380 180" style="width:100%; max-height:180px;">
-                <line x1="45" y1="150" x2="350" y2="150" stroke="#cbd5e1" stroke-width="1.2" />
-                <line x1="45" y1="20" x2="45" y2="150" stroke="#cbd5e1" stroke-width="1.2" />
-                <line x1="45" y1="150" x2="350" y2="20" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4" />
-                <!-- ROC Curve -->
-                <path d="M 45 150 Q 60 40 130 30 T 350 20" fill="none" stroke="#ea580c" stroke-width="3" />
-                <text x="35" y="153" font-size="9" fill="#94a3b8" text-anchor="end">0.0</text>
-                <text x="35" y="85" font-size="9" fill="#94a3b8" text-anchor="end">0.5</text>
-                <text x="35" y="25" font-size="9" fill="#94a3b8" text-anchor="end">1.0</text>
-                <text x="45" y="165" font-size="9" fill="#94a3b8">0.0</text>
-                <text x="195" y="165" font-size="9" fill="#94a3b8">0.5</text>
-                <text x="345" y="165" font-size="9" fill="#94a3b8">1.0</text>
-                <rect x="220" y="80" width="115" height="42" rx="6" fill="#fff7ed" stroke="#fdba74" />
-                <text x="277" y="98" font-size="11" font-weight="800" fill="#9a3412" text-anchor="middle">AUC =
-                  0.92</text>
-                <text x="277" y="112" font-size="9" fill="#64748b" text-anchor="middle">High Discrimination</text>
+        <!-- 7. AUC / ROC & Confusion Matrix (Matching Reference Screenshots 1 & 2) -->
+        <!-- 7a. AUC / ROC Curve -->
+        <div class="sxi-white-card" style="margin-top: 22px; margin-bottom: 22px;">
+          <div class="sxi-card-title-row" style="margin-bottom: 16px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M4.93 4.93l14.14 14.14"></path>
+            </svg>
+            <span style="font-size: 14px; font-weight: 700; color: #475569;">AUC / ROC</span>
+          </div>
+
+          <div
+            style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+            <div style="width: 100%; overflow-x: auto;">
+              <svg viewBox="0 0 920 440"
+                style="width: 100%; max-height: 480px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                <!-- Inner Title -->
+                <text x="80" y="32" font-size="13.5" font-weight="800" fill="#000000">AUC-ROC Curve</text>
+
+                <!-- Plot Area Background -->
+                <rect x="80" y="50" width="780" height="320" fill="#ffffff" stroke="none" />
+
+                <!-- Grid lines (Horizontal: 0, 0.2, 0.4, 0.6, 0.8, 1.0) -->
+                <!-- y=370 (0.0), y=306 (0.2), y=242 (0.4), y=178 (0.6), y=114 (0.8), y=50 (1.0) -->
+                <line x1="80" y1="50" x2="860" y2="50" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="70" y="54" font-size="11" font-weight="700" fill="#000000" text-anchor="end">1</text>
+
+                <line x1="80" y1="114" x2="860" y2="114" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="70" y="118" font-size="11" font-weight="700" fill="#000000" text-anchor="end">0.8</text>
+
+                <line x1="80" y1="178" x2="860" y2="178" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="70" y="182" font-size="11" font-weight="700" fill="#000000" text-anchor="end">0.6</text>
+
+                <line x1="80" y1="242" x2="860" y2="242" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="70" y="246" font-size="11" font-weight="700" fill="#000000" text-anchor="end">0.4</text>
+
+                <line x1="80" y1="306" x2="860" y2="306" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="70" y="310" font-size="11" font-weight="700" fill="#000000" text-anchor="end">0.2</text>
+
+                <line x1="80" y1="370" x2="860" y2="370" stroke="#64748b" stroke-width="1.2" />
+                <text x="70" y="374" font-size="11" font-weight="700" fill="#000000" text-anchor="end">0</text>
+
+                <!-- Grid lines (Vertical: 0, 0.2, 0.4, 0.6, 0.8, 1.0) -->
+                <!-- x=80 (0.0), x=236 (0.2), x=392 (0.4), x=548 (0.6), x=704 (0.8), x=860 (1.0) -->
+                <line x1="80" y1="50" x2="80" y2="370" stroke="#64748b" stroke-width="1.2" />
+                <text x="80" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">0</text>
+
+                <line x1="236" y1="50" x2="236" y2="370" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="236" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">0.2</text>
+
+                <line x1="392" y1="50" x2="392" y2="370" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="392" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">0.4</text>
+
+                <line x1="548" y1="50" x2="548" y2="370" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="548" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">0.6</text>
+
+                <line x1="704" y1="50" x2="704" y2="370" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="704" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">0.8</text>
+
+                <line x1="860" y1="50" x2="860" y2="370" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="860" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">1</text>
+
+                <!-- ROC Curve (Smooth Bright Orange matching Reference Screenshot 1) -->
+                <path d="M 80 370 Q 115 240, 185 180 T 385 120 T 630 80 L 860 50" fill="none" stroke="#ea580c"
+                  stroke-width="3.2" stroke-linecap="round" />
+
+                <!-- Axis Labels -->
+                <text x="-210" y="24" font-size="11.5" font-weight="700" fill="#000000" transform="rotate(-90)"
+                  text-anchor="middle">True Positive Rate</text>
+                <text x="470" y="420" font-size="11.5" font-weight="700" fill="#000000" text-anchor="middle">False
+                  Positive Rate</text>
               </svg>
             </div>
           </div>
+        </div>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="12" y1="3" x2="12" y2="21"></line>
-              </svg>
-              <span>Confusion Matrix (Accuracy Matrix)</span>
+        <!-- 7b. Confusion Matrix (Matching Reference Screenshot 2) -->
+        <div class="sxi-white-card" style="margin-bottom: 24px;">
+          <div class="sxi-card-title-row" style="margin-bottom: 18px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span style="font-size: 14px; font-weight: 700; color: #475569;">Confusion Matrix</span>
+          </div>
+
+          <!-- Centered Header -->
+          <div style="text-align: center; margin-bottom: 28px;">
+            <div style="font-size: 20px; font-weight: 800; color: #000000; letter-spacing: -0.01em;">
+              Confusion Matrix
             </div>
-            <div class="conf-matrix-wrapper">
-              <div class="conf-matrix-table-wrap">
-                <span class="conf-matrix-y-label">Actual Class</span>
-                <div class="conf-grid-2x2">
-                  <div class="conf-cell conf-green">
-                    <span class="conf-cell-num">136</span>
-                    <span class="conf-cell-pct">(53.33%) True Preferred</span>
+            <div style="font-size: 12.5px; font-weight: 600; color: #64748b; margin-top: 4px;">
+              Actual vs Predicted (Counts and Percentage)
+            </div>
+          </div>
+
+          <!-- 2-Column Content Layout (Matrix on Left, Explanations on Right) -->
+          <div
+            style="display: flex; gap: 48px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 0 10px;">
+            <!-- Left Column: 2x2 Matrix with Headers, Row Labels, and Legend -->
+            <div style="display: flex; align-items: center; gap: 24px; flex: 1; min-width: 360px; justify-content: center;">
+              <!-- Matrix Table Container -->
+              <div style="position: relative; padding-left: 90px; padding-top: 50px; padding-bottom: 30px;">
+                <!-- Actual Class Vertical Y-Axis Label -->
+                <div
+                  style="position: absolute; left: 0; top: 60%; transform: translateY(-50%) rotate(-90deg); font-size: 12px; font-weight: 800; color: #000000; white-space: nowrap;">
+                  Actual Class
+                </div>
+
+                <!-- Predicted Class Horizontal X-Axis Label -->
+                <div
+                  style="position: absolute; bottom: 0; left: 60%; transform: translateX(-50%); font-size: 12px; font-weight: 800; color: #000000; white-space: nowrap;">
+                  Predicted Class
+                </div>
+
+                <!-- Column Header: 0 (Predicted No Risk / Single-Source) -->
+                <div
+                  style="position: absolute; top: 12px; left: 90px; width: 140px; text-align: center; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
+                  0<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Predicted Single-Source)</span>
+                </div>
+
+                <!-- Column Header: 1 (Predicted Preferred Supplier) -->
+                <div
+                  style="position: absolute; top: 12px; left: 236px; width: 140px; text-align: center; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
+                  1<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Predicted Preferred)</span>
+                </div>
+
+                <!-- Row Label: 0 (Single-Source Risk) -->
+                <div
+                  style="position: absolute; top: 65px; left: 16px; width: 70px; text-align: right; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
+                  0<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Single-Source)</span>
+                </div>
+
+                <!-- Row Label: 1 (Preferred Supplier) -->
+                <div
+                  style="position: absolute; top: 155px; left: 16px; width: 70px; text-align: right; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
+                  1<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Preferred)</span>
+                </div>
+
+                <!-- 2x2 Grid -->
+                <div
+                  style="display: grid; grid-template-columns: 140px 140px; grid-template-rows: 85px 85px; gap: 4px; border: 2px solid #ffffff; background: #ffffff;">
+                  <!-- Top-Left: TN (Green) -->
+                  <div
+                    style="background: #22c55e; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
+                    <span style="font-size: 14px; font-weight: 800; color: #000000;">TN</span>
+                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">4,625
+                      (92.83%)</span>
                   </div>
-                  <div class="conf-cell conf-light-red">
-                    <span class="conf-cell-num">8</span>
-                    <span class="conf-cell-pct">(3.14%) False Reserve</span>
+
+                  <!-- Top-Right: FP (Red) -->
+                  <div
+                    style="background: #ef4444; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
+                    <span style="font-size: 14px; font-weight: 800; color: #000000;">FP</span>
+                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">357
+                      (7.17%)</span>
                   </div>
-                  <div class="conf-cell conf-red">
-                    <span class="conf-cell-num">9</span>
-                    <span class="conf-cell-pct">(3.53%) False Preferred</span>
+
+                  <!-- Bottom-Left: FN (Red) -->
+                  <div
+                    style="background: #ef4444; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
+                    <span style="font-size: 14px; font-weight: 800; color: #000000;">FN</span>
+                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">694
+                      (7.50%)</span>
                   </div>
-                  <div class="conf-cell conf-green">
-                    <span class="conf-cell-num">102</span>
-                    <span class="conf-cell-pct">(40.00%) True Reserve</span>
+
+                  <!-- Bottom-Right: TP (Green) -->
+                  <div
+                    style="background: #22c55e; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
+                    <span style="font-size: 14px; font-weight: 800; color: #000000;">TP</span>
+                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">8,559
+                      (92.50%)</span>
                   </div>
                 </div>
-                <span class="conf-matrix-x-label">Predicted Class</span>
+              </div>
+
+              <!-- Legend -->
+              <div style="display: flex; flex-direction: column; gap: 14px; margin-left: 10px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 16px; height: 16px; background: #22c55e; border-radius: 2px;"></div>
+                  <span style="font-size: 12px; font-weight: 700; color: #1e293b;">Correct<br><span
+                      style="font-size: 11px; font-weight: 600; color: #64748b;">(TN, TP)</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 16px; height: 16px; background: #ef4444; border-radius: 2px;"></div>
+                  <span style="font-size: 12px; font-weight: 700; color: #1e293b;">Incorrect<br><span
+                      style="font-size: 11px; font-weight: 600; color: #64748b;">(FP, FN)</span></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Explanations -->
+            <div style="flex: 1; min-width: 340px; display: flex; flex-direction: column; gap: 18px;">
+              <div>
+                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
+                  True Negative (TN)
+                </div>
+                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
+                  The order was actually Single-Source Risk (Non-Preferred), and the model correctly identified it as
+                  Single-Source Risk.
+                </div>
+              </div>
+
+              <div>
+                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
+                  False Positive (FP)
+                </div>
+                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
+                  The order was actually Single-Source Risk (Non-Preferred), but the model incorrectly classified it as
+                  Preferred Supplier.
+                </div>
+              </div>
+
+              <div>
+                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
+                  False Negative (FN)
+                </div>
+                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
+                  The order was actually Preferred Supplier, but the model incorrectly flagged it as Single-Source Risk.
+                </div>
+              </div>
+
+              <div>
+                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
+                  True Positive (TP)
+                </div>
+                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
+                  The order was actually Preferred Supplier, and the model correctly qualified it as Preferred Supplier.
+                </div>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 8. Decision Tree — Target Logic & Top 5 Feature Importance (Side-by-side equal height) -->
-        <div class="sxi-card-grid-2"
-          style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 18px; align-items: stretch; margin-top: 18px;">
+        <div class="sxi-card-grid-2" style="margin-top: 18px; margin-bottom: 24px; align-items: stretch;">
           <!-- Decision Tree card -->
           <div class="sxi-white-card"
             style="padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div class="sxi-card-title-row" style="margin-bottom: 14px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="18" cy="5" r="3"></circle>
-                  <circle cx="6" cy="12" r="3"></circle>
-                  <circle cx="18" cy="19" r="3"></circle>
-                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-                </svg>
-                <span style="font-size: 16px; font-weight: 700; color: #475569;">Decision Tree — Supplier Tiering
-                  Logic</span>
-              </div>
-              <div style="font-size: 12.5px; color: #475569; margin-bottom: 12px; line-height: 1.45;">
-                Hierarchical decision rules partitioning vendor records based on on-time delivery SLA, quote pricing,
-                and defect history.
-              </div>
+            <div class="sxi-card-title-row" style="margin-bottom: 14px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="6" y1="3" x2="6" y2="15"></line>
+                <circle cx="18" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M18 9a9 9 0 0 1-9 9"></path>
+              </svg>
+              <span style="font-size: 16px; font-weight: 700; color: #475569;">Target Decision Tree — Business
+                Interpretation</span>
             </div>
 
-            <!-- Decision Tree SVG Diagram -->
-            <div style="text-align:center; padding:6px 0; width:100%; overflow-x:auto;">
-              <svg viewBox="0 0 380 210" style="width:100%; max-height:200px;">
-                <rect x="130" y="10" width="120" height="34" rx="6" fill="#eff6ff" stroke="#3b82f6"
-                  stroke-width="1.8" />
-                <text x="190" y="26" font-size="10" font-weight="700" fill="#1e40af" text-anchor="middle">On-Time SLA
-                  &ge; 95%?</text>
-                <text x="190" y="38" font-size="9" fill="#64748b" text-anchor="middle">Reliability Threshold</text>
-                <line x1="160" y1="44" x2="90" y2="78" stroke="#94a3b8" stroke-width="1.5" />
-                <line x1="220" y1="44" x2="290" y2="78" stroke="#94a3b8" stroke-width="1.5" />
-                <text x="110" y="60" font-size="9" fill="#16a34a" font-weight="700">True</text>
-                <text x="260" y="60" font-size="9" fill="#dc2626" font-weight="700">False</text>
-                <rect x="35" y="78" width="110" height="34" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" />
-                <text x="90" y="93" font-size="10" font-weight="700" fill="#166534" text-anchor="middle">Unit Quote &le;
-                  €3.80</text>
-                <text x="90" y="105" font-size="9" fill="#64748b" text-anchor="middle">Competitive Pricing</text>
-                <rect x="235" y="78" width="110" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8"
-                  stroke-width="1.5" />
-                <text x="290" y="93" font-size="10" font-weight="700" fill="#334155" text-anchor="middle">SLA
-                  Substandard</text>
-                <text x="290" y="105" font-size="9" fill="#64748b" text-anchor="middle">Reserve Tier Only</text>
-                <line x1="65" y1="112" x2="45" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <line x1="115" y1="112" x2="135" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <rect x="10" y="145" width="70" height="30" rx="4" fill="#16a34a" stroke="#15803d" />
-                <text x="45" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">Tier 1
-                  (70%)</text>
-                <rect x="100" y="145" width="70" height="30" rx="4" fill="#2563eb" stroke="#1d4ed8" />
-                <text x="135" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">Tier 1
-                  (30%)</text>
-                <line x1="265" y1="112" x2="245" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <line x1="315" y1="112" x2="335" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <rect x="210" y="145" width="70" height="30" rx="4" fill="#ea580c" stroke="#c2410c" />
-                <text x="245" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">Backup</text>
-                <rect x="300" y="145" width="70" height="30" rx="4" fill="#dc2626" stroke="#b91c1c" />
-                <text x="335" y="164" font-size="10" font-weight="800" fill="#ffffff"
-                  text-anchor="middle">Ineligible</text>
+            <!-- Scaled Decision Tree — fits card width without horizontal scroll (Matching Demand Planning Layout) -->
+            <div
+              style="background:#fafcff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 8px; overflow:hidden;">
+              <svg viewBox="0 0 940 370"
+                style="width:100%; height:auto; display:block; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+                <!-- CONNECTOR LINES -->
+                <!-- Root to L1 -->
+                <line x1="470" y1="52" x2="265" y2="84" stroke="#94a3b8" stroke-width="1.2" />
+                <line x1="470" y1="52" x2="675" y2="84" stroke="#94a3b8" stroke-width="1.2" />
+                <text x="355" y="66" font-size="8.5" fill="#16a34a" font-weight="700">True</text>
+                <text x="580" y="66" font-size="8.5" fill="#dc2626" font-weight="700">False</text>
+
+                <!-- L1 to L2 -->
+                <line x1="265" y1="126" x2="140" y2="148" stroke="#94a3b8" stroke-width="1.1" />
+                <line x1="265" y1="126" x2="360" y2="148" stroke="#94a3b8" stroke-width="1.1" />
+                <line x1="675" y1="126" x2="580" y2="148" stroke="#94a3b8" stroke-width="1.1" />
+                <line x1="675" y1="126" x2="800" y2="148" stroke="#94a3b8" stroke-width="1.1" />
+
+                <!-- L2 to L3 -->
+                <line x1="140" y1="188" x2="85" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="140" y1="188" x2="195" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="360" y1="188" x2="305" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="360" y1="188" x2="415" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="580" y1="188" x2="525" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="580" y1="188" x2="635" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="800" y1="188" x2="745" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="800" y1="188" x2="855" y2="208" stroke="#94a3b8" stroke-width="1" />
+
+                <!-- L3 to L4 -->
+                <line x1="85" y1="246" x2="55" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="85" y1="246" x2="110" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="195" y1="246" x2="165" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="195" y1="246" x2="220" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="305" y1="246" x2="275" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="305" y1="246" x2="330" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="415" y1="246" x2="385" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="415" y1="246" x2="440" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="525" y1="246" x2="495" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="525" y1="246" x2="550" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="635" y1="246" x2="605" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="635" y1="246" x2="660" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="745" y1="246" x2="715" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="745" y1="246" x2="770" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="855" y1="246" x2="825" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="855" y1="246" x2="885" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+
+                <!-- L4 to L5 -->
+                <line x1="55" y1="295" x2="38" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="110" y1="295" x2="95" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="165" y1="295" x2="152" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="220" y1="295" x2="209" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="275" y1="295" x2="266" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="330" y1="295" x2="323" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="385" y1="295" x2="380" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="440" y1="295" x2="437" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="495" y1="295" x2="494" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="550" y1="295" x2="551" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="605" y1="295" x2="608" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="660" y1="295" x2="665" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="715" y1="295" x2="722" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="770" y1="295" x2="779" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="825" y1="295" x2="836" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="885" y1="295" x2="893" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+
+                <!-- LEVEL 0: ROOT NODE -->
+                <g transform="translate(415, 8)">
+                  <rect width="110" height="44" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.2" />
+                  <text x="55" y="10" font-size="7.5" font-weight="700" fill="#ffffff"
+                    text-anchor="middle">ontime_delivery &gt;= 0.95</text>
+                  <text x="55" y="19" font-size="6.8" fill="#dbeafe" text-anchor="middle">sxi_weight = 0.0820</text>
+                  <text x="55" y="27" font-size="6.8" fill="#dbeafe" text-anchor="middle">samples = 14235</text>
+                  <text x="55" y="35" font-size="6.8" fill="#dbeafe" text-anchor="middle">value = [4982, 9253]</text>
+                  <text x="55" y="42" font-size="6.8" fill="#dbeafe" text-anchor="middle">class = 1 (Preferred)</text>
+                </g>
+
+                <!-- LEVEL 1: 2 NODES -->
+                <g transform="translate(210, 84)">
+                  <rect width="110" height="42" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.2" />
+                  <text x="55" y="10" font-size="7.5" font-weight="700" fill="#ffffff"
+                    text-anchor="middle">unit_price_quote &lt;= 3.80</text>
+                  <text x="55" y="18" font-size="6.8" fill="#dbeafe" text-anchor="middle">sxi_weight = 0.0765</text>
+                  <text x="55" y="26" font-size="6.8" fill="#dbeafe" text-anchor="middle">samples = 8850</text>
+                  <text x="55" y="34" font-size="6.8" fill="#dbeafe" text-anchor="middle">value = [1420, 7430]</text>
+                  <text x="55" y="40" font-size="6.8" fill="#dbeafe" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(620, 84)">
+                  <rect width="110" height="42" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.2" />
+                  <text x="55" y="10" font-size="7.5" font-weight="700" fill="#ffffff"
+                    text-anchor="middle">defect_rate &lt;= 0.018</text>
+                  <text x="55" y="18" font-size="6.8" fill="#dbeafe" text-anchor="middle">sxi_weight = 0.0812</text>
+                  <text x="55" y="26" font-size="6.8" fill="#dbeafe" text-anchor="middle">samples = 5385</text>
+                  <text x="55" y="34" font-size="6.8" fill="#dbeafe" text-anchor="middle">value = [3562, 1823]</text>
+                  <text x="55" y="40" font-size="6.8" fill="#dbeafe" text-anchor="middle">class = 0</text>
+                </g>
+
+                <!-- LEVEL 2: 4 NODES -->
+                <g transform="translate(88, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">lead_time_var &lt;= 2.5</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0790</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 5200</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [480, 4720]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(308, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">capacity_util &lt;= 0.80</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0685</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 3650</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [940, 2710]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(528, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff"
+                    text-anchor="middle">compliance_score &gt;= 88</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0840</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 3100</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [1980, 1120]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+                <g transform="translate(748, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff"
+                    text-anchor="middle">credit_risk_tier &lt;= 2</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0775</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 2285</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [1582, 703]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+
+                <!-- LEVEL 3: 8 NODES -->
+                <g transform="translate(42, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">sla_breach &lt;= 1</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 3100</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[180, 2920]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(152, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">spec_conform = 1</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 2100</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[300, 1800]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(262, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">esg_score &gt;= 75</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 2200</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[410, 1790]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(372, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">commit_qty &lt;= 5k</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 1450</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[530, 920]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(482, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">moq_flex &lt;= 300</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 1800</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[1200, 600]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+                <g transform="translate(592, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">pay_terms &lt;= 45d</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 1300</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[780, 520]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+                <g transform="translate(702, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">cross_dock = 1</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 1250</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[850, 400]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+                <g transform="translate(812, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">geo_risk &lt;= 0.25</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 1035</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[732, 303]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+
+                <!-- LEVEL 4: 16 COMPACT NODES -->
+                <g transform="translate(18, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">audit_cycle</text><text x="26" y="14" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">n=1550</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(74, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">order_cadence</text><text x="26" y="14" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">n=1550</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(130, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">batch_reject</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=1050</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(186, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">yield_rate</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=1050</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(242, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">buffer_stock</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=1100</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(298, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">expedite_cost</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=1100</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(354, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">fill_rate_tier</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=725</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(410, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">safety_days</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=725</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(466, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">iso_certified</text><text x="26" y="14" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">n=900</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(522, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">port_distance</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=900</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(578, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">lead_buffer</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=650</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(634, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">tariff_risk</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=650</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(690, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">reorder_cycle</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=625</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(746, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">dock_hours</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=625</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(802, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">disruption_h</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=517</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(858, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">solvency_rt</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=518</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+
+                <!-- LEVEL 5: TERMINAL LEAVES STRIP -->
+                <!-- ORANGE HIGHLIGHTED LEAF (Target Class) -->
+                <g transform="translate(18, 315)">
+                  <rect x="0" y="0" width="44" height="28" rx="2" fill="#ea580c" stroke="#c2410c" stroke-width="1.2" />
+                  <text x="22" y="8" font-size="5" font-weight="700" fill="#ffffff" text-anchor="middle">gini = 0.18</text>
+                  <text x="22" y="15" font-size="4.8" fill="#ffedd5" text-anchor="middle">samples = 60</text>
+                  <text x="22" y="21" font-size="4.5" fill="#ffedd5" text-anchor="middle">val=[9250 u]</text>
+                  <text x="22" y="26" font-size="4.5" fill="#ffedd5" text-anchor="middle">Preferred</text>
+                </g>
+                <g transform="translate(68, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.08</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 52</text>
+                </g>
+                <g transform="translate(108, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.12</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 64</text>
+                </g>
+                <g transform="translate(148, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.05</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 48</text>
+                </g>
+                <g transform="translate(188, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.14</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 70</text>
+                </g>
+                <g transform="translate(228, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.06</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 36</text>
+                </g>
+                <g transform="translate(268, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.10</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 58</text>
+                </g>
+                <g transform="translate(308, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.07</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 42</text>
+                </g>
+                <g transform="translate(348, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.13</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 82</text>
+                </g>
+                <g transform="translate(388, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.09</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 39</text>
+                </g>
+                <g transform="translate(428, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.04</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 61</text>
+                </g>
+                <g transform="translate(468, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.11</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 47</text>
+                </g>
+                <g transform="translate(508, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.05</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 53</text>
+                </g>
+                <g transform="translate(548, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.15</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 78</text>
+                </g>
+                <g transform="translate(588, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.08</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 41</text>
+                </g>
+                <g transform="translate(628, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.10</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 66</text>
+                </g>
+                <g transform="translate(668, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.06</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 34</text>
+                </g>
+                <g transform="translate(708, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.12</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 59</text>
+                </g>
+                <g transform="translate(748, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.07</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 45</text>
+                </g>
+                <g transform="translate(788, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.14</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 88</text>
+                </g>
+                <g transform="translate(828, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.05</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 31</text>
+                </g>
+                <g transform="translate(868, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.09</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 50</text>
+                </g>
               </svg>
             </div>
 
@@ -3535,19 +4246,19 @@
               <ul
                 style="margin: 0; padding-left: 18px; font-size: 12.5px; color: #334155; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;">
                 <li>
-                  <strong style="color: #1e40af;">Historical On-Time Delivery Reliability &le; 95% (36.4%
+                  <strong style="color: #1e40af;">Historical On-Time Delivery Reliability &ge; 95% (36.4%
                     Driver):</strong> Suppliers with inconsistent on-time delivery rates trigger 70% of factory line
-                  disruptions. <em>Recommendation:</em> Allocate 70% of volume strictly to suppliers with verified 95%+
+                  disruptions. <em>Action:</em> Allocate 70% of volume strictly to suppliers with verified 95%+
                   on-time SLA records.
                 </li>
                 <li>
-                  <strong style="color: #1e40af;">Unit Price Quote Competitiveness &gt; €3.80 (27.1% Driver):</strong>
-                  Uncompetitive vendor unit quotes erode gross margins by over 8%. <em>Recommendation:</em> Cap purchase
-                  orders at €3.76/unit using automated volume-discount tier benchmarks.
+                  <strong style="color: #1e40af;">Unit Price Quote Competitiveness &le; $3.80 (27.1% Driver):</strong>
+                  Uncompetitive vendor unit quotes erode gross margins by over 8%. <em>Action:</em> Cap purchase
+                  orders at $3.76/unit using automated volume-discount tier benchmarks.
                 </li>
                 <li>
-                  <strong style="color: #1e40af;">Quality Scrap &amp; Defect Rate &gt; 1.8% (18.2% Driver):</strong>
-                  Defective raw material batches cause manufacturing downtime and rework costs. <em>Recommendation:</em>
+                  <strong style="color: #1e40af;">Quality Scrap &amp; Defect Rate &le; 1.8% (18.2% Driver):</strong>
+                  Defective raw material batches cause manufacturing downtime and rework costs. <em>Action:</em>
                   Require automated supplier pre-shipment quality certificates on all purchase order lines.
                 </li>
               </ul>
@@ -3643,7 +4354,7 @@
                 lower on-time delivery records are associated with the current 35.0% single-source disruption risk,
                 highlighting vendors that require closer performance monitoring.</li>
               <li style="margin-bottom: 6px;"><strong>Unit Price Quote Competitiveness Index:</strong> Unit quote prices
-                above €3.80 are associated with margin erosion, making supplier pricing competitiveness an important
+                above $3.80 are associated with margin erosion, making supplier pricing competitiveness an important
                 factor to review during vendor selection.</li>
               <li><strong>Quality Scrap &amp; Defect Rate Record:</strong> High defect rates are associated with
                 unexpected manufacturing delays and should receive closer attention when qualifying primary suppliers.
@@ -3755,7 +4466,7 @@
             <div class="sxi-build-headline">+23.5% Automated Audit Compliance</div>
             <div class="sxi-build-desc">
               Build target improvement validates is_po_compliant across all 5 commercial gates — achieving 100% audit
-              approval and locking in €32,665.50 in gross margin after 3 months.
+              approval and locking in $32,665.50 in gross margin after 3 months.
             </div>
           </div>
           <div class="sxi-build-right">
@@ -3771,40 +4482,70 @@
         </div>
 
         <!-- 4. Current vs Target SXI (Screenshot 3) -->
-        <div class="sxi-container">
-          <div class="sxi-card-title-row">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z">
-              </path>
-            </svg>
-            <span>Current vs Target SXI</span>
+        <div class="sxi-container" style="margin-bottom: 22px;">
+          <div class="sxi-card-title-row" style="margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+            <div
+              style="width: 26px; height: 26px; border-radius: 6px; background: #ecfdf5; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Current vs Target SXI</span>
           </div>
-          <div class="sxi-grid-6">
-            <div class="sxi-card-box border-blue">
-              <span class="sxi-card-lbl">Current SXI</span>
-              <span class="sxi-card-num" style="color: #2563eb;">6.50</span>
+
+          <!-- Row 1: 3 cards -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px;">
+            <!-- Box 1: Current SXI -->
+            <div class="sxi-card-box border-blue"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #2563eb; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #2563eb; line-height: 1.2;">6.50</span>
             </div>
-            <div class="sxi-card-box border-green">
-              <span class="sxi-card-lbl">Current Audit Pass Rate</span>
-              <span class="sxi-card-num" style="color: #059669;">76.5%</span>
+
+            <!-- Box 2: Current Audit Pass Rate -->
+            <div class="sxi-card-box border-green"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #059669; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current Audit Pass Rate</span>
+              <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2;">76.5%</span>
             </div>
-            <div class="sxi-card-box border-dark">
-              <span class="sxi-card-lbl">Model Accuracy</span>
-              <span class="sxi-card-num" style="color: #0f172a;">98.2%</span>
+
+            <!-- Box 3: Target SXI -->
+            <div class="sxi-card-box border-purple"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #8b5cf6; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #7c3aed; line-height: 1.2;">8.25</span>
             </div>
-            <div class="sxi-card-box border-purple">
-              <span class="sxi-card-lbl">Target SXI</span>
-              <span class="sxi-card-num" style="color: #7c3aed;">8.25</span>
+          </div>
+
+          <!-- Row 2: 2 cards -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+            <!-- Box 4: Target Audit Pass Rate -->
+            <div class="sxi-card-box border-orange"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #ea580c; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target Audit Pass Rate</span>
+              <span style="font-size: 24px; font-weight: 800; color: #c2410c; line-height: 1.2;">100.0%</span>
             </div>
-            <div class="sxi-card-box border-orange">
-              <span class="sxi-card-lbl">Target Audit Pass Rate</span>
-              <span class="sxi-card-num" style="color: #ea580c;">100.0%</span>
-            </div>
-            <div class="sxi-card-box border-emerald">
-              <span class="sxi-card-lbl">Compliance Lift</span>
-              <span class="sxi-card-num" style="color: #16a34a;">+23.5%</span>
+
+            <!-- Box 5: Compliance Lift -->
+            <div class="sxi-card-box border-emerald"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Compliance Lift</span>
+              <span
+                style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2; display: flex; align-items: center; gap: 4px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.8"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="19" x2="12" y2="5"></line>
+                  <polyline points="5 12 12 5 19 12"></polyline>
+                </svg>
+                23.5%
+              </span>
             </div>
           </div>
         </div>
@@ -3926,25 +4667,56 @@
               <span>Current Business Status</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Current SXI</span>
-              <span class="sxi-line-val sxi-val-blue">6.50</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                Current SXI
+              </span>
+              <span class="sxi-line-val">6.50</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Active Purchase Order</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Active Purchase Order
+              </span>
               <span class="sxi-line-val">PO-MULTI-SKU0001</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Audit Result</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                Audit Result
+              </span>
               <span class="sxi-line-val sxi-val-green">100% APPROVED (5/5 Gates)</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Locked Gross Margin</span>
-              <span class="sxi-line-val sxi-val-green">39.8% (€32,665.50)</span>
+              <span class="sxi-line-label">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+                Locked Gross Margin
+              </span>
+              <span class="sxi-line-val sxi-val-green">39.8% ($32,665.50)</span>
             </div>
-            <div
-              style="margin-top: 14px; font-size: 12.5px; color: #475569; line-height: 1.5; background: #f0fdf4; padding: 10px 14px; border-radius: 8px; border-left: 3px solid #16a34a;">
-              <strong>Business lens:</strong> PO-MULTI-SKU0001 has cleared all 5 operational & commercial gates. Ready
-              for immediate transmission to SAP/Oracle ERP.
+            <div class="sxi-metric-line" style="border-bottom: none; padding-top: 14px;">
+              <span class="sxi-line-label" style="align-items: flex-start;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                  style="margin-top: 2px;">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                Business lens:
+              </span>
+              <span style="font-size: 12.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 65%;">PO-MULTI-SKU0001 has cleared all 5 operational & commercial gates. Ready for immediate transmission to SAP/Oracle ERP.</span>
             </div>
           </div>
         </div>

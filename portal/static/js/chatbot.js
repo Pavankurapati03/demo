@@ -192,11 +192,11 @@ async function triggerPipelineExecution() {
             </div>
             <div class="result-kpi-item">
               <span>Order Value</span>
-              <strong>€${Number(data.stage_3_procurement?.total_order_cost_eur || 49390.50).toLocaleString()}</strong>
+              <strong>$${Number(data.stage_3_procurement?.total_order_cost_eur || 49390.50).toLocaleString()}</strong>
             </div>
             <div class="result-kpi-item">
               <span>Projected Margin</span>
-              <strong style="color:#047857;">€${Number(data.stage_3_procurement?.total_projected_gross_margin_eur || 32665.50).toLocaleString()}</strong>
+              <strong style="color:#047857;">$${Number(data.stage_3_procurement?.total_projected_gross_margin_eur || 32665.50).toLocaleString()}</strong>
             </div>
           </div>
         </div>

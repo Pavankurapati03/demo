@@ -178,7 +178,7 @@ async function fetchPipelineSummary() {
       if (elLT) elLT.innerHTML = `${s2.lead_time} <span style="font-size:14px; font-weight:600;">days</span>`;
 
       const elPrice = document.getElementById('kpi-price');
-      if (elPrice) elPrice.innerHTML = `€${Number(s2.weightage_list_price).toFixed(2)} <span style="font-size:14px; font-weight:600;">/ unit</span>`;
+      if (elPrice) elPrice.innerHTML = `$${Number(s2.weightage_list_price).toFixed(2)} <span style="font-size:14px; font-weight:600;">/ unit</span>`;
 
       const elVendors = document.getElementById('kpi-vendors');
       if (elVendors) elVendors.innerHTML = `${s2.vendor_count} <span style="font-size:14px; font-weight:600;">suppliers</span>`;
@@ -199,12 +199,12 @@ async function fetchPipelineSummary() {
             <td><span class="${isPrimary ? 'badge-pill-success' : 'badge-pill-primary'}">${alloc.role}</span></td>
             <td><strong>${alloc.supplier_id}</strong></td>
             <td><strong>${Number(alloc.composite_score).toFixed(4)}</strong></td>
-            <td>€${Number(alloc.predicted_unit_cost).toFixed(2)}</td>
+            <td>$${Number(alloc.predicted_unit_cost).toFixed(2)}</td>
             <td>${Number(alloc.lead_time_days).toFixed(1)} days</td>
             <td>${(Number(alloc.reliability) * 100).toFixed(1)}%</td>
             <td><strong>${Number(alloc.allocation_share_percent).toFixed(1)}%</strong></td>
             <td><strong>${Number(alloc.allocated_quantity).toLocaleString()}</strong></td>
-            <td>€${Number(alloc.order_cost_eur).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+            <td>$${Number(alloc.order_cost_eur).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
           `;
           tbody.appendChild(tr);
         });

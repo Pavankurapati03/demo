@@ -816,7 +816,7 @@ async def chat_assistant(chat: ChatMessage):
             f"🎯 <strong>The 5 Core Demand Planning Business Outcomes (Stage 2):</strong><br><br>"
             f"1. <strong>global_plan_demand_quantity</strong>: <strong>{s2.get('global_plan_demand_quantity', 44096):,.0f} units</strong> (30-day S&OP horizon, Trend ratio 0.85, 5% buffer)<br>"
             f"2. <strong>lead_time</strong>: <strong>{s2.get('lead_time', 7)} days</strong> (Ensemble Regressor: {s2.get('lead_time_ml_exact', 6.65):.2f}d, P90 SLA: {s2.get('lead_time_p90_sla', 9.0):.0f}d)<br>"
-            f"3. <strong>weightage_list_price</strong>: <strong>€{s2.get('weightage_list_price', 6.24):.2f} / unit</strong> (Volume-weighted across channels)<br>"
+            f"3. <strong>weightage_list_price</strong>: <strong>${s2.get('weightage_list_price', 6.24):.2f} / unit</strong> (Volume-weighted across channels)<br>"
             f"4. <strong>vendor_count</strong>: <strong>{s2.get('vendor_count', 60)} approved active suppliers</strong><br>"
             f"5. <strong>vendor_defect_rate</strong>: <strong>{s2.get('vendor_defect_rate_percent', 1.64):.2f}%</strong> (Defect adjustment: 1.0167x)"
         )
@@ -828,14 +828,14 @@ async def chat_assistant(chat: ChatMessage):
             f"Our Multi-Criteria Decision Analysis evaluates: <em>40% Price + 30% Lead Time + 20% Reliability + 10% Margin</em>.<br><br>"
             f"• <strong>Primary Supplier (Rank 1) — S014</strong>:<br>"
             f"&nbsp;&nbsp;- Composite Score: <strong>0.6475</strong> (Highest rank)<br>"
-            f"&nbsp;&nbsp;- Predicted Cost: €3.75 / unit (Lowest cost in supplier set)<br>"
+            f"&nbsp;&nbsp;- Predicted Cost: $3.75 / unit (Lowest cost in supplier set)<br>"
             f"&nbsp;&nbsp;- Lead Time: 6.5 days | Reliability: 96.9%<br>"
-            f"&nbsp;&nbsp;- <strong>Volume Allocation: 70.3% (9,250 units)</strong> = €34,687.50<br><br>"
+            f"&nbsp;&nbsp;- <strong>Volume Allocation: 70.3% (9,250 units)</strong> = $34,687.50<br><br>"
             f"• <strong>Secondary Supplier (Rank 2) — S015</strong>:<br>"
             f"&nbsp;&nbsp;- Composite Score: <strong>0.5936</strong><br>"
-            f"&nbsp;&nbsp;- ML Predicted Cost: €3.77 / unit<br>"
+            f"&nbsp;&nbsp;- ML Predicted Cost: $3.77 / unit<br>"
             f"&nbsp;&nbsp;- Lead Time: 6.6 days | Reliability: 97.8% (Highest reliability)<br>"
-            f"&nbsp;&nbsp;- <strong>Volume Allocation: 29.7% (3,900 units)</strong> = €14,703.00<br><br>"
+            f"&nbsp;&nbsp;- <strong>Volume Allocation: 29.7% (3,900 units)</strong> = $14,703.00<br><br>"
             f"Dual-sourcing ensures supply chain resilience against stock-outs while optimizing purchase costs."
         )
 
@@ -855,10 +855,10 @@ async def chat_assistant(chat: ChatMessage):
             f"💰 <strong>Master Purchase Order & Financial Economics:</strong><br><br>"
             f"• <strong>PO Number</strong>: <code>{s3.get('po_id', 'PO-MULTI-SKU0001-20260912')}</code><br>"
             f"• <strong>Total Order Quantity</strong>: <strong>{s3.get('recommended_po_order_quantity', 13150):,} units</strong> (MOQ: 500, Batch: 50)<br>"
-            f"• <strong>Blended Purchase Cost</strong>: <strong>€{s3.get('blended_unit_purchase_cost', 3.76):.2f} / unit</strong><br>"
-            f"• <strong>Effective Selling Price</strong>: €{s3.get('effective_selling_price', 6.24):.2f} / unit<br>"
-            f"• <strong>Total Order Commitment</strong>: <strong>€{s3.get('total_order_cost_eur', 49390.50):,.2f}</strong><br>"
-            f"• <strong>Projected Gross Margin</strong>: <strong style='color:#047857;'>€{s3.get('total_projected_gross_margin_eur', 32665.50):,.2f} (39.8%)</strong><br>"
+            f"• <strong>Blended Purchase Cost</strong>: <strong>${s3.get('blended_unit_purchase_cost', 3.76):.2f} / unit</strong><br>"
+            f"• <strong>Effective Selling Price</strong>: ${s3.get('effective_selling_price', 6.24):.2f} / unit<br>"
+            f"• <strong>Total Order Commitment</strong>: <strong>${s3.get('total_order_cost_eur', 49390.50):,.2f}</strong><br>"
+            f"• <strong>Projected Gross Margin</strong>: <strong style='color:#047857;'>${s3.get('total_projected_gross_margin_eur', 32665.50):,.2f} (39.8%)</strong><br>"
             f"• <strong>5-Point Audit Checks</strong>: 100% PASSED (ROP trigger, MOQ, batching, risk split, margin floor)."
         )
 
@@ -868,7 +868,7 @@ async def chat_assistant(chat: ChatMessage):
             f"I analyzed your inquiry regarding <em>'{chat.message}'</em> across our 3-stage fulfillment architecture:<br><br>"
             f"1. <strong>Stage 1 (Forecasting)</strong>: 90-day adaptive demand projection with 11.18% WMAPE.<br>"
             f"2. <strong>Stage 2 (Demand Planning)</strong>: 44,096 units global plan with critical ROP of 13,163 units vs 248 units on hand.<br>"
-            f"3. <strong>Stage 3 (Procurement)</strong>: Automated PO issuance for 13,150 units across S014 (70.3%) & S015 (29.7%) generating €32,665.50 in gross margin.<br><br>"
+            f"3. <strong>Stage 3 (Procurement)</strong>: Automated PO issuance for 13,150 units across S014 (70.3%) & S015 (29.7%) generating $32,665.50 in gross margin.<br><br>"
             f"Feel free to ask about specific inventory formulas, supplier scorecards, or upload a dataset to run custom calculations!"
         )
 
