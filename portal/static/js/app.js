@@ -2,14 +2,15 @@
 // Quantellix Order Fulfillment Dashboard - Client-side Logic (app.js)
 // =============================================================================
 
-let selectedStages = new Set(['s1']); // Default recommended selection
+const ALL_PROBLEM_IDS = ['e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8', 'e9', 'e10', 'e11', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11', 's1', 's2', 's3'];
+let selectedStages = new Set(['e1']); // Default recommended selection
 
 document.addEventListener('DOMContentLoaded', () => {
   updateCardSelectionsUI();
   fetchPipelineSummary();
   if (window.location.hash) {
     const stageId = window.location.hash.replace('#stage-', '');
-    if (['s1', 's2', 's3'].includes(stageId)) {
+    if (ALL_PROBLEM_IDS.includes(stageId)) {
       setTimeout(() => openStageView(stageId), 150);
     }
   }
@@ -32,7 +33,7 @@ function selectStageOnly(stageId) {
 }
 
 function selectAllStages() {
-  selectedStages = new Set(['s1', 's2', 's3']);
+  selectedStages = new Set(['e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8', 'e9', 'e10', 'e11']);
   updateCardSelectionsUI();
 }
 
@@ -42,13 +43,13 @@ function clearSelections() {
 }
 
 function resetSelections() {
-  selectedStages = new Set(['s1']);
+  selectedStages = new Set(['e1']);
   updateCardSelectionsUI();
   closeAllStageViews();
 }
 
 function updateCardSelectionsUI() {
-  ['s1', 's2', 's3'].forEach(id => {
+  ALL_PROBLEM_IDS.forEach(id => {
     const card = document.getElementById(`card-${id}`);
     const checkbox = document.getElementById(`checkbox-${id}`);
     if (card && checkbox) {

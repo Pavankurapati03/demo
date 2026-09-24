@@ -1343,18 +1343,18 @@
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link" title="vendor_count">
+        <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link" title="Optimize Supplier Base">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">vendor_count</span>
+            <span class="menu-target-name">Optimize Supplier Base</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
         <a href="/portal/marketplace/demand_planning?target=target5" class="menu-target-link"
-          title="vendor_defect_rate">
+          title="Minimize Vendor Defect Rate">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">vendor_defect_rate</span>
+            <span class="menu-target-name">Minimize Vendor Defect Rate</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
@@ -1369,50 +1369,46 @@
           <span>3. Procurement</span>
         </a>
         <a href="/portal/marketplace/procurement?target=target1" class="menu-target-link"
-          onclick="switchProcurementView('target1'); toggleDashboardsMenu(); return false;" title="purchase_cost">
+          onclick="switchProcurementView('target1'); toggleDashboardsMenu(); return false;" title="Reduce Purchase Cost">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">purchase_cost</span>
+            <span class="menu-target-name">Reduce Purchase Cost</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
         <a href="/portal/marketplace/procurement?target=target2" class="menu-target-link"
-          onclick="switchProcurementView('target2'); toggleDashboardsMenu(); return false;" title="is_reorder_required">
+          onclick="switchProcurementView('target2'); toggleDashboardsMenu(); return false;" title="Reduce Inventory Stockout Risk">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">is_reorder_required</span>
+            <span class="menu-target-name">Reduce Inventory Stockout Risk</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
         <a href="/portal/marketplace/procurement?target=target3" class="menu-target-link"
           onclick="switchProcurementView('target3'); toggleDashboardsMenu(); return false;"
-          title="is_preferred_supplier">
+          title="Reduce Single-Source Supply Risk">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">is_preferred_supplier</span>
+            <span class="menu-target-name">Reduce Single-Source Supply Risk</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
         <a href="/portal/marketplace/procurement?target=target4" class="menu-target-link"
-          onclick="switchProcurementView('target4'); toggleDashboardsMenu(); return false;" title="is_po_compliant">
+          onclick="switchProcurementView('target4'); toggleDashboardsMenu(); return false;" title="Ensure PO Compliance">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">is_po_compliant</span>
+            <span class="menu-target-name">Ensure PO Compliance</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
       </div>
     </div>
 
-    <div class="menu-drawer-footer">
-      <div class="footer-brand-title">
-        <svg class="sparkle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-        </svg>
-        <span>Quantellix.AI</span>
-      </div>
-      <div class="footer-brand-sub">Autonomous Order Fulfillment</div>
+    <!-- Fixed Bottom Action Button -->
+    <div style="padding: 14px 20px; border-top: 1px solid #e2e8f0; background: #ffffff; flex-shrink: 0;">
+      <a href="/portal/marketplace" style="display: block; width: 100%; background: #071426; color: #ffffff; text-align: center; font-size: 13.5px; font-weight: 800; padding: 12px 16px; border-radius: 8px; text-decoration: none; transition: background 0.2s ease;">
+        Open full Marketplace view
+      </a>
     </div>
   </aside>
 
@@ -1420,7 +1416,7 @@
   <main class="dashboard-main-wrapper">
     <div class="dashboard-page-container">
 
-      <!-- Back to Order Execution Button Alone (Matching Reference Screenshot 2) -->
+      <!-- Back to Order Execution Button (Replaces top tab pills) -->
       <div style="margin-top: 14px; margin-bottom: 18px;">
         <a href="/portal/chatbot" class="btn-close-back">
           &larr; Back to Order Execution
@@ -1461,7 +1457,7 @@
                     <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
                     <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
                     <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome 2: <strong>is_reorder_required</strong></span>
+                  </svg>Business Outcome 2: <strong>Reduce Inventory Stockout Risk</strong></span>
               </div>
               <div class="hero-target-pill"
                 onclick="switchProcurementView('target3', document.querySelectorAll('.dash-tab-pill')[3])"
@@ -1676,7 +1672,7 @@
           <!-- Level 1 -->
           <div class="level-box">
             <div class="level-box-header">
-              <span class="level-badge badge-l1">Immediate · Days 1–30</span>
+              <span class="level-badge badge-l1">Short-term</span>
               <span class="level-stat">SXI 6.42 → 7.20</span>
             </div>
             <div class="level-box-title">Order Trigger Automation & Safety Gate</div>
@@ -1689,7 +1685,7 @@
           <!-- Level 2 -->
           <div class="level-box">
             <div class="level-box-header">
-              <span class="level-badge badge-l2">Mid-Term · Days 31–60</span>
+              <span class="level-badge badge-l2">Medium-term</span>
               <span class="level-stat">SXI 7.20 → 7.85</span>
             </div>
             <div class="level-box-title">Dynamic Price Prediction & Multi-Vendor Split</div>
@@ -1702,7 +1698,7 @@
           <!-- Level 3 -->
           <div class="level-box">
             <div class="level-box-header">
-              <span class="level-badge badge-l3">Long-Term · Quarter 2+</span>
+              <span class="level-badge badge-l3">Long-term</span>
               <span class="level-stat">SXI 7.85 → 8.15</span>
             </div>
             <div class="level-box-title">Autonomous 5-Point ERP Audit & Compliance</div>
@@ -2142,7 +2138,7 @@
           </div>
           <div class="levels-col-grid">
             <div class="level-col-item">
-              <span class="level-col-name">Immediate · Days 1–30</span>
+              <span class="level-col-name">Short-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.20</span>
@@ -2156,13 +2152,13 @@
                 <span class="level-metric-val" style="color: #16a34a;">+7.4%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Immediate improvement:</strong> Locks in volume-discount brackets for primary suppliers S014 and
+                <strong>Short-term improvement:</strong> Locks in volume-discount brackets for primary suppliers S014 and
                 S015, lifting gross margin from 32.4% to 34.8%.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Mid-term · Days 31–60</span>
+              <span class="level-col-name">Medium-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.85</span>
@@ -2176,13 +2172,13 @@
                 <span class="level-metric-val" style="color: #16a34a;">+15.7%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term improvement:</strong> Consolidates multi-supplier purchase schedules across
+                <strong>Medium-term improvement:</strong> Consolidates multi-supplier purchase schedules across
                 Distribution Centers (DCs) to capture full truckload discount tiers.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Long-term · Quarter 2+</span>
+              <span class="level-col-name">Long-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">8.15</span>
@@ -2470,27 +2466,30 @@
           </div>
         </div>
 
-        <!-- 9. Business Actions Card -->
-        <div class="business-actions-container">
-          <div class="ba-header">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5"
+        <!-- 9. Recommended Action Card (Matching Reference Screenshot) -->
+        <div class="sxi-white-card" style="margin-top: 18px; margin-bottom: 24px; padding: 22px 24px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            <span>Business Actions — purchase_cost ($)</span>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Recommended Action</span>
           </div>
-          <ul class="ba-checklist">
-            <li><strong>Automated contract pricing:</strong> Enforce $3.76/unit cap on PO-MULTI-SKU0001, saving $7,364
-              compared to baseline single-unit quotes.</li>
-            <li><strong>Volume tier locking:</strong> Consolidate replenishment orders under 5,000 units into single
-              13,150-unit batch to secure maximum volume discounts.</li>
-            <li><strong>Supplier price renegotiation:</strong> Flag suppliers quoting above $3.85 for renegotiation
-              based on SXI quantitative cost benchmarks.</li>
-            <li><strong>Decision Engine Summary:</strong> Model Accuracy: <strong>94.6%</strong> · Correlation R²:
-              <strong>0.884</strong> · MAE: <strong>±$0.12</strong> · Current SXI: <strong>6.42</strong> &rarr; Target
-              SXI: <strong>8.15</strong>.
-            </li>
-          </ul>
+          <div style="font-size: 13px; color: #334155; margin-top: 10px; margin-bottom: 14px; font-weight: 500;">
+            Recommended Action is generated by the LLM (OpenAI).
+          </div>
+          <div
+            style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; font-size: 13.5px; line-height: 1.75; color: #334155;">
+            <p style="margin: 0 0 6px 0;"><strong style="color: #0f172a;">Insight:</strong></p>
+            <ul style="margin: 0 0 12px 0; padding-left: 20px; list-style-type: disc;">
+              <li style="margin-bottom: 6px;"><strong>Order Volume Quantity Tier:</strong> Bulk purchasing above 10,000 units triggers Tier 1 supplier pricing discounts, reducing unit procurement costs from $4.31 to $3.76.</li>
+              <li style="margin-bottom: 6px;"><strong>Supplier Historical Contract Baseline:</strong> Contracted suppliers (S014/S015) consistently offer stable volume brackets compared to spot market purchasing.</li>
+              <li><strong>Seasonal Freight &amp; Fuel Index:</strong> Consolidating smaller orders into bulk multi-SKU shipments mitigates LTL freight surcharges.</li>
+            </ul>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Enforce automated contract pricing caps ($3.76/unit) and consolidate replenishment orders into batches over 10,000 units to secure maximum volume discounts.</p>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Before issuing POs, the procurement team should review price curves, align PO volumes with tier discount thresholds, and route orders to contracted suppliers.</p>
+            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Automated Volume Tier Locking &mdash; Create an automated workflow that consolidates purchase orders into optimal volume tiers (&ge;10,000 units) and enforces contracted price benchmarks. This reduces average unit cost from $4.31 down to $3.76 (a 12.8% cost reduction saving $7,364 per batch).</p>
+          </div>
         </div>
 
       </div> <!-- /#view-target1 -->
@@ -2504,10 +2503,8 @@
         <div class="hero-banner-card">
           <div class="hero-header-flex">
             <div>
-              <h1 class="hero-title">is_reorder_required</h1>
-              <p class="hero-subtitle">Classify whether inventory position has crossed the calculated Reorder Point (ROP
-                = 13,163 units) — triggering replenishment orders strictly when needed to prevent stockouts while
-                avoiding premature working capital lockup.</p>
+              <h1 class="hero-title">Reduce Inventory Stockout Risk</h1>
+              <p class="hero-subtitle">Reduce warehouse stockout deficit by 20.0% (from 98.1% down to 78.5%) by validating replenishment triggers against warehouse Reorder Point (13,163 units) and auto-generating purchase order batches.</p>
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
@@ -2517,23 +2514,36 @@
                     <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
                     <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
                     <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome: <strong>is_reorder_required</strong></span>
+                  </svg>Business Outcome: <strong>Reduce Inventory Stockout Risk</strong></span>
+              </div>
+              <div class="hero-target-pill">
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>Target Variable: <strong>is_reorder_required</strong></span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- 1. Dataset Overview (from Screenshot) -->
-        <div class="sxi-card-title-row" style="margin-top: 10px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-          </svg>
-          <span>Dataset Overview</span>
+        <div style="display: flex; align-items: center; gap: 8px; margin-top: 14px; margin-bottom: 10px;">
+          <div
+            style="width: 26px; height: 26px; border-radius: 6px; background: #eff6ff; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
+          </div>
+          <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Dataset
+            Overview</span>
         </div>
         <div class="sxi-dataset-strip">
-          <div class="sxi-ds-col fill">
+          <div class="sxi-ds-col">
             <span class="sxi-ds-lbl">Dataset Name</span>
             <span class="sxi-ds-val">fmcg_sales_3years_1M_rows.csv</span>
           </div>
@@ -2557,51 +2567,51 @@
           <span>Key Performance Indicators</span>
         </div>
         <div class="sxi-kpi-grid-4">
-          <div class="sxi-kpi-top-card border-blue">
-            <div class="sxi-kpi-icon-pill pill-blue">📈</div>
-            <span class="sxi-kpi-title-sub">Current SXI</span>
-            <span class="sxi-kpi-main-val" style="color: #2563eb;">6.15</span>
-          </div>
-          <div class="sxi-kpi-top-card border-green">
-            <div class="sxi-kpi-icon-pill pill-green">%</div>
-            <span class="sxi-kpi-title-sub">Stockout Prevention</span>
-            <span class="sxi-kpi-main-val" style="color: #059669;">88.5%</span>
+          <div class="sxi-kpi-top-card border-orange">
+            <div class="sxi-kpi-icon-pill pill-orange">📦</div>
+            <span class="sxi-kpi-title-sub">Current Stock on Hand</span>
+            <span class="sxi-kpi-main-val" style="color: #dc2626;">248 units</span>
           </div>
           <div class="sxi-kpi-top-card border-blue">
-            <div class="sxi-kpi-icon-pill pill-blue">📦</div>
-            <span class="sxi-kpi-title-sub">Reorder Trigger</span>
-            <span class="sxi-kpi-main-val" style="color: #0f172a;">1 (Required)</span>
+            <div class="sxi-kpi-icon-pill pill-blue">⏱️</div>
+            <span class="sxi-kpi-title-sub">Supplier Lead Time</span>
+            <span class="sxi-kpi-main-val" style="color: #2563eb;">7.0 Days</span>
+          </div>
+          <div class="sxi-kpi-top-card border-purple">
+            <div class="sxi-kpi-icon-pill pill-purple">📊</div>
+            <span class="sxi-kpi-title-sub">Reorder Point (ROP)</span>
+            <span class="sxi-kpi-main-val" style="color: #7c3aed;">13,163 units</span>
           </div>
           <div class="sxi-kpi-top-card border-orange">
             <div class="sxi-kpi-icon-pill pill-orange">⚠️</div>
-            <span class="sxi-kpi-title-sub">Stockout Exposure</span>
-            <span class="sxi-kpi-main-val" style="color: #ea580c;">11.5%</span>
+            <span class="sxi-kpi-title-sub">Stockout Deficit vs ROP</span>
+            <span class="sxi-kpi-main-val" style="color: #ea580c;">98.1%</span>
           </div>
         </div>
 
         <!-- 3. Target Improvement (Build) (from Screenshot) -->
         <div class="sxi-build-card">
           <div class="sxi-build-left">
-            <div class="sxi-build-badge">Target Improvement (Build)</div>
-            <div class="sxi-build-headline">+10.5% Stockout Prevention Rate</div>
+            <div class="sxi-build-badge">Inventory Replenishment Trigger</div>
+            <div class="sxi-build-headline">Reduce Stockout Deficit by 20.0%</div>
             <div class="sxi-build-desc">
-              Build target improvement validates is_reorder_required replenishment triggers strictly when inventory
-              falls below ROP (13,163 units) — reaching 99.0% on-shelf fulfillment after 3 months.
+              Reduces warehouse stockout deficit by 20.0% (from 98.1% down to 78.5%) in the initial operational phase<br>
+              by auto-generating and releasing purchase order batches when inventory breaches Reorder Point (13,163 units).
             </div>
           </div>
           <div class="sxi-build-right">
             <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Current Stockout Prevention</span>
-              <span class="sxi-bm-val">88.5%</span>
+              <span class="sxi-bm-lbl">Current Stockout Deficit</span>
+              <span class="sxi-bm-val">98.1%</span>
             </div>
             <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Target After +10.5%</span>
-              <span class="sxi-bm-val green">99.0%</span>
+              <span class="sxi-bm-lbl">Target Stockout Deficit</span>
+              <span class="sxi-bm-val green">78.5%</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Current vs Target SXI (Screenshot 3) -->
+        <!-- 4. Current vs Target SXI (Screenshot 3 Layout) -->
         <div class="sxi-container" style="margin-bottom: 22px;">
           <div class="sxi-card-title-row" style="margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
             <div
@@ -2612,7 +2622,8 @@
                 <polyline points="12 6 12 12 16 14"></polyline>
               </svg>
             </div>
-            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Current vs Target SXI</span>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Current vs
+              Target SXI</span>
           </div>
 
           <!-- Row 1: 3 cards -->
@@ -2621,51 +2632,208 @@
             <div class="sxi-card-box border-blue"
               style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #2563eb; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
               <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current SXI</span>
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current
+                SXI</span>
               <span style="font-size: 24px; font-weight: 800; color: #2563eb; line-height: 1.2;">6.15</span>
             </div>
 
-            <!-- Box 2: Current Stockout Prevention -->
+            <!-- Box 2: Current Stockout Deficit -->
             <div class="sxi-card-box border-green"
-              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #059669; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
               <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current Prevention Rate</span>
-              <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2;">88.5%</span>
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current
+                Stockout Deficit</span>
+              <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2;">98.1%</span>
             </div>
 
             <!-- Box 3: Target SXI -->
             <div class="sxi-card-box border-purple"
               style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #8b5cf6; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
               <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target SXI</span>
-              <span style="font-size: 24px; font-weight: 800; color: #7c3aed; line-height: 1.2;">8.20</span>
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target
+                SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #7c3aed; line-height: 1.2;">7.00</span>
             </div>
           </div>
 
-          <!-- Row 2: 2 cards -->
+          <!-- Row 2: 2 cards (Matching Reference Screenshot layout) -->
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
-            <!-- Box 4: Target Stockout Prevention -->
+            <!-- Box 4: Target Stockout Deficit -->
             <div class="sxi-card-box border-orange"
               style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #ea580c; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
               <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target Prevention Rate</span>
-              <span style="font-size: 24px; font-weight: 800; color: #c2410c; line-height: 1.2;">99.0%</span>
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target
+                Stockout Deficit</span>
+              <span style="font-size: 24px; font-weight: 800; color: #c2410c; line-height: 1.2;">78.5%</span>
             </div>
 
-            <!-- Box 5: Fulfillment Lift -->
+            <!-- Box 5: Deficit Reduction -->
             <div class="sxi-card-box border-emerald"
               style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
               <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Fulfillment Lift</span>
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Deficit
+                Reduction</span>
               <span
                 style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2; display: flex; align-items: center; gap: 4px;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.8"
                   stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="19" x2="12" y2="5"></line>
-                  <polyline points="5 12 12 5 19 12"></polyline>
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
                 </svg>
-                10.5%
+                20.0%
               </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4b. Correlation Chart (Matching Reference Screenshot Layout) -->
+        <div class="sxi-white-card" style="margin-top: 18px; margin-bottom: 22px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Correlation
+              Chart</span>
+          </div>
+
+          <div
+            style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+            <div
+              style="font-size: 18px; font-weight: 800; color: #000000; margin-bottom: 14px; letter-spacing: -0.01em;">
+              SXI vs business outcome
+            </div>
+
+            <div style="width: 100%; overflow-x: auto;">
+              <svg viewBox="0 0 860 420"
+                style="width: 100%; max-height: 520px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+
+                <!-- Chart Background (Lavender / soft blue tint) -->
+                <rect x="70" y="45" width="530" height="310" fill="#f0f3ff" stroke="none" />
+
+                <!-- Horizontal Grid Lines (Stockout Deficit %: 0% to 100%) -->
+                <!-- 100% (y=45) -->
+                <line x1="70" y1="45" x2="600" y2="45" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="49" font-size="11" fill="#334155" text-anchor="end" font-weight="600">100%</text>
+                <!-- 80% (y=107) -->
+                <line x1="70" y1="107" x2="600" y2="107" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="111" font-size="11" fill="#334155" text-anchor="end" font-weight="600">80%</text>
+                <!-- 60% (y=169) -->
+                <line x1="70" y1="169" x2="600" y2="169" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="173" font-size="11" fill="#334155" text-anchor="end" font-weight="600">60%</text>
+                <!-- 40% (y=231) -->
+                <line x1="70" y1="231" x2="600" y2="231" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="235" font-size="11" fill="#334155" text-anchor="end" font-weight="600">40%</text>
+                <!-- 20% (y=293) -->
+                <line x1="70" y1="293" x2="600" y2="293" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="297" font-size="11" fill="#334155" text-anchor="end" font-weight="600">20%</text>
+                <!-- 0% (y=355) -->
+                <line x1="70" y1="355" x2="600" y2="355" stroke="#c8d2fc" stroke-width="1.2" />
+                <text x="62" y="359" font-size="11" fill="#334155" text-anchor="end" font-weight="600">0%</text>
+
+                <!-- Vertical Grid Lines (SXI: 6.0 to 9.0) -->
+                <!-- SXI 6.0 (x=70) -->
+                <line x1="70" y1="45" x2="70" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="70" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">6.0</text>
+                <!-- SXI 6.5 (x=158) -->
+                <line x1="158" y1="45" x2="158" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="158" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">6.5</text>
+                <!-- SXI 7.0 (x=247) -->
+                <line x1="247" y1="45" x2="247" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="247" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">7.0</text>
+                <!-- SXI 7.5 (x=335) -->
+                <line x1="335" y1="45" x2="335" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="335" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">7.5</text>
+                <!-- SXI 8.0 (x=423) -->
+                <line x1="423" y1="45" x2="423" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="423" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">8.0</text>
+                <!-- SXI 8.5 (x=512) -->
+                <line x1="512" y1="45" x2="512" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="512" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">8.5</text>
+                <!-- SXI 9.0 (x=600) -->
+                <line x1="600" y1="45" x2="600" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="600" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">9.0</text>
+
+                <!-- Y-Axis Label -->
+                <text x="-200" y="22" font-size="12" fill="#334155" font-weight="700" transform="rotate(-90)"
+                  text-anchor="middle">stockout_deficit (%)</text>
+                <!-- X-Axis Label -->
+                <text x="335" y="402" font-size="12" fill="#334155" font-weight="700" text-anchor="middle">SXI</text>
+
+                <!-- Continuous Straight Mustard Gold Correlation Line passing precisely through all 4 points -->
+                <line x1="70" y1="40" x2="600" y2="290" stroke="#ca8a04" stroke-width="2.2" />
+
+                <!-- Cross Mark 1: Current (SXI=6.15, deficit=98.1%) -> Blue Cross -->
+                <g transform="translate(97, 51)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#0000ff" stroke-width="3.2"
+                    stroke-linecap="round" />
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#0000ff" stroke-width="3.2"
+                    stroke-linecap="round" />
+                </g>
+
+                <!-- Cross Mark 2: Short-term (SXI=7.00, deficit=78.5%) -> Magenta Cross -->
+                <g transform="translate(247, 112)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#c026d3" stroke-width="3.2"
+                    stroke-linecap="round" />
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#c026d3" stroke-width="3.2"
+                    stroke-linecap="round" />
+                </g>
+
+                <!-- Cross Mark 3: Mid-term (SXI=7.85, deficit=54.0%) -> Black Cross -->
+                <g transform="translate(397, 188)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#000000" stroke-width="3.2"
+                    stroke-linecap="round" />
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#000000" stroke-width="3.2"
+                    stroke-linecap="round" />
+                </g>
+
+                <!-- Cross Mark 4: Long-term (SXI=8.70, deficit=29.4%) -> Green Cross -->
+                <g transform="translate(547, 264)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#15803d" stroke-width="3.2"
+                    stroke-linecap="round" />
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#15803d" stroke-width="3.2"
+                    stroke-linecap="round" />
+                </g>
+
+                <!-- LEGEND (Matching Reference Screenshot Layout) -->
+                <g transform="translate(630, 60)">
+                  <!-- 1. Correlation Line -->
+                  <line x1="0" y1="6" x2="20" y2="6" stroke="#ca8a04" stroke-width="2.5" />
+                  <text x="28" y="10" font-size="12" fill="#334155" font-weight="600">Correlation Line</text>
+
+                  <!-- 2. Current -->
+                  <g transform="translate(10, 32)">
+                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#0000ff" stroke-width="3" stroke-linecap="round" />
+                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#0000ff" stroke-width="3" stroke-linecap="round" />
+                  </g>
+                  <text x="28" y="36" font-size="12" fill="#334155" font-weight="600">Current (98.1% Deficit)</text>
+
+                  <!-- 3. Short Term -->
+                  <g transform="translate(10, 58)">
+                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#c026d3" stroke-width="3" stroke-linecap="round" />
+                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#c026d3" stroke-width="3" stroke-linecap="round" />
+                  </g>
+                  <text x="28" y="62" font-size="12" fill="#334155" font-weight="600">Short Term 20.0% Decrease</text>
+
+                  <!-- 4. Mid Term -->
+                  <g transform="translate(10, 84)">
+                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+                  </g>
+                  <text x="28" y="88" font-size="12" fill="#334155" font-weight="600">Mid Term 45.0% Decrease</text>
+
+                  <!-- 5. Long Term -->
+                  <g transform="translate(10, 110)">
+                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#15803d" stroke-width="3" stroke-linecap="round" />
+                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#15803d" stroke-width="3" stroke-linecap="round" />
+                  </g>
+                  <text x="28" y="114" font-size="12" fill="#334155" font-weight="600">Long Term 70.0% Decrease</text>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
@@ -2682,62 +2850,59 @@
           </div>
           <div class="levels-col-grid">
             <div class="level-col-item">
-              <span class="level-col-name">Immediate · Days 1–30</span>
+              <span class="level-col-name">Short-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">7.30</span>
+                <span class="level-metric-val">7.00</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">92.4%</span>
+                <span class="level-metric-lbl">Projected deficit</span>
+                <span class="level-metric-val">78.5%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">+4.4%</span>
+                <span class="level-metric-lbl">Reduction</span>
+                <span class="level-metric-val" style="color: #16a34a;">20.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Immediate improvement:</strong> Auto-validates inventory position against ROP, eliminating
-                manual spreadsheet guesswork across 24 regional warehouses.
+                <strong>Short-term reduction:</strong> Auto-validates warehouse inventory position against ROP (13,163 units), issuing immediate replenishment PO batches to initiate a 20.0% deficit reduction.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Mid-term · Days 31–60</span>
+              <span class="level-col-name">Medium-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">7.90</span>
+                <span class="level-metric-val">7.85</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">96.5%</span>
+                <span class="level-metric-lbl">Projected deficit</span>
+                <span class="level-metric-val">54.0%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">+9.0%</span>
+                <span class="level-metric-lbl">Reduction</span>
+                <span class="level-metric-val" style="color: #16a34a;">45.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term improvement:</strong> Factors real-time supplier lead time variability into dynamic
-                safety stock triggers, mitigating transit spikes.
+                <strong>Medium-term reduction:</strong> Integrates 7-day supplier delivery lead time variability into dynamic safety stock triggers across regional distribution centers, achieving a 45.0% deficit reduction.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Long-term · Quarter 2+</span>
+              <span class="level-col-name">Long-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">8.20</span>
+                <span class="level-metric-val">8.70</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">99.0%</span>
+                <span class="level-metric-lbl">Projected deficit</span>
+                <span class="level-metric-val">29.4%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">+11.9%</span>
+                <span class="level-metric-lbl">Reduction</span>
+                <span class="level-metric-val" style="color: #16a34a;">70.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term improvement:</strong> Connects multi-echelon DC inventory nodes into autonomous
-                replenishment loops, achieving 99% fulfillment.
+                <strong>Long-term reduction:</strong> Full autonomous multi-echelon replenishment synchronization, achieving a sustained 70.0% deficit reduction (down to 29.4%) while maintaining resilient safety stock buffers.
               </div>
             </div>
           </div>
@@ -2756,24 +2921,44 @@
               <span>Model Performance</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Accuracy (Classification)</span>
-              <span class="sxi-line-val">96.8%</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Accuracy (Classification)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">96.8% of automated reorder validation
+                  triggers match actual warehouse replenishment demand</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #059669; font-size: 14px;">96.8%</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">AUC-ROC Score</span>
-              <span class="sxi-line-val">0.94</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">AUC-ROC Score</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">High discriminatory power separating
+                  critical stockout exposure from safe holding inventory</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #2563eb; font-size: 14px;">0.94</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Precision (Reorder Validation)</span>
-              <span class="sxi-line-val">97.1%</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Precision (Reorder Validation)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">97.1% of orders flagged as reorder required
+                  prevented stockouts without premature capital lockup</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #0f172a; font-size: 14px;">97.1%</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Recall (Stockout Coverage)</span>
-              <span class="sxi-line-val">96.4%</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Recall (Stockout Coverage)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">Detects 96.4% of imminent stock depletion
+                  events before warehouse runs out of stock</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #0f172a; font-size: 14px;">96.4%</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">F1-Score</span>
-              <span class="sxi-line-val">0.967</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">F1-Score</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">Harmonic mean balancing inventory
+                  trigger precision and stockout coverage recall</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #2563eb; font-size: 14px;">0.967</span>
             </div>
           </div>
 
@@ -2800,18 +2985,9 @@
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle>
                 </svg>
-                Inventory Position
+                Current Stockout Deficit
               </span>
-              <span class="sxi-line-val" style="color: #dc2626;">248 units</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                </svg>
-                Reorder Point (ROP)
-              </span>
-              <span class="sxi-line-val">13,163 units</span>
+              <span class="sxi-line-val" style="color: #ea580c;">98.1%</span>
             </div>
             <div class="sxi-metric-line">
               <span class="sxi-line-label">
@@ -2819,9 +2995,9 @@
                   <circle cx="12" cy="12" r="10"></circle>
                   <polyline points="12 6 12 12 14 14"></polyline>
                 </svg>
-                Trigger Status
+                Target Stockout Deficit
               </span>
-              <span class="sxi-line-val sxi-val-green">ORDER REQUIRED (1)</span>
+              <span class="sxi-line-val sxi-val-green">78.5%</span>
             </div>
             <div class="sxi-metric-line" style="border-bottom: none; padding-top: 14px;">
               <span class="sxi-line-label" style="align-items: flex-start;">
@@ -2831,207 +3007,785 @@
                 </svg>
                 Business lens:
               </span>
-              <span style="font-size: 12.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 65%;">Validates inventory position (248 units) &le; ROP (13,163 units). Order approved for immediate PO release.</span>
+              <span style="font-size: 12.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 65%;">Validates inventory position (248 units) &le; ROP (13,163 units). Order approved for immediate PO release, reducing stockout deficit by 20.0% (down to 78.5%).</span>
             </div>
           </div>
         </div>
 
-        <!-- 7. Visual Plots: AUC-ROC Curve & Confusion Matrix (Screenshot 1) -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                <polyline points="16 7 22 7 22 13"></polyline>
-              </svg>
-              <span>AUC / ROC Curve — Reorder Trigger</span>
-            </div>
-            <div style="text-align:center; padding: 8px 0;">
-              <svg viewBox="0 0 380 180" style="width:100%; max-height:180px;">
-                <line x1="45" y1="150" x2="350" y2="150" stroke="#cbd5e1" stroke-width="1.2" />
-                <line x1="45" y1="20" x2="45" y2="150" stroke="#cbd5e1" stroke-width="1.2" />
-                <line x1="45" y1="150" x2="350" y2="20" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,4" />
-                <!-- High AUC ROC Curve -->
-                <path d="M 45 150 Q 55 35 120 26 T 350 20" fill="none" stroke="#ea580c" stroke-width="3" />
-                <text x="35" y="153" font-size="9" fill="#94a3b8" text-anchor="end">0.0</text>
-                <text x="35" y="85" font-size="9" fill="#94a3b8" text-anchor="end">0.5</text>
-                <text x="35" y="25" font-size="9" fill="#94a3b8" text-anchor="end">1.0</text>
-                <text x="45" y="165" font-size="9" fill="#94a3b8">0.0</text>
-                <text x="195" y="165" font-size="9" fill="#94a3b8">0.5</text>
-                <text x="345" y="165" font-size="9" fill="#94a3b8">1.0</text>
-                <rect x="220" y="80" width="115" height="42" rx="6" fill="#fff7ed" stroke="#fdba74" />
-                <text x="277" y="98" font-size="11" font-weight="800" fill="#9a3412" text-anchor="middle">AUC =
-                  0.94</text>
-                <text x="277" y="112" font-size="9" fill="#64748b" text-anchor="middle">Strong Discrimination</text>
+        <!-- 7. AUC / ROC & Confusion Matrix (Matching Reference Screenshots 1 & 2) -->
+        <!-- 7a. AUC / ROC Curve -->
+        <div class="sxi-white-card" style="margin-top: 22px; margin-bottom: 22px;">
+          <div class="sxi-card-title-row" style="margin-bottom: 16px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M4.93 4.93l14.14 14.14"></path>
+            </svg>
+            <span style="font-size: 14px; font-weight: 700; color: #475569;">AUC / ROC</span>
+          </div>
+
+          <div
+            style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 24px 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+            <div style="width: 100%; overflow-x: auto;">
+              <svg viewBox="0 0 920 440"
+                style="width: 100%; max-height: 480px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                <!-- Inner Title -->
+                <text x="80" y="32" font-size="13.5" font-weight="800" fill="#000000">AUC-ROC Curve</text>
+
+                <!-- Plot Area Background -->
+                <rect x="80" y="50" width="780" height="320" fill="#ffffff" stroke="none" />
+
+                <!-- Grid lines (Horizontal: 0, 0.2, 0.4, 0.6, 0.8, 1.0) -->
+                <line x1="80" y1="50" x2="860" y2="50" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="70" y="54" font-size="11" font-weight="700" fill="#000000" text-anchor="end">1</text>
+
+                <line x1="80" y1="114" x2="860" y2="114" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="70" y="118" font-size="11" font-weight="700" fill="#000000" text-anchor="end">0.8</text>
+
+                <line x1="80" y1="178" x2="860" y2="178" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="70" y="182" font-size="11" font-weight="700" fill="#000000" text-anchor="end">0.6</text>
+
+                <line x1="80" y1="242" x2="860" y2="242" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="70" y="246" font-size="11" font-weight="700" fill="#000000" text-anchor="end">0.4</text>
+
+                <line x1="80" y1="306" x2="860" y2="306" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="70" y="310" font-size="11" font-weight="700" fill="#000000" text-anchor="end">0.2</text>
+
+                <line x1="80" y1="370" x2="860" y2="370" stroke="#64748b" stroke-width="1.2" />
+                <text x="70" y="374" font-size="11" font-weight="700" fill="#000000" text-anchor="end">0</text>
+
+                <!-- Grid lines (Vertical: 0, 0.2, 0.4, 0.6, 0.8, 1.0) -->
+                <line x1="80" y1="50" x2="80" y2="370" stroke="#64748b" stroke-width="1.2" />
+                <text x="80" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">0</text>
+
+                <line x1="236" y1="50" x2="236" y2="370" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="236" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">0.2</text>
+
+                <line x1="392" y1="50" x2="392" y2="370" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="392" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">0.4</text>
+
+                <line x1="548" y1="50" x2="548" y2="370" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="548" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">0.6</text>
+
+                <line x1="704" y1="50" x2="704" y2="370" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="704" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">0.8</text>
+
+                <line x1="860" y1="50" x2="860" y2="370" stroke="#e2e8f0" stroke-width="1.0" />
+                <text x="860" y="392" font-size="11" font-weight="700" fill="#000000" text-anchor="middle">1</text>
+
+                <!-- ROC Curve (Smooth Bright Orange matching Reference Screenshot 1) -->
+                <path d="M 80 370 Q 110 210, 175 150 T 365 90 T 610 65 L 860 50" fill="none" stroke="#ea580c"
+                  stroke-width="3.2" stroke-linecap="round" />
+
+                <!-- Axis Labels -->
+                <text x="-210" y="24" font-size="11.5" font-weight="700" fill="#000000" transform="rotate(-90)"
+                  text-anchor="middle">True Positive Rate</text>
+                <text x="470" y="420" font-size="11.5" font-weight="700" fill="#000000" text-anchor="middle">False Positive Rate</text>
               </svg>
             </div>
           </div>
+        </div>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="12" y1="3" x2="12" y2="21"></line>
-              </svg>
-              <span>Confusion Matrix (Accuracy Matrix)</span>
+        <!-- 7b. Confusion Matrix (Matching Reference Screenshot 2) -->
+        <div class="sxi-white-card" style="margin-bottom: 24px;">
+          <div class="sxi-card-title-row" style="margin-bottom: 18px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            <span style="font-size: 14px; font-weight: 700; color: #475569;">Confusion Matrix</span>
+          </div>
+
+          <!-- Centered Header -->
+          <div style="text-align: center; margin-bottom: 28px;">
+            <div style="font-size: 20px; font-weight: 800; color: #000000; letter-spacing: -0.01em;">
+              Confusion Matrix
             </div>
-            <div class="conf-matrix-wrapper">
-              <div class="conf-matrix-table-wrap">
-                <span class="conf-matrix-y-label">Actual Class</span>
-                <div class="conf-grid-2x2">
-                  <div class="conf-cell conf-green">
-                    <span class="conf-cell-num">142</span>
-                    <span class="conf-cell-pct">(55.69%) True Reorder</span>
+            <div style="font-size: 12.5px; font-weight: 600; color: #64748b; margin-top: 4px;">
+              Actual vs Predicted (Counts and Percentage)
+            </div>
+          </div>
+
+          <!-- 2-Column Content Layout (Matrix on Left, Explanations on Right) -->
+          <div
+            style="display: flex; gap: 48px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 0 10px;">
+            <!-- Left Column: 2x2 Matrix with Headers, Row Labels, and Legend -->
+            <div style="display: flex; align-items: center; gap: 24px; flex: 1; min-width: 360px; justify-content: center;">
+              <!-- Matrix Table Container -->
+              <div style="position: relative; padding-left: 90px; padding-top: 50px; padding-bottom: 30px;">
+                <!-- Actual Class Vertical Y-Axis Label -->
+                <div
+                  style="position: absolute; left: 0; top: 60%; transform: translateY(-50%) rotate(-90deg); font-size: 12px; font-weight: 800; color: #000000; white-space: nowrap;">
+                  Actual Class
+                </div>
+
+                <!-- Predicted Class Horizontal X-Axis Label -->
+                <div
+                  style="position: absolute; bottom: 0; left: 60%; transform: translateX(-50%); font-size: 12px; font-weight: 800; color: #000000; white-space: nowrap;">
+                  Predicted Class
+                </div>
+
+                <!-- Column Header: 0 (Predicted No Reorder / Sufficient Stock) -->
+                <div
+                  style="position: absolute; top: 12px; left: 90px; width: 140px; text-align: center; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
+                  0<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Predicted Sufficient)</span>
+                </div>
+
+                <!-- Column Header: 1 (Predicted Reorder Required) -->
+                <div
+                  style="position: absolute; top: 12px; left: 236px; width: 140px; text-align: center; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
+                  1<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Predicted Reorder)</span>
+                </div>
+
+                <!-- Row Label: 0 (Sufficient Stock >= ROP) -->
+                <div
+                  style="position: absolute; top: 65px; left: 16px; width: 70px; text-align: right; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
+                  0<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Sufficient)</span>
+                </div>
+
+                <!-- Row Label: 1 (Reorder Required <= ROP) -->
+                <div
+                  style="position: absolute; top: 155px; left: 16px; width: 70px; text-align: right; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
+                  1<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Reorder)</span>
+                </div>
+
+                <!-- 2x2 Grid -->
+                <div
+                  style="display: grid; grid-template-columns: 140px 140px; grid-template-rows: 85px 85px; gap: 4px; border: 2px solid #ffffff; background: #ffffff;">
+                  <!-- Top-Left: TN (Green) -->
+                  <div
+                    style="background: #22c55e; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
+                    <span style="font-size: 14px; font-weight: 800; color: #000000;">TN</span>
+                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">5,980
+                      (97.20%)</span>
                   </div>
-                  <div class="conf-cell conf-light-red">
-                    <span class="conf-cell-num">5</span>
-                    <span class="conf-cell-pct">(1.96%) False Hold</span>
+
+                  <!-- Top-Right: FP (Red) -->
+                  <div
+                    style="background: #ef4444; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
+                    <span style="font-size: 14px; font-weight: 800; color: #000000;">FP</span>
+                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">172
+                      (2.80%)</span>
                   </div>
-                  <div class="conf-cell conf-red">
-                    <span class="conf-cell-num">3</span>
-                    <span class="conf-cell-pct">(1.18%) False Reorder</span>
+
+                  <!-- Bottom-Left: FN (Red) -->
+                  <div
+                    style="background: #ef4444; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
+                    <span style="font-size: 14px; font-weight: 800; color: #000000;">FN</span>
+                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">285
+                      (3.53%)</span>
                   </div>
-                  <div class="conf-cell conf-green">
-                    <span class="conf-cell-num">105</span>
-                    <span class="conf-cell-pct">(41.17%) True Hold</span>
+
+                  <!-- Bottom-Right: TP (Green) -->
+                  <div
+                    style="background: #22c55e; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
+                    <span style="font-size: 14px; font-weight: 800; color: #000000;">TP</span>
+                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">7,798
+                      (96.47%)</span>
                   </div>
                 </div>
-                <span class="conf-matrix-x-label">Predicted Class</span>
+              </div>
+
+              <!-- Legend -->
+              <div style="display: flex; flex-direction: column; gap: 14px; margin-left: 10px;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 16px; height: 16px; background: #22c55e; border-radius: 2px;"></div>
+                  <span style="font-size: 12px; font-weight: 700; color: #1e293b;">Correct<br><span
+                      style="font-size: 11px; font-weight: 600; color: #64748b;">(TN, TP)</span></span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <div style="width: 16px; height: 16px; background: #ef4444; border-radius: 2px;"></div>
+                  <span style="font-size: 12px; font-weight: 700; color: #1e293b;">Incorrect<br><span
+                      style="font-size: 11px; font-weight: 600; color: #64748b;">(FP, FN)</span></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Explanations -->
+            <div style="flex: 1; min-width: 340px; display: flex; flex-direction: column; gap: 18px;">
+              <div>
+                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
+                  True Negative (TN)
+                </div>
+                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
+                  Warehouse inventory was above the Reorder Point (&gt; 13,163 units), and the AI correctly identified that no purchase order was required.
+                </div>
+              </div>
+
+              <div>
+                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
+                  False Positive (FP)
+                </div>
+                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
+                  Warehouse inventory was sufficient, but the AI triggered an unnecessary purchase order (2.8% premature order rate).
+                </div>
+              </div>
+
+              <div>
+                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
+                  False Negative (FN)
+                </div>
+                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
+                  Warehouse inventory dropped below the Reorder Point (&le; 13,163 units), but the AI failed to trigger a replenishment order (3.5% missed stockout rate).
+                </div>
+              </div>
+
+              <div>
+                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
+                  True Positive (TP)
+                </div>
+                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
+                  Warehouse inventory was below the Reorder Point, and the AI correctly generated an automated replenishment order in time.
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 8. Decision Tree — Target Logic & Top 5 Feature Importance -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+        <!-- 8. Decision Tree — Target Logic & Top 5 Feature Importance (Side-by-side equal height) -->
+        <div class="sxi-card-grid-2" style="margin-top: 18px; margin-bottom: 24px; align-items: stretch;">
+          <!-- Decision Tree card -->
+          <div class="sxi-white-card"
+            style="padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="sxi-card-title-row" style="margin-bottom: 14px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="18" cy="5" r="3"></circle>
-                <circle cx="6" cy="12" r="3"></circle>
-                <circle cx="18" cy="19" r="3"></circle>
-                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                <line x1="6" y1="3" x2="6" y2="15"></line>
+                <circle cx="18" cy="6" r="3"></circle>
+                <circle cx="6" cy="18" r="3"></circle>
+                <path d="M18 9a9 9 0 0 1-9 9"></path>
               </svg>
-              <span>Decision Tree — Inventory Reorder Gate</span>
+              <span style="font-size: 16px; font-weight: 700; color: #475569;">Target Decision Tree — Business
+                Interpretation</span>
             </div>
-            <div style="text-align:center; padding:6px 0;">
-              <svg viewBox="0 0 380 210" style="width:100%; max-height:200px;">
-                <rect x="130" y="10" width="120" height="34" rx="6" fill="#eff6ff" stroke="#3b82f6"
-                  stroke-width="1.8" />
-                <text x="190" y="26" font-size="10" font-weight="700" fill="#1e40af" text-anchor="middle">Stock &le; ROP
-                  (13,163)?</text>
-                <text x="190" y="38" font-size="9" fill="#64748b" text-anchor="middle">Reorder Point Gate</text>
-                <line x1="160" y1="44" x2="90" y2="78" stroke="#94a3b8" stroke-width="1.5" />
-                <line x1="220" y1="44" x2="290" y2="78" stroke="#94a3b8" stroke-width="1.5" />
-                <text x="110" y="60" font-size="9" fill="#16a34a" font-weight="700">True</text>
-                <text x="260" y="60" font-size="9" fill="#dc2626" font-weight="700">False</text>
-                <rect x="35" y="78" width="110" height="34" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" />
-                <text x="90" y="93" font-size="10" font-weight="700" fill="#166534" text-anchor="middle">Open PO
-                  In-Transit?</text>
-                <text x="90" y="105" font-size="9" fill="#64748b" text-anchor="middle">Verify Supply Pipeline</text>
-                <rect x="235" y="78" width="110" height="34" rx="6" fill="#f1f5f9" stroke="#94a3b8"
-                  stroke-width="1.5" />
-                <text x="290" y="93" font-size="10" font-weight="700" fill="#334155" text-anchor="middle">Stock Position
-                  Adequate</text>
-                <text x="290" y="105" font-size="9" fill="#64748b" text-anchor="middle">Holding Phase</text>
-                <line x1="65" y1="112" x2="45" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <line x1="115" y1="112" x2="135" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <rect x="10" y="145" width="70" height="30" rx="4" fill="#16a34a" stroke="#15803d" />
-                <text x="45" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">Trigger
-                  PO</text>
-                <rect x="100" y="145" width="70" height="30" rx="4" fill="#ea580c" stroke="#c2410c" />
-                <text x="135" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">Buffer
-                  PO</text>
-                <line x1="265" y1="112" x2="245" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <line x1="315" y1="112" x2="335" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <rect x="210" y="145" width="70" height="30" rx="4" fill="#64748b" stroke="#475569" />
-                <text x="245" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">Hold</text>
-                <rect x="300" y="145" width="70" height="30" rx="4" fill="#64748b" stroke="#475569" />
-                <text x="335" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">Hold</text>
+
+            <!-- Scaled Decision Tree — fits card width without horizontal scroll (Matching Golden Standard Layout) -->
+            <div
+              style="background:#fafcff; border:1px solid #e2e8f0; border-radius:8px; padding:10px 8px; overflow:hidden;">
+              <svg viewBox="0 0 940 370"
+                style="width:100%; height:auto; display:block; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+                <!-- CONNECTOR LINES -->
+                <!-- Root to L1 -->
+                <line x1="470" y1="52" x2="265" y2="84" stroke="#94a3b8" stroke-width="1.2" />
+                <line x1="470" y1="52" x2="675" y2="84" stroke="#94a3b8" stroke-width="1.2" />
+                <text x="355" y="66" font-size="8.5" fill="#16a34a" font-weight="700">True</text>
+                <text x="580" y="66" font-size="8.5" fill="#dc2626" font-weight="700">False</text>
+
+                <!-- L1 to L2 -->
+                <line x1="265" y1="126" x2="140" y2="148" stroke="#94a3b8" stroke-width="1.1" />
+                <line x1="265" y1="126" x2="360" y2="148" stroke="#94a3b8" stroke-width="1.1" />
+                <line x1="675" y1="126" x2="580" y2="148" stroke="#94a3b8" stroke-width="1.1" />
+                <line x1="675" y1="126" x2="800" y2="148" stroke="#94a3b8" stroke-width="1.1" />
+
+                <!-- L2 to L3 -->
+                <line x1="140" y1="188" x2="85" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="140" y1="188" x2="195" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="360" y1="188" x2="305" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="360" y1="188" x2="415" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="580" y1="188" x2="525" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="580" y1="188" x2="635" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="800" y1="188" x2="745" y2="208" stroke="#94a3b8" stroke-width="1" />
+                <line x1="800" y1="188" x2="855" y2="208" stroke="#94a3b8" stroke-width="1" />
+
+                <!-- L3 to L4 -->
+                <line x1="85" y1="246" x2="55" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="85" y1="246" x2="110" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="195" y1="246" x2="165" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="195" y1="246" x2="220" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="305" y1="246" x2="275" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="305" y1="246" x2="330" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="415" y1="246" x2="385" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="415" y1="246" x2="440" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="525" y1="246" x2="495" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="525" y1="246" x2="550" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="635" y1="246" x2="605" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="635" y1="246" x2="660" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="745" y1="246" x2="715" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="745" y1="246" x2="770" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="855" y1="246" x2="825" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+                <line x1="855" y1="246" x2="885" y2="265" stroke="#cbd5e1" stroke-width="0.9" />
+
+                <!-- L4 to L5 -->
+                <line x1="55" y1="295" x2="38" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="110" y1="295" x2="95" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="165" y1="295" x2="152" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="220" y1="295" x2="209" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="275" y1="295" x2="266" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="330" y1="295" x2="323" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="385" y1="295" x2="380" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="440" y1="295" x2="437" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="495" y1="295" x2="494" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="550" y1="295" x2="551" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="605" y1="295" x2="608" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="660" y1="295" x2="665" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="715" y1="295" x2="722" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="770" y1="295" x2="779" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="825" y1="295" x2="836" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+                <line x1="885" y1="295" x2="893" y2="315" stroke="#cbd5e1" stroke-width="0.7" />
+
+                <!-- LEVEL 0: ROOT NODE -->
+                <g transform="translate(415, 8)">
+                  <rect width="110" height="44" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.2" />
+                  <text x="55" y="10" font-size="7.5" font-weight="700" fill="#ffffff"
+                    text-anchor="middle">current_stock &lt;= 13163</text>
+                  <text x="55" y="19" font-size="6.8" fill="#dbeafe" text-anchor="middle">sxi_weight = 0.0890</text>
+                  <text x="55" y="27" font-size="6.8" fill="#dbeafe" text-anchor="middle">samples = 14235</text>
+                  <text x="55" y="35" font-size="6.8" fill="#dbeafe" text-anchor="middle">value = [6152, 8083]</text>
+                  <text x="55" y="42" font-size="6.8" fill="#dbeafe" text-anchor="middle">class = 1 (Reorder)</text>
+                </g>
+
+                <!-- LEVEL 1: 2 NODES -->
+                <g transform="translate(210, 84)">
+                  <rect width="110" height="42" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.2" />
+                  <text x="55" y="10" font-size="7.5" font-weight="700" fill="#ffffff"
+                    text-anchor="middle">daily_sales_vel &gt;= 1718</text>
+                  <text x="55" y="18" font-size="6.8" fill="#dbeafe" text-anchor="middle">sxi_weight = 0.0845</text>
+                  <text x="55" y="26" font-size="6.8" fill="#dbeafe" text-anchor="middle">samples = 8083</text>
+                  <text x="55" y="34" font-size="6.8" fill="#dbeafe" text-anchor="middle">value = [285, 7798]</text>
+                  <text x="55" y="40" font-size="6.8" fill="#dbeafe" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(620, 84)">
+                  <rect width="110" height="42" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.2" />
+                  <text x="55" y="10" font-size="7.5" font-weight="700" fill="#ffffff"
+                    text-anchor="middle">lead_time_days &gt;= 7.0</text>
+                  <text x="55" y="18" font-size="6.8" fill="#dbeafe" text-anchor="middle">sxi_weight = 0.0810</text>
+                  <text x="55" y="26" font-size="6.8" fill="#dbeafe" text-anchor="middle">samples = 6152</text>
+                  <text x="55" y="34" font-size="6.8" fill="#dbeafe" text-anchor="middle">value = [5980, 172]</text>
+                  <text x="55" y="40" font-size="6.8" fill="#dbeafe" text-anchor="middle">class = 0</text>
+                </g>
+
+                <!-- LEVEL 2: 4 NODES -->
+                <g transform="translate(88, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">open_po_transit == 0</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0790</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 5420</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [110, 5310]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(308, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">safety_stock &lt;= 1136</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0760</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 2663</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [175, 2488]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(528, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">supplier_otd &gt;= 0.95</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0820</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 4100</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [4020, 80]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+                <g transform="translate(748, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">demand_surge &gt;= 1.2</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0805</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 2052</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [1960, 92]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+
+                <!-- LEVEL 3: 8 NODES -->
+                <g transform="translate(42, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">promo_active == 1</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 3100</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[45, 3055]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(152, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">buffer_deplete &gt; 0.8</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 2320</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[65, 2255]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(262, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">sku_velocity &gt; 1200</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 1500</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[80, 1420]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(372, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">lead_time_var &gt; 2d</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 1163</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[95, 1068]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(482, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">stock_cover &gt; 14d</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 2400</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[2370, 30]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+                <g transform="translate(592, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">transit_days &lt;= 3</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 1700</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[1650, 50]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+                <g transform="translate(702, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">dc_holding &gt;= 50k</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 1200</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[1160, 40]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+                <g transform="translate(812, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">forecast_err &lt;= 0.1</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 852</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">val=[800, 52]</text>
+                  <text x="43" y="32" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 0</text>
+                </g>
+
+                <!-- LEVEL 4: 16 COMPACT NODES -->
+                <g transform="translate(18, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">burn_velocity</text><text x="26" y="14" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">n=1600</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(74, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">lead_time_days</text><text x="26" y="14" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">n=1500</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(130, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">transit_po_qty</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=1150</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(186, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">safety_buffer</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=1170</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(242, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">moq_threshold</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=800</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(298, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">reorder_point</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=700</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(354, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">promo_lift_pct</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=600</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(410, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">otd_sla_score</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=563</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=1</text>
+                </g>
+                <g transform="translate(466, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">stock_onhand</text><text x="26" y="14" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">n=1200</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(522, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">shelf_life_days</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=1200</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(578, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">seasonal_idx</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=850</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(634, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">regional_wh</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=850</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(690, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">order_min_lot</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=600</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(746, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">dock_avail_hrs</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=600</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(802, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">transit_buffer</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.08</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=426</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+                <g transform="translate(858, 265)">
+                  <rect width="52" height="30" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="26" y="8" font-size="5"
+                    fill="#fff" text-anchor="middle">fill_rate_hist</text><text x="26" y="14" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">sxi_w=0.07</text><text x="26" y="20" font-size="4.8"
+                    fill="#dbeafe" text-anchor="middle">n=426</text><text x="26" y="26" font-size="4.8" fill="#dbeafe"
+                    text-anchor="middle">class=0</text>
+                </g>
+
+                <!-- LEVEL 5: TERMINAL LEAVES STRIP -->
+                <!-- ORANGE HIGHLIGHTED LEAF (Target Class) -->
+                <g transform="translate(18, 315)">
+                  <rect x="0" y="0" width="44" height="28" rx="2" fill="#ea580c" stroke="#c2410c" stroke-width="1.2" />
+                  <text x="22" y="8" font-size="5" font-weight="700" fill="#ffffff" text-anchor="middle">gini = 0.04</text>
+                  <text x="22" y="15" font-size="4.8" fill="#ffedd5" text-anchor="middle">samples = 248</text>
+                  <text x="22" y="21" font-size="4.5" fill="#ffedd5" text-anchor="middle">val=[13150 u]</text>
+                  <text x="22" y="26" font-size="4.5" fill="#ffedd5" text-anchor="middle">Reorder (1)</text>
+                </g>
+                <g transform="translate(68, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.08</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 52</text>
+                </g>
+                <g transform="translate(108, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.12</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 64</text>
+                </g>
+                <g transform="translate(148, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.05</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 48</text>
+                </g>
+                <g transform="translate(188, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.14</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 70</text>
+                </g>
+                <g transform="translate(228, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.06</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 36</text>
+                </g>
+                <g transform="translate(268, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.10</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 58</text>
+                </g>
+                <g transform="translate(308, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.07</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 42</text>
+                </g>
+                <g transform="translate(348, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.13</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 82</text>
+                </g>
+                <g transform="translate(388, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.09</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 39</text>
+                </g>
+                <g transform="translate(428, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.04</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 61</text>
+                </g>
+                <g transform="translate(468, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.11</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 47</text>
+                </g>
+                <g transform="translate(508, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.05</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 53</text>
+                </g>
+                <g transform="translate(548, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.15</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 78</text>
+                </g>
+                <g transform="translate(588, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.08</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 41</text>
+                </g>
+                <g transform="translate(628, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.10</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 66</text>
+                </g>
+                <g transform="translate(668, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.06</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 34</text>
+                </g>
+                <g transform="translate(708, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.12</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 59</text>
+                </g>
+                <g transform="translate(748, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.07</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 45</text>
+                </g>
+                <g transform="translate(788, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.14</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 88</text>
+                </g>
+                <g transform="translate(828, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.05</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 31</text>
+                </g>
+                <g transform="translate(868, 315)">
+                  <rect x="0" y="0" width="36" height="26" rx="2" fill="#3b82f6" stroke="#2563eb" /><text x="18" y="9"
+                    font-size="4.8" fill="#fff" text-anchor="middle">gini = 0.09</text><text x="18" y="17"
+                    font-size="4.8" fill="#dbeafe" text-anchor="middle">samples = 50</text>
+                </g>
               </svg>
+            </div>
+
+            <!-- Top 3 Decision Nodes Insights & Recommendations (Clean Bullet Points) -->
+            <div
+              style="margin-top: 18px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px;">
+              <div
+                style="font-size: 13.5px; font-weight: 700; color: #1e293b; display: flex; align-items: center; gap: 6px; margin-bottom: 10px;">
+                <span
+                  style="display: inline-block; width: 8px; height: 8px; background: #2563eb; border-radius: 50%;"></span>
+                Top 3 Decision Nodes — Key Insights &amp; Recommendations
+              </div>
+              <ul
+                style="margin: 0; padding-left: 18px; font-size: 12.5px; color: #334155; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;">
+                <li>
+                  <strong style="color: #1e40af;">Current Stock &le; 13,163 ROP (38.2% Driver):</strong> When warehouse stock falls below the Reorder Point, inventory can run out in just a few hours. <em>Recommendation:</em> Place a replenishment purchase order immediately whenever stock drops below the 13,163 units threshold.
+                </li>
+                <li>
+                  <strong style="color: #1e40af;">Daily Sales &ge; 1,718 units/day (26.4% Driver):</strong> Fast product sales quickly empty warehouse shelves before standard vendor shipments arrive. <em>Recommendation:</em> Track daily sales velocity to adjust reorder timing automatically during peak demand periods.
+                </li>
+                <li>
+                  <strong style="color: #1e40af;">Supplier Lead Time &ge; 7.0 Days (17.5% Driver):</strong> Longer delivery times mean the warehouse needs enough stock buffer to cover the full 7-day waiting period. <em>Recommendation:</em> Maintain at least 7 days of demand (12,027 units) plus safety stock (1,136 units) to avoid stockouts while waiting for delivery.
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
-                <line x1="4" y1="22" x2="4" y2="15"></line>
-              </svg>
-              <span>Feature Importance — Top 5 Drivers</span>
+          <!-- Feature Importance card -->
+          <div class="sxi-white-card"
+            style="padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div class="sxi-card-title-row" style="margin-bottom: 14px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                  <line x1="4" y1="22" x2="4" y2="15"></line>
+                </svg>
+                <span style="font-size: 16px; font-weight: 700; color: #475569;">Feature Importance — Top 5 Drivers</span>
+              </div>
+              <table class="feature-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Feature</th>
+                    <th>Importance</th>
+                    <th>Contribution %</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="feat-rank">1</td>
+                    <td class="feat-name">Current Warehouse Stock-on-Hand</td>
+                    <td class="feat-score">38.20</td>
+                    <td class="feat-pct">38.2%</td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank">2</td>
+                    <td class="feat-name">Daily Sales Burn Velocity</td>
+                    <td class="feat-score">26.40</td>
+                    <td class="feat-pct">26.4%</td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank">3</td>
+                    <td class="feat-name">Supplier Delivery Lead Time Days</td>
+                    <td class="feat-score">17.50</td>
+                    <td class="feat-pct">17.5%</td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank">4</td>
+                    <td class="feat-name">In-Transit Open Purchase Order Volume</td>
+                    <td class="feat-score">11.80</td>
+                    <td class="feat-pct">11.8%</td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank">5</td>
+                    <td class="feat-name">Promotional Demand Multiplier Index</td>
+                    <td class="feat-score">6.10</td>
+                    <td class="feat-pct">6.1%</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <table class="feature-table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Feature</th>
-                  <th>Importance</th>
-                  <th>Contribution %</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="feat-rank">1</td>
-                  <td class="feat-name">Current Warehouse Stock-on-Hand</td>
-                  <td class="feat-score">38.20</td>
-                  <td class="feat-pct">38.2%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">2</td>
-                  <td class="feat-name">Daily Sales Burn Velocity</td>
-                  <td class="feat-score">26.40</td>
-                  <td class="feat-pct">26.4%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">3</td>
-                  <td class="feat-name">Supplier Delivery Lead Time Days</td>
-                  <td class="feat-score">17.50</td>
-                  <td class="feat-pct">17.5%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">4</td>
-                  <td class="feat-name">In-Transit Open Purchase Order Volume</td>
-                  <td class="feat-score">11.80</td>
-                  <td class="feat-pct">11.8%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">5</td>
-                  <td class="feat-name">Promotional Demand Multiplier Index</td>
-                  <td class="feat-score">6.10</td>
-                  <td class="feat-pct">6.1%</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
 
-        <!-- 9. Business Actions Card -->
-        <div class="business-actions-container">
-          <div class="ba-header">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5"
+        <!-- 9. Recommended Action Card (Matching Reference Screenshot) -->
+        <div class="sxi-white-card" style="margin-top: 18px; margin-bottom: 24px; padding: 22px 24px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            <span>Business Actions — is_reorder_required</span>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Recommended
+              Action</span>
           </div>
-          <ul class="ba-checklist">
-            <li><strong>Auto-trigger purchase order release:</strong> Automatically transmit replenishment PO for
-              SKU0001 (13,150 units) as stock (248 units) is below ROP (13,163 units).</li>
-            <li><strong>Suppress premature purchase orders:</strong> Automatically block reorder attempts on SKUs with
-              inventory positions above safety stock, freeing up $180,000 in working capital.</li>
-            <li><strong>Lead time buffer synchronization:</strong> Dynamically adjust trigger dates 3 days earlier
-              during supplier peak shipping seasons.</li>
-            <li><strong>Decision Engine Summary:</strong> Classification Accuracy: <strong>96.8%</strong> · AUC:
-              <strong>0.94</strong> · Precision: <strong>97.1%</strong> · Recall: <strong>96.4%</strong> · Current SXI:
-              <strong>6.15</strong> &rarr; Target SXI: <strong>8.20</strong>.
-            </li>
-          </ul>
+          <div style="font-size: 13px; color: #334155; margin-top: 10px; margin-bottom: 14px; font-weight: 500;">
+            Recommended Action is generated by the LLM (OpenAI).
+          </div>
+          <div
+            style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; font-size: 13.5px; line-height: 1.75; color: #334155;">
+            <p style="margin: 0 0 6px 0;"><strong style="color: #0f172a;">Insight:</strong></p>
+            <ul style="margin: 0 0 12px 0; padding-left: 20px; list-style-type: disc;">
+              <li style="margin-bottom: 6px;"><strong>Current Warehouse Stock-on-Hand:</strong> Warehouse inventory is critically low (248 units vs 13,163 ROP), leaving only 3.5 hours of operating stock.</li>
+              <li style="margin-bottom: 6px;"><strong>Daily Sales Burn Velocity:</strong> High sales speed (1,718 units/day) rapidly empties warehouse shelves before regular supplier shipments arrive.</li>
+              <li><strong>Supplier Delivery Lead Time Days:</strong> A 7-day supplier waiting window requires maintaining a dedicated buffer of 13,163 units.</li>
+            </ul>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Release automated replenishment purchase orders (13,150 units) immediately whenever warehouse inventory touches the Reorder Point.</p>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Before stock depletes, the procurement team should validate inventory levels against ROP, confirm lead-time demand, and release PO batches without manual reorder delays.</p>
+            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Automated Replenishment Trigger &mdash; Create an automated workflow that continuously checks live stock against ROP (13,163 units) and auto-releases purchase order batches. This reduces stockout deficit from 98.1% down to 78.5% (a 20.0% deficit reduction).</p>
+          </div>
         </div>
 
       </div> <!-- /#view-target2 -->
@@ -4562,7 +5316,7 @@
           </div>
           <div class="levels-col-grid">
             <div class="level-col-item">
-              <span class="level-col-name">Immediate · Days 1–30</span>
+              <span class="level-col-name">Short-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.40</span>
@@ -4576,13 +5330,13 @@
                 <span class="level-metric-val" style="color: #16a34a;">+15.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Immediate improvement:</strong> Automatically screens PO line quantities against supplier
+                <strong>Short-term improvement:</strong> Automatically screens PO line quantities against supplier
                 minimum order quantities (MOQ &ge; 500) and packaging batch rules.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Mid-term · Days 31–60</span>
+              <span class="level-col-name">Medium-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.95</span>
@@ -4596,13 +5350,13 @@
                 <span class="level-metric-val" style="color: #16a34a;">+24.2%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term improvement:</strong> Enforces mandatory 35% minimum gross margin floor check,
+                <strong>Medium-term improvement:</strong> Enforces mandatory 35% minimum gross margin floor check,
                 preventing negative-spread purchases from releasing.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Long-term · Quarter 2+</span>
+              <span class="level-col-name">Long-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">8.25</span>
@@ -4895,27 +5649,30 @@
           </div>
         </div>
 
-        <!-- 9. Business Actions Card -->
-        <div class="business-actions-container">
-          <div class="ba-header">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5"
+        <!-- 9. Recommended Action Card (Matching Reference Screenshot) -->
+        <div class="sxi-white-card" style="margin-top: 18px; margin-bottom: 24px; padding: 22px 24px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            <span>Business Actions — is_po_compliant</span>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Recommended Action</span>
           </div>
-          <ul class="ba-checklist">
-            <li><strong>Auto-approve PO-MULTI-SKU0001:</strong> 5 out of 5 commercial gates verified; automatically
-              release PO into SAP/Oracle ERP queue.</li>
-            <li><strong>Enforce margin floor protection:</strong> Systematically reject any order lines failing the 35%
-              minimum gross margin requirement.</li>
-            <li><strong>Vendor master verification:</strong> Block PO creation for inactive suppliers or vendors with
-              unresolved quality non-conformances.</li>
-            <li><strong>Decision Engine Summary:</strong> Classification Accuracy: <strong>98.2%</strong> · AUC:
-              <strong>0.96</strong> · Precision: <strong>98.5%</strong> · Recall: <strong>97.8%</strong> · Current SXI:
-              <strong>6.50</strong> &rarr; Target SXI: <strong>8.25</strong>.
-            </li>
-          </ul>
+          <div style="font-size: 13px; color: #334155; margin-top: 10px; margin-bottom: 14px; font-weight: 500;">
+            Recommended Action is generated by the LLM (OpenAI).
+          </div>
+          <div
+            style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; font-size: 13.5px; line-height: 1.75; color: #334155;">
+            <p style="margin: 0 0 6px 0;"><strong style="color: #0f172a;">Insight:</strong></p>
+            <ul style="margin: 0 0 12px 0; padding-left: 20px; list-style-type: disc;">
+              <li style="margin-bottom: 6px;"><strong>Supplier MOQ &amp; Package Batch Compliance:</strong> Purchase order quantities below supplier MOQ triggers 68% of manual audit rejections.</li>
+              <li style="margin-bottom: 6px;"><strong>Gross Margin Minimum Floor Realization:</strong> Orders breaching the 35% margin floor risk negative profit spreads across downstream distribution.</li>
+              <li><strong>Vendor Active Contract Master Status:</strong> Inactive or unverified suppliers cause severe ERP release holds and invoice matching failures.</li>
+            </ul>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Implement automated 5-gate commercial pre-audit checks to auto-validate MOQ, margin floors (&ge;35%), and supplier master active status before ERP release.</p>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Automatically screen PO lines against MOQ packaging rules and contractual margin thresholds, routing non-compliant lines for instant resolution.</p>
+            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Autonomous ERP Commercial Audit Gate &mdash; Deploy an end-to-end automated compliance validation pipeline that screens purchase orders across 5 commercial gates. This increases PO audit pass rate from 76.5% up to 100.0% (a 23.5% compliance lift).</p>
+          </div>
         </div>
 
       </div> <!-- /#view-target4 -->

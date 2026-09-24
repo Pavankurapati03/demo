@@ -4,261 +4,561 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Commerce Order Execution | Quantellix AI</title>
-  <link rel="stylesheet" href="/static/css/styles.css?v=3.3">
+  <link rel="stylesheet" href="/static/css/styles.css?v=7.0">
   <link rel="icon" href="/static/images/quantellix-logo-dark.png" type="image/png">
 </head>
-<body>
+<body style="background-color: #f1f5f9; min-height: 100vh;">
 
   <!-- =========================================================================
-       TOP NAVBAR (Transparent logo, Credits: 0, & User Menu)
+       TOP NAVBAR
        ========================================================================= -->
-  <header class="header-navbar">
+  <header class="header-navbar" style="background: #091428; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 12px 32px; height: 72px;">
     <div class="nav-left">
       <a href="/portal/marketplace" class="logo-link" title="Quantellix Marketplace">
-        <img src="/static/images/quantellix-logo-dark.png?v=2.0" alt="Quantellix" class="logo-img">
+        <img src="/static/images/quantellix-logo-dark.png?v=2.0" alt="Quantellix" class="logo-img" style="filter: brightness(0) invert(1); height: 48px; display: block;">
       </a>
     </div>
 
-    <div class="nav-right">
-      <span class="nav-credits">Credits: <strong>0</strong></span>
-      <a href="/portal/marketplace" class="nav-link">Marketplace</a>
-      <a href="#buy" class="nav-link">Buy credits</a>
-
-      <!-- User Profile Dropdown -->
-      <div class="user-menu-container">
-        <button class="btn-user-avatar" id="btnUserMenu" onclick="toggleUserMenu(event)" title="User Account">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-            <circle cx="12" cy="7" r="4"></circle>
-          </svg>
-        </button>
-
-        <div class="user-dropdown-menu" id="userDropdown">
-          <a href="javascript:void(0)" class="dropdown-item"
-            onclick="closeUserMenu(); alert('My account: Quantellix Enterprise Tier');">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-            My account
-          </a>
-          <a href="/portal/marketplace" class="dropdown-item" onclick="closeUserMenu(); resetSelections();">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="1 4 1 10 7 10"></polyline>
-              <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
-            </svg>
-            Restart
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="javascript:void(0)" class="dropdown-item item-danger" onclick="closeUserMenu(); confirmSignOut();">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-              <polyline points="16 17 21 12 16 7"></polyline>
-              <line x1="21" y1="12" x2="9" y2="12"></line>
-            </svg>
-            Sign out
-          </a>
-        </div>
-      </div>
+    <div class="nav-right" style="display: flex; align-items: center; gap: 18px;">
+      <span class="nav-credits" style="font-size: 13px; color: #94a3b8;">Credits: <strong style="color: #ffffff;">0</strong></span>
+      <a href="/portal/marketplace" class="nav-link" style="font-size: 13px; color: #ffffff; font-weight: 600; text-decoration: none;">Marketplace</a>
+      <a href="javascript:void(0)" onclick="alert('Account: Quantellix Enterprise Tier');" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">My account</a>
+      <a href="#buy" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Buy credits</a>
+      <a href="/portal/marketplace" class="nav-link" onclick="resetSelections();" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Restart</a>
+      <a href="javascript:void(0)" onclick="confirmSignOut();" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Sign out</a>
+      <a href="/portal/marketplace" class="btn-exit-app" style="background: #ef4444; color: #ffffff; padding: 6px 14px; border-radius: 6px; font-size: 12.5px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center;">Exit App</a>
     </div>
   </header>
 
   <!-- =========================================================================
-       MAIN CONTENT CONTAINER
+       MAIN CONTENT CONTAINER (Centered with generous white/light side margins)
        ========================================================================= -->
   <main class="main-wrapper">
     <div class="content-card">
 
       <!-- Card Title & Subtitle -->
-      <div class="portal-header">
-        <h1 class="portal-title">E-commerce Order Execution</h1>
-        <p class="portal-subtitle">Step 1 of 3: Pick the operational stage you want to open, then review its dashboard.</p>
+      <div class="portal-header" style="margin-bottom: 12px;">
+        <h1 class="portal-title" style="font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 3px; letter-spacing: -0.02em;">E-Commerce Order Execution</h1>
+        <p class="portal-subtitle" style="font-size: 13px; color: #64748b;">Step 1 of 11: Pick the operational stage you want to open, then review its dashboard.</p>
       </div>
 
-      <!-- Blue Announcement Box -->
-      <div class="callout-box callout-blue">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          style="flex-shrink:0; margin-top:2px;">
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="12" y1="16" x2="12" y2="12"></line>
-          <line x1="12" y1="8" x2="12.01" y2="8"></line>
-        </svg>
-        <div>
-          <strong>Recommended first: Sales Demand Forecasting (S1).</strong> Flow: Select a stage → Open dashboard →
-          Review prediction objective → Apply the single optimization lever.
+      <!-- Yellow Announcement Box (Matching Reference Screenshot) -->
+      <div class="callout-box" style="background: #fffdf5; border: 1px solid #fef3c7; border-radius: 7px; padding: 11px 15px; margin-bottom: 14px;">
+        <div style="font-size: 12.5px; line-height: 1.45; color: #78350f;">
+          <div style="font-weight: 800; color: #92400e; margin-bottom: 1px;">11 operational stages &mdash; each stage has its own dashboard.</div>
+          <div style="color: #a16207; font-size: 11.5px;">The structure follows the supplied Quantellix.AI marketplace page; the content is mapped directly to the supplied Order Execution framework.</div>
         </div>
       </div>
 
       <!-- Toolbar Quick Actions -->
-      <div class="controls-toolbar">
-        <div class="toolbar-group-left">
-          <button class="btn-pill" id="btnSelectS1" onclick="selectStageOnly('s1')">Select S1</button>
-          <button class="btn-pill" id="btnSelectAll" onclick="selectAllStages()">Select all 3</button>
-          <button class="btn-pill" id="btnClear" onclick="clearSelections()">Clear</button>
-        </div>
+      <div class="controls-toolbar" style="display: flex; gap: 8px; margin-bottom: 14px;">
+        <button class="btn-pill" id="btnSelectE1" onclick="selectStageOnly('e1')" style="background: #e2e8f0; border: none; padding: 5px 12px; border-radius: 5px; font-size: 11.5px; font-weight: 700; color: #1e293b; cursor: pointer;">Select E1</button>
+        <button class="btn-pill" id="btnSelectAll" onclick="selectAllStages()" style="background: #e2e8f0; border: none; padding: 5px 12px; border-radius: 5px; font-size: 11.5px; font-weight: 700; color: #1e293b; cursor: pointer;">Select all 11</button>
+        <button class="btn-pill" id="btnClear" onclick="clearSelections()" style="background: #e2e8f0; border: none; padding: 5px 12px; border-radius: 5px; font-size: 11.5px; font-weight: 700; color: #1e293b; cursor: pointer;">Clear</button>
       </div>
 
       <!-- =====================================================================
-           THE 3 OPERATIONAL STAGES GRID
+           THE 11 OPERATIONAL STAGES GRID (4 PER ROW)
            ===================================================================== -->
       <div class="stages-grid">
 
-        <!-- STAGE 1 CARD: Sales Demand Forecasting -->
-        <div class="stage-card selected" id="card-s1" onclick="toggleCardSelection('s1')">
+        <!-- STAGE 1: E1 ★ First (Forecast Sales Demand) -->
+        <div class="stage-card selected" id="card-e1" onclick="toggleCardSelection('e1')">
           <div>
             <div class="card-header-bar">
-              <span class="stage-badge badge-s1">S1 ★ First</span>
-              <div class="card-select-checkbox" id="checkbox-s1">
+              <span class="stage-badge badge-s1">E1 ★ First</span>
+              <div class="card-select-checkbox" id="checkbox-e1">
                 <span class="checkbox-icon">✓</span>
               </div>
             </div>
 
-            <!-- Vector Graphic: Demand Forecasting -->
+            <!-- Illustration with connected check badge (matching screenshot) -->
             <div class="card-illustration">
-              <svg class="illustration-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <line x1="20" y1="100" x2="180" y2="100" stroke="#E2E8F0" stroke-width="1.5" />
-                <line x1="20" y1="70" x2="180" y2="70" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3 3" />
-                <line x1="20" y1="40" x2="180" y2="40" stroke="#E2E8F0" stroke-width="1" stroke-dasharray="3 3" />
-                <circle cx="50" cy="85" r="18" fill="#EFF6FF" />
-                <path d="M42 80h4l3.5 12h8l3-8h-16" stroke="#2563EB" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <circle cx="49" cy="94" r="1.8" fill="#2563EB" />
-                <circle cx="57" cy="94" r="1.8" fill="#2563EB" />
-                <path d="M68 85 C 90 85, 105 50, 130 55 C 145 58, 160 30, 180 25" stroke="#10B981" stroke-width="3"
-                  stroke-linecap="round" fill="none" />
-                <path d="M130 45 C 145 48, 160 20, 180 15 L 180 35 C 160 40, 145 68, 130 65 Z" fill="#10B981"
-                  fill-opacity="0.15" />
-                <circle cx="180" cy="25" r="4.5" fill="#10B981" />
-                <circle cx="180" cy="25" r="9" stroke="#10B981" stroke-width="1.5" stroke-dasharray="2 2" />
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <circle cx="20" cy="35" r="7" fill="#eff6ff" />
+                <circle cx="20" cy="33" r="2.5" fill="#2563eb" />
+                <path d="M16 38c0-2 2-3 4-3s4 1 4 3" stroke="#2563eb" stroke-width="1.2" />
+                <line x1="28" y1="35" x2="38" y2="35" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 2" />
+                <path d="M42 26h4l3 11h9l2.5-7h-14.5" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="48" cy="40" r="1.5" fill="#2563eb" />
+                <circle cx="55" cy="40" r="1.5" fill="#2563eb" />
+                <line x1="62" y1="33" x2="94" y2="33" stroke="#10b981" stroke-width="1.2" stroke-dasharray="2 2" />
+                <circle cx="104" cy="33" r="8" fill="#10b981" />
+                <path d="M101 33l2 2 4-4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
 
-            <!-- Card Content -->
             <div class="card-body">
-              <h2 class="stage-card-title">Sales Demand Forecasting</h2>
-              <p class="stage-card-objective">See how much customers will actually buy — and stop guessing daily demand.<br>Predict sales quantity accurately to cut forecast error and keep shelves stocked.</p>
+              <h2 class="stage-card-title">Forecast Sales Demand</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">Sales Velocity &bull; Daily Burn Rate</div>
+                <div class="stage-bullet-line2">Predicts daily customer demand to stop stockout guesswork.</div>
+              </div>
             </div>
           </div>
 
           <div class="stage-card-footer">
             <div class="pricing-badge-group">
-              <span class="pricing-pill">1 credit</span>
-              <span class="pricing-pill">$1000</span>
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
             </div>
-            <a href="/portal/marketplace/sales_forecasting" class="btn-card-view-dashboard" style="text-decoration:none;" onclick="event.stopPropagation();">
-              View Dashboard
+            <a href="/portal/marketplace/sales_forecasting?target=target1" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
             </a>
           </div>
         </div>
 
-        <!-- STAGE 2 CARD: Demand Planning (S&OP) -->
-        <div class="stage-card" id="card-s2" onclick="toggleCardSelection('s2')">
+        <!-- STAGE 2: E2 (Minimize Forecast Variance) -->
+        <div class="stage-card" id="card-e2" onclick="toggleCardSelection('e2')">
           <div>
             <div class="card-header-bar">
-              <span class="stage-badge badge-s2">S2</span>
-              <div class="card-select-checkbox" id="checkbox-s2">
+              <span class="stage-badge badge-s2">E2</span>
+              <div class="card-select-checkbox" id="checkbox-e2">
                 <span class="checkbox-icon">✓</span>
               </div>
             </div>
 
-            <!-- Vector Graphic: Demand Planning & S&OP -->
             <div class="card-illustration">
-              <svg class="illustration-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="35" y="25" width="55" height="75" rx="6" fill="#FFFFFF" stroke="#3B82F6" stroke-width="2" />
-                <rect x="50" y="20" width="25" height="10" rx="3" fill="#93C5FD" />
-                <line x1="45" y1="42" x2="78" y2="42" stroke="#64748B" stroke-width="2" stroke-linecap="round" />
-                <line x1="45" y1="56" x2="78" y2="56" stroke="#64748B" stroke-width="2" stroke-linecap="round" />
-                <line x1="45" y1="70" x2="72" y2="70" stroke="#64748B" stroke-width="2" stroke-linecap="round" />
-                <path d="M42 42l2 2 4-4" stroke="#10B981" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M42 56l2 2 4-4" stroke="#10B981" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <rect x="110" y="65" width="14" height="35" rx="3" fill="#3B82F6" />
-                <rect x="130" y="45" width="14" height="55" rx="3" fill="#F59E0B" />
-                <rect x="150" y="30" width="14" height="70" rx="3" fill="#10B981" />
-                <line x1="100" y1="100" x2="175" y2="100" stroke="#CBD5E1" stroke-width="2" />
-                <line x1="105" y1="40" x2="170" y2="40" stroke="#EF4444" stroke-width="1.8" stroke-dasharray="3 3" />
-                <circle cx="168" cy="40" r="3" fill="#EF4444" />
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <path d="M22 25l8-5 8 5v12l-8 5-8-5z" fill="#3b82f6" />
+                <line x1="38" y1="31" x2="48" y2="31" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 2" />
+                <rect x="52" y="16" width="26" height="34" rx="2.5" fill="#ffffff" stroke="#3b82f6" stroke-width="1.4" />
+                <rect x="58" y="13" width="14" height="5" rx="1" fill="#93c5fd" />
+                <path d="M57 26l2 2 4-4" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M57 34l2 2 4-4" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <line x1="80" y1="31" x2="94" y2="31" stroke="#10b981" stroke-width="1.2" stroke-dasharray="2 2" />
+                <circle cx="104" cy="31" r="8" fill="#10b981" />
+                <path d="M101 31l2 2 4-4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
 
-            <!-- Card Content -->
             <div class="card-body">
-              <h2 class="stage-card-title">Demand Planning (S&OP)</h2>
-              <p class="stage-card-objective">See when your stock will run low — and how long suppliers take to deliver.<br>Set exact reorder points and safety stock to prevent stockouts without locking up cash.</p>
+              <h2 class="stage-card-title">Minimize Forecast Variance</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">Forecast Accuracy &bull; Error Control</div>
+                <div class="stage-bullet-line2">Cuts actual vs predicted sales gap to defend against spikes.</div>
+              </div>
             </div>
           </div>
 
           <div class="stage-card-footer">
             <div class="pricing-badge-group">
-              <span class="pricing-pill">1 credit</span>
-              <span class="pricing-pill">$1000</span>
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
             </div>
-            <a href="/portal/marketplace/demand_planning" class="btn-card-view-dashboard" style="text-decoration:none;" onclick="event.stopPropagation();">
-              View Dashboard
+            <a href="/portal/marketplace/sales_forecasting?target=target2" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
             </a>
           </div>
         </div>
 
-        <!-- STAGE 3 CARD: Procurement & Replenishment Decision Engine -->
-        <div class="stage-card" id="card-s3" onclick="toggleCardSelection('s3')">
+        <!-- STAGE 3: E3 (Reduce Stockouts) -->
+        <div class="stage-card" id="card-e3" onclick="toggleCardSelection('e3')">
           <div>
             <div class="card-header-bar">
-              <span class="stage-badge badge-s3">S3</span>
-              <div class="card-select-checkbox" id="checkbox-s3">
+              <span class="stage-badge badge-s2">E3</span>
+              <div class="card-select-checkbox" id="checkbox-e3">
                 <span class="checkbox-icon">✓</span>
               </div>
             </div>
 
-            <!-- Vector Graphic: Multi-Vendor Procurement & PO Generation -->
             <div class="card-illustration">
-              <svg class="illustration-svg" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M100 25 C120 25, 128 35, 128 55 C128 78, 100 95, 100 95 C100 95, 72 78, 72 55 C72 35, 80 25, 100 25 Z"
-                  fill="#6366F1" fill-opacity="0.12" stroke="#6366F1" stroke-width="2" />
-                <path d="M92 56l6 6 12-12" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <circle cx="35" cy="58" r="14" fill="#F8FAFC" stroke="#8B5CF6" stroke-width="2" />
-                <text x="35" y="62" text-anchor="middle" font-size="10" font-weight="700" fill="#6D28D9">S014</text>
-                <circle cx="165" cy="58" r="14" fill="#F8FAFC" stroke="#8B5CF6" stroke-width="2" />
-                <text x="165" y="62" text-anchor="middle" font-size="10" font-weight="700" fill="#6D28D9">S015</text>
-                <line x1="50" y1="58" x2="72" y2="58" stroke="#8B5CF6" stroke-width="1.8" stroke-dasharray="3 3" />
-                <line x1="128" y1="58" x2="150" y2="58" stroke="#8B5CF6" stroke-width="1.8" stroke-dasharray="3 3" />
-                <rect x="88" y="96" width="24" height="16" rx="2" fill="#8B5CF6" />
-                <line x1="93" y1="104" x2="107" y2="104" stroke="#FFFFFF" stroke-width="1.5" />
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <rect x="18" y="24" width="16" height="11" rx="1.5" fill="#2563eb" />
+                <line x1="36" y1="30" x2="48" y2="30" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 2" />
+                <path d="M62 16l14 8v16l-14 8-14-8V24z" fill="#2563eb" />
+                <path d="M62 26l4 4 8-8" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <line x1="78" y1="30" x2="94" y2="30" stroke="#10b981" stroke-width="1.2" stroke-dasharray="2 2" />
+                <circle cx="104" cy="30" r="8" fill="#10b981" />
+                <path d="M101 30l2 2 4-4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
 
-            <!-- Card Content -->
             <div class="card-body">
-              <h2 class="stage-card-title">Procurement Decision Engine</h2>
-              <p class="stage-card-objective">Get the best purchase price — and stop relying on a single supplier that could fail.<br>Split orders across top-rated vendors and verify every purchase order before spending money.</p>
+              <h2 class="stage-card-title">Reduce Stockouts</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">Stockout Deficit &bull; Safety Buffer</div>
+                <div class="stage-bullet-line2">Prevents empty shelves and protects daily sales revenue.</div>
+              </div>
             </div>
           </div>
 
           <div class="stage-card-footer">
             <div class="pricing-badge-group">
-              <span class="pricing-pill">1 credit</span>
-              <span class="pricing-pill">$1000</span>
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
             </div>
-            <a href="/portal/marketplace/procurement" class="btn-card-view-dashboard" style="text-decoration:none;" onclick="event.stopPropagation();">
-              View Dashboard
+            <a href="/portal/marketplace/demand_planning?target=target1" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
+            </a>
+          </div>
+        </div>
+
+        <!-- STAGE 4: E4 (Maximize Delivery Reliability) -->
+        <div class="stage-card" id="card-e4" onclick="toggleCardSelection('e4')">
+          <div>
+            <div class="card-header-bar">
+              <span class="stage-badge badge-s2">E4</span>
+              <div class="card-select-checkbox" id="checkbox-e4">
+                <span class="checkbox-icon">✓</span>
+              </div>
+            </div>
+
+            <div class="card-illustration">
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <rect x="18" y="24" width="22" height="18" rx="2" fill="#3b82f6" />
+                <path d="M15 24l13-9 13 9" stroke="#3b82f6" stroke-width="1.3" />
+                <line x1="42" y1="33" x2="52" y2="33" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 2" />
+                <path d="M60 22l6-4 6 4v8l-6 4-6-4z" fill="#10b981" />
+                <path d="M60 38l6-4 6 4v8l-6 4-6-4z" fill="#3b82f6" />
+                <line x1="74" y1="33" x2="94" y2="33" stroke="#10b981" stroke-width="1.2" stroke-dasharray="2 2" />
+                <circle cx="104" cy="33" r="8" fill="#10b981" />
+                <path d="M101 33l2 2 4-4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="card-body">
+              <h2 class="stage-card-title">Maximize Delivery Reliability</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">On-Time Delivery &bull; Vendor SLA</div>
+                <div class="stage-bullet-line2">Tracks supplier speed to eliminate factory delays.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-card-footer">
+            <div class="pricing-badge-group">
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
+            </div>
+            <a href="/portal/marketplace/demand_planning?target=target2" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
+            </a>
+          </div>
+        </div>
+
+        <!-- STAGE 5: E5 (Protect Pricing & Margins) -->
+        <div class="stage-card" id="card-e5" onclick="toggleCardSelection('e5')">
+          <div>
+            <div class="card-header-bar">
+              <span class="stage-badge badge-s2">E5</span>
+              <div class="card-select-checkbox" id="checkbox-e5">
+                <span class="checkbox-icon">✓</span>
+              </div>
+            </div>
+
+            <div class="card-illustration">
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <path d="M40 18l15 8v16l-15-8z" fill="#93c5fd" />
+                <path d="M40 18L25 26v16l15-8z" fill="#3b82f6" />
+                <path d="M40 18l15 8-15 8-15-8z" fill="#60a5fa" />
+                <line x1="58" y1="28" x2="80" y2="28" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 2" />
+                <rect x="84" y="24" width="12" height="10" rx="1.5" fill="#f59e0b" />
+                <path d="M86.5 24v-3a3.5 3.5 0 0 1 7 0v3" stroke="#f59e0b" stroke-width="1.4" fill="none" />
+                <circle cx="106" cy="29" r="8" fill="#f59e0b" />
+                <path d="M103 29l2 2 4-4" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </div>
+
+            <div class="card-body">
+              <h2 class="stage-card-title">Protect Pricing &amp; Margins</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">Margin Floor &bull; Cost Cap</div>
+                <div class="stage-bullet-line2">Controls raw material costs to secure 35%+ gross profit margins.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-card-footer">
+            <div class="pricing-badge-group">
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
+            </div>
+            <a href="/portal/marketplace/demand_planning?target=target3" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
+            </a>
+          </div>
+        </div>
+
+        <!-- STAGE 6: E6 (Optimize Supplier Base) -->
+        <div class="stage-card" id="card-e6" onclick="toggleCardSelection('e6')">
+          <div>
+            <div class="card-header-bar">
+              <span class="stage-badge badge-s3">E6</span>
+              <div class="card-select-checkbox" id="checkbox-e6">
+                <span class="checkbox-icon">✓</span>
+              </div>
+            </div>
+
+            <div class="card-illustration">
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <rect x="18" y="24" width="22" height="18" rx="2" fill="#3b82f6" />
+                <circle cx="50" cy="33" r="3.5" fill="#10b981" />
+                <circle cx="62" cy="33" r="3.5" fill="#3b82f6" />
+                <circle cx="74" cy="33" r="3.5" fill="#f59e0b" />
+                <line x1="78" y1="33" x2="94" y2="33" stroke="#10b981" stroke-width="1.2" stroke-dasharray="2 2" />
+                <circle cx="104" cy="33" r="8" fill="#10b981" />
+                <path d="M101 33l2 2 4-4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="card-body">
+              <h2 class="stage-card-title">Optimize Supplier Base</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">Vendor Consolidation &bull; Tiers</div>
+                <div class="stage-bullet-line2">Allocates volume to top suppliers for bulk pricing discounts.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-card-footer">
+            <div class="pricing-badge-group">
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
+            </div>
+            <a href="/portal/marketplace/demand_planning?target=target4" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
+            </a>
+          </div>
+        </div>
+
+        <!-- STAGE 7: E7 (Minimize Vendor Defect Rate) -->
+        <div class="stage-card" id="card-e7" onclick="toggleCardSelection('e7')">
+          <div>
+            <div class="card-header-bar">
+              <span class="stage-badge badge-s3">E7</span>
+              <div class="card-select-checkbox" id="checkbox-e7">
+                <span class="checkbox-icon">✓</span>
+              </div>
+            </div>
+
+            <div class="card-illustration">
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <rect x="18" y="24" width="20" height="16" rx="2" fill="#3b82f6" />
+                <path d="M15 24l13-8 13 8" stroke="#3b82f6" stroke-width="1.2" />
+                <line x1="42" y1="32" x2="52" y2="32" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 2" />
+                <rect x="56" y="26" width="16" height="12" rx="1.5" fill="#3b82f6" />
+                <circle cx="60" cy="38" r="2.5" fill="#0f172a" />
+                <circle cx="68" cy="38" r="2.5" fill="#0f172a" />
+                <line x1="74" y1="32" x2="94" y2="32" stroke="#10b981" stroke-width="1.2" stroke-dasharray="2 2" />
+                <circle cx="104" cy="32" r="8" fill="#10b981" />
+                <path d="M101 32l2 2 4-4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="card-body">
+              <h2 class="stage-card-title">Minimize Vendor Defect Rate</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">Scrap Rate &bull; Quality Checks</div>
+                <div class="stage-bullet-line2">Catches defective supplier batches before production begins.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-card-footer">
+            <div class="pricing-badge-group">
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
+            </div>
+            <a href="/portal/marketplace/demand_planning?target=target5" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
+            </a>
+          </div>
+        </div>
+
+        <!-- STAGE 8: E8 (Reduce Purchase Cost) -->
+        <div class="stage-card" id="card-e8" onclick="toggleCardSelection('e8')">
+          <div>
+            <div class="card-header-bar">
+              <span class="stage-badge badge-s3">E8</span>
+              <div class="card-select-checkbox" id="checkbox-e8">
+                <span class="checkbox-icon">✓</span>
+              </div>
+            </div>
+
+            <div class="card-illustration">
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <rect x="22" y="24" width="22" height="14" rx="2" fill="#3b82f6" />
+                <circle cx="27" cy="38" r="3" fill="#0f172a" />
+                <circle cx="39" cy="38" r="3" fill="#0f172a" />
+                <line x1="48" y1="31" x2="94" y2="31" stroke="#10b981" stroke-width="1.2" stroke-dasharray="2 2" />
+                <path d="M104 22 C101 22, 98 25, 98 29 C98 35, 104 42, 104 42 C104 42, 110 35, 110 29 C110 25, 107 22, 104 22 Z" fill="#10b981" />
+                <circle cx="104" cy="28" r="2.5" fill="#ffffff" />
+              </svg>
+            </div>
+
+            <div class="card-body">
+              <h2 class="stage-card-title">Reduce Purchase Cost</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">Dynamic Cost &bull; Bulk Tiers</div>
+                <div class="stage-bullet-line2">Locks in $3.76/unit pricing by ordering optimal volume tiers.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-card-footer">
+            <div class="pricing-badge-group">
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
+            </div>
+            <a href="/portal/marketplace/procurement?target=target1" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
+            </a>
+          </div>
+        </div>
+
+        <!-- STAGE 9: E9 (Reduce Inventory Stockout Risk) -->
+        <div class="stage-card" id="card-e9" onclick="toggleCardSelection('e9')">
+          <div>
+            <div class="card-header-bar">
+              <span class="stage-badge badge-s3">E9</span>
+              <div class="card-select-checkbox" id="checkbox-e9">
+                <span class="checkbox-icon">✓</span>
+              </div>
+            </div>
+
+            <div class="card-illustration">
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <circle cx="35" cy="33" r="16" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.2" />
+                <circle cx="35" cy="33" r="9" fill="#ffffff" stroke="#3b82f6" stroke-width="1.2" stroke-dasharray="2 2" />
+                <circle cx="35" cy="33" r="3.5" fill="#2563eb" />
+                <line x1="53" y1="33" x2="68" y2="33" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 2" />
+                <rect x="70" y="27" width="12" height="10" rx="1.5" fill="#10b981" />
+                <circle cx="73" cy="37" r="2" fill="#0f172a" />
+                <circle cx="79" cy="37" r="2" fill="#0f172a" />
+              </svg>
+            </div>
+
+            <div class="card-body">
+              <h2 class="stage-card-title">Reduce Inventory Stockout Risk</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">Reorder Point &bull; Auto PO</div>
+                <div class="stage-bullet-line2">Auto-orders 13,150 units the instant warehouse stock hits ROP.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-card-footer">
+            <div class="pricing-badge-group">
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
+            </div>
+            <a href="/portal/marketplace/procurement?target=target2" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
+            </a>
+          </div>
+        </div>
+
+        <!-- STAGE 10: E10 (Reduce Single-Source Supply Risk) -->
+        <div class="stage-card" id="card-e10" onclick="toggleCardSelection('e10')">
+          <div>
+            <div class="card-header-bar">
+              <span class="stage-badge badge-s3">E10</span>
+              <div class="card-select-checkbox" id="checkbox-e10">
+                <span class="checkbox-icon">✓</span>
+              </div>
+            </div>
+
+            <div class="card-illustration">
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <rect x="18" y="26" width="16" height="12" rx="1.5" fill="#3b82f6" />
+                <circle cx="22" cy="38" r="2.5" fill="#0f172a" />
+                <circle cx="30" cy="38" r="2.5" fill="#0f172a" />
+                <line x1="38" y1="32" x2="60" y2="32" stroke="#94a3b8" stroke-width="1" stroke-dasharray="2 2" />
+                <rect x="64" y="22" width="22" height="18" rx="2" fill="#3b82f6" />
+                <path d="M61 22l13-9 13 9" stroke="#3b82f6" stroke-width="1.2" />
+                <line x1="88" y1="32" x2="96" y2="32" stroke="#10b981" stroke-width="1" stroke-dasharray="2 2" />
+                <circle cx="104" cy="32" r="8" fill="#10b981" />
+                <path d="M101 32l2 2 4-4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="card-body">
+              <h2 class="stage-card-title">Reduce Single-Source Supply Risk</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">70/30 Dual-Sourcing &bull; Backup</div>
+                <div class="stage-bullet-line2">Splits orders between two suppliers so a failure won't halt supply.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-card-footer">
+            <div class="pricing-badge-group">
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
+            </div>
+            <a href="/portal/marketplace/procurement?target=target3" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
+            </a>
+          </div>
+        </div>
+
+        <!-- STAGE 11: E11 (Ensure PO Compliance) -->
+        <div class="stage-card" id="card-e11" onclick="toggleCardSelection('e11')">
+          <div>
+            <div class="card-header-bar">
+              <span class="stage-badge badge-s3">E11</span>
+              <div class="card-select-checkbox" id="checkbox-e11">
+                <span class="checkbox-icon">✓</span>
+              </div>
+            </div>
+
+            <div class="card-illustration">
+              <svg class="illustration-svg" viewBox="0 0 130 65" fill="none">
+                <rect x="36" y="15" width="38" height="36" rx="2.5" fill="#ffffff" stroke="#10b981" stroke-width="1.4" />
+                <rect x="44" y="11" width="22" height="5" rx="1" fill="#10b981" />
+                <line x1="42" y1="23" x2="68" y2="23" stroke="#64748b" stroke-width="1.2" stroke-linecap="round" />
+                <line x1="42" y1="29" x2="68" y2="29" stroke="#64748b" stroke-width="1.2" stroke-linecap="round" />
+                <circle cx="55" cy="40" r="6" fill="#10b981" />
+                <path d="M53 40l1.5 1.5 3.5-3.5" stroke="#ffffff" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                <line x1="76" y1="33" x2="94" y2="33" stroke="#10b981" stroke-width="1.2" stroke-dasharray="2 2" />
+                <circle cx="104" cy="33" r="8" fill="#10b981" />
+                <path d="M101 33l2 2 4-4" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <div class="card-body">
+              <h2 class="stage-card-title">Ensure PO Compliance</h2>
+              <div class="stage-card-bullets">
+                <div class="stage-bullet-line1">5-Gate Audit &bull; MOQ Checks</div>
+                <div class="stage-bullet-line2">Auto-approves POs across 5 commercial rules before ERP release.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-card-footer">
+            <div class="pricing-badge-group">
+              <span class="pricing-pill">1 dashboard</span>
+              <span class="pricing-pill">1 stage</span>
+              <span class="pricing-pill pricing-pill-price">$1000</span>
+            </div>
+            <a href="/portal/marketplace/procurement?target=target4" class="btn-card-view-dashboard" onclick="event.stopPropagation();">
+              View sample
             </a>
           </div>
         </div>
 
       </div><!-- /.stages-grid -->
 
-      <!-- Action row outside the cards: Continue & Chat button placed under S1 card -->
-      <div class="stages-actions-row">
+      <!-- Action row outside the cards -->
+      <div class="stages-actions-row" style="margin-top: 20px;">
         <div class="s1-action-col">
-          <a href="/portal/chatbot" class="btn-continue-chat" id="btnContinueChat" style="background-color: #10b981 !important; color: #ffffff !important; text-decoration: none !important;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <a href="/portal/chatbot" class="btn-continue-chat" id="btnContinueChat" style="background-color: #10b981 !important; color: #ffffff !important; text-decoration: none !important; padding: 9px 18px; border-radius: 6px; font-size: 13px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
-            Continue & Chat
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            Continue &amp; Chat
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
           </a>
@@ -269,6 +569,6 @@
   </main>
 
   <!-- Scripts -->
-  <script src="/static/js/app.js"></script>
+  <script src="/static/js/app.js?v=5.0"></script>
 </body>
 </html>

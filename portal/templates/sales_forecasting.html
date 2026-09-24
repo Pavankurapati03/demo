@@ -1290,30 +1290,31 @@
 </head>
 <body>
 
-  <!-- Top Navbar (White background, View Dashboards left, Logo center, Mode toggle right) -->
-  <header class="header-navbar dashboard-navbar">
-    <div class="header-left">
-      <button type="button" id="btnViewDashboards" class="btn-header-dashboards" onclick="toggleDashboardsMenu()" title="View Dashboards Menu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Top Navbar (Matching Marketplace Navigation) -->
+  <header class="header-navbar" style="background: #091428; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 12px 32px; height: 72px; display: flex; align-items: center; justify-content: space-between;">
+    <div class="nav-left" style="display: flex; align-items: center; gap: 16px;">
+      <button type="button" class="btn-menu-trigger" onclick="toggleDashboardsMenu()" title="Open Menu" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); color: #ffffff; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="3" width="7" height="7"></rect>
           <rect x="14" y="3" width="7" height="7"></rect>
           <rect x="14" y="14" width="7" height="7"></rect>
           <rect x="3" y="14" width="7" height="7"></rect>
         </svg>
-        View Dashboards
+        Menu
       </button>
-    </div>
-
-    <div class="header-center">
-      <a href="/portal/marketplace" class="header-logo-link" title="Quantellix Marketplace">
-        <img src="/static/images/quantellix-logo-white-nav.png?v=3.0" alt="Quantellix" class="header-logo-img">
+      <a href="/portal/marketplace" class="logo-link" title="Quantellix Marketplace">
+        <img src="/static/images/quantellix-logo-dark.png?v=2.0" alt="Quantellix" class="logo-img" style="filter: brightness(0) invert(1); height: 48px; display: block;">
       </a>
     </div>
 
-    <div class="header-right">
-      <button id="btnThemeToggle" class="btn-theme-toggle" onclick="toggleDashboardTheme()" title="Toggle Dark/Light Mode">
-        🌙
-      </button>
+    <div class="nav-right" style="display: flex; align-items: center; gap: 18px;">
+      <span class="nav-credits" style="font-size: 13px; color: #94a3b8;">Credits: <strong style="color: #ffffff;">0</strong></span>
+      <a href="/portal/marketplace" class="nav-link" style="font-size: 13px; color: #ffffff; font-weight: 600; text-decoration: none;">Marketplace</a>
+      <a href="javascript:void(0)" onclick="alert('Account: Quantellix Enterprise Tier');" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">My account</a>
+      <a href="#buy" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Buy credits</a>
+      <a href="/portal/marketplace" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Restart</a>
+      <a href="javascript:void(0)" onclick="if(confirm('Are you sure you want to sign out?')) window.location.href='/portal/marketplace';" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Sign out</a>
+      <a href="/portal/marketplace" class="btn-exit-app" style="background: #ef4444; color: #ffffff; padding: 6px 14px; border-radius: 6px; font-size: 12.5px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center;">Exit App</a>
     </div>
   </header>
 
@@ -1354,19 +1355,19 @@
         <span class="menu-group-title">Order Execution</span>
       </div>
 
-      <!-- 1. Sales Forecasting (Current active stage) -->
+      <!-- 1. Sales Forecasting -->
       <div class="menu-stage-section">
-        <a href="/portal/marketplace/sales_forecasting" class="menu-stage-title-link" style="color: #2563eb; background-color: #eef2ff;" onclick="switchSalesView('overview', document.querySelectorAll('.dash-tab-pill')[0]); toggleDashboardsMenu(); return false;" title="View Sales Forecasting Executive Dashboard">
-          <span>1. Sales Forecasting</span>
-        </a>
-        <a href="/portal/marketplace/sales_forecasting?target=target1" class="menu-target-link" onclick="switchSalesView('target1', document.querySelectorAll('.dash-tab-pill')[1]); toggleDashboardsMenu(); return false;" title="Forecast/Predict Sales (Quantity)">
+        <div class="menu-stage-title-header" style="padding: 6px 12px 4px 12px; font-size: 14.5px; font-weight: 800; color: #0f172a;">
+          1. Sales Forecasting
+        </div>
+        <a href="/portal/marketplace/sales_forecasting?target=target1" class="menu-target-link" onclick="switchSalesView('target1'); toggleDashboardsMenu(); return false;" title="Forecast/Predict Sales (Quantity)">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
             <span class="menu-target-name">Forecast/Predict Sales (Quantity)</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/sales_forecasting?target=target2" class="menu-target-link" onclick="switchSalesView('target2', document.querySelectorAll('.dash-tab-pill')[2]); toggleDashboardsMenu(); return false;" title="Minimize Actual vs Predicted Sales Difference (%)">
+        <a href="/portal/marketplace/sales_forecasting?target=target2" class="menu-target-link" onclick="switchSalesView('target2'); toggleDashboardsMenu(); return false;" title="Minimize Actual vs Predicted Sales Difference (%)">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
             <span class="menu-target-name">Minimize Actual vs Predicted Sales Difference (%)</span>
@@ -1377,9 +1378,9 @@
 
       <!-- 2. Demand Planning -->
       <div class="menu-stage-section">
-        <a href="/portal/marketplace/demand_planning" class="menu-stage-title-link" title="View Demand Planning Executive Dashboard">
-          <span>2. Demand Planning</span>
-        </a>
+        <div class="menu-stage-title-header" style="padding: 6px 12px 4px 12px; font-size: 14.5px; font-weight: 800; color: #0f172a;">
+          2. Demand Planning
+        </div>
         <a href="/portal/marketplace/demand_planning?target=target1" class="menu-target-link" title="Reduce Stockouts">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
@@ -1401,17 +1402,17 @@
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link" title="vendor_count">
+        <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link" title="Optimize Supplier Base">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">vendor_count</span>
+            <span class="menu-target-name">Optimize Supplier Base</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target5" class="menu-target-link" title="vendor_defect_rate">
+        <a href="/portal/marketplace/demand_planning?target=target5" class="menu-target-link" title="Minimize Vendor Defect Rate">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">vendor_defect_rate</span>
+            <span class="menu-target-name">Minimize Vendor Defect Rate</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
@@ -1419,48 +1420,45 @@
 
       <!-- 3. Procurement -->
       <div class="menu-stage-section">
-        <a href="/portal/marketplace/procurement" class="menu-stage-title-link" title="View Procurement Executive Dashboard">
-          <span>3. Procurement</span>
-        </a>
-        <a href="/portal/marketplace/procurement?target=target1" class="menu-target-link" title="purchase_cost">
+        <div class="menu-stage-title-header" style="padding: 6px 12px 4px 12px; font-size: 14.5px; font-weight: 800; color: #0f172a;">
+          3. Procurement
+        </div>
+        <a href="/portal/marketplace/procurement?target=target1" class="menu-target-link" title="Reduce Purchase Cost">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">purchase_cost</span>
+            <span class="menu-target-name">Reduce Purchase Cost</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/procurement?target=target2" class="menu-target-link" title="is_reorder_required">
+        <a href="/portal/marketplace/procurement?target=target2" class="menu-target-link" title="Reduce Inventory Stockout Risk">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">is_reorder_required</span>
+            <span class="menu-target-name">Reduce Inventory Stockout Risk</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/procurement?target=target3" class="menu-target-link" title="is_preferred_supplier">
+        <a href="/portal/marketplace/procurement?target=target3" class="menu-target-link" title="Reduce Single-Source Supply Risk">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">is_preferred_supplier</span>
+            <span class="menu-target-name">Reduce Single-Source Supply Risk</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/procurement?target=target4" class="menu-target-link" title="is_po_compliant">
+        <a href="/portal/marketplace/procurement?target=target4" class="menu-target-link" title="Ensure PO Compliance">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">is_po_compliant</span>
+            <span class="menu-target-name">Ensure PO Compliance</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
       </div>
     </div>
 
-    <div class="menu-drawer-footer">
-      <div class="footer-brand-title">
-        <svg class="sparkle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-        </svg>
-        <span>Quantellix.AI</span>
-      </div>
-      <div class="footer-brand-sub">Your multi-modal assistant</div>
+    <!-- Fixed Bottom Action Button -->
+    <div style="padding: 14px 20px; border-top: 1px solid #e2e8f0; background: #ffffff; flex-shrink: 0;">
+      <a href="/portal/marketplace" style="display: block; width: 100%; background: #071426; color: #ffffff; text-align: center; font-size: 13.5px; font-weight: 800; padding: 12px 16px; border-radius: 8px; text-decoration: none; transition: background 0.2s ease;">
+        Open full Marketplace view
+      </a>
     </div>
   </aside>
 
@@ -1468,18 +1466,11 @@
   <main class="dashboard-main-wrapper">
     <div class="dashboard-page-container">
       
-      <!-- Upper Section: Tabs & Action Buttons -->
-      <div class="dashboard-top-nav">
-        <div class="dashboard-tabs-list" style="display:flex; flex-wrap:wrap; gap:8px;">
-          <button class="dash-tab-pill active" onclick="switchSalesView('overview', this)">Executive / Forecast Overview</button>
-          <button class="dash-tab-pill" onclick="switchSalesView('target1', this)">Forecast/Predict Sales (Quantity)</button>
-          <button class="dash-tab-pill" onclick="switchSalesView('target2', this)">Minimize Actual vs Predicted Sales Difference (%)</button>
-        </div>
-        <div class="dashboard-actions-row">
-          <a href="/portal/chatbot" class="btn-close-back">
-            ← Back to Order Execution
-          </a>
-        </div>
+      <!-- Back to Order Execution Button (Replaces top tab pills) -->
+      <div style="margin-top: 14px; margin-bottom: 18px;">
+        <a href="/portal/chatbot" class="btn-close-back">
+          &larr; Back to Order Execution
+        </a>
       </div>
 
       <!-- =====================================================================

@@ -1988,10 +1988,10 @@
         </a>
         <a href="/portal/marketplace/demand_planning?target=target2" class="menu-target-link"
           onclick="switchDemandView('target2', document.querySelectorAll('.dash-tab-pill')[2]); toggleDashboardsMenu(); return false;"
-          title="Reduce Delivery Lead Time">
+          title="Maximize Delivery Reliability">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Reduce Delivery Lead Time</span>
+            <span class="menu-target-name">Maximize Delivery Reliability</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
@@ -2006,19 +2006,19 @@
         </a>
         <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link"
           onclick="switchDemandView('target4', document.querySelectorAll('.dash-tab-pill')[4]); toggleDashboardsMenu(); return false;"
-          title="vendor_count">
+          title="Optimize Supplier Base">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">vendor_count</span>
+            <span class="menu-target-name">Optimize Supplier Base</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
         <a href="/portal/marketplace/demand_planning?target=target5" class="menu-target-link"
           onclick="switchDemandView('target5', document.querySelectorAll('.dash-tab-pill')[5]); toggleDashboardsMenu(); return false;"
-          title="vendor_defect_rate">
+          title="Minimize Vendor Defect Rate">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">vendor_defect_rate</span>
+            <span class="menu-target-name">Minimize Vendor Defect Rate</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
@@ -2030,46 +2030,42 @@
           title="View Procurement Executive Dashboard">
           <span>3. Procurement</span>
         </a>
-        <a href="/portal/marketplace/procurement?target=target1" class="menu-target-link" title="purchase_cost">
+        <a href="/portal/marketplace/procurement?target=target1" class="menu-target-link" title="Reduce Purchase Cost">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">purchase_cost</span>
+            <span class="menu-target-name">Reduce Purchase Cost</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/procurement?target=target2" class="menu-target-link" title="is_reorder_required">
+        <a href="/portal/marketplace/procurement?target=target2" class="menu-target-link" title="Reduce Inventory Stockout Risk">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">is_reorder_required</span>
+            <span class="menu-target-name">Reduce Inventory Stockout Risk</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/procurement?target=target3" class="menu-target-link" title="is_preferred_supplier">
+        <a href="/portal/marketplace/procurement?target=target3" class="menu-target-link" title="Reduce Single-Source Supply Risk">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">is_preferred_supplier</span>
+            <span class="menu-target-name">Reduce Single-Source Supply Risk</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/procurement?target=target4" class="menu-target-link" title="is_po_compliant">
+        <a href="/portal/marketplace/procurement?target=target4" class="menu-target-link" title="Ensure PO Compliance">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">is_po_compliant</span>
+            <span class="menu-target-name">Ensure PO Compliance</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
       </div>
     </div>
 
-    <div class="menu-drawer-footer">
-      <div class="footer-brand-title">
-        <svg class="sparkle-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563eb"
-          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-        </svg>
-        <span>Quantellix.AI</span>
-      </div>
-      <div class="footer-brand-sub">Your multi-modal assistant</div>
+    <!-- Fixed Bottom Action Button -->
+    <div style="padding: 14px 20px; border-top: 1px solid #e2e8f0; background: #ffffff; flex-shrink: 0;">
+      <a href="/portal/marketplace" style="display: block; width: 100%; background: #071426; color: #ffffff; text-align: center; font-size: 13.5px; font-weight: 800; padding: 12px 16px; border-radius: 8px; text-decoration: none; transition: background 0.2s ease;">
+        Open full Marketplace view
+      </a>
     </div>
   </aside>
 
@@ -2077,7 +2073,7 @@
   <main class="dashboard-main-wrapper">
     <div class="dashboard-page-container">
 
-      <!-- Back to Order Execution Button Alone (Matching Reference Screenshot 2) -->
+      <!-- Back to Order Execution Button (Replaces top tab pills) -->
       <div style="margin-top: 14px; margin-bottom: 18px;">
         <a href="/portal/chatbot" class="btn-close-back">
           &larr; Back to Order Execution
