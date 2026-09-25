@@ -1876,33 +1876,22 @@
 
 <body>
 
-  <!-- Top Navbar (White background, View Dashboards left, Logo center, Mode toggle right) -->
-  <header class="header-navbar dashboard-navbar">
-    <div class="header-left">
-      <button type="button" id="btnViewDashboards" class="btn-header-dashboards" onclick="toggleDashboardsMenu()"
-        title="View Dashboards Menu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="7" height="7"></rect>
-          <rect x="14" y="3" width="7" height="7"></rect>
-          <rect x="14" y="14" width="7" height="7"></rect>
-          <rect x="3" y="14" width="7" height="7"></rect>
-        </svg>
-        View Dashboards
-      </button>
-    </div>
-
-    <div class="header-center">
-      <a href="/portal/marketplace" class="header-logo-link" title="Quantellix Marketplace">
-        <img src="/static/images/quantellix-logo-white-nav.png?v=3.0" alt="Quantellix" class="header-logo-img">
+  <!-- Top Navbar (Matching Marketplace Navigation) -->
+  <header class="header-navbar" style="background: #091428; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 12px 32px; height: 72px; display: flex; align-items: center; justify-content: space-between;">
+    <div class="nav-left" style="display: flex; align-items: center;">
+      <a href="/portal/marketplace" class="logo-link" title="Quantellix Marketplace">
+        <img src="/static/images/quantellix-logo-dark.png?v=2.0" alt="Quantellix" class="logo-img" style="filter: brightness(0) invert(1); height: 48px; display: block;">
       </a>
     </div>
 
-    <div class="header-right">
-      <button id="btnThemeToggle" class="btn-theme-toggle" onclick="toggleDashboardTheme()"
-        title="Toggle Dark/Light Mode">
-        🌙
-      </button>
+    <div class="nav-right" style="display: flex; align-items: center; gap: 18px;">
+      <span class="nav-credits" style="font-size: 13px; color: #94a3b8;">Credits: <strong style="color: #ffffff;">0</strong></span>
+      <a href="/portal/marketplace" class="nav-link" style="font-size: 13px; color: #ffffff; font-weight: 600; text-decoration: none;">Marketplace</a>
+      <a href="javascript:void(0)" onclick="alert('Account: Quantellix Enterprise Tier');" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">My account</a>
+      <a href="#buy" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Buy credits</a>
+      <a href="/portal/marketplace" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Restart</a>
+      <a href="javascript:void(0)" onclick="if(confirm('Are you sure you want to sign out?')) window.location.href='/portal/marketplace';" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Sign out</a>
+      <a href="/portal/marketplace" class="btn-exit-app" style="background: #ef4444; color: #ffffff; padding: 6px 14px; border-radius: 6px; font-size: 12.5px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center;">Exit App</a>
     </div>
   </header>
 
@@ -1988,33 +1977,24 @@
         </a>
         <a href="/portal/marketplace/demand_planning?target=target2" class="menu-target-link"
           onclick="switchDemandView('target2', document.querySelectorAll('.dash-tab-pill')[2]); toggleDashboardsMenu(); return false;"
-          title="Maximize Delivery Reliability">
+          title="Reduce Delivery Lead Time">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Maximize Delivery Reliability</span>
+            <span class="menu-target-name">Reduce Delivery Lead Time</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
         <a href="/portal/marketplace/demand_planning?target=target3" class="menu-target-link"
           onclick="switchDemandView('target3', document.querySelectorAll('.dash-tab-pill')[3]); toggleDashboardsMenu(); return false;"
-          title="Protect Pricing & Margins">
+          title="Reduce Margin Leakage">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Protect Pricing & Margins</span>
+            <span class="menu-target-name">Reduce Margin Leakage</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
         <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link"
           onclick="switchDemandView('target4', document.querySelectorAll('.dash-tab-pill')[4]); toggleDashboardsMenu(); return false;"
-          title="Optimize Supplier Base">
-          <div class="menu-target-name-wrap">
-            <span class="menu-dot"></span>
-            <span class="menu-target-name">Optimize Supplier Base</span>
-          </div>
-          <span class="menu-target-price">$1000/Month</span>
-        </a>
-        <a href="/portal/marketplace/demand_planning?target=target5" class="menu-target-link"
-          onclick="switchDemandView('target5', document.querySelectorAll('.dash-tab-pill')[5]); toggleDashboardsMenu(); return false;"
           title="Minimize Vendor Defect Rate">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
@@ -2108,47 +2088,36 @@
               </div>
               <div class="hero-target-pill"
                 onclick="switchDemandView('target2', document.querySelectorAll('.dash-tab-pill')[2])"
-                style="cursor:pointer;" title="View Maximize Delivery Reliability dashboard">
+                style="cursor:pointer;" title="View Reduce Delivery Lead Time dashboard">
                 <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;">
                     <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
                     <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
                     <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome 2: <strong>Maximize Delivery Reliability</strong></span>
+                  </svg>Business Outcome 2: <strong>Reduce Delivery Lead Time</strong></span>
               </div>
               <div class="hero-target-pill"
                 onclick="switchDemandView('target3', document.querySelectorAll('.dash-tab-pill')[3])"
-                style="cursor:pointer;" title="View Protect Pricing & Margins dashboard">
+                style="cursor:pointer;" title="View Reduce Margin Leakage dashboard">
                 <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;">
                     <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
                     <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
                     <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome 3: <strong>Protect Pricing & Margins</strong></span>
+                  </svg>Business Outcome 3: <strong>Reduce Margin Leakage</strong></span>
               </div>
               <div class="hero-target-pill"
                 onclick="switchDemandView('target4', document.querySelectorAll('.dash-tab-pill')[4])"
-                style="cursor:pointer;" title="View vendor_count dashboard">
+                style="cursor:pointer;" title="View Minimize Vendor Defect Rate dashboard">
                 <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;">
                     <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
                     <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
                     <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome 4: <strong>vendor_count (count)</strong></span>
-              </div>
-              <div class="hero-target-pill"
-                onclick="switchDemandView('target5', document.querySelectorAll('.dash-tab-pill')[5])"
-                style="cursor:pointer;" title="View vendor_defect_rate dashboard">
-                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;">
-                    <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
-                    <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
-                    <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome 5: <strong>vendor_defect_rate (%)</strong></span>
+                  </svg>Business Outcome 4: <strong>Minimize Vendor Defect Rate</strong></span>
               </div>
             </div>
           </div>
@@ -2309,7 +2278,7 @@
             <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
             <polyline points="16 7 22 7 22 13"></polyline>
           </svg>
-          <span>The 5 Core Demand Planning Targets (Stage 2)</span>
+          <span>The 4 Core Demand Planning Targets (Stage 2)</span>
         </div>
 
         <div class="metrics-row-v2" style="grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));">
@@ -2361,30 +2330,13 @@
 
           <!-- Target 4 -->
           <div class="kpi-card-v2">
-            <div class="kpi-icon-box icon-amber">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <div class="kpi-v2-label">4. Approved Vendors</div>
-            <div class="kpi-v2-value">60 <span style="font-size:15px; font-weight:600; color:#64748b;">suppliers</span>
-            </div>
-            <div class="kpi-v2-sub">Qualified contracted supplier network</div>
-          </div>
-
-          <!-- Target 5 -->
-          <div class="kpi-card-v2">
             <div class="kpi-icon-box icon-green" style="background:#fee2e2; color:#dc2626;">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
             </div>
-            <div class="kpi-v2-label">5. Vendor Defect Rate</div>
+            <div class="kpi-v2-label">4. Vendor Defect Rate</div>
             <div class="kpi-v2-value" style="color: #dc2626;">1.64%</div>
             <div class="kpi-v2-sub">Scrap multiplier: 1.0167x (Auto-compensated)</div>
           </div>
@@ -3091,7 +3043,7 @@
           </div>
           <ul class="ba-checklist">
             <li><strong>Predict consensus replenishment demand dynamically:</strong> 30-day forecast of 44,096 units
-              ($275,159 valuation) automatically accounts for sales momentum and promotional uplifts.</li>
+              ($275,159 valuation) accurately accounts for sales momentum and promotional uplifts.</li>
             <li><strong>Dynamic safety stock and ROP recalibration:</strong> Real-time stockout early warning detects
               inventory (248 units / 0.17 Days of Supply) is 98.1% below ROP (13,163 units), triggering immediate net
               replenishment of 13,131 units.</li>
@@ -3577,7 +3529,7 @@
             <div class="sxi-metric-line">
               <div>
                 <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Pearson Correlation</div>
-                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">AI forecast tracks actual customer demand
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">The model forecast tracks actual customer demand
                   direction 93.5% of the time</div>
               </div>
               <span class="sxi-line-val" style="font-weight: 700; color: #2563eb; font-size: 14px;">0.935</span>
@@ -4156,17 +4108,17 @@
                 style="margin: 0; padding-left: 18px; font-size: 12.5px; color: #334155; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;">
                 <li>
                   <strong style="color: #1e40af;">Sales Velocity &gt; 1,400 u/mo (38.4% Driver):</strong>
-                  Fast-selling items cause 70% of stockouts when safety stocks run out. <em>Recommendation:</em> Track
+                  Fast-selling items cause 70% of stockouts when safety stocks run out. <strong>Recommendation:</strong> Track
                   inventory daily and add a 20% safety buffer on fast-selling products.
                 </li>
                 <li>
                   <strong style="color: #1e40af;">Promotional Discount &gt; 15% (24.2% Driver):</strong> Large
-                  discounts create sudden sales spikes that quickly empty shelves. <em>Recommendation:</em> Work with
+                  discounts create sudden sales spikes that quickly empty shelves. <strong>Recommendation:</strong> Work with
                   marketing to stock up 2 weeks before launching any discount above 15%.
                 </li>
                 <li>
                   <strong style="color: #1e40af;">Channel Share &gt; 35% (12.2% Driver):</strong> Busy sales
-                  channels and quick-commerce sell out faster during peak hours. <em>Recommendation:</em> Keep dedicated
+                  channels and quick-commerce sell out faster during peak hours. <strong>Recommendation:</strong> Keep dedicated
                   stock reserves for top-performing retail and online channels.
                 </li>
               </ul>
@@ -5319,24 +5271,18 @@
               <ul
                 style="margin: 0; padding-left: 18px; font-size: 12.5px; color: #334155; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;">
                 <li>
-                  <strong style="color: #1e40af;">Supplier OTIF &le; 85% (36.2% Driver):</strong> Suppliers
-                  with
-                  low on-time fulfillment scores cause over 65% of delivery delays. <em>Recommendation:</em> Direct
-                  purchase
+                  <strong style="color: #1e40af;">Supplier OTIF &le; 85% (36.2% Driver):</strong> Suppliers with
+                  low on-time fulfillment scores cause over 65% of delivery delays. <strong>Recommendation:</strong> Direct purchase
                   orders to suppliers with verified 85%+ on-time track records.
                 </li>
                 <li>
-                  <strong style="color: #1e40af;">Transit Distance &gt; 250 km (26.9% Driver):</strong>
-                  Long-distance
-                  highway corridors face unexpected traffic bottlenecks. <em>Recommendation:</em> Route shipments over
-                  250 km
-                  through dedicated express carrier transit lanes.
+                  <strong style="color: #1e40af;">Transit Distance &gt; 250 km (26.9% Driver):</strong> Long-distance
+                  highway corridors face unexpected traffic bottlenecks. <strong>Recommendation:</strong> Route shipments over
+                  250 km through dedicated express carrier transit lanes.
                 </li>
                 <li>
-                  <strong style="color: #1e40af;">Order Batch Size &gt; 450 units (18.1% Driver):</strong>
-                  Extra-large
-                  shipments take twice as long to clear receiving docks. <em>Recommendation:</em> Split large orders
-                  into
+                  <strong style="color: #1e40af;">Order Batch Size &gt; 450 units (18.1% Driver):</strong> Extra-large
+                  shipments take twice as long to clear receiving docks. <strong>Recommendation:</strong> Split large orders into
                   scheduled pallet batches to speed up warehouse receiving.
                 </li>
               </ul>
@@ -5448,10 +5394,8 @@
         <div class="hero-banner-card">
           <div class="hero-header-flex">
             <div>
-              <h1 class="hero-title">Protect Pricing & Margins</h1>
-              <p class="hero-subtitle">Increase margin realization from 78.5% to 88.0%, a 12.1% improvement, while
-                maintaining the $6.24 blended price baseline. This can safeguard $32,665.50 in gross margin profit at a
-                39.8% margin.</p>
+              <h1 class="hero-title">Reduce Margin Leakage</h1>
+              <p class="hero-subtitle">Stop losing money on hidden channel discounts. Cut margin leakage by 20.0% (from 21.5% down to 17.2%) by defending your $6.24 list price and locking in $32,665 in protected profit.</p>
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
@@ -5461,7 +5405,15 @@
                     <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
                     <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
                     <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome: <strong>Protect Pricing & Margins</strong></span>
+                  </svg>Business Outcome: <strong>Reduce Margin Leakage</strong></span>
+              </div>
+              <div class="hero-target-pill">
+                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                  </svg>Target Variable: <strong>weightage_list_price ($)</strong></span>
               </div>
             </div>
           </div>
@@ -5506,10 +5458,10 @@
           <span>Key Performance Indicators</span>
         </div>
         <div class="sxi-kpi-grid-4">
-          <div class="sxi-kpi-top-card border-blue">
-            <div class="sxi-kpi-icon-pill pill-blue">📈</div>
-            <span class="sxi-kpi-title-sub">Current SXI</span>
-            <span class="sxi-kpi-main-val" style="color: #2563eb;">6.30</span>
+          <div class="sxi-kpi-top-card border-orange">
+            <div class="sxi-kpi-icon-pill pill-orange">⚠️</div>
+            <span class="sxi-kpi-title-sub">Margin Leakage Rate %</span>
+            <span class="sxi-kpi-main-val" style="color: #ea580c;">21.5%</span>
           </div>
           <div class="sxi-kpi-top-card border-green">
             <div class="sxi-kpi-icon-pill pill-green">%</div>
@@ -5521,70 +5473,254 @@
             <span class="sxi-kpi-title-sub">Weighted List Price</span>
             <span class="sxi-kpi-main-val" style="color: #0f172a;">$6.24</span>
           </div>
-          <div class="sxi-kpi-top-card border-orange">
-            <div class="sxi-kpi-icon-pill pill-orange">🏷️</div>
+          <div class="sxi-kpi-top-card border-purple">
+            <div class="sxi-kpi-icon-pill pill-purple">📈</div>
             <span class="sxi-kpi-title-sub">Gross Profit / Unit</span>
-            <span class="sxi-kpi-main-val" style="color: #ea580c;">$2.48</span>
+            <span class="sxi-kpi-main-val" style="color: #7c3aed;">$2.48</span>
           </div>
         </div>
 
-        <!-- 3. Target Improvement (Build) (from Screenshot) -->
+        <!-- 3. Target Improvement (Build) -->
         <div class="sxi-build-card">
           <div class="sxi-build-left">
-            <div class="sxi-build-badge">Target Improvement (Build)</div>
-            <div class="sxi-build-headline">+12.1% Margin Realization</div>
+            <div class="sxi-build-badge">Margin Leakage Reduction</div>
+            <div class="sxi-build-headline">Reduce Margin Leakage by 20.0%</div>
             <div class="sxi-build-desc">
-              Build target improvement is +12.1% (increasing) on Channel Margin Realization Rate — safeguarding
-              $32,665.50 in gross margin profit.
+              Reduces margin leakage from 21.5% down to 17.2% across sales channels<br>
+              by defending the $6.24 list price baseline and capping unauthorized promotional discounts.
             </div>
           </div>
           <div class="sxi-build-right">
             <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Current Margin Realization</span>
-              <span class="sxi-bm-val">78.5%</span>
+              <span class="sxi-bm-lbl">Current Margin Leakage</span>
+              <span class="sxi-bm-val">21.5%</span>
             </div>
             <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Target After +12.1%</span>
-              <span class="sxi-bm-val green">88.0%</span>
+              <span class="sxi-bm-lbl">Target Margin Leakage</span>
+              <span class="sxi-bm-val green">17.2%</span>
             </div>
           </div>
         </div>
 
-        <!-- 4. Current vs Target SXI (Screenshot 3) -->
+        <!-- 4. Current vs Target SXI (Matching Reference 5-Box Grid Layout) -->
         <div class="sxi-container">
-          <div class="sxi-card-title-row">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z">
-              </path>
-            </svg>
-            <span>Current vs Target SXI</span>
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <div
+              style="width: 26px; height: 26px; border-radius: 6px; background: #ecfdf5; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Current vs
+              Target SXI</span>
           </div>
-          <div class="sxi-grid-6">
-            <div class="sxi-card-box border-blue">
-              <span class="sxi-card-lbl">Current SXI</span>
-              <span class="sxi-card-num" style="color: #2563eb;">6.30</span>
+
+          <!-- Row 1: 3 cards -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 14px;">
+            <!-- Box 1: Current SXI -->
+            <div class="sxi-card-box border-blue"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #2563eb; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current
+                SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #2563eb; line-height: 1.2;">6.30</span>
             </div>
-            <div class="sxi-card-box border-green">
-              <span class="sxi-card-lbl">Current Margin Realization</span>
-              <span class="sxi-card-num" style="color: #059669;">78.5%</span>
+
+            <!-- Box 2: Current Margin Leakage -->
+            <div class="sxi-card-box border-green"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current
+                Margin Leakage</span>
+              <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2;">21.5%</span>
             </div>
-            <div class="sxi-card-box border-dark">
-              <span class="sxi-card-lbl">Model Accuracy</span>
-              <span class="sxi-card-num" style="color: #0f172a;">95.2%</span>
+
+            <!-- Box 3: Target SXI -->
+            <div class="sxi-card-box border-purple"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #8b5cf6; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target
+                SXI</span>
+              <span style="font-size: 24px; font-weight: 800; color: #7c3aed; line-height: 1.2;">7.85</span>
             </div>
-            <div class="sxi-card-box border-purple">
-              <span class="sxi-card-lbl">Target SXI</span>
-              <span class="sxi-card-num" style="color: #7c3aed;">8.05</span>
+          </div>
+
+          <!-- Row 2: 2 cards (Matching Reference Screenshot layout) -->
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
+            <!-- Box 4: Target Margin Leakage -->
+            <div class="sxi-card-box border-orange"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #ea580c; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target
+                Margin Leakage</span>
+              <span style="font-size: 24px; font-weight: 800; color: #c2410c; line-height: 1.2;">17.2%</span>
             </div>
-            <div class="sxi-card-box border-orange">
-              <span class="sxi-card-lbl">Target Margin Realization</span>
-              <span class="sxi-card-num" style="color: #ea580c;">88.0%</span>
+
+            <!-- Box 5: Margin Leakage Reduction -->
+            <div class="sxi-card-box border-emerald"
+              style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+              <span
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Margin
+                Leakage Reduction</span>
+              <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2; display: flex; align-items: center; gap: 4px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+                20.0%
+              </span>
             </div>
-            <div class="sxi-card-box border-emerald">
-              <span class="sxi-card-lbl">Margin Realization Change</span>
-              <span class="sxi-card-num" style="color: #16a34a;">+12.1%</span>
+          </div>
+        </div>
+
+        <!-- 4b. Correlation Chart (Matching Reference Screenshot 1) -->
+        <div class="sxi-white-card" style="margin-top: 18px; margin-bottom: 22px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Correlation
+              Chart</span>
+          </div>
+
+          <div
+            style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03);">
+            <div
+              style="font-size: 18px; font-weight: 800; color: #000000; margin-bottom: 14px; letter-spacing: -0.01em;">
+              SXI vs business outcome
+            </div>
+
+            <div style="width: 100%; overflow-x: auto;">
+              <svg viewBox="0 0 860 420"
+                style="width: 100%; max-height: 520px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+
+                <!-- Chart Background (Lavender / soft blue tint) -->
+                <rect x="70" y="45" width="530" height="310" fill="#f0f3ff" stroke="none" />
+
+                <!-- Horizontal Grid Lines (margin_leakage %: 0% to 25%) -->
+                <!-- 25% (y=45) -->
+                <line x1="70" y1="45" x2="600" y2="45" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="49" font-size="11" fill="#334155" text-anchor="end" font-weight="600">25%</text>
+                <!-- 20% (y=107) -->
+                <line x1="70" y1="107" x2="600" y2="107" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="111" font-size="11" fill="#334155" text-anchor="end" font-weight="600">20%</text>
+                <!-- 15% (y=169) -->
+                <line x1="70" y1="169" x2="600" y2="169" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="173" font-size="11" fill="#334155" text-anchor="end" font-weight="600">15%</text>
+                <!-- 10% (y=231) -->
+                <line x1="70" y1="231" x2="600" y2="231" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="235" font-size="11" fill="#334155" text-anchor="end" font-weight="600">10%</text>
+                <!-- 5% (y=293) -->
+                <line x1="70" y1="293" x2="600" y2="293" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="297" font-size="11" fill="#334155" text-anchor="end" font-weight="600">5%</text>
+                <!-- 0% (y=355) -->
+                <line x1="70" y1="355" x2="600" y2="355" stroke="#c8d2fc" stroke-width="1.2" />
+                <text x="62" y="359" font-size="11" fill="#334155" text-anchor="end" font-weight="600">0%</text>
+
+                <!-- Vertical Grid Lines (SXI: 6.0 to 10.0) -->
+                <!-- SXI 6.0 (x=70) -->
+                <line x1="70" y1="45" x2="70" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="70" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">6.0</text>
+                <!-- SXI 6.5 (x=136) -->
+                <line x1="136" y1="45" x2="136" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="136" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">6.5</text>
+                <!-- SXI 7.0 (x=202) -->
+                <line x1="202" y1="45" x2="202" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="202" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">7.0</text>
+                <!-- SXI 7.5 (x=269) -->
+                <line x1="269" y1="45" x2="269" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="269" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">7.5</text>
+                <!-- SXI 8.0 (x=335) -->
+                <line x1="335" y1="45" x2="335" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="335" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">8.0</text>
+                <!-- SXI 8.5 (x=401) -->
+                <line x1="401" y1="45" x2="401" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="401" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">8.5</text>
+                <!-- SXI 9.0 (x=467) -->
+                <line x1="467" y1="45" x2="467" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="467" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">9.0</text>
+                <!-- SXI 9.5 (x=534) -->
+                <line x1="534" y1="45" x2="534" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="534" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">9.5</text>
+                <!-- SXI 10.0 (x=600) -->
+                <line x1="600" y1="45" x2="600" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="600" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">10.0</text>
+
+                <!-- Y-Axis Label -->
+                <text x="-200" y="22" font-size="12" fill="#334155" font-weight="700" transform="rotate(-90)"
+                  text-anchor="middle">margin_leakage (%)</text>
+                <!-- X-Axis Label -->
+                <text x="335" y="402" font-size="12" fill="#334155" font-weight="700" text-anchor="middle">SXI</text>
+
+                <!-- Mustard Gold Correlation Line -->
+                <line x1="70" y1="76" x2="600" y2="233" stroke="#ca8a04" stroke-width="2.2" />
+
+                <!-- Cross Mark 1: Current (SXI=6.30, margin_leakage=21.5%) -> Blue Cross -->
+                <g transform="translate(110, 88)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#0000ff" stroke-width="3.2" stroke-linecap="round" />
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#0000ff" stroke-width="3.2" stroke-linecap="round" />
+                </g>
+
+                <!-- Cross Mark 2: Short-term (SXI=7.85, margin_leakage=17.2%) -> Magenta Cross -->
+                <g transform="translate(315, 142)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#c026d3" stroke-width="3.2" stroke-linecap="round" />
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#c026d3" stroke-width="3.2" stroke-linecap="round" />
+                </g>
+
+                <!-- Cross Mark 3: Mid-term (SXI=8.65, margin_leakage=14.5%) -> Black Cross -->
+                <g transform="translate(421, 175)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#000000" stroke-width="3.2" stroke-linecap="round" />
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#000000" stroke-width="3.2" stroke-linecap="round" />
+                </g>
+
+                <!-- Cross Mark 4: Long-term (SXI=9.40, margin_leakage=11.8%) -> Green Cross -->
+                <g transform="translate(520, 209)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#15803d" stroke-width="3.2" stroke-linecap="round" />
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#15803d" stroke-width="3.2" stroke-linecap="round" />
+                </g>
+
+                <!-- LEGEND (Matching Reference Screenshot Layout) -->
+                <g transform="translate(630, 60)">
+                  <!-- 1. Correlation Line -->
+                  <line x1="0" y1="6" x2="20" y2="6" stroke="#ca8a04" stroke-width="2.5" />
+                  <text x="28" y="10" font-size="12" fill="#334155" font-weight="600">Correlation Line</text>
+
+                  <!-- 2. Current -->
+                  <g transform="translate(10, 32)">
+                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#0000ff" stroke-width="3" stroke-linecap="round" />
+                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#0000ff" stroke-width="3" stroke-linecap="round" />
+                  </g>
+                  <text x="28" y="36" font-size="12" fill="#334155" font-weight="600">Current</text>
+
+                  <!-- 3. Short Term -->
+                  <g transform="translate(10, 58)">
+                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#c026d3" stroke-width="3" stroke-linecap="round" />
+                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#c026d3" stroke-width="3" stroke-linecap="round" />
+                  </g>
+                  <text x="28" y="62" font-size="12" fill="#334155" font-weight="600">Short Term 20% Decrease</text>
+
+                  <!-- 4. Mid Term -->
+                  <g transform="translate(10, 84)">
+                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+                  </g>
+                  <text x="28" y="88" font-size="12" fill="#334155" font-weight="600">Mid Term 32.5% Decrease</text>
+
+                  <!-- 5. Long Term -->
+                  <g transform="translate(10, 110)">
+                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#15803d" stroke-width="3" stroke-linecap="round" />
+                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#15803d" stroke-width="3" stroke-linecap="round" />
+                  </g>
+                  <text x="28" y="114" font-size="12" fill="#334155" font-weight="600">Long Term 45.1% Decrease</text>
+                </g>
+              </svg>
             </div>
           </div>
         </div>
@@ -5604,19 +5740,19 @@
               <span class="level-col-name">Short-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">8.05</span>
+                <span class="level-metric-val">7.85</span>
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">88.0%</span>
+                <span class="level-metric-val">17.2%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">+12.1%</span>
+                <span class="level-metric-lbl">Reduction</span>
+                <span class="level-metric-val" style="color: #16a34a;">20.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Short improvement:</strong> A +12.1% lift brings Target Margin Realization UP to about 88.0%
-                SXI moves from 6.30 to short SXI 8.05.
+                <strong>Short improvement:</strong> A 20.0% reduction brings Margin Leakage DOWN from 21.5% to about 17.2%.
+                SXI moves from 6.30 to short SXI 7.85.
               </div>
             </div>
 
@@ -5624,19 +5760,19 @@
               <span class="level-col-name">Medium-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">8.85</span>
+                <span class="level-metric-val">8.65</span>
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">92.5%</span>
+                <span class="level-metric-val">14.5%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">17.8%</span>
+                <span class="level-metric-lbl">Reduction</span>
+                <span class="level-metric-val" style="color: #16a34a;">32.5%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Medium improvement:</strong> A 17.8% increase brings Target Margin Realization UP to about
-                92.5%. SXI moves from short 8.05 to medium 8.85.
+                <strong>Medium improvement:</strong> A 32.5% reduction brings Margin Leakage DOWN to about
+                14.5%. SXI moves from short 7.85 to medium 8.65.
               </div>
             </div>
 
@@ -5644,19 +5780,19 @@
               <span class="level-col-name">Long-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">9.50</span>
+                <span class="level-metric-val">9.40</span>
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">96.2%</span>
+                <span class="level-metric-val">11.8%</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">22.5%</span>
+                <span class="level-metric-lbl">Reduction</span>
+                <span class="level-metric-val" style="color: #16a34a;">45.1%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term improvement:</strong> A 22.5% increase brings Target Margin Realization UP to about
-                96.2%. SXI moves from medium 8.85 to long-term 9.50.
+                <strong>Long-term improvement:</strong> A 45.1% reduction brings Margin Leakage DOWN to about
+                11.8%. SXI moves from medium 8.65 to long-term 9.40.
               </div>
             </div>
           </div>
@@ -5675,24 +5811,39 @@
               <span>Model Performance</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Price Prediction Accuracy</span>
-              <span class="sxi-line-val">95.2%</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Price Prediction Accuracy</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">Over 95 out of 100 sales transactions priced within planned gross margin corridor</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #059669; font-size: 14px;">95.2%</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Correlation (R²)</span>
-              <span class="sxi-line-val">0.895</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Correlation (R²)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">89.5% of channel pricing dynamics and discount variance captured</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #2563eb; font-size: 14px;">0.895</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Mean Absolute Error (MAE)</span>
-              <span class="sxi-line-val">±$0.14</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Mean Absolute Error (MAE)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">Average invoice price variance is only ±$0.14 from catalog price floor</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #0f172a; font-size: 14px;">±$0.14</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Root Mean Squared Error (RMSE)</span>
-              <span class="sxi-line-val">$0.22</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Root Mean Squared Error (RMSE)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">Low variance proving model prevents unbudgeted promotional price cuts</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #0f172a; font-size: 14px;">$0.22</span>
             </div>
             <div class="sxi-metric-line">
-              <span class="sxi-line-label">Channel Revenue Alignment</span>
-              <span class="sxi-line-val">0.946</span>
+              <div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Channel Revenue Alignment</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">94.6% agreement between forecast channel quotas and realized revenue margins</div>
+              </div>
+              <span class="sxi-line-val" style="font-weight: 700; color: #2563eb; font-size: 14px;">0.946</span>
             </div>
           </div>
 
@@ -5716,12 +5867,12 @@
             </div>
             <div class="sxi-metric-line">
               <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle>
                 </svg>
-                Target Margin Realization
+                Current Margin Leakage
               </span>
-              <span class="sxi-line-val">78.5%</span>
+              <span class="sxi-line-val" style="color: #ea580c;">21.5%</span>
             </div>
             <div class="sxi-metric-line">
               <span class="sxi-line-label">
@@ -5729,9 +5880,9 @@
                   <circle cx="12" cy="12" r="10"></circle>
                   <polyline points="12 6 12 12 14 14"></polyline>
                 </svg>
-                Target Improvement
+                Target Margin Leakage
               </span>
-              <span class="sxi-line-val sxi-val-green">88.0% · +12.1%</span>
+              <span class="sxi-line-val sxi-val-green">17.2%</span>
             </div>
             <div class="sxi-metric-line" style="border-bottom:none; padding-top:14px;">
               <span class="sxi-line-label" style="align-items:flex-start;">
@@ -5741,69 +5892,78 @@
                 </svg>
                 Business lens:
               </span>
-              <span style="font-size:12.5px; font-weight:700; color:#0f172a; text-align:right; max-width:65%;">Protect
-                $6.24 list price baseline; cap trade promotions at 10% maximum depth.</span>
+              <span style="font-size:12.5px; font-weight:700; color:#0f172a; text-align:right; max-width:65%;">Defend
+                $6.24 list price baseline; cap trade promotions at 10% maximum discount ceiling.</span>
             </div>
           </div>
         </div>
 
-        <!-- 7. Actual vs Predicted & Error Distribution -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-              </svg>
-              <span>Channel Weighted Price Curve</span>
-            </div>
-            <div style="text-align:center; padding:10px 0;">
-              <svg viewBox="0 0 400 200" style="width:100%; max-height:190px;">
-                <line x1="40" y1="170" x2="380" y2="170" stroke="#cbd5e1" stroke-width="1.5" />
-                <line x1="40" y1="30" x2="40" y2="170" stroke="#cbd5e1" stroke-width="1.5" />
-                <path d="M 40 100 Q 120 90 200 105 T 360 98" fill="none" stroke="#94a3b8" stroke-width="2"
-                  stroke-dasharray="4 4" />
-                <path d="M 40 102 Q 120 92 200 103 T 360 97" fill="none" stroke="#7c3aed" stroke-width="2.8" />
-                <circle cx="80" cy="20" r="4" fill="#7c3aed" />
-                <text x="90" y="24" font-size="11" fill="#475569" font-weight="600">Weighted Price ($6.24 mean)</text>
-                <circle cx="270" cy="20" r="4" fill="#94a3b8" />
-                <text x="280" y="24" font-size="11" fill="#475569" font-weight="600">Actual Invoice Price</text>
-              </svg>
-            </div>
-          </div>
+        
+        <!-- 7. Actual vs Predicted -->
+        <div class="sxi-card-title-row" style="display: flex; align-items: center; gap: 8px; margin-top: 20px; margin-bottom: 12px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+          </svg>
+          <span style="font-size: 14px; font-weight: 700; color: #475569;">Actual vs Predicted</span>
+        </div>
+        <div class="sxi-white-card" style="padding: 20px; border-radius: 12px; margin-bottom: 24px; background: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <div style="width: 100%; overflow-x: auto;">
+            <svg viewBox="0 0 800 480" style="width: 100%; max-height: 520px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <!-- Title & Accuracy Header -->
+  <text x="405" y="28" font-size="13.5" font-weight="800" fill="#000000" text-anchor="middle">Actual vs Predicted weightage_list_price ($)</text>
+  <text x="405" y="46" font-size="13" font-weight="700" fill="#000000" text-anchor="middle">Within ±10% Error: 92.40%</text>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="4 14 10 14 10 20"></polyline>
-                <polyline points="20 10 14 10 14 4"></polyline>
-                <line x1="14" y1="10" x2="21" y2="3"></line>
-                <line x1="3" y1="21" x2="10" y2="14"></line>
-              </svg>
-              <span>Price Spread Heatmap Distribution</span>
-            </div>
-            <div style="text-align:center; padding:10px 0;">
-              <svg viewBox="0 0 400 200" style="width:100%; max-height:190px;">
-                <line x1="40" y1="170" x2="380" y2="170" stroke="#cbd5e1" stroke-width="1.5" />
-                <line x1="210" y1="30" x2="210" y2="170" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3 3" />
-                <path d="M 60 170 C 140 170, 160 55, 210 55 C 260 55, 280 170, 360 170" fill="rgba(124, 58, 237, 0.12)"
-                  stroke="#7c3aed" stroke-width="2.5" />
-                <text x="210" y="24" font-size="11" fill="#7c3aed" font-weight="700" text-anchor="middle">Mean List
-                  Price = $6.24 (MAE ±$0.14)</text>
-                <text x="100" y="185" font-size="10" fill="#64748b">$5.50</text>
-                <text x="210" y="185" font-size="10" fill="#64748b" text-anchor="middle">$6.24 (Target)</text>
-                <text x="320" y="185" font-size="10" fill="#64748b">$7.00</text>
-              </svg>
-            </div>
+  <!-- Plot Background -->
+  <rect x="80" y="65" width="650" height="360" fill="#f0f3ff" stroke="#000000" stroke-width="1.4" />
+
+  <!-- Grid Lines -->
+  <line x1="80" y1="425.0" x2="730" y2="425.0" stroke="#c8d2fc" stroke-width="1" /><line x1="80.0" y1="65" x2="80.0" y2="425" stroke="#c8d2fc" stroke-width="1" /><line x1="80" y1="353.0" x2="730" y2="353.0" stroke="#c8d2fc" stroke-width="1" /><line x1="210.0" y1="65" x2="210.0" y2="425" stroke="#c8d2fc" stroke-width="1" /><line x1="80" y1="281.0" x2="730" y2="281.0" stroke="#c8d2fc" stroke-width="1" /><line x1="340.0" y1="65" x2="340.0" y2="425" stroke="#c8d2fc" stroke-width="1" /><line x1="80" y1="209.0" x2="730" y2="209.0" stroke="#c8d2fc" stroke-width="1" /><line x1="470.0" y1="65" x2="470.0" y2="425" stroke="#c8d2fc" stroke-width="1" /><line x1="80" y1="137.0" x2="730" y2="137.0" stroke="#c8d2fc" stroke-width="1" /><line x1="600.0" y1="65" x2="600.0" y2="425" stroke="#c8d2fc" stroke-width="1" /><line x1="80" y1="65.0" x2="730" y2="65.0" stroke="#c8d2fc" stroke-width="1" /><line x1="730.0" y1="65" x2="730.0" y2="425" stroke="#c8d2fc" stroke-width="1" />
+
+  <!-- Diagonal Perfect Prediction Line (y = x) -->
+  <line x1="80" y1="425" x2="730" y2="65" stroke="#000000" stroke-width="1.8" />
+
+  <!-- ±10% Bounds (Blue dashed lines) -->
+  <line x1="80" y1="425" x2="670.9" y2="65.0" stroke="#2563eb" stroke-width="1.3" stroke-dasharray="4 3" />
+  <line x1="80" y1="425" x2="730.0" y2="101.0" stroke="#2563eb" stroke-width="1.3" stroke-dasharray="4 3" />
+
+  <!-- Scatter Points -->
+  <circle cx="437.4" cy="222.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="490.9" cy="208.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="516.7" cy="164.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="646.3" cy="106.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="376.4" cy="263.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="591.0" cy="132.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="403.0" cy="256.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="410.8" cy="239.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="475.2" cy="194.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="655.0" cy="72.2" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="629.3" cy="111.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="454.4" cy="224.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="430.8" cy="215.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="542.4" cy="162.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="459.7" cy="246.8" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="388.4" cy="255.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="574.3" cy="152.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="475.1" cy="209.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="532.5" cy="151.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="572.4" cy="144.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="444.6" cy="217.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="468.1" cy="207.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="613.3" cy="147.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="515.7" cy="173.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="515.0" cy="192.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="411.1" cy="225.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="509.2" cy="179.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="494.4" cy="186.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="513.9" cy="169.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="190.6" cy="366.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="537.6" cy="159.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="641.8" cy="155.7" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="388.9" cy="250.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="445.0" cy="215.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="409.2" cy="245.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="486.1" cy="199.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="655.4" cy="100.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="377.2" cy="255.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="436.1" cy="226.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="401.2" cy="247.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="463.3" cy="219.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="579.4" cy="137.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="405.2" cy="243.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="592.9" cy="146.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="471.8" cy="202.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="619.0" cy="129.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="492.0" cy="200.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="370.9" cy="257.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="412.0" cy="245.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="356.8" cy="274.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="442.7" cy="215.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="548.0" cy="183.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="365.5" cy="254.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="531.6" cy="165.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="442.9" cy="219.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="470.9" cy="204.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="409.2" cy="247.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="373.0" cy="271.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="608.2" cy="93.1" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="443.4" cy="227.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="557.6" cy="170.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="494.5" cy="202.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="600.9" cy="145.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="678.7" cy="79.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="328.6" cy="290.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="442.0" cy="226.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="552.7" cy="205.2" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="421.7" cy="238.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="484.5" cy="209.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="464.3" cy="214.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="604.4" cy="134.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="560.7" cy="149.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="461.5" cy="194.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="456.9" cy="209.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="601.9" cy="143.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="329.7" cy="278.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="449.9" cy="232.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="425.4" cy="226.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="442.7" cy="222.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="512.3" cy="192.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="404.7" cy="251.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="591.0" cy="151.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="493.5" cy="198.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="487.8" cy="194.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="380.9" cy="255.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="518.2" cy="176.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="351.1" cy="279.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="494.7" cy="200.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="479.0" cy="194.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="530.8" cy="176.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="567.5" cy="151.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="292.3" cy="310.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="559.6" cy="188.7" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="247.2" cy="329.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="483.9" cy="210.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="515.1" cy="185.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="573.3" cy="147.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="518.5" cy="188.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="442.4" cy="229.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="511.2" cy="192.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="532.5" cy="169.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="413.5" cy="241.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="526.0" cy="170.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="419.1" cy="235.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="595.7" cy="173.1" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="506.3" cy="175.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="559.5" cy="144.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="462.6" cy="224.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="353.8" cy="282.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="491.4" cy="207.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="512.5" cy="182.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="475.7" cy="202.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="548.4" cy="169.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="423.7" cy="232.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="495.9" cy="188.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="646.9" cy="72.2" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="503.7" cy="196.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="420.2" cy="238.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="681.5" cy="102.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="364.7" cy="266.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="559.6" cy="152.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="696.2" cy="110.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="507.6" cy="207.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="684.9" cy="101.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="665.0" cy="72.2" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="634.1" cy="136.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="344.5" cy="278.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="445.6" cy="221.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="553.6" cy="156.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="506.0" cy="188.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="466.7" cy="215.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="441.4" cy="224.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="616.8" cy="145.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="395.5" cy="254.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="518.5" cy="166.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="498.1" cy="160.2" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="482.3" cy="187.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="416.5" cy="237.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="584.2" cy="133.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="347.3" cy="279.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="483.7" cy="200.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="432.0" cy="223.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="509.0" cy="188.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="484.4" cy="211.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="410.5" cy="244.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="360.2" cy="275.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="396.9" cy="243.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="393.4" cy="249.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="563.6" cy="158.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="430.9" cy="233.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="560.4" cy="137.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="308.4" cy="281.8" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="679.7" cy="120.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="559.6" cy="173.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="507.9" cy="193.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="301.3" cy="301.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="492.5" cy="203.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="539.0" cy="147.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="591.4" cy="141.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="568.9" cy="150.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="465.8" cy="201.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="504.6" cy="209.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="414.3" cy="242.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="657.2" cy="103.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="542.5" cy="178.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="408.5" cy="254.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="620.1" cy="132.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="528.7" cy="177.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="394.1" cy="259.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="489.7" cy="204.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="362.5" cy="249.1" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="340.5" cy="284.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="515.1" cy="187.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="589.6" cy="133.8" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="565.0" cy="154.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="533.1" cy="170.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="482.4" cy="213.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="523.2" cy="185.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="385.2" cy="280.7" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="560.5" cy="172.5" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="532.9" cy="158.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="486.1" cy="202.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="518.1" cy="189.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="465.3" cy="205.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="547.7" cy="169.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="494.4" cy="189.7" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="508.4" cy="184.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="629.9" cy="136.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="552.8" cy="161.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="505.1" cy="201.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="384.9" cy="264.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="396.3" cy="246.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="680.7" cy="83.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="617.7" cy="115.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="491.7" cy="210.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="401.9" cy="235.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="535.4" cy="174.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="486.8" cy="186.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="388.1" cy="250.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="516.9" cy="201.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="501.4" cy="187.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="443.7" cy="214.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="424.0" cy="229.6" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="478.6" cy="201.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="403.8" cy="241.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="311.0" cy="297.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="494.0" cy="214.9" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="457.6" cy="246.7" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="510.8" cy="178.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="415.3" cy="241.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="483.9" cy="204.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="465.6" cy="208.2" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="326.1" cy="310.3" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="572.1" cy="159.1" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="544.5" cy="151.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="520.2" cy="210.0" r="3.2" fill="#dc2626" fill-opacity="0.82" /><circle cx="339.3" cy="280.3" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="410.2" cy="246.4" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="420.5" cy="231.0" r="3.2" fill="#16a34a" fill-opacity="0.82" /><circle cx="491.1" cy="176.4" r="3.2" fill="#16a34a" fill-opacity="0.82" />
+
+  <!-- Legend Box (Top-Left inside plot) -->
+  <g transform="translate(96, 77)">
+    <rect x="0" y="0" width="136" height="76" fill="rgba(255,255,255,0.92)" stroke="#cbd5e1" stroke-width="1" rx="3" />
+    <circle cx="12" cy="14" r="3.5" fill="#dc2626" />
+    <text x="24" y="17.5" font-size="10.5" fill="#000000" font-weight="600">Outside ±10%</text>
+    
+    <circle cx="12" cy="31" r="3.5" fill="#16a34a" />
+    <text x="24" y="34.5" font-size="10.5" fill="#000000" font-weight="600">Within ±10%</text>
+    
+    <line x1="5" y1="48" x2="19" y2="48" stroke="#000000" stroke-width="1.8" />
+    <text x="24" y="51.5" font-size="10.5" fill="#000000" font-weight="600">Perfect Prediction</text>
+    
+    <line x1="5" y1="65" x2="19" y2="65" stroke="#2563eb" stroke-width="1.3" stroke-dasharray="3 2" />
+    <text x="24" y="68.5" font-size="10.5" fill="#000000" font-weight="600">±10% bounds</text>
+  </g>
+
+  <!-- Y-Axis Ticks -->
+  <text x="72" y="429.0" font-size="11" fill="#000000" font-weight="600" text-anchor="end">0</text><text x="72" y="357.0" font-size="11" fill="#000000" font-weight="600" text-anchor="end">2</text><text x="72" y="285.0" font-size="11" fill="#000000" font-weight="600" text-anchor="end">4</text><text x="72" y="213.0" font-size="11" fill="#000000" font-weight="600" text-anchor="end">6</text><text x="72" y="141.0" font-size="11" fill="#000000" font-weight="600" text-anchor="end">8</text><text x="72" y="69.0" font-size="11" fill="#000000" font-weight="600" text-anchor="end">10</text>
+
+  <!-- X-Axis Ticks -->
+  <text x="80.0" y="443" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">0</text><text x="210.0" y="443" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">2</text><text x="340.0" y="443" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">4</text><text x="470.0" y="443" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">6</text><text x="600.0" y="443" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">8</text><text x="730.0" y="443" font-size="11" fill="#000000" font-weight="600" text-anchor="middle">10</text>
+
+  <!-- Axis Titles -->
+  <text x="-245" y="28" font-size="12" font-weight="700" fill="#000000" transform="rotate(-90)" text-anchor="middle">Predicted weightage_list_price ($)</text>
+  <text x="405" y="466" font-size="12" font-weight="700" fill="#000000" text-anchor="middle">Actual weightage_list_price ($)</text>
+</svg>
           </div>
         </div>
 
         <!-- 8. Decision Tree — Target Logic & Top 5 Feature Importance -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+        <div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 20px; align-items: stretch; margin-bottom: 24px;">
+          <!-- Left: Decision Tree with Integrated Insights Box -->
+          <div class="sxi-white-card" style="padding: 22px 24px; display: flex; flex-direction: column;">
+            <div class="sxi-card-title-row" style="margin-bottom: 14px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="18" cy="5" r="3"></circle>
@@ -5812,128 +5972,267 @@
                 <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
                 <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
               </svg>
-              <span>Decision Tree — Price Optimization Logic</span>
+              <span style="font-size: 16px; font-weight: 700; color: #475569;">Decision Tree — Price & Margin Logic</span>
             </div>
-            <div style="text-align:center; padding:6px 0;">
-              <svg viewBox="0 0 380 210" style="width:100%; max-height:200px;">
-                <rect x="130" y="10" width="120" height="34" rx="6" fill="#eff6ff" stroke="#3b82f6"
-                  stroke-width="1.8" />
-                <text x="190" y="26" font-size="10" font-weight="700" fill="#1e40af" text-anchor="middle">Channel
-                  Type</text>
-                <text x="190" y="38" font-size="9" fill="#64748b" text-anchor="middle">Quick Commerce?</text>
-                <line x1="160" y1="44" x2="90" y2="78" stroke="#94a3b8" stroke-width="1.5" />
-                <line x1="220" y1="44" x2="290" y2="78" stroke="#94a3b8" stroke-width="1.5" />
-                <text x="110" y="60" font-size="9" fill="#16a34a" font-weight="700">True</text>
-                <text x="260" y="60" font-size="9" fill="#dc2626" font-weight="700">False</text>
-                <rect x="35" y="78" width="110" height="34" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" />
-                <text x="90" y="93" font-size="10" font-weight="700" fill="#166534" text-anchor="middle">Convenience
-                  Pack</text>
-                <text x="90" y="105" font-size="9" fill="#64748b" text-anchor="middle">Instant 15-min SLA</text>
-                <rect x="235" y="78" width="110" height="34" rx="6" fill="#fff7ed" stroke="#ea580c"
-                  stroke-width="1.5" />
-                <text x="290" y="93" font-size="10" font-weight="700" fill="#9a3412" text-anchor="middle">Modern
-                  Supermarket</text>
-                <text x="290" y="105" font-size="9" fill="#64748b" text-anchor="middle">Pallet Volume</text>
-                <line x1="65" y1="112" x2="45" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <line x1="115" y1="112" x2="135" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <rect x="10" y="145" width="70" height="30" rx="4" fill="#7c3aed" stroke="#6d28d9" />
-                <text x="45" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">$6.45 /
-                  u</text>
-                <rect x="100" y="145" width="70" height="30" rx="4" fill="#2563eb" stroke="#1d4ed8" />
-                <text x="135" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">$6.30 /
-                  u</text>
-                <line x1="265" y1="112" x2="245" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <line x1="315" y1="112" x2="335" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <rect x="210" y="145" width="70" height="30" rx="4" fill="#059669" stroke="#047857" />
-                <text x="245" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">$6.15 /
-                  u</text>
-                <rect x="300" y="145" width="70" height="30" rx="4" fill="#f59e0b" stroke="#d97706" />
-                <text x="335" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">$5.95 /
-                  u</text>
+
+            <!-- Decision Tree SVG -->
+            <div style="width: 100%; overflow-x: auto; background: #ffffff; border: 1px solid #f1f5f9; border-radius: 8px; padding: 12px 6px;">
+              <svg viewBox="0 0 940 370"
+                style="width: 100%; min-width: 820px; max-height: 400px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                <!-- Connecting lines -->
+                <line x1="470" y1="52" x2="265" y2="84" stroke="#cbd5e1" stroke-width="1.2" />
+                <line x1="470" y1="52" x2="675" y2="84" stroke="#cbd5e1" stroke-width="1.2" />
+                <line x1="265" y1="126" x2="140" y2="148" stroke="#cbd5e1" stroke-width="1.0" />
+                <line x1="265" y1="126" x2="360" y2="148" stroke="#cbd5e1" stroke-width="1.0" />
+                <line x1="675" y1="126" x2="580" y2="148" stroke="#cbd5e1" stroke-width="1.0" />
+                <line x1="675" y1="126" x2="800" y2="148" stroke="#cbd5e1" stroke-width="1.0" />
+
+                <!-- Level 2 to Level 3 lines -->
+                <line x1="140" y1="188" x2="85" y2="208" stroke="#cbd5e1" stroke-width="0.8" />
+                <line x1="140" y1="188" x2="195" y2="208" stroke="#cbd5e1" stroke-width="0.8" />
+                <line x1="360" y1="188" x2="305" y2="208" stroke="#cbd5e1" stroke-width="0.8" />
+                <line x1="360" y1="188" x2="415" y2="208" stroke="#cbd5e1" stroke-width="0.8" />
+                <line x1="580" y1="188" x2="525" y2="208" stroke="#cbd5e1" stroke-width="0.8" />
+                <line x1="580" y1="188" x2="635" y2="208" stroke="#cbd5e1" stroke-width="0.8" />
+                <line x1="800" y1="188" x2="745" y2="208" stroke="#cbd5e1" stroke-width="0.8" />
+                <line x1="800" y1="188" x2="855" y2="208" stroke="#cbd5e1" stroke-width="0.8" />
+
+                <!-- LEVEL 0: ROOT NODE -->
+                <g transform="translate(415, 8)">
+                  <rect width="110" height="44" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.2" />
+                  <text x="55" y="10" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">modern_trade_vol &lt;= 35.0%</text>
+                  <text x="55" y="19" font-size="6.8" fill="#dbeafe" text-anchor="middle">sxi_weight = 0.0814</text>
+                  <text x="55" y="27" font-size="6.8" fill="#dbeafe" text-anchor="middle">samples = 1000000</text>
+                  <text x="55" y="35" font-size="6.8" fill="#dbeafe" text-anchor="middle">value = [215000, 785000]</text>
+                  <text x="55" y="42" font-size="6.8" fill="#dbeafe" text-anchor="middle">class = 1 (Discount Leakage)</text>
+                </g>
+
+                <!-- LEVEL 1: 2 NODES -->
+                <g transform="translate(210, 84)">
+                  <rect width="110" height="42" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.2" />
+                  <text x="55" y="10" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">wholesale_tier &lt;= 10.0%</text>
+                  <text x="55" y="18" font-size="6.8" fill="#dbeafe" text-anchor="middle">sxi_weight = 0.0742</text>
+                  <text x="55" y="26" font-size="6.8" fill="#dbeafe" text-anchor="middle">samples = 524000</text>
+                  <text x="55" y="34" font-size="6.8" fill="#dbeafe" text-anchor="middle">value = [84200, 439800]</text>
+                  <text x="55" y="40" font-size="6.8" fill="#dbeafe" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(620, 84)">
+                  <rect width="110" height="42" rx="3" fill="#2563eb" stroke="#1d4ed8" stroke-width="1.2" />
+                  <text x="55" y="10" font-size="7.5" font-weight="700" fill="#ffffff" text-anchor="middle">qcommerce_markup &lt;= 15%</text>
+                  <text x="55" y="18" font-size="6.8" fill="#dbeafe" text-anchor="middle">sxi_weight = 0.0865</text>
+                  <text x="55" y="26" font-size="6.8" fill="#dbeafe" text-anchor="middle">samples = 476000</text>
+                  <text x="55" y="34" font-size="6.8" fill="#dbeafe" text-anchor="middle">value = [130800, 345200]</text>
+                  <text x="55" y="40" font-size="6.8" fill="#dbeafe" text-anchor="middle">class = 1</text>
+                </g>
+
+                <!-- LEVEL 2: 4 NODES -->
+                <g transform="translate(88, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">promo_depth &lt;= 10.0%</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0824</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 280000</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [32000, 248000]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(308, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">pallet_discount &lt;= 5%</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0710</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 244000</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [52200, 191800]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(528, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">micro_hub_fee &lt;= $0.25</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0831</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 278000</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [68000, 210000]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(748, 148)">
+                  <rect width="104" height="40" rx="3" fill="#3b82f6" stroke="#2563eb" stroke-width="1.1" />
+                  <text x="52" y="9" font-size="7.2" font-weight="700" fill="#ffffff" text-anchor="middle">benchmark_price &lt;= $6.20</text>
+                  <text x="52" y="17" font-size="6.5" fill="#eff6ff" text-anchor="middle">sxi_weight = 0.0800</text>
+                  <text x="52" y="25" font-size="6.5" fill="#eff6ff" text-anchor="middle">samples = 198000</text>
+                  <text x="52" y="32" font-size="6.5" fill="#eff6ff" text-anchor="middle">value = [62800, 135200]</text>
+                  <text x="52" y="38" font-size="6.5" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+
+                <!-- LEVEL 3: 8 NODES -->
+                <g transform="translate(42, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">trade_spend &lt;= 8%</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">sxi_w = 0.0824</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 150000</text>
+                  <text x="43" y="31" font-size="5.8" fill="#eff6ff" text-anchor="middle">val=[12000, 138000]</text>
+                  <text x="43" y="36" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(152, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">retail_rebate &lt;= 3%</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">sxi_w = 0.0786</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 130000</text>
+                  <text x="43" y="31" font-size="5.8" fill="#eff6ff" text-anchor="middle">val=[20000, 110000]</text>
+                  <text x="43" y="36" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(262, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">moq_tier &gt;= 500</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">sxi_w = 0.0799</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 120000</text>
+                  <text x="43" y="31" font-size="5.8" fill="#eff6ff" text-anchor="middle">val=[22000, 98000]</text>
+                  <text x="43" y="36" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(372, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">distrib_margin &lt;= 32%</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">sxi_w = 0.0799</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 124000</text>
+                  <text x="43" y="31" font-size="5.8" fill="#eff6ff" text-anchor="middle">val=[30200, 93800]</text>
+                  <text x="43" y="36" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(482, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">express_sla = 1</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">sxi_w = 0.0831</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 148000</text>
+                  <text x="43" y="31" font-size="5.8" fill="#eff6ff" text-anchor="middle">val=[31000, 117000]</text>
+                  <text x="43" y="36" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(592, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">dark_store_tier &lt;= 2</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">sxi_w = 0.0824</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 130000</text>
+                  <text x="43" y="31" font-size="5.8" fill="#eff6ff" text-anchor="middle">val=[37000, 93000]</text>
+                  <text x="43" y="36" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(702, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">category_idx &lt;= 0.18</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">sxi_w = 0.0764</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 108000</text>
+                  <text x="43" y="31" font-size="5.8" fill="#eff6ff" text-anchor="middle">val=[32800, 75200]</text>
+                  <text x="43" y="36" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
+                <g transform="translate(812, 208)">
+                  <rect width="86" height="38" rx="2.5" fill="#3b82f6" stroke="#2563eb" stroke-width="1" />
+                  <text x="43" y="9" font-size="6.6" font-weight="600" fill="#fff" text-anchor="middle">invoice_variance &lt;= 0.12</text>
+                  <text x="43" y="17" font-size="6" fill="#eff6ff" text-anchor="middle">sxi_w = 0.0800</text>
+                  <text x="43" y="24" font-size="6" fill="#eff6ff" text-anchor="middle">samples = 90000</text>
+                  <text x="43" y="31" font-size="5.8" fill="#eff6ff" text-anchor="middle">val=[30000, 60000]</text>
+                  <text x="43" y="36" font-size="5.8" fill="#eff6ff" text-anchor="middle">class = 1</text>
+                </g>
               </svg>
+            </div>
+
+            <!-- Top 3 Decision Tree Nodes Key Insights & Recommendations -->
+            <div style="margin-top: 18px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px;">
+              <div style="font-size: 13.5px; font-weight: 700; color: #1e293b; display: flex; align-items: center; gap: 6px; margin-bottom: 10px;">
+                <span style="display: inline-block; width: 8px; height: 8px; background: #2563eb; border-radius: 50%;"></span>
+                Top 3 Decision Nodes — Key Insights &amp; Recommendations
+              </div>
+              <ul style="margin: 0; padding-left: 18px; font-size: 12.5px; color: #334155; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;">
+                <li>
+                  <strong style="color: #1e40af;">Modern Trade Channel Volume &gt; 35% (35.8% Driver):</strong> Supermarket bulk orders demand heavy promotional allowances, causing over 40% of margin leakage. <strong>Recommendation:</strong> Cap supermarket promotional discounts at 10% maximum depth and enforce minimum order quantities.
+                </li>
+                <li>
+                  <strong style="color: #1e40af;">Wholesale Volume Discount Tier &gt; 10% (25.4% Driver):</strong> Deep distributor discounts erode realized price below the $6.24 threshold. <strong>Recommendation:</strong> Standardize wholesale discount tiers to protect the $6.24 list price floor.
+                </li>
+                <li>
+                  <strong style="color: #1e40af;">Quick Commerce Micro-Hub Markup &gt; 15% (19.2% Driver):</strong> 15-minute instant fulfillment orders maintain premium pricing resilience ($6.45/unit). <strong>Recommendation:</strong> Allocate 28%+ volume to Quick Commerce micro-hubs to lift blended margins.
+                </li>
+              </ul>
             </div>
           </div>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+          <!-- Feature Importance card -->
+          <div class="sxi-white-card" style="padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="sxi-card-title-row" style="margin-bottom: 14px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1z"></path>
                 <line x1="4" y1="22" x2="4" y2="15"></line>
               </svg>
-              <span>Feature Importance — Top 5 Drivers</span>
+              <span style="font-size: 16px; font-weight: 700; color: #475569;">Feature Importance — Top 5 Drivers</span>
             </div>
-            <table class="feature-table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Feature</th>
-                  <th>Importance</th>
-                  <th>Contribution %</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="feat-rank">1</td>
-                  <td class="feat-name">Modern Trade Channel Volume Share</td>
-                  <td class="feat-score">35.80</td>
-                  <td class="feat-pct">35.8%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">2</td>
-                  <td class="feat-name">Wholesale Volume Discount Tier</td>
-                  <td class="feat-score">25.40</td>
-                  <td class="feat-pct">25.4%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">3</td>
-                  <td class="feat-name">Quick Commerce Micro-Hub Markup</td>
-                  <td class="feat-score">19.20</td>
-                  <td class="feat-pct">19.2%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">4</td>
-                  <td class="feat-name">Category Benchmark List Price</td>
-                  <td class="feat-score">12.60</td>
-                  <td class="feat-pct">12.6%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">5</td>
-                  <td class="feat-name">Promotional Markdown Frequency</td>
-                  <td class="feat-score">7.00</td>
-                  <td class="feat-pct">7.0%</td>
-                </tr>
-              </tbody>
-            </table>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+              <table class="feature-table" style="height: 100%; flex: 1; width: 100%;">
+                <thead>
+                  <tr>
+                    <th style="padding: 16px 12px;">#</th>
+                    <th style="padding: 16px 12px;">Feature</th>
+                    <th style="padding: 16px 12px;">Importance</th>
+                    <th style="padding: 16px 12px;">Contribution %</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">1</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Modern Trade Channel Volume Share</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">35.80</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span style="color:#2563eb; font-weight:700; font-size: 14px;">35.8%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">2</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Wholesale Volume Discount Tier</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">25.40</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span style="color:#2563eb; font-weight:700; font-size: 14px;">25.4%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">3</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Quick Commerce Micro-Hub Markup</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">19.20</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span style="color:#2563eb; font-weight:700; font-size: 14px;">19.2%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">4</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Category Benchmark List Price</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">12.60</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span style="color:#2563eb; font-weight:700; font-size: 14px;">12.6%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">5</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Promotional Markdown Frequency</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">7.00</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span style="color:#2563eb; font-weight:700; font-size: 14px;">7.0%</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
+        </div><!-- /grid 8 -->
 
-        <!-- 9. Business Actions —Card (from Reference Dashboard Page 7/8) -->
-        <div class="business-actions-container">
-          <div class="ba-header">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5"
+        <!-- 9. Recommended Action Card (Matching Reference Screenshot 1) -->
+        <div class="sxi-white-card" style="margin-top: 18px; margin-bottom: 24px; padding: 22px 24px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            <span>Business Actions —— Protect Pricing & Margins</span>
+            <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Recommended Action</span>
           </div>
-          <ul class="ba-checklist">
-            <li><strong>Protect blended gross margin threshold:</strong> Maintain $6.24 list price baseline across all
-              channels to safeguard $32,665.50 in gross margin profit (39.8% margin).</li>
-            <li><strong>Channel discount governance:</strong> Restrict ad-hoc supermarket promotional allowances to a
-              10% maximum markdown ceiling.</li>
-            <li><strong>Optimized channel fulfillment quotas:</strong> Allocate 52.4% volume to Modern Trade
-              ($6.15/unit), 27.8% to Quick Commerce ($6.45/unit), and 19.8% to Traditional Retail ($6.20/unit).</li>
-            <li><strong>Decision Engine Summary:</strong> Prediction Accuracy: <strong>95.2%</strong> · Correlation
-              (R²): <strong>0.895</strong> · MAE: <strong>±$0.14</strong> · Current SXI: <strong>6.30</strong> &rarr;
-              Target SXI: <strong>8.05</strong>.</li>
-          </ul>
+          <div style="font-size: 13px; color: #334155; margin-top: 10px; margin-bottom: 14px; font-weight: 500;">
+            Recommended Action is generated by the LLM (OpenAI).
+          </div>
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; font-size: 13.5px; line-height: 1.75; color: #334155;">
+            <p style="margin: 0 0 6px 0;"><strong style="color: #0f172a;">Insight:</strong></p>
+            <ul style="margin: 0 0 12px 0; padding-left: 20px; list-style-type: disc;">
+              <li style="margin-bottom: 6px;"><strong>Modern Trade Channel Volume Share:</strong> High supermarket volume deals are associated with the current 21.5% margin leakage rate, highlighting key accounts that require strict discount governance.</li>
+              <li style="margin-bottom: 6px;"><strong>Wholesale Volume Discount Tier:</strong> Uncalibrated distributor tiered discounts are associated with price erosion below the $6.24 threshold, making wholesale contract tiers an important factor to review during demand planning.</li>
+              <li><strong>Quick Commerce Micro-Hub Markup:</strong> Instant 15-minute delivery channels are associated with higher price realization ($6.45/unit) and should receive priority stock allocation.</li>
+            </ul>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Prioritize large supermarket orders, deep wholesale tier requests, and quick-commerce channels for proactive margin governance before invoice approval.</p>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Before releasing commercial orders, the pricing and sales team should review these three factors together, verify list price floors and channel quotas, and proactively prevent unapproved discount leakage when needed.</p>
+            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Pre-Invoice Margin Governance — Create an automated commercial check that validates transaction pricing against the $6.24 floor and restricts discount depth to 10%. This can help reduce margin leakage from 21.5% toward the 17.2% target.</p>
+          </div>
         </div>
 
       </div> <!-- /#view-target3 -->
 
       <!-- =====================================================================
-           VIEW 4: TARGET 4 — vendor_count (count) [CLASSIFICATION]
+           VIEW 4: TARGET 4 — Minimize Vendor Defect Rate [CLASSIFICATION]
            ===================================================================== -->
       <div id="view-target4" class="demand-view" style="display:none;">
 
@@ -5941,9 +6240,8 @@
         <div class="hero-banner-card">
           <div class="hero-header-flex">
             <div>
-              <h1 class="hero-title">vendor_count (count)</h1>
-              <p class="hero-subtitle">Classify whether the qualified supplier pool meets multi-sourcing resilience
-                thresholds — preventing single-vendor supply bottlenecks.</p>
+              <h1 class="hero-title">Minimize Vendor Defect Rate</h1>
+              <p class="hero-subtitle">Stop supplier scrap from halting factory lines. The model classifies defect risk across 60 suppliers to raise quality protection from 55.0% to 85.0%.</p>
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
@@ -5953,518 +6251,7 @@
                     <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
                     <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
                     <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome: <strong>vendor_count (count)</strong></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 1. Dataset Overview (from Screenshot) -->
-        <div style="display: flex; align-items: center; gap: 8px; margin-top: 14px; margin-bottom: 10px;">
-          <div
-            style="width: 26px; height: 26px; border-radius: 6px; background: #eff6ff; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-              <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-              <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-            </svg>
-          </div>
-          <span style="font-size: 13.5px; font-weight: 700; color: #64748b; letter-spacing: -0.01em;">Dataset
-            Overview</span>
-        </div>
-        <div class="sxi-dataset-strip">
-          <div class="sxi-ds-col">
-            <span class="sxi-ds-lbl">Dataset Name</span>
-            <span class="sxi-ds-val">fmcg_sales_3years_1M_rows.csv</span>
-          </div>
-          <div class="sxi-ds-col">
-            <span class="sxi-ds-lbl">Rows</span>
-            <span class="sxi-ds-val num">1,000,000</span>
-          </div>
-          <div class="sxi-ds-col">
-            <span class="sxi-ds-lbl">Columns</span>
-            <span class="sxi-ds-val num">24</span>
-          </div>
-        </div>
-
-        <!-- 2. Key Performance Indicators (from Screenshot) -->
-        <div class="sxi-card-title-row">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <path d="M12 2a10 10 0 0 1 10 10"></path>
-          </svg>
-          <span>Key Performance Indicators</span>
-        </div>
-        <div class="sxi-kpi-grid-4">
-          <div class="sxi-kpi-top-card border-blue">
-            <div class="sxi-kpi-icon-pill pill-blue">📈</div>
-            <span class="sxi-kpi-title-sub">Current SXI</span>
-            <span class="sxi-kpi-main-val" style="color: #2563eb;">5.80</span>
-          </div>
-          <div class="sxi-kpi-top-card border-green">
-            <div class="sxi-kpi-icon-pill pill-green">%</div>
-            <span class="sxi-kpi-title-sub">Resilient SKUs</span>
-            <span class="sxi-kpi-main-val" style="color: #059669;">42.0%</span>
-          </div>
-          <div class="sxi-kpi-top-card border-blue">
-            <div class="sxi-kpi-icon-pill pill-blue">🏭</div>
-            <span class="sxi-kpi-title-sub">Approved Suppliers</span>
-            <span class="sxi-kpi-main-val" style="color: #0f172a;">60</span>
-          </div>
-          <div class="sxi-kpi-top-card border-orange">
-            <div class="sxi-kpi-icon-pill pill-orange">⚠️</div>
-            <span class="sxi-kpi-title-sub">Single-Source Risk</span>
-            <span class="sxi-kpi-main-val" style="color: #ea580c;">58.0%</span>
-          </div>
-        </div>
-
-        <!-- 3. Target Improvement (Build) (from Screenshot) -->
-        <div class="sxi-build-card">
-          <div class="sxi-build-left">
-            <div class="sxi-build-badge">Target Improvement (Build)</div>
-            <div class="sxi-build-headline">+78.6% Resilient Multi-Sourced SKUs</div>
-            <div class="sxi-build-desc">
-              Build target improvement is +78.6% (increasing) on vendor_count multi-sourcing — Dual-Source Resilient SKU
-              Coverage across supply lines after 3 months.
-            </div>
-          </div>
-          <div class="sxi-build-right">
-            <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Current Resilient SKUs</span>
-              <span class="sxi-bm-val">42.0%</span>
-            </div>
-            <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Target After +78.6%</span>
-              <span class="sxi-bm-val green">75.0%</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Current vs Target SXI (Screenshot 3) -->
-        <div class="sxi-container">
-          <div class="sxi-card-title-row">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path
-                d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-4a1.5 1.5 0 1 1-3 0V7a1.5 1.5 0 0 1 3 0z">
-              </path>
-            </svg>
-            <span>Current vs Target SXI</span>
-          </div>
-          <div class="sxi-grid-6">
-            <div class="sxi-card-box border-blue">
-              <span class="sxi-card-lbl">Current SXI</span>
-              <span class="sxi-card-num" style="color: #2563eb;">5.80</span>
-            </div>
-            <div class="sxi-card-box border-green">
-              <span class="sxi-card-lbl">Current Resilient SKUs</span>
-              <span class="sxi-card-num" style="color: #059669;">42.0%</span>
-            </div>
-            <div class="sxi-card-box border-dark">
-              <span class="sxi-card-lbl">Model Accuracy</span>
-              <span class="sxi-card-num" style="color: #0f172a;">88.5%</span>
-            </div>
-            <div class="sxi-card-box border-purple">
-              <span class="sxi-card-lbl">Target SXI</span>
-              <span class="sxi-card-num" style="color: #7c3aed;">7.70</span>
-            </div>
-            <div class="sxi-card-box border-orange">
-              <span class="sxi-card-lbl">Target Resilient SKUs</span>
-              <span class="sxi-card-num" style="color: #ea580c;">75.0%</span>
-            </div>
-            <div class="sxi-card-box border-emerald">
-              <span class="sxi-card-lbl">Resilient SKUs Change</span>
-              <span class="sxi-card-num" style="color: #16a34a;">+78.6%</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. 3 Levels of Improvement (Screenshot 4) -->
-        <div class="sxi-levels-container">
-          <div class="sxi-card-title-row">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-              <polyline points="16 7 22 7 22 13"></polyline>
-            </svg>
-            <span>3 Levels of Improvement</span>
-          </div>
-          <div class="levels-col-grid">
-            <div class="level-col-item">
-              <span class="level-col-name">Short-term</span>
-              <div class="level-metric-row">
-                <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">7.70</span>
-              </div>
-              <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">75.0%</span>
-              </div>
-              <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">+78.6%</span>
-              </div>
-              <div class="level-desc-box">
-                <strong>Short improvement:</strong> A +78.6% lift brings Resilient Multi-Sourced SKUs UP to about
-                75.0% after 30 days. SXI moves from 5.80 to short SXI 7.70.
-              </div>
-            </div>
-
-            <div class="level-col-item">
-              <span class="level-col-name">Medium-term</span>
-              <div class="level-metric-row">
-                <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">8.70</span>
-              </div>
-              <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">85.0%</span>
-              </div>
-              <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">102.4%</span>
-              </div>
-              <div class="level-desc-box">
-                <strong>Medium improvement:</strong> A 102.4% increase brings Resilient Multi-Sourced SKUs UP to about
-                85.0%. SXI moves from short 7.70 to medium 8.70.
-              </div>
-            </div>
-
-            <div class="level-col-item">
-              <span class="level-col-name">Long-term</span>
-              <div class="level-metric-row">
-                <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">9.60</span>
-              </div>
-              <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
-                <span class="level-metric-val">95.0%</span>
-              </div>
-              <div class="level-metric-row">
-                <span class="level-metric-lbl">Increase</span>
-                <span class="level-metric-val" style="color: #16a34a;">126.2%</span>
-              </div>
-              <div class="level-desc-box">
-                <strong>Long-term improvement:</strong> A 126.2% increase brings Resilient Multi-Sourced SKUs UP to
-                about 95.0%. SXI moves from medium 8.70 to long-term 9.60.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Model Performance & Current Business Status (Screenshot 0) -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                <path d="M2 17l10 5 10-5"></path>
-                <path d="M2 12l10 5 10-5"></path>
-              </svg>
-              <span>Model Performance</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Accuracy</span>
-              <span class="sxi-line-val">88.5%</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">AUC</span>
-              <span class="sxi-line-val">0.91</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Precision</span>
-              <span class="sxi-line-val">89.2%</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">Recall</span>
-              <span class="sxi-line-val">87.4%</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">F1 Score</span>
-              <span class="sxi-line-val">88.3%</span>
-            </div>
-          </div>
-
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-              </svg>
-              <span>Current Business Status</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-                Current SXI
-              </span>
-              <span class="sxi-line-val">5.80</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                </svg>
-                Multi-Sourced Resilient SKUs
-              </span>
-              <span class="sxi-line-val">42.0%</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 14 14"></polyline>
-                </svg>
-                Target Improvement
-              </span>
-              <span class="sxi-line-val sxi-val-green">75.0% · +78.6%</span>
-            </div>
-            <div class="sxi-metric-line" style="border-bottom:none; padding-top:14px;">
-              <span class="sxi-line-label" style="align-items:flex-start;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
-                  style="margin-top:2px;">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-                Business lens:
-              </span>
-              <span style="font-size:12.5px; font-weight:700; color:#0f172a; text-align:right; max-width:65%;">Qualify
-                and activate secondary suppliers for 14 single-source bottleneck SKUs.</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. AUC / ROC & Confusion Matrix (Screenshot 1 Exact Match for Classification!) -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M12 2a10 10 0 0 1 10 10"></path>
-              </svg>
-              <span>AUC / ROC</span>
-            </div>
-            <div style="text-align:center; padding:10px 0;">
-              <svg viewBox="0 0 400 220" style="width:100%; max-height:210px;">
-                <text x="200" y="20" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">AUC-ROC
-                  Curve</text>
-                <line x1="50" y1="180" x2="360" y2="180" stroke="#cbd5e1" stroke-width="1.5" />
-                <line x1="50" y1="35" x2="50" y2="180" stroke="#cbd5e1" stroke-width="1.5" />
-                <line x1="50" y1="180" x2="360" y2="35" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="4 4" />
-                <path d="M 50 180 C 80 80, 140 40, 360 35" fill="none" stroke="#f97316" stroke-width="3" />
-                <text x="205" y="200" font-size="10" font-weight="600" fill="#64748b" text-anchor="middle">False
-                  Positive Rate</text>
-                <text x="20" y="110" font-size="10" font-weight="600" fill="#64748b" transform="rotate(-90 20 110)"
-                  text-anchor="middle">True Positive Rate</text>
-                <rect x="230" y="140" width="120" height="30" rx="4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
-                <line x1="236" y1="150" x2="252" y2="150" stroke="#f97316" stroke-width="2.5" />
-                <text x="256" y="153" font-size="9.5" font-weight="700" fill="#0f172a">ROC curve (AUC = 0.91)</text>
-                <line x1="236" y1="162" x2="252" y2="162" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="3 2" />
-                <text x="256" y="165" font-size="9.5" fill="#64748b">Random</text>
-              </svg>
-            </div>
-          </div>
-
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="7" height="7"></rect>
-                <rect x="14" y="3" width="7" height="7"></rect>
-                <rect x="14" y="14" width="7" height="7"></rect>
-                <rect x="3" y="14" width="7" height="7"></rect>
-              </svg>
-              <span>Confusion Matrix</span>
-            </div>
-            <div class="conf-matrix-wrapper">
-              <div class="conf-matrix-title">Accuracy Matrix</div>
-              <div class="conf-matrix-table-wrap">
-                <span class="conf-matrix-y-label">True Class</span>
-                <div class="conf-grid-2x2">
-                  <div class="conf-cell conf-red">
-                    <span class="conf-cell-num">18</span>
-                    <span class="conf-cell-pct">(15.79%)</span>
-                  </div>
-                  <div class="conf-cell conf-light-red">
-                    <span class="conf-cell-num">96</span>
-                    <span class="conf-cell-pct">(84.21%)</span>
-                  </div>
-                  <div class="conf-cell conf-green">
-                    <span class="conf-cell-num">182</span>
-                    <span class="conf-cell-pct">(92.86%)</span>
-                  </div>
-                  <div class="conf-cell conf-red">
-                    <span class="conf-cell-num">14</span>
-                    <span class="conf-cell-pct">(7.14%)</span>
-                  </div>
-                </div>
-                <span class="conf-matrix-x-label">Predicted Class</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Decision Tree — Target Logic & Top 5 Feature Importance -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="18" cy="5" r="3"></circle>
-                <circle cx="6" cy="12" r="3"></circle>
-                <circle cx="18" cy="19" r="3"></circle>
-                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-              </svg>
-              <span>Decision Tree — Sourcing Resilience Logic</span>
-            </div>
-            <div style="text-align:center; padding:6px 0;">
-              <svg viewBox="0 0 380 210" style="width:100%; max-height:200px;">
-                <rect x="130" y="10" width="120" height="34" rx="6" fill="#eff6ff" stroke="#3b82f6"
-                  stroke-width="1.8" />
-                <text x="190" y="26" font-size="10" font-weight="700" fill="#1e40af" text-anchor="middle">SKU Disruption
-                  Risk</text>
-                <text x="190" y="38" font-size="9" fill="#64748b" text-anchor="middle">Revenue Tier 1?</text>
-                <line x1="160" y1="44" x2="90" y2="78" stroke="#94a3b8" stroke-width="1.5" />
-                <line x1="220" y1="44" x2="290" y2="78" stroke="#94a3b8" stroke-width="1.5" />
-                <text x="110" y="60" font-size="9" fill="#16a34a" font-weight="700">True</text>
-                <text x="260" y="60" font-size="9" fill="#dc2626" font-weight="700">False</text>
-                <rect x="35" y="78" width="110" height="34" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" />
-                <text x="90" y="93" font-size="10" font-weight="700" fill="#166534" text-anchor="middle">Active Vendors
-                  &ge; 2</text>
-                <text x="90" y="105" font-size="9" fill="#64748b" text-anchor="middle">Multi-Source Split</text>
-                <rect x="235" y="78" width="110" height="34" rx="6" fill="#fff7ed" stroke="#ea580c"
-                  stroke-width="1.5" />
-                <text x="290" y="93" font-size="10" font-weight="700" fill="#9a3412" text-anchor="middle">Vendor MOQ
-                  &gt; 500</text>
-                <text x="290" y="105" font-size="9" fill="#64748b" text-anchor="middle">Consolidated PO</text>
-                <line x1="65" y1="112" x2="45" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <line x1="115" y1="112" x2="135" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <rect x="10" y="145" width="70" height="30" rx="4" fill="#16a34a" stroke="#15803d" />
-                <text x="45" y="164" font-size="10" font-weight="800" fill="#ffffff"
-                  text-anchor="middle">Resilient</text>
-                <rect x="100" y="145" width="70" height="30" rx="4" fill="#059669" stroke="#047857" />
-                <text x="135" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">Dual
-                  Tier</text>
-                <line x1="265" y1="112" x2="245" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <line x1="315" y1="112" x2="335" y2="145" stroke="#94a3b8" stroke-width="1.2" />
-                <rect x="210" y="145" width="70" height="30" rx="4" fill="#ea580c" stroke="#c2410c" />
-                <text x="245" y="164" font-size="10" font-weight="800" fill="#ffffff"
-                  text-anchor="middle">Single-Src</text>
-                <rect x="300" y="145" width="70" height="30" rx="4" fill="#dc2626" stroke="#b91c1c" />
-                <text x="335" y="164" font-size="10" font-weight="800" fill="#ffffff" text-anchor="middle">High
-                  Risk</text>
-              </svg>
-            </div>
-          </div>
-
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
-                <line x1="4" y1="22" x2="4" y2="15"></line>
-              </svg>
-              <span>Feature Importance — Top 5 Drivers</span>
-            </div>
-            <table class="feature-table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Feature</th>
-                  <th>Importance</th>
-                  <th>Contribution %</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="feat-rank">1</td>
-                  <td class="feat-name">SKU Disruption Vulnerability Index</td>
-                  <td class="feat-score">34.20</td>
-                  <td class="feat-pct">34.2%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">2</td>
-                  <td class="feat-name">Single-Source Revenue Concentration</td>
-                  <td class="feat-score">27.50</td>
-                  <td class="feat-pct">27.5%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">3</td>
-                  <td class="feat-name">Regional Supplier Pool Availability</td>
-                  <td class="feat-score">18.60</td>
-                  <td class="feat-pct">18.6%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">4</td>
-                  <td class="feat-name">Contracted Minimum Order Quantities</td>
-                  <td class="feat-score">12.10</td>
-                  <td class="feat-pct">12.1%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">5</td>
-                  <td class="feat-name">Factory Capacity Headroom Margin</td>
-                  <td class="feat-score">7.60</td>
-                  <td class="feat-pct">7.6%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- 9. Business Actions —Card (from Reference Dashboard Page 7/8) -->
-        <div class="business-actions-container">
-          <div class="ba-header">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5"
-              stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
-            <span>Business Actions —— vendor_count (count)</span>
-          </div>
-          <ul class="ba-checklist">
-            <li><strong>Mitigate single-source catastrophic disruption:</strong> Qualify and onboard secondary suppliers
-              for 14 Tier-1 single-source SKUs to raise resilient SKU coverage from 42% to 75%.</li>
-            <li><strong>Dual-source quota allocation policy:</strong> Split PO-MULTI-SKU0001 (13,150 units) across
-              Primary S014 (70.3%) and Secondary S015 (29.7%), hedging against supplier delays.</li>
-            <li><strong>Leverage approved pool of 60 suppliers:</strong> Consolidate category spend to negotiate
-              contracted volume pricing, reducing cost-per-unit by $0.56.</li>
-            <li><strong>Decision Engine Summary:</strong> Classification Accuracy: <strong>88.5%</strong> · AUC:
-              <strong>0.91</strong> · Precision: <strong>89.2%</strong> · Recall: <strong>87.4%</strong> · Current SXI:
-              <strong>5.80</strong> &rarr; Target SXI: <strong>7.70</strong>.
-            </li>
-          </ul>
-        </div>
-
-      </div> <!-- /#view-target4 -->
-
-      <!-- =====================================================================
-           VIEW 5: TARGET 5 — vendor_defect_rate (%) [CLASSIFICATION]
-           ===================================================================== -->
-      <div id="view-target5" class="demand-view" style="display:none;">
-
-        <!-- Hero Header Banner -->
-        <div class="hero-banner-card">
-          <div class="hero-header-flex">
-            <div>
-              <h1 class="hero-title">vendor_defect_rate (%)</h1>
-              <p class="hero-subtitle">Classify incoming supplier defect risk (Low vs High Scrap) — dynamically
-                calculating quality buffers (+216 units) before PO release to prevent assembly floor shutdowns.</p>
-            </div>
-            <div class="hero-targets-stack">
-              <div class="hero-target-pill">
-                <span><svg class="pill-target-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    style="vertical-align: middle; margin-right: 6px; flex-shrink: 0;">
-                    <circle cx="12" cy="12" r="10" stroke="#38bdf8" stroke-width="1.8" opacity="0.85"></circle>
-                    <circle cx="12" cy="12" r="6" stroke="#38bdf8" stroke-width="1.8" opacity="0.95"></circle>
-                    <circle cx="12" cy="12" r="2.5" fill="#38bdf8"></circle>
-                  </svg>Business Outcome: <strong>vendor_defect_rate (%)</strong></span>
+                  </svg>Business Outcome: <strong>Minimize Vendor Defect Rate</strong></span>
               </div>
             </div>
           </div>
@@ -6936,10 +6723,10 @@
               stroke-linecap="round" stroke-linejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
             </svg>
-            <span>Business Actions —— vendor_defect_rate (%)</span>
+            <span>Business Actions —— Minimize Vendor Defect Rate</span>
           </div>
           <ul class="ba-checklist">
-            <li><strong>Automate defect scrap buffer dispatch:</strong> Automatically inject a +1.64% safety buffer
+            <li><strong>Automate defect scrap buffer dispatch:</strong> Directly inject a +1.64% safety buffer
               (+216 units) onto purchase orders for primary supplier S008 to ensure factory lines never starve.</li>
             <li><strong>Supplier quality audit & pre-shipment testing:</strong> Mandate lot inspection testing for any
               vendor with historical defect rates over 1.5%.</li>
@@ -6977,12 +6764,12 @@
         'target2': 'target2',
         'target3': 'target3',
         'target4': 'target4',
-        'target5': 'target5',
+        'target5': 'target4',
         'global_plan_demand_quantity': 'target1',
         'lead_time': 'target2',
         'weightage_list_price': 'target3',
-        'vendor_count': 'target4',
-        'vendor_defect_rate': 'target5'
+        'vendor_defect_rate': 'target4',
+        'defect_rate': 'target4'
       };
       const viewKey = targetParam && tabMap[targetParam] ? tabMap[targetParam] : 'target1';
       document.querySelectorAll('.demand-view').forEach(v => v.style.display = 'none');

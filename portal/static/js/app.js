@@ -2,7 +2,7 @@
 // Quantellix Order Fulfillment Dashboard - Client-side Logic (app.js)
 // =============================================================================
 
-const ALL_PROBLEM_IDS = ['e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8', 'e9', 'e10', 'e11', 'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9', 'p10', 'p11', 's1', 's2', 's3'];
+const ALL_PROBLEM_IDS = ['e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8', 'e9', 'e10'];
 let selectedStages = new Set(['e1']); // Default recommended selection
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,8 +33,12 @@ function selectStageOnly(stageId) {
 }
 
 function selectAllStages() {
-  selectedStages = new Set(['e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8', 'e9', 'e10', 'e11']);
+  selectedStages = new Set(['e1', 'e2', 'e3', 'e4', 'e5', 'e6', 'e7', 'e8', 'e9', 'e10']);
   updateCardSelectionsUI();
+}
+
+function selectAllSolutions() {
+  selectAllStages();
 }
 
 function clearSelections() {
@@ -60,6 +64,12 @@ function updateCardSelectionsUI() {
       }
     }
   });
+
+  const reviewText = document.getElementById('review-selected-text');
+  if (reviewText) {
+    const count = selectedStages.size;
+    reviewText.innerHTML = `${count} Solution${count === 1 ? '' : 's'} selected &bull; Credits required: ${count}`;
+  }
 
   const openBtn = document.getElementById('btnOpenSelected');
   if (openBtn) {

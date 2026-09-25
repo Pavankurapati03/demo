@@ -1292,16 +1292,7 @@
 
   <!-- Top Navbar (Matching Marketplace Navigation) -->
   <header class="header-navbar" style="background: #091428; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 12px 32px; height: 72px; display: flex; align-items: center; justify-content: space-between;">
-    <div class="nav-left" style="display: flex; align-items: center; gap: 16px;">
-      <button type="button" class="btn-menu-trigger" onclick="toggleDashboardsMenu()" title="Open Menu" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); color: #ffffff; padding: 7px 14px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 8px;">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="7" height="7"></rect>
-          <rect x="14" y="3" width="7" height="7"></rect>
-          <rect x="14" y="14" width="7" height="7"></rect>
-          <rect x="3" y="14" width="7" height="7"></rect>
-        </svg>
-        Menu
-      </button>
+    <div class="nav-left" style="display: flex; align-items: center;">
       <a href="/portal/marketplace" class="logo-link" title="Quantellix Marketplace">
         <img src="/static/images/quantellix-logo-dark.png?v=2.0" alt="Quantellix" class="logo-img" style="filter: brightness(0) invert(1); height: 48px; display: block;">
       </a>
@@ -1388,28 +1379,21 @@
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target2" class="menu-target-link" title="Maximize Delivery Reliability">
+        <a href="/portal/marketplace/demand_planning?target=target2" class="menu-target-link" title="Reduce Delivery Lead Time">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Maximize Delivery Reliability</span>
+            <span class="menu-target-name">Reduce Delivery Lead Time</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target3" class="menu-target-link" title="Protect Pricing & Margins">
+        <a href="/portal/marketplace/demand_planning?target=target3" class="menu-target-link" title="Reduce Margin Leakage">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Protect Pricing & Margins</span>
+            <span class="menu-target-name">Reduce Margin Leakage</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link" title="Optimize Supplier Base">
-          <div class="menu-target-name-wrap">
-            <span class="menu-dot"></span>
-            <span class="menu-target-name">Optimize Supplier Base</span>
-          </div>
-          <span class="menu-target-price">$1000/Month</span>
-        </a>
-        <a href="/portal/marketplace/demand_planning?target=target5" class="menu-target-link" title="Minimize Vendor Defect Rate">
+        <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link" title="Minimize Vendor Defect Rate">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
             <span class="menu-target-name">Minimize Vendor Defect Rate</span>
@@ -1543,7 +1527,7 @@
           </div>
           <div class="kpi-v2-label">Champion Forecast Accuracy</div>
           <div class="kpi-v2-value" style="color: #059669;">88.82%</div>
-          <div class="kpi-v2-sub">100 - WMAPE (Meta Prophet AI)</div>
+          <div class="kpi-v2-sub">100 - WMAPE (Meta Prophet Model)</div>
         </div>
 
         <div class="kpi-card-v2">
@@ -1732,7 +1716,7 @@
           <ul class="model-features-list">
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              <span><strong>Non-Linear Changepoints:</strong> Automatically detects shifting market trends and regime changes</span>
+              <span><strong>Non-Linear Changepoints:</strong> Dynamically detects shifting market trends and regime changes</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -2244,7 +2228,7 @@
                 <span class="level-impact-pill">+3.1% Accuracy Gain</span>
               </div>
               <div class="level-title">Immediate Ingestion & Baseline Automation</div>
-              <div class="level-desc">Eliminates manual spreadsheet errors. Automatically ingests national calendar holidays, payday cycles, and day-of-week seasonality into Meta Prophet.</div>
+              <div class="level-desc">Eliminates manual spreadsheet errors. Directly ingests national calendar holidays, payday cycles, and day-of-week seasonality into Meta Prophet.</div>
             </div>
 
             <!-- Level 2 -->

@@ -1221,33 +1221,22 @@
 
 <body>
 
-  <!-- Top Navbar -->
-  <header class="header-navbar dashboard-navbar">
-    <div class="header-left">
-      <button type="button" id="btnViewDashboards" class="btn-header-dashboards" onclick="toggleDashboardsMenu()"
-        title="View Dashboards Menu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="7" height="7"></rect>
-          <rect x="14" y="3" width="7" height="7"></rect>
-          <rect x="14" y="14" width="7" height="7"></rect>
-          <rect x="3" y="14" width="7" height="7"></rect>
-        </svg>
-        View Dashboards
-      </button>
-    </div>
-
-    <div class="header-center">
-      <a href="/portal/marketplace" class="header-logo-link" title="Quantellix Marketplace">
-        <img src="/static/images/quantellix-logo-white-nav.png?v=3.0" alt="Quantellix" class="header-logo-img">
+  <!-- Top Navbar (Matching Marketplace Navigation) -->
+  <header class="header-navbar" style="background: #091428; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 12px 32px; height: 72px; display: flex; align-items: center; justify-content: space-between;">
+    <div class="nav-left" style="display: flex; align-items: center;">
+      <a href="/portal/marketplace" class="logo-link" title="Quantellix Marketplace">
+        <img src="/static/images/quantellix-logo-dark.png?v=2.0" alt="Quantellix" class="logo-img" style="filter: brightness(0) invert(1); height: 48px; display: block;">
       </a>
     </div>
 
-    <div class="header-right">
-      <button id="btnThemeToggle" class="btn-theme-toggle" onclick="toggleDashboardTheme()"
-        title="Toggle Dark/Light Mode">
-        🌙
-      </button>
+    <div class="nav-right" style="display: flex; align-items: center; gap: 18px;">
+      <span class="nav-credits" style="font-size: 13px; color: #94a3b8;">Credits: <strong style="color: #ffffff;">0</strong></span>
+      <a href="/portal/marketplace" class="nav-link" style="font-size: 13px; color: #ffffff; font-weight: 600; text-decoration: none;">Marketplace</a>
+      <a href="javascript:void(0)" onclick="alert('Account: Quantellix Enterprise Tier');" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">My account</a>
+      <a href="#buy" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Buy credits</a>
+      <a href="/portal/marketplace" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Restart</a>
+      <a href="javascript:void(0)" onclick="if(confirm('Are you sure you want to sign out?')) window.location.href='/portal/marketplace';" class="nav-link" style="font-size: 13px; color: #cbd5e1; text-decoration: none;">Sign out</a>
+      <a href="/portal/marketplace" class="btn-exit-app" style="background: #ef4444; color: #ffffff; padding: 6px 14px; border-radius: 6px; font-size: 12.5px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center;">Exit App</a>
     </div>
   </header>
 
@@ -1328,29 +1317,22 @@
           <span class="menu-target-price">$1000/Month</span>
         </a>
         <a href="/portal/marketplace/demand_planning?target=target2" class="menu-target-link"
-          title="Maximize Delivery Reliability">
+          title="Reduce Delivery Lead Time">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Maximize Delivery Reliability</span>
+            <span class="menu-target-name">Reduce Delivery Lead Time</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
         <a href="/portal/marketplace/demand_planning?target=target3" class="menu-target-link"
-          title="Protect Pricing & Margins">
+          title="Reduce Margin Leakage">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Protect Pricing & Margins</span>
+            <span class="menu-target-name">Reduce Margin Leakage</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link" title="Optimize Supplier Base">
-          <div class="menu-target-name-wrap">
-            <span class="menu-dot"></span>
-            <span class="menu-target-name">Optimize Supplier Base</span>
-          </div>
-          <span class="menu-target-price">$1000/Month</span>
-        </a>
-        <a href="/portal/marketplace/demand_planning?target=target5" class="menu-target-link"
+        <a href="/portal/marketplace/demand_planning?target=target4" class="menu-target-link"
           title="Minimize Vendor Defect Rate">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
@@ -3015,13 +2997,16 @@
         <!-- 7. AUC / ROC & Confusion Matrix (Matching Reference Screenshots 1 & 2) -->
         <!-- 7a. AUC / ROC Curve -->
         <div class="sxi-white-card" style="margin-top: 22px; margin-bottom: 22px;">
-          <div class="sxi-card-title-row" style="margin-bottom: 16px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M4.93 4.93l14.14 14.14"></path>
-            </svg>
-            <span style="font-size: 14px; font-weight: 700; color: #475569;">AUC / ROC</span>
+          <div class="sxi-card-title-row" style="margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M4.93 4.93l14.14 14.14"></path>
+              </svg>
+              <span style="font-size: 14px; font-weight: 700; color: #475569;">AUC / ROC</span>
+            </div>
+            <span style="background: #eff6ff; border: 1.5px solid #bfdbfe; color: #1e40af; font-size: 12.5px; font-weight: 800; padding: 4px 12px; border-radius: 6px;">AUC-ROC Score: 0.94</span>
           </div>
 
           <div
@@ -3031,6 +3016,13 @@
                 style="width: 100%; max-height: 480px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
                 <!-- Inner Title -->
                 <text x="80" y="32" font-size="13.5" font-weight="800" fill="#000000">AUC-ROC Curve</text>
+
+                <!-- AUC Score Badge Box inside plot -->
+                <g transform="translate(680, 68)">
+                  <rect x="0" y="0" width="165" height="38" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2" />
+                  <text x="14" y="24" font-size="12" font-weight="700" fill="#1e40af">AUC-ROC:</text>
+                  <text x="92" y="25" font-size="14.5" font-weight="800" fill="#1d4ed8">0.94 (94%)</text>
+                </g>
 
                 <!-- Plot Area Background -->
                 <rect x="80" y="50" width="780" height="320" fill="#ffffff" stroke="none" />
@@ -3086,160 +3078,121 @@
           </div>
         </div>
 
-        <!-- 7b. Confusion Matrix (Matching Reference Screenshot 2) -->
+        <!-- 7b. Classification Outcomes & Model Evaluation -->
         <div class="sxi-white-card" style="margin-bottom: 24px;">
           <div class="sxi-card-title-row" style="margin-bottom: 18px;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="7" height="7"></rect>
-              <rect x="14" y="3" width="7" height="7"></rect>
-              <rect x="14" y="14" width="7" height="7"></rect>
-              <rect x="3" y="14" width="7" height="7"></rect>
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
-            <span style="font-size: 14px; font-weight: 700; color: #475569;">Confusion Matrix</span>
+            <span style="font-size: 14px; font-weight: 700; color: #475569;">Classification Outcomes &amp; Model Evaluation</span>
           </div>
 
-          <!-- Centered Header -->
-          <div style="text-align: center; margin-bottom: 28px;">
-            <div style="font-size: 20px; font-weight: 800; color: #000000; letter-spacing: -0.01em;">
-              Confusion Matrix
+          <!-- Section Header & Target Class Legend -->
+          <div style="margin-bottom: 22px;">
+            <div style="font-size: 18px; font-weight: 800; color: #0f172a; letter-spacing: -0.01em; margin-bottom: 6px;">
+              Model Decision Performance Breakdown
             </div>
-            <div style="font-size: 12.5px; font-weight: 600; color: #64748b; margin-top: 4px;">
-              Actual vs Predicted (Counts and Percentage)
+            <p style="font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.5;">
+              How accurately the model classifies warehouse replenishment triggers across all inventory events:
+            </p>
+
+            <!-- Target Class Definitions (0 vs 1) -->
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 16px;">
+              <span style="font-size: 12.5px; font-weight: 700; color: #334155; margin-right: 4px;">Target Variable Classes:</span>
+              <div style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 5px 12px; font-size: 12px;">
+                <span style="display: inline-block; width: 18px; height: 18px; border-radius: 4px; background: #e2e8f0; color: #334155; font-weight: 800; text-align: center; line-height: 18px; font-size: 11px;">0</span>
+                <span style="font-weight: 700; color: #1e293b;">Sufficient Stock</span>
+                <span style="color: #64748b;">(Inventory &gt; 13,163 ROP &rarr; No Reorder Needed)</span>
+              </div>
+              <div style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 5px 12px; font-size: 12px;">
+                <span style="display: inline-block; width: 18px; height: 18px; border-radius: 4px; background: #dbeafe; color: #1e40af; font-weight: 800; text-align: center; line-height: 18px; font-size: 11px;">1</span>
+                <span style="font-weight: 700; color: #1e293b;">Reorder Required</span>
+                <span style="color: #64748b;">(Inventory &le; 13,163 ROP &rarr; Auto-Order Triggered)</span>
+              </div>
             </div>
           </div>
 
-          <!-- 2-Column Content Layout (Matrix on Left, Explanations on Right) -->
-          <div
-            style="display: flex; gap: 48px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 0 10px;">
-            <!-- Left Column: 2x2 Matrix with Headers, Row Labels, and Legend -->
-            <div style="display: flex; align-items: center; gap: 24px; flex: 1; min-width: 360px; justify-content: center;">
-              <!-- Matrix Table Container -->
-              <div style="position: relative; padding-left: 90px; padding-top: 50px; padding-bottom: 30px;">
-                <!-- Actual Class Vertical Y-Axis Label -->
-                <div
-                  style="position: absolute; left: 0; top: 60%; transform: translateY(-50%) rotate(-90deg); font-size: 12px; font-weight: 800; color: #000000; white-space: nowrap;">
-                  Actual Class
+          <!-- 4 Classification Outcome Cards Grid (Ordered: TP, FN, FP, TN) -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+            <!-- 1. True Positive -->
+            <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                  <span style="font-size: 13px; font-weight: 800; color: #166534; display: flex; align-items: center; gap: 6px;">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e;"></span>
+                    True Positive (TP)
+                  </span>
+                  <span style="background: #dcfce7; color: #15803d; font-size: 11.5px; font-weight: 800; padding: 2px 8px; border-radius: 6px;">7,798 (96.47%)</span>
                 </div>
-
-                <!-- Predicted Class Horizontal X-Axis Label -->
-                <div
-                  style="position: absolute; bottom: 0; left: 60%; transform: translateX(-50%); font-size: 12px; font-weight: 800; color: #000000; white-space: nowrap;">
-                  Predicted Class
-                </div>
-
-                <!-- Column Header: 0 (Predicted No Reorder / Sufficient Stock) -->
-                <div
-                  style="position: absolute; top: 12px; left: 90px; width: 140px; text-align: center; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
-                  0<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Predicted Sufficient)</span>
-                </div>
-
-                <!-- Column Header: 1 (Predicted Reorder Required) -->
-                <div
-                  style="position: absolute; top: 12px; left: 236px; width: 140px; text-align: center; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
-                  1<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Predicted Reorder)</span>
-                </div>
-
-                <!-- Row Label: 0 (Sufficient Stock >= ROP) -->
-                <div
-                  style="position: absolute; top: 65px; left: 16px; width: 70px; text-align: right; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
-                  0<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Sufficient)</span>
-                </div>
-
-                <!-- Row Label: 1 (Reorder Required <= ROP) -->
-                <div
-                  style="position: absolute; top: 155px; left: 16px; width: 70px; text-align: right; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
-                  1<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Reorder)</span>
-                </div>
-
-                <!-- 2x2 Grid -->
-                <div
-                  style="display: grid; grid-template-columns: 140px 140px; grid-template-rows: 85px 85px; gap: 4px; border: 2px solid #ffffff; background: #ffffff;">
-                  <!-- Top-Left: TN (Green) -->
-                  <div
-                    style="background: #22c55e; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
-                    <span style="font-size: 14px; font-weight: 800; color: #000000;">TN</span>
-                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">5,980
-                      (97.20%)</span>
-                  </div>
-
-                  <!-- Top-Right: FP (Red) -->
-                  <div
-                    style="background: #ef4444; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
-                    <span style="font-size: 14px; font-weight: 800; color: #000000;">FP</span>
-                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">172
-                      (2.80%)</span>
-                  </div>
-
-                  <!-- Bottom-Left: FN (Red) -->
-                  <div
-                    style="background: #ef4444; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
-                    <span style="font-size: 14px; font-weight: 800; color: #000000;">FN</span>
-                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">285
-                      (3.53%)</span>
-                  </div>
-
-                  <!-- Bottom-Right: TP (Green) -->
-                  <div
-                    style="background: #22c55e; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
-                    <span style="font-size: 14px; font-weight: 800; color: #000000;">TP</span>
-                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">7,798
-                      (96.47%)</span>
-                  </div>
+                <div style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">Correctly Replenished (Stockout Prevented)</div>
+                <div style="font-size: 12.5px; color: #475569; line-height: 1.55;">
+                  Warehouse inventory was below the Reorder Point (&le; 13,163 units), so actually a reorder was required. The model predicted correctly that a reorder is required, preventing warehouse stockout deficits.
                 </div>
               </div>
-
-              <!-- Legend -->
-              <div style="display: flex; flex-direction: column; gap: 14px; margin-left: 10px;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <div style="width: 16px; height: 16px; background: #22c55e; border-radius: 2px;"></div>
-                  <span style="font-size: 12px; font-weight: 700; color: #1e293b;">Correct<br><span
-                      style="font-size: 11px; font-weight: 600; color: #64748b;">(TN, TP)</span></span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <div style="width: 16px; height: 16px; background: #ef4444; border-radius: 2px;"></div>
-                  <span style="font-size: 12px; font-weight: 700; color: #1e293b;">Incorrect<br><span
-                      style="font-size: 11px; font-weight: 600; color: #64748b;">(FP, FN)</span></span>
-                </div>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 11.5px; color: #15803d; font-weight: 600;">
+                &#10003; Actual: 1 (Reorder) &bull; Predicted: 1 (Reorder)
               </div>
             </div>
 
-            <!-- Right Column: Explanations -->
-            <div style="flex: 1; min-width: 340px; display: flex; flex-direction: column; gap: 18px;">
+            <!-- 2. False Negative -->
+            <div style="background: #ffffff; border: 1.5px solid #fecaca; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
-                  True Negative (TN)
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                  <span style="font-size: 13px; font-weight: 800; color: #991b1b; display: flex; align-items: center; gap: 6px;">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ef4444;"></span>
+                    False Negative (FN)
+                  </span>
+                  <span style="background: #fee2e2; color: #b91c1c; font-size: 11.5px; font-weight: 800; padding: 2px 8px; border-radius: 6px;">285 (3.53%)</span>
                 </div>
-                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
-                  Warehouse inventory was above the Reorder Point (&gt; 13,163 units), and the AI correctly identified that no purchase order was required.
+                <div style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">Missed Reorder (Delayed Trigger)</div>
+                <div style="font-size: 12.5px; color: #475569; line-height: 1.55;">
+                  Warehouse inventory was below the Reorder Point (&le; 13,163 units), so actually a reorder was required. But the model predicted incorrectly that stock is sufficient, causing a delayed order.
                 </div>
               </div>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 11.5px; color: #b91c1c; font-weight: 600;">
+                &#9888; Actual: 1 (Reorder) &bull; Predicted: 0 (Sufficient)
+              </div>
+            </div>
 
+            <!-- 3. False Positive -->
+            <div style="background: #ffffff; border: 1.5px solid #fed7aa; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
-                  False Positive (FP)
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                  <span style="font-size: 13px; font-weight: 800; color: #9a3412; display: flex; align-items: center; gap: 6px;">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #f97316;"></span>
+                    False Positive (FP)
+                  </span>
+                  <span style="background: #ffedd5; color: #c2410c; font-size: 11.5px; font-weight: 800; padding: 2px 8px; border-radius: 6px;">172 (2.80%)</span>
                 </div>
-                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
-                  Warehouse inventory was sufficient, but the AI triggered an unnecessary purchase order (2.8% premature order rate).
+                <div style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">Premature Reorder (Early Trigger)</div>
+                <div style="font-size: 12.5px; color: #475569; line-height: 1.55;">
+                  Warehouse inventory was above the Reorder Point (&gt; 13,163 units), so actually no reorder was required. But the model predicted incorrectly that a reorder is required, triggering an order slightly early.
                 </div>
               </div>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 11.5px; color: #c2410c; font-weight: 600;">
+                &#9888; Actual: 0 (Sufficient) &bull; Predicted: 1 (Reorder)
+              </div>
+            </div>
 
+            <!-- 4. True Negative -->
+            <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
-                  False Negative (FN)
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                  <span style="font-size: 13px; font-weight: 800; color: #166534; display: flex; align-items: center; gap: 6px;">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e;"></span>
+                    True Negative (TN)
+                  </span>
+                  <span style="background: #dcfce7; color: #15803d; font-size: 11.5px; font-weight: 800; padding: 2px 8px; border-radius: 6px;">5,980 (97.20%)</span>
                 </div>
-                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
-                  Warehouse inventory dropped below the Reorder Point (&le; 13,163 units), but the AI failed to trigger a replenishment order (3.5% missed stockout rate).
+                <div style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">Correctly Held (No Order Placed)</div>
+                <div style="font-size: 12.5px; color: #475569; line-height: 1.55;">
+                  Warehouse inventory was above the Reorder Point (&gt; 13,163 units), so actually no reorder was required. The model predicted correctly that stock is sufficient, avoiding excess holding costs.
                 </div>
               </div>
-
-              <div>
-                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
-                  True Positive (TP)
-                </div>
-                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
-                  Warehouse inventory was below the Reorder Point, and the AI correctly generated an automated replenishment order in time.
-                </div>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 11.5px; color: #15803d; font-weight: 600;">
+                &#10003; Actual: 0 (Sufficient) &bull; Predicted: 0 (Sufficient)
               </div>
             </div>
           </div>
@@ -3691,13 +3644,13 @@
               <ul
                 style="margin: 0; padding-left: 18px; font-size: 12.5px; color: #334155; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;">
                 <li>
-                  <strong style="color: #1e40af;">Current Stock &le; 13,163 ROP (38.2% Driver):</strong> When warehouse stock falls below the Reorder Point, inventory can run out in just a few hours. <em>Recommendation:</em> Place a replenishment purchase order immediately whenever stock drops below the 13,163 units threshold.
+                  <strong style="color: #1e40af;">Current Stock &le; 13,163 ROP (38.2% Driver):</strong> When warehouse stock falls below the Reorder Point, inventory can run out in just a few hours. <strong>Recommendation:</strong> Place a replenishment purchase order immediately whenever stock drops below the 13,163 units threshold.
                 </li>
                 <li>
-                  <strong style="color: #1e40af;">Daily Sales &ge; 1,718 units/day (26.4% Driver):</strong> Fast product sales quickly empty warehouse shelves before standard vendor shipments arrive. <em>Recommendation:</em> Track daily sales velocity to adjust reorder timing automatically during peak demand periods.
+                  <strong style="color: #1e40af;">Daily Sales &ge; 1,718 units/day (26.4% Driver):</strong> Fast product sales quickly empty warehouse shelves before standard vendor shipments arrive. <strong>Recommendation:</strong> Track daily sales velocity to adjust reorder timing quickly during peak demand periods.
                 </li>
                 <li>
-                  <strong style="color: #1e40af;">Supplier Lead Time &ge; 7.0 Days (17.5% Driver):</strong> Longer delivery times mean the warehouse needs enough stock buffer to cover the full 7-day waiting period. <em>Recommendation:</em> Maintain at least 7 days of demand (12,027 units) plus safety stock (1,136 units) to avoid stockouts while waiting for delivery.
+                  <strong style="color: #1e40af;">Supplier Lead Time &ge; 7.0 Days (17.5% Driver):</strong> Longer delivery times mean the warehouse needs enough stock buffer to cover the full 7-day waiting period. <strong>Recommendation:</strong> Maintain at least 7 days of demand (12,027 units) plus safety stock (1,136 units) to avoid stockouts while waiting for delivery.
                 </li>
               </ul>
             </div>
@@ -4317,13 +4270,16 @@
         <!-- 7. AUC / ROC & Confusion Matrix (Matching Reference Screenshots 1 & 2) -->
         <!-- 7a. AUC / ROC Curve -->
         <div class="sxi-white-card" style="margin-top: 22px; margin-bottom: 22px;">
-          <div class="sxi-card-title-row" style="margin-bottom: 16px;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M4.93 4.93l14.14 14.14"></path>
-            </svg>
-            <span style="font-size: 14px; font-weight: 700; color: #475569;">AUC / ROC</span>
+          <div class="sxi-card-title-row" style="margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M4.93 4.93l14.14 14.14"></path>
+              </svg>
+              <span style="font-size: 14px; font-weight: 700; color: #475569;">AUC / ROC</span>
+            </div>
+            <span style="background: #eff6ff; border: 1.5px solid #bfdbfe; color: #1e40af; font-size: 12.5px; font-weight: 800; padding: 4px 12px; border-radius: 6px;">AUC-ROC Score: 0.92</span>
           </div>
 
           <div
@@ -4333,6 +4289,13 @@
                 style="width: 100%; max-height: 480px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
                 <!-- Inner Title -->
                 <text x="80" y="32" font-size="13.5" font-weight="800" fill="#000000">AUC-ROC Curve</text>
+
+                <!-- AUC Score Badge Box inside plot -->
+                <g transform="translate(680, 68)">
+                  <rect x="0" y="0" width="165" height="38" rx="6" fill="#eff6ff" stroke="#93c5fd" stroke-width="1.2" />
+                  <text x="14" y="24" font-size="12" font-weight="700" fill="#1e40af">AUC-ROC:</text>
+                  <text x="92" y="25" font-size="14.5" font-weight="800" fill="#1d4ed8">0.92 (92%)</text>
+                </g>
 
                 <!-- Plot Area Background -->
                 <rect x="80" y="50" width="780" height="320" fill="#ffffff" stroke="none" />
@@ -4391,162 +4354,121 @@
           </div>
         </div>
 
-        <!-- 7b. Confusion Matrix (Matching Reference Screenshot 2) -->
+        <!-- 7b. Classification Outcomes & Model Evaluation -->
         <div class="sxi-white-card" style="margin-bottom: 24px;">
           <div class="sxi-card-title-row" style="margin-bottom: 18px;">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="7" height="7"></rect>
-              <rect x="14" y="3" width="7" height="7"></rect>
-              <rect x="14" y="14" width="7" height="7"></rect>
-              <rect x="3" y="14" width="7" height="7"></rect>
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
             </svg>
-            <span style="font-size: 14px; font-weight: 700; color: #475569;">Confusion Matrix</span>
+            <span style="font-size: 14px; font-weight: 700; color: #475569;">Classification Outcomes &amp; Model Evaluation</span>
           </div>
 
-          <!-- Centered Header -->
-          <div style="text-align: center; margin-bottom: 28px;">
-            <div style="font-size: 20px; font-weight: 800; color: #000000; letter-spacing: -0.01em;">
-              Confusion Matrix
+          <!-- Section Header & Target Class Legend -->
+          <div style="margin-bottom: 22px;">
+            <div style="font-size: 18px; font-weight: 800; color: #0f172a; letter-spacing: -0.01em; margin-bottom: 6px;">
+              Model Decision Performance Breakdown
             </div>
-            <div style="font-size: 12.5px; font-weight: 600; color: #64748b; margin-top: 4px;">
-              Actual vs Predicted (Counts and Percentage)
+            <p style="font-size: 13px; color: #64748b; margin: 0 0 14px 0; line-height: 1.5;">
+              How accurately the model qualifies preferred suppliers and enforces dual-sourcing resilience across purchase orders:
+            </p>
+
+            <!-- Target Class Definitions (0 vs 1) -->
+            <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 16px;">
+              <span style="font-size: 12.5px; font-weight: 700; color: #334155; margin-right: 4px;">Target Variable Classes:</span>
+              <div style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 5px 12px; font-size: 12px;">
+                <span style="display: inline-block; width: 18px; height: 18px; border-radius: 4px; background: #e2e8f0; color: #334155; font-weight: 800; text-align: center; line-height: 18px; font-size: 11px;">0</span>
+                <span style="font-weight: 700; color: #1e293b;">Single-Source Risk</span>
+                <span style="color: #64748b;">(Non-Preferred Vendor &rarr; High Disruption Risk)</span>
+              </div>
+              <div style="display: inline-flex; align-items: center; gap: 6px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 5px 12px; font-size: 12px;">
+                <span style="display: inline-block; width: 18px; height: 18px; border-radius: 4px; background: #dbeafe; color: #1e40af; font-weight: 800; text-align: center; line-height: 18px; font-size: 11px;">1</span>
+                <span style="font-weight: 700; color: #1e293b;">Preferred Supplier</span>
+                <span style="color: #64748b;">(Certified Vendor &rarr; Qualified for 70/30 Dual Sourcing)</span>
+              </div>
             </div>
           </div>
 
-          <!-- 2-Column Content Layout (Matrix on Left, Explanations on Right) -->
-          <div
-            style="display: flex; gap: 48px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 0 10px;">
-            <!-- Left Column: 2x2 Matrix with Headers, Row Labels, and Legend -->
-            <div style="display: flex; align-items: center; gap: 24px; flex: 1; min-width: 360px; justify-content: center;">
-              <!-- Matrix Table Container -->
-              <div style="position: relative; padding-left: 90px; padding-top: 50px; padding-bottom: 30px;">
-                <!-- Actual Class Vertical Y-Axis Label -->
-                <div
-                  style="position: absolute; left: 0; top: 60%; transform: translateY(-50%) rotate(-90deg); font-size: 12px; font-weight: 800; color: #000000; white-space: nowrap;">
-                  Actual Class
+          <!-- 4 Classification Outcome Cards Grid (Ordered: TP, FN, FP, TN) -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+            <!-- 1. True Positive -->
+            <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                  <span style="font-size: 13px; font-weight: 800; color: #166534; display: flex; align-items: center; gap: 6px;">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e;"></span>
+                    True Positive (TP)
+                  </span>
+                  <span style="background: #dcfce7; color: #15803d; font-size: 11.5px; font-weight: 800; padding: 2px 8px; border-radius: 6px;">8,559 (92.50%)</span>
                 </div>
-
-                <!-- Predicted Class Horizontal X-Axis Label -->
-                <div
-                  style="position: absolute; bottom: 0; left: 60%; transform: translateX(-50%); font-size: 12px; font-weight: 800; color: #000000; white-space: nowrap;">
-                  Predicted Class
-                </div>
-
-                <!-- Column Header: 0 (Predicted No Risk / Single-Source) -->
-                <div
-                  style="position: absolute; top: 12px; left: 90px; width: 140px; text-align: center; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
-                  0<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Predicted Single-Source)</span>
-                </div>
-
-                <!-- Column Header: 1 (Predicted Preferred Supplier) -->
-                <div
-                  style="position: absolute; top: 12px; left: 236px; width: 140px; text-align: center; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
-                  1<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Predicted Preferred)</span>
-                </div>
-
-                <!-- Row Label: 0 (Single-Source Risk) -->
-                <div
-                  style="position: absolute; top: 65px; left: 16px; width: 70px; text-align: right; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
-                  0<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Single-Source)</span>
-                </div>
-
-                <!-- Row Label: 1 (Preferred Supplier) -->
-                <div
-                  style="position: absolute; top: 155px; left: 16px; width: 70px; text-align: right; font-size: 11px; font-weight: 700; color: #000000; line-height: 1.3;">
-                  1<br><span style="font-size: 10px; font-weight: 600; color: #000000;">(Preferred)</span>
-                </div>
-
-                <!-- 2x2 Grid -->
-                <div
-                  style="display: grid; grid-template-columns: 140px 140px; grid-template-rows: 85px 85px; gap: 4px; border: 2px solid #ffffff; background: #ffffff;">
-                  <!-- Top-Left: TN (Green) -->
-                  <div
-                    style="background: #22c55e; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
-                    <span style="font-size: 14px; font-weight: 800; color: #000000;">TN</span>
-                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">4,625
-                      (92.83%)</span>
-                  </div>
-
-                  <!-- Top-Right: FP (Red) -->
-                  <div
-                    style="background: #ef4444; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
-                    <span style="font-size: 14px; font-weight: 800; color: #000000;">FP</span>
-                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">357
-                      (7.17%)</span>
-                  </div>
-
-                  <!-- Bottom-Left: FN (Red) -->
-                  <div
-                    style="background: #ef4444; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
-                    <span style="font-size: 14px; font-weight: 800; color: #000000;">FN</span>
-                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">694
-                      (7.50%)</span>
-                  </div>
-
-                  <!-- Bottom-Right: TP (Green) -->
-                  <div
-                    style="background: #22c55e; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 8px;">
-                    <span style="font-size: 14px; font-weight: 800; color: #000000;">TP</span>
-                    <span style="font-size: 15px; font-weight: 800; color: #000000; margin-top: 4px;">8,559
-                      (92.50%)</span>
-                  </div>
+                <div style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">Verified Preferred Supplier Routing</div>
+                <div style="font-size: 12.5px; color: #475569; line-height: 1.55;">
+                  The purchase order was placed with a certified vendor, so actually it is a Preferred Supplier. The model predicted correctly that it is a preferred supplier, maintaining 70/30 dual-sourcing resilience.
                 </div>
               </div>
-
-              <!-- Legend -->
-              <div style="display: flex; flex-direction: column; gap: 14px; margin-left: 10px;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <div style="width: 16px; height: 16px; background: #22c55e; border-radius: 2px;"></div>
-                  <span style="font-size: 12px; font-weight: 700; color: #1e293b;">Correct<br><span
-                      style="font-size: 11px; font-weight: 600; color: #64748b;">(TN, TP)</span></span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
-                  <div style="width: 16px; height: 16px; background: #ef4444; border-radius: 2px;"></div>
-                  <span style="font-size: 12px; font-weight: 700; color: #1e293b;">Incorrect<br><span
-                      style="font-size: 11px; font-weight: 600; color: #64748b;">(FP, FN)</span></span>
-                </div>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 11.5px; color: #15803d; font-weight: 600;">
+                &#10003; Actual: 1 (Preferred) &bull; Predicted: 1 (Preferred)
               </div>
             </div>
 
-            <!-- Right Column: Explanations -->
-            <div style="flex: 1; min-width: 340px; display: flex; flex-direction: column; gap: 18px;">
+            <!-- 2. False Negative -->
+            <div style="background: #ffffff; border: 1.5px solid #fecaca; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
-                  True Negative (TN)
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                  <span style="font-size: 13px; font-weight: 800; color: #991b1b; display: flex; align-items: center; gap: 6px;">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #ef4444;"></span>
+                    False Negative (FN)
+                  </span>
+                  <span style="background: #fee2e2; color: #b91c1c; font-size: 11.5px; font-weight: 800; padding: 2px 8px; border-radius: 6px;">694 (7.50%)</span>
                 </div>
-                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
-                  The order was actually Single-Source Risk (Non-Preferred), and the model correctly identified it as
-                  Single-Source Risk.
+                <div style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">Unnecessary Risk Flag (False Alarm)</div>
+                <div style="font-size: 12.5px; color: #475569; line-height: 1.55;">
+                  The purchase order was placed with a certified vendor, so actually it is a Preferred Supplier. But the model predicted incorrectly that it is a single-source risk, causing an unnecessary verification flag.
                 </div>
               </div>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 11.5px; color: #b91c1c; font-weight: 600;">
+                &#9888; Actual: 1 (Preferred) &bull; Predicted: 0 (Single-Source Risk)
+              </div>
+            </div>
 
+            <!-- 3. False Positive -->
+            <div style="background: #ffffff; border: 1.5px solid #fed7aa; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
-                  False Positive (FP)
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                  <span style="font-size: 13px; font-weight: 800; color: #9a3412; display: flex; align-items: center; gap: 6px;">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #f97316;"></span>
+                    False Positive (FP)
+                  </span>
+                  <span style="background: #ffedd5; color: #c2410c; font-size: 11.5px; font-weight: 800; padding: 2px 8px; border-radius: 6px;">357 (7.17%)</span>
                 </div>
-                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
-                  The order was actually Single-Source Risk (Non-Preferred), but the model incorrectly classified it as
-                  Preferred Supplier.
+                <div style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">Unverified Supplier Routing</div>
+                <div style="font-size: 12.5px; color: #475569; line-height: 1.55;">
+                  The purchase order was placed with an uncertified vendor, so actually it is Single-Source Risk. But the model predicted incorrectly that it is a preferred supplier, missing the supplier risk.
                 </div>
               </div>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 11.5px; color: #c2410c; font-weight: 600;">
+                &#9888; Actual: 0 (Single-Source Risk) &bull; Predicted: 1 (Preferred)
+              </div>
+            </div>
 
+            <!-- 4. True Negative -->
+            <div style="background: #ffffff; border: 1.5px solid #bbf7d0; border-radius: 10px; padding: 18px 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); display: flex; flex-direction: column; justify-content: space-between;">
               <div>
-                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
-                  False Negative (FN)
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+                  <span style="font-size: 13px; font-weight: 800; color: #166534; display: flex; align-items: center; gap: 6px;">
+                    <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #22c55e;"></span>
+                    True Negative (TN)
+                  </span>
+                  <span style="background: #dcfce7; color: #15803d; font-size: 11.5px; font-weight: 800; padding: 2px 8px; border-radius: 6px;">4,625 (92.83%)</span>
                 </div>
-                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
-                  The order was actually Preferred Supplier, but the model incorrectly flagged it as Single-Source Risk.
+                <div style="font-size: 13.5px; font-weight: 700; color: #0f172a; margin-bottom: 6px;">Correct Single-Source Risk Detection</div>
+                <div style="font-size: 12.5px; color: #475569; line-height: 1.55;">
+                  The purchase order was placed with an uncertified vendor, so actually it is Single-Source Risk. The model predicted correctly that it is a single-source risk, flagging it for secondary supplier allocation.
                 </div>
               </div>
-
-              <div>
-                <div style="font-size: 13.5px; font-weight: 800; color: #000000; margin-bottom: 2px;">
-                  True Positive (TP)
-                </div>
-                <div style="font-size: 12px; color: #475569; line-height: 1.5;">
-                  The order was actually Preferred Supplier, and the model correctly qualified it as Preferred Supplier.
-                </div>
+              <div style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed #e2e8f0; font-size: 11.5px; color: #15803d; font-weight: 600;">
+                &#10003; Actual: 0 (Single-Source Risk) &bull; Predicted: 0 (Single-Source Risk)
               </div>
             </div>
           </div>
@@ -5000,20 +4922,19 @@
               <ul
                 style="margin: 0; padding-left: 18px; font-size: 12.5px; color: #334155; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;">
                 <li>
-                  <strong style="color: #1e40af;">Historical On-Time Delivery Reliability &ge; 95% (36.4%
-                    Driver):</strong> Suppliers with inconsistent on-time delivery rates trigger 70% of factory line
-                  disruptions. <em>Action:</em> Allocate 70% of volume strictly to suppliers with verified 95%+
-                  on-time SLA records.
+                  <strong style="color: #1e40af;">Historical On-Time Delivery Reliability &ge; 95% (36.4% Driver):</strong>
+                  Suppliers with inconsistent on-time delivery rates trigger 70% of factory line disruptions.
+                  <strong>Recommendation:</strong> Allocate 70% of volume strictly to suppliers with verified 95%+ on-time SLA records.
                 </li>
                 <li>
                   <strong style="color: #1e40af;">Unit Price Quote Competitiveness &le; $3.80 (27.1% Driver):</strong>
-                  Uncompetitive vendor unit quotes erode gross margins by over 8%. <em>Action:</em> Cap purchase
-                  orders at $3.76/unit using automated volume-discount tier benchmarks.
+                  Uncompetitive vendor unit quotes erode gross margins by over 8%.
+                  <strong>Recommendation:</strong> Cap purchase orders at $3.76/unit using automated volume-discount tier benchmarks.
                 </li>
                 <li>
                   <strong style="color: #1e40af;">Quality Scrap &amp; Defect Rate &le; 1.8% (18.2% Driver):</strong>
-                  Defective raw material batches cause manufacturing downtime and rework costs. <em>Action:</em>
-                  Require automated supplier pre-shipment quality certificates on all purchase order lines.
+                  Defective raw material batches cause manufacturing downtime and rework costs.
+                  <strong>Recommendation:</strong> Require automated supplier pre-shipment quality certificates on all purchase order lines.
                 </li>
               </ul>
             </div>
@@ -5330,7 +5251,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">+15.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Short-term improvement:</strong> Automatically screens PO line quantities against supplier
+                <strong>Short-term improvement:</strong> The model screens PO line quantities against supplier
                 minimum order quantities (MOQ &ge; 500) and packaging batch rules.
               </div>
             </div>
@@ -5670,7 +5591,7 @@
               <li><strong>Vendor Active Contract Master Status:</strong> Inactive or unverified suppliers cause severe ERP release holds and invoice matching failures.</li>
             </ul>
             <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Implement automated 5-gate commercial pre-audit checks to auto-validate MOQ, margin floors (&ge;35%), and supplier master active status before ERP release.</p>
-            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Automatically screen PO lines against MOQ packaging rules and contractual margin thresholds, routing non-compliant lines for instant resolution.</p>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Directly screen PO lines against MOQ packaging rules and contractual margin thresholds, routing non-compliant lines for instant resolution.</p>
             <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Autonomous ERP Commercial Audit Gate &mdash; Deploy an end-to-end automated compliance validation pipeline that screens purchase orders across 5 commercial gates. This increases PO audit pass rate from 76.5% up to 100.0% (a 23.5% compliance lift).</p>
           </div>
         </div>
