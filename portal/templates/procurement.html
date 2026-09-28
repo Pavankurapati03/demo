@@ -1595,7 +1595,7 @@
               <h2 class="improvement-big-title">+18.4% Margin Efficiency · 0% Single-Source Risk</h2>
               <p class="improvement-desc-text">
                 Build target improvement reduces purchase cost variance from 22.5% down to <strong>18.0%</strong> across
-                all product categories, enforces automated reorder validation before committing funds, and splits volume
+                all product categories, enforces systematic reorder validation before committing funds, and splits volume
                 across top
                 suppliers with <strong>100% audit approval</strong> after 3 months.
               </p>
@@ -1672,9 +1672,9 @@
               <span class="level-badge badge-l1">Short-term</span>
               <span class="level-stat">SXI 6.42 → 7.20</span>
             </div>
-            <div class="level-box-title">Order Trigger Automation & Safety Gate</div>
+            <div class="level-box-title">Order Trigger Scheduling & Safety Gate</div>
             <div class="level-box-desc">
-              Replaces manual spreadsheet PO guesswork with automated inventory reorder validation. Triggers
+              Replaces manual spreadsheet PO guesswork with systematic inventory reorder validation. Triggers
               replenishment orders strictly when inventory position falls below safety reorder point (13,163 units).
             </div>
           </div>
@@ -1698,10 +1698,10 @@
               <span class="level-badge badge-l3">Long-term</span>
               <span class="level-stat">SXI 7.85 → 8.15</span>
             </div>
-            <div class="level-box-title">Autonomous 5-Point ERP Audit & Compliance</div>
+            <div class="level-box-title">5-Point ERP Commercial Audit & Compliance</div>
             <div class="level-box-desc">
-              Automates end-to-end commercial compliance: verifies supplier Minimum Order Quantity (MOQ), lead time
-              delivery windows, and guaranteed gross margin before PO release, achieving 98.4% automated audit
+              Enforces end-to-end commercial compliance: verifies supplier Minimum Order Quantity (MOQ), lead time
+              delivery windows, and guaranteed gross margin before PO release, achieving 98.4% audit
               approvals.
             </div>
           </div>
@@ -1930,12 +1930,12 @@
           <ul class="ba-checklist">
             <li><strong>Predict unit purchase costs dynamically:</strong> Volume-based pricing secures $3.76/unit
               (saving $0.56/unit compared to single-unit baseline quotes).</li>
-            <li><strong>Automated reorder validation:</strong> Reorder gate verifies inventory position (248 units) is
+            <li><strong>Systematic reorder validation:</strong> Reorder gate verifies inventory position (248 units) is
               below ROP (13,163 units), preventing premature capital expenditure.</li>
             <li><strong>Eliminate single-source supply disruptions:</strong> Splitting 13,150 units across Primary
               Supplier S014 (9,250 units · 70%) and Secondary Supplier S015 (3,900 units · 30%) completely hedges
               factory delay risk.</li>
-            <li><strong>Autonomous 5-point audit compliance:</strong> All 5 operational and financial gates cleared —
+            <li><strong>5-point audit compliance:</strong> All 5 operational and financial gates cleared —
               locks in <strong>$32,665.50</strong> in projected gross margin (39.8% margin).</li>
             <li><strong>Decision Engine Summary:</strong> Prediction Accuracy: <strong>94.6%</strong> · AUC:
               <strong>0.91</strong> · Precision: <strong>96.2%</strong> · Recall: <strong>97.8%</strong> · Current SXI:
@@ -2573,57 +2573,65 @@
             </div>
           </div>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+          <div class="sxi-white-card"
+            style="padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="sxi-card-title-row" style="margin-bottom: 14px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
                 <line x1="4" y1="22" x2="4" y2="15"></line>
               </svg>
-              <span>Feature Importance — Top 5 Drivers</span>
+              <span style="font-size: 16px; font-weight: 700; color: #475569;">Feature Importance — Top 5 Drivers</span>
             </div>
-            <table class="feature-table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Feature</th>
-                  <th>Importance</th>
-                  <th>Contribution %</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="feat-rank">1</td>
-                  <td class="feat-name">Order Volume Quantity Tier</td>
-                  <td class="feat-score">41.50</td>
-                  <td class="feat-pct">41.5%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">2</td>
-                  <td class="feat-name">Supplier Historical Contract Baseline</td>
-                  <td class="feat-score">25.80</td>
-                  <td class="feat-pct">25.8%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">3</td>
-                  <td class="feat-name">Seasonal Freight & Fuel Index</td>
-                  <td class="feat-score">16.20</td>
-                  <td class="feat-pct">16.2%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">4</td>
-                  <td class="feat-name">Payment Terms & Early Cash Rebate</td>
-                  <td class="feat-score">10.10</td>
-                  <td class="feat-pct">10.1%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">5</td>
-                  <td class="feat-name">Lead Time Delivery Urgency Factor</td>
-                  <td class="feat-score">6.40</td>
-                  <td class="feat-pct">6.4%</td>
-                </tr>
-              </tbody>
-            </table>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+              <table class="feature-table" style="height: 100%; flex: 1; width: 100%;">
+                <thead>
+                  <tr>
+                    <th style="padding: 16px 12px;">#</th>
+                    <th style="padding: 16px 12px;">Feature</th>
+                    <th style="padding: 16px 12px;">Importance</th>
+                    <th style="padding: 16px 12px;">Contribution %</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">1</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Order Volume Quantity Tier</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">41.50</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">41.5%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">2</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Supplier Historical Contract Baseline</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">25.80</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">25.8%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">3</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Seasonal Freight & Fuel Index</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">16.20</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">16.2%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">4</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Payment Terms & Early Cash Rebate</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">10.10</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">10.1%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">5</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Lead Time Delivery Urgency Factor</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">6.40</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">6.4%</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
 
@@ -2702,14 +2710,14 @@
               <li><strong>Seasonal Freight &amp; Fuel Index:</strong> Consolidating smaller orders into bulk multi-SKU
                 shipments mitigates LTL freight surcharges.</li>
             </ul>
-            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Enforce automated contract
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Enforce contract
               pricing caps ($3.76/unit) and consolidate replenishment orders into batches over 10,000 units to secure
               maximum volume discounts.</p>
             <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Before issuing
               POs, the procurement team should review price curves, align PO volumes with tier discount thresholds, and
               route orders to contracted suppliers.</p>
-            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Automated Volume Tier
-              Locking &mdash; Create an automated workflow that consolidates purchase orders into optimal volume tiers
+            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Volume Tier Price
+              Locking &mdash; Create a dedicated workflow that consolidates purchase orders into optimal volume tiers
               (&ge;10,000 units) and enforces contracted price benchmarks. This reduces average unit cost from $4.31
               down to $3.76 (a 12.8% cost reduction saving $7,364 per batch).</p>
           </div>
@@ -2727,7 +2735,8 @@
           <div class="hero-header-flex">
             <div>
               <h1 class="hero-title">Reduce Inventory Stockout Risk</h1>
-              <p class="hero-subtitle">Reduce inventory stock deficit by 20.0% from 98.1% to 78.5% by validating replenishment decisions against the 13,163-unit Reorder Point (ROP).</p>
+              <p class="hero-subtitle">Reduce inventory stockout risk by 20.0% from 98.1% to 78.5% by validating
+                replenishment decisions against the 13,163-unit Reorder Point (ROP).</p>
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
@@ -2807,7 +2816,7 @@
           </div>
           <div class="sxi-kpi-top-card border-orange">
             <div class="sxi-kpi-icon-pill pill-orange">⚠️</div>
-            <span class="sxi-kpi-title-sub">Current Stock Deficit vs ROP</span>
+            <span class="sxi-kpi-title-sub">Current Stockout Risk vs ROP</span>
             <span class="sxi-kpi-main-val" style="color: #ea580c;">98.1%</span>
           </div>
         </div>
@@ -2815,20 +2824,20 @@
         <!-- 3. Target Improvement (Build) (from Screenshot) -->
         <div class="sxi-build-card">
           <div class="sxi-build-left">
-            <div class="sxi-build-badge">Stockout Deficit Reduction</div>
-            <div class="sxi-build-headline">Reduce Stockout Deficit by 20.0%</div>
+            <div class="sxi-build-badge">Stockout Risk Reduction</div>
+            <div class="sxi-build-headline">Reduce Stockout Risk by 20.0%</div>
             <div class="sxi-build-desc">
-              Reduces warehouse stockout deficit by 20.0% (from 98.1% down to 78.5%) by validating replenishment
+              Reduces warehouse stockout risk by 20.0% (from 98.1% down to 78.5%) by validating replenishment
               triggers against warehouse Reorder Point (13,163 units).
             </div>
           </div>
           <div class="sxi-build-right">
             <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Current Stockout Deficit</span>
+              <span class="sxi-bm-lbl">Current Stockout Risk</span>
               <span class="sxi-bm-val">98.1%</span>
             </div>
             <div class="sxi-build-metric">
-              <span class="sxi-bm-lbl">Target Stockout Deficit</span>
+              <span class="sxi-bm-lbl">Target Stockout Risk</span>
               <span class="sxi-bm-val green">78.5%</span>
             </div>
           </div>
@@ -2860,12 +2869,12 @@
               <span style="font-size: 24px; font-weight: 800; color: #2563eb; line-height: 1.2;">6.15</span>
             </div>
 
-            <!-- Box 2: Current Stockout Deficit -->
+            <!-- Box 2: Current Stockout Risk -->
             <div class="sxi-card-box border-green"
               style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
               <span
                 style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current
-                Stockout Deficit</span>
+                Stockout Risk</span>
               <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2;">98.1%</span>
             </div>
 
@@ -2881,21 +2890,20 @@
 
           <!-- Row 2: 3 cards (Matching Reference 6-box Grid Layout) -->
           <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;">
-            <!-- Box 4: Target Stockout Deficit -->
+            <!-- Box 4: Target Stockout Risk -->
             <div class="sxi-card-box border-orange"
               style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #ea580c; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
               <span
                 style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target
-                Stockout Deficit</span>
+                Stockout Risk</span>
               <span style="font-size: 24px; font-weight: 800; color: #c2410c; line-height: 1.2;">78.5%</span>
             </div>
 
-            <!-- Box 5: Relative Deficit Reduction -->
+            <!-- Box 5: Stockout Risk Reduction -->
             <div class="sxi-card-box border-emerald"
               style="padding: 16px 20px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; border-bottom: 3.5px solid #10b981; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
               <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Relative
-                Deficit Reduction</span>
+                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Stockout Risk Reduction</span>
               <span
                 style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2; display: flex; align-items: center; gap: 4px;">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.8"
@@ -2947,7 +2955,7 @@
                 <!-- Chart Background (Lavender / soft blue tint) -->
                 <rect x="70" y="45" width="530" height="310" fill="#f0f3ff" stroke="none" />
 
-                <!-- Horizontal Grid Lines (Stockout Deficit %: 0% to 100%) -->
+                <!-- Horizontal Grid Lines (Stockout Risk %: 0% to 100%) -->
                 <!-- 100% (y=45) -->
                 <line x1="70" y1="45" x2="600" y2="45" stroke="#c8d2fc" stroke-width="1.0" />
                 <text x="62" y="49" font-size="11" fill="#334155" text-anchor="end" font-weight="600">100%</text>
@@ -2992,14 +3000,14 @@
 
                 <!-- Y-Axis Label -->
                 <text x="-200" y="22" font-size="12" fill="#334155" font-weight="700" transform="rotate(-90)"
-                  text-anchor="middle">stockout_deficit (%)</text>
+                  text-anchor="middle">stockout_risk (%)</text>
                 <!-- X-Axis Label -->
                 <text x="335" y="402" font-size="12" fill="#334155" font-weight="700" text-anchor="middle">SXI</text>
 
                 <!-- Continuous Straight Mustard Gold Correlation Line passing precisely through all 4 points -->
                 <line x1="70" y1="40" x2="600" y2="290" stroke="#ca8a04" stroke-width="2.2" />
 
-                <!-- Cross Mark 1: Current (SXI=6.15, deficit=98.1%) -> Blue Cross -->
+                <!-- Cross Mark 1: Current (SXI=6.15, risk=98.1%) -> Blue Cross -->
                 <g transform="translate(97, 51)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#0000ff" stroke-width="3.2"
                     stroke-linecap="round" />
@@ -3007,7 +3015,7 @@
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross Mark 2: Short-term (SXI=7.00, deficit=78.5%) -> Magenta Cross -->
+                <!-- Cross Mark 2: Short-term (SXI=7.00, risk=78.5%) -> Magenta Cross -->
                 <g transform="translate(247, 112)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#c026d3" stroke-width="3.2"
                     stroke-linecap="round" />
@@ -3015,7 +3023,7 @@
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross Mark 3: Mid-term (SXI=7.85, deficit=54.0%) -> Black Cross -->
+                <!-- Cross Mark 3: Mid-term (SXI=7.85, risk=54.0%) -> Black Cross -->
                 <g transform="translate(397, 188)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#000000" stroke-width="3.2"
                     stroke-linecap="round" />
@@ -3023,7 +3031,7 @@
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross Mark 4: Long-term (SXI=8.70, deficit=29.4%) -> Green Cross -->
+                <!-- Cross Mark 4: Long-term (SXI=8.70, risk=29.4%) -> Green Cross -->
                 <g transform="translate(547, 264)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#15803d" stroke-width="3.2"
                     stroke-linecap="round" />
@@ -3042,7 +3050,7 @@
                     <line x1="-5" y1="-5" x2="5" y2="5" stroke="#0000ff" stroke-width="3" stroke-linecap="round" />
                     <line x1="-5" y1="5" x2="5" y2="-5" stroke="#0000ff" stroke-width="3" stroke-linecap="round" />
                   </g>
-                  <text x="28" y="36" font-size="12" fill="#334155" font-weight="600">Current (98.1% Deficit)</text>
+                  <text x="28" y="36" font-size="12" fill="#334155" font-weight="600">Current (98.1% Risk)</text>
 
                   <!-- 3. Short Term -->
                   <g transform="translate(10, 58)">
@@ -3088,7 +3096,7 @@
                 <span class="level-metric-val">7.00</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected deficit</span>
+                <span class="level-metric-lbl">Projected risk</span>
                 <span class="level-metric-val">78.5%</span>
               </div>
               <div class="level-metric-row">
@@ -3096,8 +3104,8 @@
                 <span class="level-metric-val" style="color: #16a34a;">20.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Short-term:</strong> Checks stock levels against the 13,163-unit Reorder Point and places timely
-                purchase orders to reduce the stockout deficit by 20.0%.
+                <strong>Short-term:</strong> Checks live stock against the 13,163-unit reorder threshold to reduce
+                stockout risk by 20.0%.
               </div>
             </div>
 
@@ -3108,7 +3116,7 @@
                 <span class="level-metric-val">7.85</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected deficit</span>
+                <span class="level-metric-lbl">Projected risk</span>
                 <span class="level-metric-val">54.0%</span>
               </div>
               <div class="level-metric-row">
@@ -3116,8 +3124,8 @@
                 <span class="level-metric-val" style="color: #16a34a;">45.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term:</strong> Factors in the 7-day supplier lead time and adjusts buffer stock across
-                warehouses to achieve a 45.0% deficit reduction.
+                <strong>Mid-term:</strong> Tracks supplier delivery lead times to trigger purchase orders early,
+                reducing stockout risk by 45.0%.
               </div>
             </div>
 
@@ -3128,7 +3136,7 @@
                 <span class="level-metric-val">8.70</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected deficit</span>
+                <span class="level-metric-lbl">Projected risk</span>
                 <span class="level-metric-val">29.4%</span>
               </div>
               <div class="level-metric-row">
@@ -3136,8 +3144,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">70.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term:</strong> Aligns demand and supply across all warehouses to maintain healthy stock
-                buffers and achieve a 70.0% deficit reduction.
+                <strong>Long-term:</strong> Synchronizes purchase reordering with real-time sales demand across all warehouses to cut stockout risk by 70.0%.
               </div>
             </div>
           </div>
@@ -3171,7 +3178,7 @@
                 stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
               </svg>
-              Current Stockout Deficit
+              Current Stockout Risk
             </span>
             <span class="sxi-line-val" style="font-size: 15px; color: #ea580c;">98.1%</span>
           </div>
@@ -3184,7 +3191,7 @@
                 <circle cx="12" cy="12" r="6"></circle>
                 <circle cx="12" cy="12" r="2"></circle>
               </svg>
-              Target Stockout Deficit
+              Target Stockout Risk
             </span>
             <span class="sxi-line-val" style="font-size: 15px; color: #16a34a;">78.5%</span>
           </div>
@@ -3197,7 +3204,7 @@
                 <polyline points="16 12 12 8 8 12"></polyline>
                 <line x1="12" y1="16" x2="12" y2="8"></line>
               </svg>
-              Stockout Deficit Reduction
+              Stockout Risk Reduction
             </span>
             <span class="sxi-line-val" style="font-size: 15px; color: #16a34a;">20.0%</span>
           </div>
@@ -3213,7 +3220,7 @@
             <span
               style="font-size: 13.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 68%;">Current
               stock (248 units) is below the 13,163-unit Reorder Point. Timely purchase order release prevents stockouts
-              and reduces inventory deficit from 98.1% to 78.5%.</span>
+              and reduces stockout risk from 98.1% to 78.5%.</span>
           </div>
         </div>
 
@@ -3305,7 +3312,7 @@
           </div>
         </div>
 
-        <!-- 7b. Prediction Accuracy by Actual Reorder Need Outcome (2-Bar Breakdown & Business Context) -->
+        <!-- 7b. Prediction Accuracy (Unified 4-Bar Graph) -->
         <div class="sxi-white-card" style="margin-top: 18px; margin-bottom: 24px; padding: 22px 24px;">
           <div class="sxi-card-title-row" style="margin-bottom: 6px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
@@ -3314,142 +3321,107 @@
               <line x1="12" y1="20" x2="12" y2="4"></line>
               <line x1="6" y1="20" x2="6" y2="14"></line>
             </svg>
-            <span style="font-size: 16px; font-weight: 700; color: #475569;">Prediction Accuracy by Actual Reorder Need
-              Outcome</span>
+            <span style="font-size: 16px; font-weight: 700; color: #475569;">Prediction Accuracy</span>
           </div>
           <div style="font-size: 13px; color: #64748b; margin-bottom: 18px;">
-            Current Prediction accuracy and future prediction accuracy for both good and bad outcomes
+            Improved model accuracy for identifying when to place a reorder, helping reduce stockout risk.
           </div>
 
-          <!-- 2-Column Grid: Left = Current Model Accuracy (2 Bars), Right = Future Target Accuracy (2 Bars, 99% Target) -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch;">
+          <!-- Single Unified 4-Bar Graph (Current Light vs Future Dark side-by-side) -->
+          <div
+            style="background: #fafcff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+            <svg viewBox="0 0 920 320"
+              style="width: 100%; height: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              <!-- Grid Lines (Y: 0%, 25%, 50%, 75%, 100%) -->
+              <line x1="50" y1="40" x2="870" y2="40" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
+              <text x="42" y="44" font-size="11" font-weight="600" fill="#64748b" text-anchor="end">100%</text>
 
-            <!-- Left: Current Model Accuracy -->
+              <line x1="50" y1="92.5" x2="870" y2="92.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
+              <text x="42" y="96.5" font-size="11" font-weight="600" fill="#64748b" text-anchor="end">75%</text>
+
+              <line x1="50" y1="145" x2="870" y2="145" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
+              <text x="42" y="149" font-size="11" font-weight="600" fill="#64748b" text-anchor="end">50%</text>
+
+              <line x1="50" y1="197.5" x2="870" y2="197.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
+              <text x="42" y="201.5" font-size="11" font-weight="600" fill="#64748b" text-anchor="end">25%</text>
+
+              <line x1="50" y1="250" x2="870" y2="250" stroke="#94a3b8" stroke-width="1.2" />
+              <text x="42" y="254" font-size="11" font-weight="600" fill="#64748b" text-anchor="end">0%</text>
+
+              <!-- GROUP 1: No Reorder Required (Good Outcome) -->
+              <!-- Bar 1: Current Baseline (Light Blue) -->
+              <g>
+                <rect x="160" y="46" width="110" height="204" rx="6" fill="#93c5fd" stroke="#60a5fa"
+                  stroke-width="1.5" />
+                <text x="215" y="145" font-size="21" font-weight="800" fill="#1e40af" text-anchor="middle">97.2%</text>
+                <text x="215" y="268" font-size="11" font-weight="700" fill="#64748b"
+                  text-anchor="middle">Current</text>
+              </g>
+
+              <!-- Bar 2: Future Target (Dark Blue) -->
+              <g>
+                <rect x="286" y="42" width="110" height="208" rx="6" fill="#2563eb" stroke="#1d4ed8"
+                  stroke-width="1.5" />
+                <text x="341" y="145" font-size="21" font-weight="800" fill="#ffffff" text-anchor="middle">99.0%</text>
+                <text x="341" y="268" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle">Future
+                  Target</text>
+              </g>
+
+              <!-- Group 1 Category Label -->
+              <text x="278" y="294" font-size="14.5" font-weight="800" fill="#0f172a" text-anchor="middle">No Reorder
+                Required</text>
+
+              <!-- Group Divider Line -->
+              <line x1="460" y1="40" x2="460" y2="280" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4 4" />
+
+              <!-- GROUP 2: Reorder Required (Bad / Action Outcome) -->
+              <!-- Bar 3: Current Baseline (Light Green) -->
+              <g>
+                <rect x="524" y="47" width="110" height="203" rx="6" fill="#86efac" stroke="#4ade80"
+                  stroke-width="1.5" />
+                <text x="579" y="145" font-size="21" font-weight="800" fill="#166534" text-anchor="middle">96.5%</text>
+                <text x="579" y="268" font-size="11" font-weight="700" fill="#64748b"
+                  text-anchor="middle">Current</text>
+              </g>
+
+              <!-- Bar 4: Future Target (Dark Green) -->
+              <g>
+                <rect x="650" y="42" width="110" height="208" rx="6" fill="#16a34a" stroke="#15803d"
+                  stroke-width="1.5" />
+                <text x="705" y="145" font-size="21" font-weight="800" fill="#ffffff" text-anchor="middle">99.0%</text>
+                <text x="705" y="268" font-size="11" font-weight="700" fill="#16a34a" text-anchor="middle">Future
+                  Target</text>
+              </g>
+
+              <!-- Group 2 Category Label -->
+              <text x="642" y="294" font-size="14.5" font-weight="800" fill="#0f172a" text-anchor="middle">Reorder
+                Required</text>
+            </svg>
+
+            <!-- Legend underneath -->
             <div
-              style="background: #fafcff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px 18px; display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="font-size: 14.5px; font-weight: 800; color: #0f172a;">Current Model Accuracy</span>
+              style="display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-top: 14px; font-size: 12px; font-weight: 600;">
+              <div style="display: flex; align-items: center; gap: 7px;">
                 <span
-                  style="font-size: 11px; font-weight: 700; color: #2563eb; background: #eff6ff; padding: 3px 8px; border-radius: 4px; border: 1px solid #bfdbfe;">Current
-                  Baseline</span>
+                  style="width: 13px; height: 13px; background: #93c5fd; border: 1.5px solid #60a5fa; border-radius: 3px; display: inline-block;"></span>
+                <span style="color: #334155;">Current — No Reorder (97.2%)</span>
               </div>
-              <svg viewBox="0 0 500 270"
-                style="width: 100%; height: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                <!-- Grid Lines (Y: 0%, 25%, 50%, 75%, 100%) -->
-                <line x1="45" y1="30" x2="475" y2="30" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="34" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">100%</text>
-
-                <line x1="45" y1="77.5" x2="475" y2="77.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="81.5" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">75%</text>
-
-                <line x1="45" y1="125" x2="475" y2="125" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="129" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">50%</text>
-
-                <line x1="45" y1="172.5" x2="475" y2="172.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="176.5" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">25%</text>
-
-                <line x1="45" y1="220" x2="475" y2="220" stroke="#94a3b8" stroke-width="1.2" />
-                <text x="38" y="224" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">0%</text>
-
-                <!-- BAR 1: reorder_Not_Required — 97.2% -> Height 185px -> Y = 35 -->
-                <g>
-                  <rect x="75" y="35" width="150" height="185" rx="6" fill="#2563eb" />
-                  <text x="150" y="132" font-size="20" font-weight="800" fill="#ffffff"
-                    text-anchor="middle">97.2%</text>
-                </g>
-
-                <!-- BAR 2: reorder_Required — 96.5% -> Height 183px -> Y = 37 -->
-                <g>
-                  <rect x="275" y="37" width="150" height="183" rx="6" fill="#16a34a" />
-                  <text x="350" y="132" font-size="20" font-weight="800" fill="#ffffff"
-                    text-anchor="middle">96.5%</text>
-                </g>
-
-                <!-- X-Axis Labels -->
-                <text x="150" y="246" font-size="12.5" font-weight="700" fill="#1e293b"
-                  text-anchor="middle">reorder_Not_Required</text>
-                <text x="350" y="246" font-size="12.5" font-weight="700" fill="#1e293b"
-                  text-anchor="middle">reorder_Required</text>
-              </svg>
-
-              <div
-                style="display: flex; justify-content: center; gap: 20px; margin-top: 8px; font-size: 11.5px; font-weight: 600;">
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span
-                    style="width: 12px; height: 12px; background: #2563eb; border-radius: 3px; display: inline-block;"></span>
-                  <span style="color: #1e293b;">reorder_Not_Required</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span
-                    style="width: 12px; height: 12px; background: #16a34a; border-radius: 3px; display: inline-block;"></span>
-                  <span style="color: #1e293b;">reorder_Required</span>
-                </div>
+              <div style="display: flex; align-items: center; gap: 7px;">
+                <span
+                  style="width: 13px; height: 13px; background: #2563eb; border: 1.5px solid #1d4ed8; border-radius: 3px; display: inline-block;"></span>
+                <span style="color: #1e40af; font-weight: 700;">Target — No Reorder (99.0%)</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 7px;">
+                <span
+                  style="width: 13px; height: 13px; background: #86efac; border: 1.5px solid #4ade80; border-radius: 3px; display: inline-block;"></span>
+                <span style="color: #334155;">Current — Reorder Required (96.5%)</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 7px;">
+                <span
+                  style="width: 13px; height: 13px; background: #16a34a; border: 1.5px solid #15803d; border-radius: 3px; display: inline-block;"></span>
+                <span style="color: #166534; font-weight: 700;">Target — Reorder Required (99.0%)</span>
               </div>
             </div>
-
-            <!-- Right: Future Target Model Accuracy (99% Target) -->
-            <div
-              style="background: #fafcff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px 18px; display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="font-size: 14.5px; font-weight: 800; color: #0f172a;">Future Target Improvement Potential</span>
-                <span
-                  style="font-size: 11px; font-weight: 700; color: #16a34a; background: #f0fdf4; padding: 3px 8px; border-radius: 4px; border: 1px solid #bbf7d0;">99.0%
-                  Target Goal</span>
-              </div>
-              <svg viewBox="0 0 500 270"
-                style="width: 100%; height: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                <!-- Grid Lines (Y: 0%, 25%, 50%, 75%, 100%) -->
-                <line x1="45" y1="30" x2="475" y2="30" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="34" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">100%</text>
-
-                <line x1="45" y1="77.5" x2="475" y2="77.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="81.5" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">75%</text>
-
-                <line x1="45" y1="125" x2="475" y2="125" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="129" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">50%</text>
-
-                <line x1="45" y1="172.5" x2="475" y2="172.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="176.5" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">25%</text>
-
-                <line x1="45" y1="220" x2="475" y2="220" stroke="#94a3b8" stroke-width="1.2" />
-                <text x="38" y="224" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">0%</text>
-
-                <!-- BAR 1: reorder_Not_Required — 99.0% -> Light Blue -->
-                <g>
-                  <rect x="75" y="32" width="150" height="188" rx="6" fill="#93c5fd" stroke="#60a5fa" stroke-width="1.5" />
-                  <text x="150" y="132" font-size="20" font-weight="800" fill="#1e40af"
-                    text-anchor="middle">99.0%</text>
-                </g>
-
-                <!-- BAR 2: reorder_Required — 99.0% -> Light Green -->
-                <g>
-                  <rect x="275" y="32" width="150" height="188" rx="6" fill="#86efac" stroke="#4ade80" stroke-width="1.5" />
-                  <text x="350" y="132" font-size="20" font-weight="800" fill="#166534"
-                    text-anchor="middle">99.0%</text>
-                </g>
-
-                <!-- X-Axis Labels -->
-                <text x="150" y="246" font-size="12.5" font-weight="700" fill="#1e293b"
-                  text-anchor="middle">reorder_Not_Required</text>
-                <text x="350" y="246" font-size="12.5" font-weight="700" fill="#1e293b"
-                  text-anchor="middle">reorder_Required</text>
-              </svg>
-
-              <div
-                style="display: flex; justify-content: center; gap: 20px; margin-top: 8px; font-size: 11.5px; font-weight: 600;">
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span
-                    style="width: 12px; height: 12px; background: #93c5fd; border: 1px solid #60a5fa; border-radius: 3px; display: inline-block;"></span>
-                  <span style="color: #1e293b;">reorder_Not_Required</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span
-                    style="width: 12px; height: 12px; background: #86efac; border: 1px solid #4ade80; border-radius: 3px; display: inline-block;"></span>
-                  <span style="color: #1e293b;">reorder_Required</span>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
 
@@ -3936,55 +3908,59 @@
           <!-- Feature Importance card -->
           <div class="sxi-white-card"
             style="padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between;">
-            <div>
-              <div class="sxi-card-title-row" style="margin-bottom: 14px;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                  stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
-                  <line x1="4" y1="22" x2="4" y2="15"></line>
-                </svg>
-                <span style="font-size: 16px; font-weight: 700; color: #475569;">Feature Importance — Top 5
-                  Drivers</span>
-              </div>
-              <table class="feature-table">
+            <div class="sxi-card-title-row" style="margin-bottom: 14px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                <line x1="4" y1="22" x2="4" y2="15"></line>
+              </svg>
+              <span style="font-size: 16px; font-weight: 700; color: #475569;">Feature Importance — Top 5 Drivers</span>
+            </div>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+              <table class="feature-table" style="height: 100%; flex: 1; width: 100%;">
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>Feature</th>
-                    <th>Importance</th>
-                    <th>Contribution %</th>
+                    <th style="padding: 16px 12px;">#</th>
+                    <th style="padding: 16px 12px;">Feature</th>
+                    <th style="padding: 16px 12px;">Importance</th>
+                    <th style="padding: 16px 12px;">Contribution %</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td class="feat-rank">1</td>
-                    <td class="feat-name">Current Warehouse Stock-on-Hand</td>
-                    <td class="feat-score">38.20</td>
-                    <td class="feat-pct">38.2%</td>
+                    <td class="feat-rank" style="padding: 24px 12px;">1</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Current Warehouse Stock-on-Hand</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">38.20</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">38.2%</span></td>
                   </tr>
                   <tr>
-                    <td class="feat-rank">2</td>
-                    <td class="feat-name">Daily Sales Burn Velocity</td>
-                    <td class="feat-score">26.40</td>
-                    <td class="feat-pct">26.4%</td>
+                    <td class="feat-rank" style="padding: 24px 12px;">2</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Daily Sales Burn Velocity</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">26.40</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">26.4%</span></td>
                   </tr>
                   <tr>
-                    <td class="feat-rank">3</td>
-                    <td class="feat-name">Supplier Delivery Lead Time Days</td>
-                    <td class="feat-score">17.50</td>
-                    <td class="feat-pct">17.5%</td>
+                    <td class="feat-rank" style="padding: 24px 12px;">3</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Supplier Delivery Lead Time Days</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">17.50</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">17.5%</span></td>
                   </tr>
                   <tr>
-                    <td class="feat-rank">4</td>
-                    <td class="feat-name">In-Transit Open Purchase Order Volume</td>
-                    <td class="feat-score">11.80</td>
-                    <td class="feat-pct">11.8%</td>
+                    <td class="feat-rank" style="padding: 24px 12px;">4</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">In-Transit Open Purchase Order Volume</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">11.80</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">11.8%</span></td>
                   </tr>
                   <tr>
-                    <td class="feat-rank">5</td>
-                    <td class="feat-name">Promotional Demand Multiplier Index</td>
-                    <td class="feat-score">6.10</td>
-                    <td class="feat-pct">6.1%</td>
+                    <td class="feat-rank" style="padding: 24px 12px;">5</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Promotional Demand Multiplier Index</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">6.10</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">6.1%</span></td>
                   </tr>
                 </tbody>
               </table>
@@ -4016,16 +3992,16 @@
               <li><strong>Supplier Delivery Lead Time Days:</strong> A 7-day supplier waiting window requires
                 maintaining a dedicated buffer of 13,163 units.</li>
             </ul>
-            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Release automated
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Release scheduled
               replenishment purchase orders (13,150 units) immediately whenever warehouse inventory touches the Reorder
               Point.</p>
             <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Before stock
               depletes, the procurement team should validate inventory levels against ROP, confirm lead-time demand, and
               release PO batches without manual reorder delays.</p>
-            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Automated Replenishment
-              Trigger &mdash; Create an automated workflow that continuously checks live stock against ROP (13,163
-              units) and auto-releases purchase order batches. This reduces stockout deficit from 98.1% down to 78.5% (a
-              20.0% deficit reduction).</p>
+            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Proactive Replenishment
+              Trigger &mdash; Create a dedicated workflow that continuously checks live stock against ROP (13,163
+              units) and promptly releases purchase order batches. This reduces stockout risk from 98.1% down to 78.5% (a
+              20.0% risk reduction).</p>
           </div>
         </div>
 
@@ -4116,7 +4092,8 @@
           <div class="hero-header-flex">
             <div>
               <h1 class="hero-title">Reduce Single-Source Supply Risk</h1>
-              <p class="hero-subtitle">Reduces single-source disruption risk from 35.0% down to 28.0% by qualifying top vendors and enforcing a 70/30 dual-sourcing split.</p>
+              <p class="hero-subtitle">Reduces single-source disruption risk from 35.0% down to 28.0% by qualifying top
+                vendors and enforcing a 70/30 dual-sourcing split.</p>
             </div>
             <div class="hero-targets-stack">
               <div class="hero-target-pill">
@@ -4693,7 +4670,7 @@
           </div>
         </div>
 
-        <!-- 7b. Prediction Accuracy by Actual Supplier Risk Outcome (2-Bar Breakdown & Business Context) -->
+        <!-- 7b. Prediction Accuracy (Unified 4-Bar Graph) -->
         <div class="sxi-white-card" style="margin-top: 18px; margin-bottom: 24px; padding: 22px 24px;">
           <div class="sxi-card-title-row" style="margin-bottom: 6px;">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
@@ -4702,142 +4679,108 @@
               <line x1="12" y1="20" x2="12" y2="4"></line>
               <line x1="6" y1="20" x2="6" y2="14"></line>
             </svg>
-            <span style="font-size: 16px; font-weight: 700; color: #475569;">Prediction Accuracy by Actual Supplier
-              Outcome</span>
+            <span style="font-size: 16px; font-weight: 700; color: #475569;">Prediction Accuracy</span>
           </div>
           <div style="font-size: 13px; color: #64748b; margin-bottom: 18px;">
-            Current Prediction accuracy and future prediction accuracy for both good and bad outcomes
+            Improved model accuracy for identifying preferred backup suppliers, helping reduce single-source supply
+            risk.
           </div>
 
-          <!-- 2-Column Grid: Left = Current Model Accuracy (2 Bars), Right = Future Target Accuracy (2 Bars, 99% Target) -->
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: stretch;">
+          <!-- Single Unified 4-Bar Graph (Current Light vs Future Dark side-by-side) -->
+          <div
+            style="background: #fafcff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 22px 20px; display: flex; flex-direction: column; justify-content: space-between;">
+            <svg viewBox="0 0 920 320"
+              style="width: 100%; height: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              <!-- Grid Lines (Y: 0%, 25%, 50%, 75%, 100%) -->
+              <line x1="50" y1="40" x2="870" y2="40" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
+              <text x="42" y="44" font-size="11" font-weight="600" fill="#64748b" text-anchor="end">100%</text>
 
-            <!-- Left: Current Model Accuracy -->
+              <line x1="50" y1="92.5" x2="870" y2="92.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
+              <text x="42" y="96.5" font-size="11" font-weight="600" fill="#64748b" text-anchor="end">75%</text>
+
+              <line x1="50" y1="145" x2="870" y2="145" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
+              <text x="42" y="149" font-size="11" font-weight="600" fill="#64748b" text-anchor="end">50%</text>
+
+              <line x1="50" y1="197.5" x2="870" y2="197.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
+              <text x="42" y="201.5" font-size="11" font-weight="600" fill="#64748b" text-anchor="end">25%</text>
+
+              <line x1="50" y1="250" x2="870" y2="250" stroke="#94a3b8" stroke-width="1.2" />
+              <text x="42" y="254" font-size="11" font-weight="600" fill="#64748b" text-anchor="end">0%</text>
+
+              <!-- GROUP 1: Preferred Supplier (Good Outcome) -->
+              <!-- Bar 1: Current Baseline (Light Green) -->
+              <g>
+                <rect x="160" y="56" width="110" height="194" rx="6" fill="#86efac" stroke="#4ade80"
+                  stroke-width="1.5" />
+                <text x="215" y="145" font-size="21" font-weight="800" fill="#166534" text-anchor="middle">92.5%</text>
+                <text x="215" y="268" font-size="11" font-weight="700" fill="#64748b"
+                  text-anchor="middle">Current</text>
+              </g>
+
+              <!-- Bar 2: Future Target (Dark Green) -->
+              <g>
+                <rect x="286" y="42" width="110" height="208" rx="6" fill="#16a34a" stroke="#15803d"
+                  stroke-width="1.5" />
+                <text x="341" y="145" font-size="21" font-weight="800" fill="#ffffff" text-anchor="middle">99.0%</text>
+                <text x="341" y="268" font-size="11" font-weight="700" fill="#16a34a" text-anchor="middle">Future
+                  Target</text>
+              </g>
+
+              <!-- Group 1 Category Label -->
+              <text x="278" y="294" font-size="14.5" font-weight="800" fill="#0f172a" text-anchor="middle">Preferred
+                Supplier</text>
+
+              <!-- Group Divider Line -->
+              <line x1="460" y1="40" x2="460" y2="280" stroke="#e2e8f0" stroke-width="1.2" stroke-dasharray="4 4" />
+
+              <!-- GROUP 2: Not a Preferred Supplier (Action Outcome) -->
+              <!-- Bar 3: Current Baseline (Light Blue) -->
+              <g>
+                <rect x="524" y="55" width="110" height="195" rx="6" fill="#93c5fd" stroke="#60a5fa"
+                  stroke-width="1.5" />
+                <text x="579" y="145" font-size="21" font-weight="800" fill="#1e40af" text-anchor="middle">92.8%</text>
+                <text x="579" y="268" font-size="11" font-weight="700" fill="#64748b"
+                  text-anchor="middle">Current</text>
+              </g>
+
+              <!-- Bar 4: Future Target (Dark Blue) -->
+              <g>
+                <rect x="650" y="42" width="110" height="208" rx="6" fill="#2563eb" stroke="#1d4ed8"
+                  stroke-width="1.5" />
+                <text x="705" y="145" font-size="21" font-weight="800" fill="#ffffff" text-anchor="middle">99.0%</text>
+                <text x="705" y="268" font-size="11" font-weight="700" fill="#2563eb" text-anchor="middle">Future
+                  Target</text>
+              </g>
+
+              <!-- Group 2 Category Label -->
+              <text x="642" y="294" font-size="14.5" font-weight="800" fill="#0f172a" text-anchor="middle">Not a
+                Preferred Supplier</text>
+            </svg>
+
+            <!-- Legend underneath -->
             <div
-              style="background: #fafcff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px 18px; display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="font-size: 14.5px; font-weight: 800; color: #0f172a;">Current Model Accuracy</span>
+              style="display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-top: 14px; font-size: 12px; font-weight: 600;">
+              <div style="display: flex; align-items: center; gap: 7px;">
                 <span
-                  style="font-size: 11px; font-weight: 700; color: #2563eb; background: #eff6ff; padding: 3px 8px; border-radius: 4px; border: 1px solid #bfdbfe;">Current
-                  Baseline</span>
+                  style="width: 13px; height: 13px; background: #86efac; border: 1.5px solid #4ade80; border-radius: 3px; display: inline-block;"></span>
+                <span style="color: #334155;">Current — Preferred (92.5%)</span>
               </div>
-              <svg viewBox="0 0 500 270"
-                style="width: 100%; height: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                <!-- Grid Lines (Y: 0%, 25%, 50%, 75%, 100%) -->
-                <line x1="45" y1="30" x2="475" y2="30" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="34" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">100%</text>
-
-                <line x1="45" y1="77.5" x2="475" y2="77.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="81.5" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">75%</text>
-
-                <line x1="45" y1="125" x2="475" y2="125" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="129" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">50%</text>
-
-                <line x1="45" y1="172.5" x2="475" y2="172.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="176.5" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">25%</text>
-
-                <line x1="45" y1="220" x2="475" y2="220" stroke="#94a3b8" stroke-width="1.2" />
-                <text x="38" y="224" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">0%</text>
-
-                <!-- BAR 1: Preferred Supplier — 92.5% -> Height 176px -> Y = 44 -->
-                <g>
-                  <rect x="75" y="44" width="150" height="176" rx="6" fill="#16a34a" />
-                  <text x="150" y="132" font-size="20" font-weight="800" fill="#ffffff"
-                    text-anchor="middle">92.5%</text>
-                </g>
-
-                <!-- BAR 2: Not a Preferred Supplier — 92.8% -> Height 176px -> Y = 44 -->
-                <g>
-                  <rect x="275" y="44" width="150" height="176" rx="6" fill="#2563eb" />
-                  <text x="350" y="132" font-size="20" font-weight="800" fill="#ffffff"
-                    text-anchor="middle">92.8%</text>
-                </g>
-
-                <!-- X-Axis Labels -->
-                <text x="150" y="246" font-size="12.5" font-weight="700" fill="#1e293b"
-                  text-anchor="middle">Preferred Supplier</text>
-                <text x="350" y="246" font-size="12.5" font-weight="700" fill="#1e293b"
-                  text-anchor="middle">Not a Preferred Supplier</text>
-              </svg>
-
-              <div
-                style="display: flex; justify-content: center; gap: 20px; margin-top: 8px; font-size: 11.5px; font-weight: 600;">
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span
-                    style="width: 12px; height: 12px; background: #16a34a; border-radius: 3px; display: inline-block;"></span>
-                  <span style="color: #1e293b;">Preferred Supplier</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span
-                    style="width: 12px; height: 12px; background: #2563eb; border-radius: 3px; display: inline-block;"></span>
-                  <span style="color: #1e293b;">Not a Preferred Supplier</span>
-                </div>
+              <div style="display: flex; align-items: center; gap: 7px;">
+                <span
+                  style="width: 13px; height: 13px; background: #16a34a; border: 1.5px solid #15803d; border-radius: 3px; display: inline-block;"></span>
+                <span style="color: #166534; font-weight: 700;">Target — Preferred (99.0%)</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 7px;">
+                <span
+                  style="width: 13px; height: 13px; background: #93c5fd; border: 1.5px solid #60a5fa; border-radius: 3px; display: inline-block;"></span>
+                <span style="color: #334155;">Current — Not Preferred (92.8%)</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 7px;">
+                <span
+                  style="width: 13px; height: 13px; background: #2563eb; border: 1.5px solid #1d4ed8; border-radius: 3px; display: inline-block;"></span>
+                <span style="color: #1e40af; font-weight: 700;">Target — Not Preferred (99.0%)</span>
               </div>
             </div>
-
-            <!-- Right: Future Target Model Accuracy (99% Target) -->
-            <div
-              style="background: #fafcff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px 18px; display: flex; flex-direction: column; justify-content: space-between;">
-              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
-                <span style="font-size: 14.5px; font-weight: 800; color: #0f172a;">Future Target Improvement Potential</span>
-                <span
-                  style="font-size: 11px; font-weight: 700; color: #16a34a; background: #f0fdf4; padding: 3px 8px; border-radius: 4px; border: 1px solid #bbf7d0;">99.0%
-                  Target Goal</span>
-              </div>
-              <svg viewBox="0 0 500 270"
-                style="width: 100%; height: auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-                <!-- Grid Lines (Y: 0%, 25%, 50%, 75%, 100%) -->
-                <line x1="45" y1="30" x2="475" y2="30" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="34" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">100%</text>
-
-                <line x1="45" y1="77.5" x2="475" y2="77.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="81.5" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">75%</text>
-
-                <line x1="45" y1="125" x2="475" y2="125" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="129" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">50%</text>
-
-                <line x1="45" y1="172.5" x2="475" y2="172.5" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3" />
-                <text x="38" y="176.5" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">25%</text>
-
-                <line x1="45" y1="220" x2="475" y2="220" stroke="#94a3b8" stroke-width="1.2" />
-                <text x="38" y="224" font-size="10" font-weight="600" fill="#64748b" text-anchor="end">0%</text>
-
-                <!-- BAR 1: Preferred Supplier — 99.0% -> Light Green -->
-                <g>
-                  <rect x="75" y="32" width="150" height="188" rx="6" fill="#86efac" stroke="#4ade80" stroke-width="1.5" />
-                  <text x="150" y="132" font-size="20" font-weight="800" fill="#166534"
-                    text-anchor="middle">99.0%</text>
-                </g>
-
-                <!-- BAR 2: Not a Preferred Supplier — 99.0% -> Light Blue -->
-                <g>
-                  <rect x="275" y="32" width="150" height="188" rx="6" fill="#93c5fd" stroke="#60a5fa" stroke-width="1.5" />
-                  <text x="350" y="132" font-size="20" font-weight="800" fill="#1e40af"
-                    text-anchor="middle">99.0%</text>
-                </g>
-
-                <!-- X-Axis Labels -->
-                <text x="150" y="246" font-size="12.5" font-weight="700" fill="#1e293b"
-                  text-anchor="middle">Preferred Supplier</text>
-                <text x="350" y="246" font-size="12.5" font-weight="700" fill="#1e293b"
-                  text-anchor="middle">Not a Preferred Supplier</text>
-              </svg>
-
-              <div
-                style="display: flex; justify-content: center; gap: 20px; margin-top: 8px; font-size: 11.5px; font-weight: 600;">
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span
-                    style="width: 12px; height: 12px; background: #86efac; border: 1px solid #4ade80; border-radius: 3px; display: inline-block;"></span>
-                  <span style="color: #1e293b;">Preferred Supplier</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 6px;">
-                  <span
-                    style="width: 12px; height: 12px; background: #93c5fd; border: 1px solid #60a5fa; border-radius: 3px; display: inline-block;"></span>
-                  <span style="color: #1e293b;">Not a Preferred Supplier</span>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
 
@@ -5309,13 +5252,13 @@
                 <li>
                   <strong style="color: #1e40af;">Unit Price Quote Competitiveness &le; $3.80 (27.1% Driver):</strong>
                   Uncompetitive vendor unit quotes erode gross margins by over 8%.
-                  <strong>Recommendation:</strong> Cap purchase orders at $3.76/unit using automated volume-discount
+                  <strong>Recommendation:</strong> Cap purchase orders at $3.76/unit using contracted volume-discount
                   tier benchmarks.
                 </li>
                 <li>
                   <strong style="color: #1e40af;">Quality Scrap &amp; Defect Rate &le; 1.8% (18.2% Driver):</strong>
                   Defective raw material batches cause manufacturing downtime and rework costs.
-                  <strong>Recommendation:</strong> Require automated supplier pre-shipment quality certificates on all
+                  <strong>Recommendation:</strong> Require verified supplier pre-shipment quality certificates on all
                   purchase order lines.
                 </li>
               </ul>
@@ -5595,7 +5538,7 @@
         <div class="sxi-build-card">
           <div class="sxi-build-left">
             <div class="sxi-build-badge">Target Improvement (Build)</div>
-            <div class="sxi-build-headline">+23.5% Automated Audit Compliance</div>
+            <div class="sxi-build-headline">+23.5% Audit Compliance Rate</div>
             <div class="sxi-build-desc">
               Build target improvement validates is_po_compliant across all 5 commercial gates — achieving 100% audit
               approval and locking in $32,665.50 in gross margin after 3 months.
@@ -5982,57 +5925,65 @@
             </div>
           </div>
 
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
+          <div class="sxi-white-card"
+            style="padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div class="sxi-card-title-row" style="margin-bottom: 14px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
                 <line x1="4" y1="22" x2="4" y2="15"></line>
               </svg>
-              <span>Feature Importance — Top 5 Drivers</span>
+              <span style="font-size: 16px; font-weight: 700; color: #475569;">Feature Importance — Top 5 Drivers</span>
             </div>
-            <table class="feature-table">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Feature</th>
-                  <th>Importance</th>
-                  <th>Contribution %</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="feat-rank">1</td>
-                  <td class="feat-name">Supplier MOQ & Package Batch Compliance</td>
-                  <td class="feat-score">37.80</td>
-                  <td class="feat-pct">37.8%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">2</td>
-                  <td class="feat-name">Gross Margin Minimum Floor Realization</td>
-                  <td class="feat-score">29.20</td>
-                  <td class="feat-pct">29.2%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">3</td>
-                  <td class="feat-name">Vendor Active Contract Master Status</td>
-                  <td class="feat-score">18.10</td>
-                  <td class="feat-pct">18.1%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">4</td>
-                  <td class="feat-name">Delivery Lead Time Window Feasibility</td>
-                  <td class="feat-score">9.50</td>
-                  <td class="feat-pct">9.5%</td>
-                </tr>
-                <tr>
-                  <td class="feat-rank">5</td>
-                  <td class="feat-name">Credit Terms & Commercial Liability Limit</td>
-                  <td class="feat-score">5.40</td>
-                  <td class="feat-pct">5.4%</td>
-                </tr>
-              </tbody>
-            </table>
+            <div style="flex: 1; display: flex; flex-direction: column;">
+              <table class="feature-table" style="height: 100%; flex: 1; width: 100%;">
+                <thead>
+                  <tr>
+                    <th style="padding: 16px 12px;">#</th>
+                    <th style="padding: 16px 12px;">Feature</th>
+                    <th style="padding: 16px 12px;">Importance</th>
+                    <th style="padding: 16px 12px;">Contribution %</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">1</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Supplier MOQ &amp; Package Batch Compliance</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">37.80</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">37.8%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">2</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Gross Margin Minimum Floor Realization</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">29.20</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">29.2%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">3</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Vendor Active Contract Master Status</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">18.10</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">18.1%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">4</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Delivery Lead Time Window Feasibility</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">9.50</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">9.5%</span></td>
+                  </tr>
+                  <tr>
+                    <td class="feat-rank" style="padding: 24px 12px;">5</td>
+                    <td class="feat-name" style="padding: 24px 12px; font-size: 13.5px;">Credit Terms &amp; Commercial Liability Limit</td>
+                    <td class="feat-score" style="padding: 24px 12px; font-size: 14px;">5.40</td>
+                    <td class="feat-pct" style="padding: 24px 12px;"><span
+                        style="color:#2563eb; font-weight:700; font-size: 14px;">5.4%</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
 
@@ -6060,14 +6011,14 @@
               <li><strong>Vendor Active Contract Master Status:</strong> Inactive or unverified suppliers cause severe
                 ERP release holds and invoice matching failures.</li>
             </ul>
-            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Implement automated 5-gate
-              commercial pre-audit checks to auto-validate MOQ, margin floors (&ge;35%), and supplier master active
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Implement 5-gate
+              commercial pre-audit checks to validate MOQ, margin floors (&ge;35%), and supplier master active
               status before ERP release.</p>
             <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Directly screen
               PO lines against MOQ packaging rules and contractual margin thresholds, routing non-compliant lines for
               instant resolution.</p>
-            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Autonomous ERP Commercial
-              Audit Gate &mdash; Deploy an end-to-end automated compliance validation pipeline that screens purchase
+            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Commercial Audit
+              Gate &mdash; Deploy an end-to-end compliance validation pipeline that screens purchase
               orders across 5 commercial gates. This increases PO audit pass rate from 76.5% up to 100.0% (a 23.5%
               compliance lift).</p>
           </div>
