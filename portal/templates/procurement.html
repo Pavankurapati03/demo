@@ -2323,13 +2323,13 @@
                 <span class="level-metric-val" style="color: #16a34a;">7.6%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Short-term improvement:</strong> Enforces standard discount brackets across primary vendors to
+                <strong>Short-term reduction:</strong> Enforces standard discount brackets across primary vendors to
                 lower procurement cost variance from 22.5% to 20.8%.
               </div>
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Medium-term</span>
+              <span class="level-col-name">Mid-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.85</span>
@@ -2343,7 +2343,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">14.7%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Medium-term improvement:</strong> Consolidates multi-category purchase schedules across
+                <strong>Mid-term reduction:</strong> Consolidates multi-category purchase schedules across
                 Distribution Centers to secure full truckload discount tiers.
               </div>
             </div>
@@ -2363,7 +2363,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">20.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term improvement:</strong> Automates contractual rebate tracking and volume tiering across
+                <strong>Long-term reduction:</strong> Automates contractual rebate tracking and volume tiering across
                 all 14,235 purchase orders, reaching target 18.0% variance.
               </div>
             </div>
@@ -2635,52 +2635,52 @@
           </div>
         </div>
 
-        <!-- 9. Model Performance Box (5 Metrics Matching Golden Standard) -->
+        <!-- 9. Model Performance Box (Matching Reference Layout) -->
         <div class="sxi-white-card" style="margin-top: 18px; margin-bottom: 24px; padding: 22px 24px;">
-          <div class="sxi-card-title-row" style="margin-bottom: 14px;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+          <div class="sxi-card-title-row" style="margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
               <path d="M2 17l10 5 10-5"></path>
               <path d="M2 12l10 5 10-5"></path>
             </svg>
-            <span style="font-size: 16px; font-weight: 700; color: #475569;">Model Performance</span>
+            <span style="font-size: 15px; font-weight: 700; color: #475569;">Model Performance</span>
           </div>
-          <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 14px;">
-            <div
-              style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; text-align: center;">
-              <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Accuracy
-                (100-WMAPE)</span>
-              <span style="font-size: 22px; font-weight: 800; color: #2563eb;">94.6%</span>
+          <div>
+            <div class="sxi-metric-line" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
+              <div>
+                <div style="font-weight: 600; color: #1e293b; font-size: 13.5px;">Accuracy (Score Precision)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">About 95 out of 100 vendor price quotes are close enough to use for contract review.</div>
+              </div>
+              <span style="font-weight: 700; color: #16a34a; font-size: 15px;">94.6%</span>
             </div>
-            <div
-              style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; text-align: center;">
-              <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Correlation
-                (R²)</span>
-              <span style="font-size: 22px; font-weight: 800; color: #059669;">0.884</span>
+            <div class="sxi-metric-line" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
+              <div>
+                <div style="font-weight: 600; color: #1e293b; font-size: 13.5px;">Correlation (R²)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">88.4% of real-world purchase price movement is captured by the model.</div>
+              </div>
+              <span style="font-weight: 700; color: #2563eb; font-size: 15px;">0.88</span>
             </div>
-            <div
-              style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; text-align: center;">
-              <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Mean
-                Absolute Error</span>
-              <span style="font-size: 22px; font-weight: 800; color: #7c3aed;">±$0.12</span>
+            <div class="sxi-metric-line" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
+              <div>
+                <div style="font-weight: 600; color: #1e293b; font-size: 13.5px;">Mean Absolute Error (MAE)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">The typical miss is only ±$0.12 per unit from the actual contract price.</div>
+              </div>
+              <span style="font-weight: 700; color: #0f172a; font-size: 15px;">±$0.12</span>
             </div>
-            <div
-              style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; text-align: center;">
-              <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Root
-                Mean Squared Error</span>
-              <span style="font-size: 22px; font-weight: 800; color: #ea580c;">$0.18</span>
+            <div class="sxi-metric-line" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f1f5f9;">
+              <div>
+                <div style="font-weight: 600; color: #1e293b; font-size: 13.5px;">Root Mean Squared Error (RMSE)</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">Larger misses stay around $0.18, so extreme price swings are limited.</div>
+              </div>
+              <span style="font-weight: 700; color: #0f172a; font-size: 15px;">$0.18</span>
             </div>
-            <div
-              style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px 16px; text-align: center;">
-              <span
-                style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 4px;">Pearson
-                Correlation</span>
-              <span style="font-size: 22px; font-weight: 800; color: #0891b2;">0.941</span>
+            <div class="sxi-metric-line" style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: none;">
+              <div>
+                <div style="font-weight: 600; color: #1e293b; font-size: 13.5px;">Within ±10%</div>
+                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">91.4% of predicted unit prices stay within 10% of the actual unit price.</div>
+              </div>
+              <span style="font-weight: 700; color: #0f172a; font-size: 15px;">91.4%</span>
             </div>
           </div>
         </div>
@@ -2735,7 +2735,7 @@
           <div class="hero-header-flex">
             <div>
               <h1 class="hero-title">Reduce Inventory Stockout Risk</h1>
-              <p class="hero-subtitle">Reduce inventory stockout risk by 20.0% from 98.1% to 78.5% by validating
+              <p class="hero-subtitle">Reduce inventory stockout risk by 20.0% from 4.8% to 3.8% by validating
                 replenishment decisions against the 13,163-unit Reorder Point (ROP).</p>
             </div>
             <div class="hero-targets-stack">
@@ -2802,7 +2802,7 @@
           <div class="sxi-kpi-top-card border-orange">
             <div class="sxi-kpi-icon-pill pill-orange">📦</div>
             <span class="sxi-kpi-title-sub">Current Stock on Hand</span>
-            <span class="sxi-kpi-main-val" style="color: #dc2626;">248 units</span>
+            <span class="sxi-kpi-main-val" style="color: #059669;">14,280 units</span>
           </div>
           <div class="sxi-kpi-top-card border-blue">
             <div class="sxi-kpi-icon-pill pill-blue">⏱️</div>
@@ -2817,7 +2817,7 @@
           <div class="sxi-kpi-top-card border-orange">
             <div class="sxi-kpi-icon-pill pill-orange">⚠️</div>
             <span class="sxi-kpi-title-sub">Current Stockout Risk vs ROP</span>
-            <span class="sxi-kpi-main-val" style="color: #ea580c;">98.1%</span>
+            <span class="sxi-kpi-main-val" style="color: #ea580c;">4.8%</span>
           </div>
         </div>
 
@@ -2827,18 +2827,18 @@
             <div class="sxi-build-badge">Stockout Risk Reduction</div>
             <div class="sxi-build-headline">Reduce Stockout Risk by 20.0%</div>
             <div class="sxi-build-desc">
-              Reduces warehouse stockout risk by 20.0% (from 98.1% down to 78.5%) by validating replenishment
+              Reduces warehouse stockout risk by 20.0% (from 4.8% down to 3.8%) by validating replenishment
               triggers against warehouse Reorder Point (13,163 units).
             </div>
           </div>
           <div class="sxi-build-right">
             <div class="sxi-build-metric">
               <span class="sxi-bm-lbl">Current Stockout Risk</span>
-              <span class="sxi-bm-val">98.1%</span>
+              <span class="sxi-bm-val">4.8%</span>
             </div>
             <div class="sxi-build-metric">
               <span class="sxi-bm-lbl">Target Stockout Risk</span>
-              <span class="sxi-bm-val green">78.5%</span>
+              <span class="sxi-bm-val green">3.8%</span>
             </div>
           </div>
         </div>
@@ -2875,7 +2875,7 @@
               <span
                 style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Current
                 Stockout Risk</span>
-              <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2;">98.1%</span>
+              <span style="font-size: 24px; font-weight: 800; color: #059669; line-height: 1.2;">4.8%</span>
             </div>
 
             <!-- Box 3: Target SXI -->
@@ -2896,7 +2896,7 @@
               <span
                 style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target
                 Stockout Risk</span>
-              <span style="font-size: 24px; font-weight: 800; color: #c2410c; line-height: 1.2;">78.5%</span>
+              <span style="font-size: 24px; font-weight: 800; color: #c2410c; line-height: 1.2;">3.8%</span>
             </div>
 
             <!-- Box 5: Stockout Risk Reduction -->
@@ -2921,7 +2921,7 @@
               <span
                 style="font-size: 11px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.04em; display: block; margin-bottom: 6px;">Target
                 Stock on Hand</span>
-              <span style="font-size: 24px; font-weight: 800; color: #1d4ed8; line-height: 1.2;">2,830 units</span>
+              <span style="font-size: 24px; font-weight: 800; color: #1d4ed8; line-height: 1.2;">15,800 units</span>
             </div>
           </div>
         </div>
@@ -2955,25 +2955,28 @@
                 <!-- Chart Background (Lavender / soft blue tint) -->
                 <rect x="70" y="45" width="530" height="310" fill="#f0f3ff" stroke="none" />
 
-                <!-- Horizontal Grid Lines (Stockout Risk %: 0% to 100%) -->
-                <!-- 100% (y=45) -->
+                <!-- Horizontal Grid Lines (Stockout Risk %: 0% to 6%) -->
+                <!-- 6% (y=45) -->
                 <line x1="70" y1="45" x2="600" y2="45" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="62" y="49" font-size="11" fill="#334155" text-anchor="end" font-weight="600">100%</text>
-                <!-- 80% (y=107) -->
-                <line x1="70" y1="107" x2="600" y2="107" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="62" y="111" font-size="11" fill="#334155" text-anchor="end" font-weight="600">80%</text>
-                <!-- 60% (y=169) -->
-                <line x1="70" y1="169" x2="600" y2="169" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="62" y="173" font-size="11" fill="#334155" text-anchor="end" font-weight="600">60%</text>
-                <!-- 40% (y=231) -->
-                <line x1="70" y1="231" x2="600" y2="231" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="62" y="235" font-size="11" fill="#334155" text-anchor="end" font-weight="600">40%</text>
-                <!-- 20% (y=293) -->
-                <line x1="70" y1="293" x2="600" y2="293" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="62" y="297" font-size="11" fill="#334155" text-anchor="end" font-weight="600">20%</text>
+                <text x="62" y="49" font-size="11" fill="#334155" text-anchor="end" font-weight="600">6.0%</text>
+                <!-- 5% (y=97) -->
+                <line x1="70" y1="97" x2="600" y2="97" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="101" font-size="11" fill="#334155" text-anchor="end" font-weight="600">5.0%</text>
+                <!-- 4% (y=148) -->
+                <line x1="70" y1="148" x2="600" y2="148" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="152" font-size="11" fill="#334155" text-anchor="end" font-weight="600">4.0%</text>
+                <!-- 3% (y=200) -->
+                <line x1="70" y1="200" x2="600" y2="200" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="204" font-size="11" fill="#334155" text-anchor="end" font-weight="600">3.0%</text>
+                <!-- 2% (y=252) -->
+                <line x1="70" y1="252" x2="600" y2="252" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="256" font-size="11" fill="#334155" text-anchor="end" font-weight="600">2.0%</text>
+                <!-- 1% (y=303) -->
+                <line x1="70" y1="303" x2="600" y2="303" stroke="#c8d2fc" stroke-width="1.0" />
+                <text x="62" y="307" font-size="11" fill="#334155" text-anchor="end" font-weight="600">1.0%</text>
                 <!-- 0% (y=355) -->
                 <line x1="70" y1="355" x2="600" y2="355" stroke="#c8d2fc" stroke-width="1.2" />
-                <text x="62" y="359" font-size="11" fill="#334155" text-anchor="end" font-weight="600">0%</text>
+                <text x="62" y="359" font-size="11" fill="#334155" text-anchor="end" font-weight="600">0.0%</text>
 
                 <!-- Vertical Grid Lines (SXI: 6.0 to 9.0) -->
                 <!-- SXI 6.0 (x=70) -->
@@ -3005,34 +3008,34 @@
                 <text x="335" y="402" font-size="12" fill="#334155" font-weight="700" text-anchor="middle">SXI</text>
 
                 <!-- Continuous Straight Mustard Gold Correlation Line passing precisely through all 4 points -->
-                <line x1="70" y1="40" x2="600" y2="290" stroke="#ca8a04" stroke-width="2.2" />
+                <line x1="70" y1="96" x2="600" y2="304" stroke="#ca8a04" stroke-width="2.2" />
 
-                <!-- Cross Mark 1: Current (SXI=6.15, risk=98.1%) -> Blue Cross -->
-                <g transform="translate(97, 51)">
+                <!-- Cross Mark 1: Current (SXI=6.15, risk=4.8%) -> Blue Cross -->
+                <g transform="translate(97, 107)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#0000ff" stroke-width="3.2"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#0000ff" stroke-width="3.2"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross Mark 2: Short-term (SXI=7.00, risk=78.5%) -> Magenta Cross -->
-                <g transform="translate(247, 112)">
+                <!-- Cross Mark 2: Short-term (SXI=7.00, risk=3.8%) -> Magenta Cross -->
+                <g transform="translate(247, 159)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#c026d3" stroke-width="3.2"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#c026d3" stroke-width="3.2"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross Mark 3: Mid-term (SXI=7.85, risk=54.0%) -> Black Cross -->
-                <g transform="translate(397, 188)">
+                <!-- Cross Mark 3: Mid-term (SXI=7.85, risk=2.6%) -> Black Cross -->
+                <g transform="translate(397, 221)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#000000" stroke-width="3.2"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#000000" stroke-width="3.2"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross Mark 4: Long-term (SXI=8.70, risk=29.4%) -> Green Cross -->
-                <g transform="translate(547, 264)">
+                <!-- Cross Mark 4: Long-term (SXI=8.70, risk=1.4%) -> Green Cross -->
+                <g transform="translate(547, 283)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#15803d" stroke-width="3.2"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#15803d" stroke-width="3.2"
@@ -3050,7 +3053,7 @@
                     <line x1="-5" y1="-5" x2="5" y2="5" stroke="#0000ff" stroke-width="3" stroke-linecap="round" />
                     <line x1="-5" y1="5" x2="5" y2="-5" stroke="#0000ff" stroke-width="3" stroke-linecap="round" />
                   </g>
-                  <text x="28" y="36" font-size="12" fill="#334155" font-weight="600">Current (98.1% Risk)</text>
+                  <text x="28" y="36" font-size="12" fill="#334155" font-weight="600">Current (4.8% Risk)</text>
 
                   <!-- 3. Short Term -->
                   <g transform="translate(10, 58)">
@@ -3097,14 +3100,14 @@
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Projected risk</span>
-                <span class="level-metric-val">78.5%</span>
+                <span class="level-metric-val">3.8%</span>
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Reduction</span>
                 <span class="level-metric-val" style="color: #16a34a;">20.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Short-term:</strong> Checks live stock against the 13,163-unit reorder threshold to reduce
+                <strong>Short-term reduction:</strong> Checks live stock against the 13,163-unit reorder threshold to reduce
                 stockout risk by 20.0%.
               </div>
             </div>
@@ -3117,14 +3120,14 @@
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Projected risk</span>
-                <span class="level-metric-val">54.0%</span>
+                <span class="level-metric-val">2.6%</span>
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Reduction</span>
                 <span class="level-metric-val" style="color: #16a34a;">45.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term:</strong> Tracks supplier delivery lead times to trigger purchase orders early,
+                <strong>Mid-term reduction:</strong> Tracks supplier delivery lead times to trigger purchase orders early,
                 reducing stockout risk by 45.0%.
               </div>
             </div>
@@ -3137,14 +3140,14 @@
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Projected risk</span>
-                <span class="level-metric-val">29.4%</span>
+                <span class="level-metric-val">1.4%</span>
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Reduction</span>
                 <span class="level-metric-val" style="color: #16a34a;">70.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term:</strong> Synchronizes purchase reordering with real-time sales demand across all warehouses to cut stockout risk by 70.0%.
+                <strong>Long-term reduction:</strong> Synchronizes purchase reordering with real-time sales demand across all warehouses to cut stockout risk by 70.0%.
               </div>
             </div>
           </div>
@@ -3180,7 +3183,7 @@
               </svg>
               Current Stockout Risk
             </span>
-            <span class="sxi-line-val" style="font-size: 15px; color: #ea580c;">98.1%</span>
+            <span class="sxi-line-val" style="font-size: 15px; color: #ea580c;">4.8%</span>
           </div>
 
           <div class="sxi-metric-line" style="padding: 14px 0;">
@@ -3193,7 +3196,7 @@
               </svg>
               Target Stockout Risk
             </span>
-            <span class="sxi-line-val" style="font-size: 15px; color: #16a34a;">78.5%</span>
+            <span class="sxi-line-val" style="font-size: 15px; color: #16a34a;">3.8%</span>
           </div>
 
           <div class="sxi-metric-line" style="padding: 14px 0;">
@@ -3218,9 +3221,8 @@
               Business Lens
             </span>
             <span
-              style="font-size: 13.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 68%;">Current
-              stock (248 units) is below the 13,163-unit Reorder Point. Timely purchase order release prevents stockouts
-              and reduces stockout risk from 98.1% to 78.5%.</span>
+              style="font-size: 13.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 68%;">Validating
+              replenishment against the 13,163-unit Reorder Point prevents stockouts and reduces stockout risk from 4.8% to 3.8%.</span>
           </div>
         </div>
 
@@ -4000,7 +4002,7 @@
               release PO batches without manual reorder delays.</p>
             <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Proactive Replenishment
               Trigger &mdash; Create a dedicated workflow that continuously checks live stock against ROP (13,163
-              units) and promptly releases purchase order batches. This reduces stockout risk from 98.1% down to 78.5% (a
+              units) and promptly releases purchase order batches. This reduces stockout risk from 4.8% down to 3.8% (a
               20.0% risk reduction).</p>
           </div>
         </div>
@@ -4459,7 +4461,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">20.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Short-term:</strong> Qualifies secondary vendors and introduces a 70/30 dual-sourcing split to
+                <strong>Short-term reduction:</strong> Qualifies secondary vendors and introduces a 70/30 dual-sourcing split to
                 reduce single-source disruption risk by 20.0%.
               </div>
             </div>
@@ -4479,7 +4481,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">35.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term:</strong> Expands backup supplier contracts across more component categories to achieve
+                <strong>Mid-term reduction:</strong> Expands backup supplier contracts across more component categories to achieve
                 a 35.0% risk reduction.
               </div>
             </div>
@@ -4499,7 +4501,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">50.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term:</strong> Fully diversifies the vendor network to eliminate single-point dependencies
+                <strong>Long-term reduction:</strong> Fully diversifies the vendor network to eliminate single-point dependencies
                 and achieve a 50.0% risk reduction.
               </div>
             </div>
@@ -5663,7 +5665,7 @@
             </div>
 
             <div class="level-col-item">
-              <span class="level-col-name">Medium-term</span>
+              <span class="level-col-name">Mid-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
                 <span class="level-metric-val">7.95</span>
@@ -5677,7 +5679,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">+24.2%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Medium-term improvement:</strong> Enforces mandatory 35% minimum gross margin floor check,
+                <strong>Mid-term improvement:</strong> Enforces mandatory 35% minimum gross margin floor check,
                 preventing negative-spread purchases from releasing.
               </div>
             </div>
