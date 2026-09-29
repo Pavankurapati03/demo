@@ -3457,7 +3457,7 @@
                 <span class="level-metric-val">6.96</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected stockout rate</span>
+                <span class="level-metric-lbl">Target Outcome</span>
                 <span class="level-metric-val">23.4%</span>
               </div>
               <div class="level-metric-row">
@@ -3465,8 +3465,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">20.0% <span style="font-size: 11.5px; font-weight: 600;">(-2,583 units)</span></span>
               </div>
               <div class="level-desc-box">
-                <strong>Short-term reduction:</strong> Allocates safety buffers to fast-selling items at regional distribution
-                centers to reduce stockouts by 20.0%.
+                <strong>Short-term reduction:</strong> Reduce stockout rate from 29.3% to 23.4%. This represents a 20.0% Stockout Reduction Rate from the current baseline.
               </div>
             </div>
 
@@ -3477,7 +3476,7 @@
                 <span class="level-metric-val">8.20</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected stockout rate</span>
+                <span class="level-metric-lbl">Target Outcome</span>
                 <span class="level-metric-val">14.6%</span>
               </div>
               <div class="level-metric-row">
@@ -3485,8 +3484,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">50.2% <span style="font-size: 11.5px; font-weight: 600;">(-6,483 units)</span></span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term reduction:</strong> Optimizes store-level replenishment triggers across distribution networks to
-                cut stockouts by 50.2%.
+                <strong>Mid-term reduction:</strong> Reduce stockout rate from 29.3% to 14.6%. This represents a 50.2% Stockout Reduction Rate from the current baseline.
               </div>
             </div>
 
@@ -3497,7 +3495,7 @@
                 <span class="level-metric-val">9.45</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected stockout rate</span>
+                <span class="level-metric-lbl">Target Outcome</span>
                 <span class="level-metric-val">5.8%</span>
               </div>
               <div class="level-metric-row">
@@ -3505,8 +3503,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">80.2% <span style="font-size: 11.5px; font-weight: 600;">(-10,358 units)</span></span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term reduction:</strong> Synchronizes supply chain forecasts with demand planning to lower stockout
-                rate to 5.8%.
+                <strong>Long-term reduction:</strong> Reduce stockout rate from 29.3% to 5.8%. This represents an 80.2% Stockout Reduction Rate from the current baseline.
               </div>
             </div>
           </div>
@@ -3526,7 +3523,7 @@
             </div>
             <div class="sxi-metric-line">
               <div>
-                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Accuracy (Score Precision)</div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Accuracy</div>
                 <div style="font-size: 11px; color: #64748b; margin-top: 2px;">About 93 out of 100 stockout predictions are close enough to use for planning.</div>
               </div>
               <span class="sxi-line-val" style="font-weight: 700; color: #16a34a; font-size: 15px;">92.8%</span>
@@ -4905,126 +4902,161 @@
             </div>
 
             <div style="width: 100%; overflow-x: auto;">
-              <svg viewBox="0 0 860 420"
+              <svg viewBox="0 0 860 430"
                 style="width: 100%; max-height: 520px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
 
                 <!-- Chart Background (Lavender / soft blue tint) -->
-                <rect x="70" y="45" width="530" height="310" fill="#f0f3ff" stroke="none" />
+                <rect x="75" y="30" width="560" height="340" fill="#f0f3ff" stroke="none" />
 
-                <!-- Horizontal Grid Lines (Lead Time (days): 0 to 10 days) -->
-                <!-- 10 Days (y=45) -->
-                <line x1="70" y1="45" x2="600" y2="45" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="62" y="49" font-size="11" fill="#334155" text-anchor="end" font-weight="600">10d</text>
-                <!-- 8 Days (y=107) -->
-                <line x1="70" y1="107" x2="600" y2="107" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="62" y="111" font-size="11" fill="#334155" text-anchor="end" font-weight="600">8d</text>
-                <!-- 6 Days (y=169) -->
-                <line x1="70" y1="169" x2="600" y2="169" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="62" y="173" font-size="11" fill="#334155" text-anchor="end" font-weight="600">6d</text>
-                <!-- 4 Days (y=231) -->
-                <line x1="70" y1="231" x2="600" y2="231" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="62" y="235" font-size="11" fill="#334155" text-anchor="end" font-weight="600">4d</text>
-                <!-- 2 Days (y=293) -->
-                <line x1="70" y1="293" x2="600" y2="293" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="62" y="297" font-size="11" fill="#334155" text-anchor="end" font-weight="600">2d</text>
-                <!-- 0 Days (y=355) -->
-                <line x1="70" y1="355" x2="600" y2="355" stroke="#c8d2fc" stroke-width="1.2" />
-                <text x="62" y="359" font-size="11" fill="#334155" text-anchor="end" font-weight="600">0d</text>
+                <!-- Horizontal Grid Lines (Lead Time: 0 to 10.0 Days) -->
+                <!-- 10.0d (y=65) -->
+                <line x1="75" y1="65" x2="635" y2="65" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="68" y="69" font-size="11" fill="#334155" text-anchor="end" font-weight="500">10.0d</text>
+
+                <!-- 8.0d (y=126) -->
+                <line x1="75" y1="126" x2="635" y2="126" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="68" y="130" font-size="11" fill="#334155" text-anchor="end" font-weight="500">8.0d</text>
+
+                <!-- 6.0d (y=187) -->
+                <line x1="75" y1="187" x2="635" y2="187" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="68" y="191" font-size="11" fill="#334155" text-anchor="end" font-weight="500">6.0d</text>
+
+                <!-- 4.0d (y=248) -->
+                <line x1="75" y1="248" x2="635" y2="248" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="68" y="252" font-size="11" fill="#334155" text-anchor="end" font-weight="500">4.0d</text>
+
+                <!-- 2.0d (y=309) -->
+                <line x1="75" y1="309" x2="635" y2="309" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="68" y="313" font-size="11" fill="#334155" text-anchor="end" font-weight="500">2.0d</text>
+
+                <!-- 0.0d (y=370) -->
+                <line x1="75" y1="370" x2="635" y2="370" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="68" y="374" font-size="11" fill="#334155" text-anchor="end" font-weight="500">0.0d</text>
 
                 <!-- Vertical Grid Lines (SXI: 5.0 to 10.0) -->
-                <!-- SXI 5.0 (x=70) -->
-                <line x1="70" y1="45" x2="70" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="70" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">5.0</text>
-                <!-- SXI 6.0 (x=176) -->
-                <line x1="176" y1="45" x2="176" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="176" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">6.0</text>
-                <!-- SXI 7.0 (x=282) -->
-                <line x1="282" y1="45" x2="282" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="282" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">7.0</text>
-                <!-- SXI 8.0 (x=388) -->
-                <line x1="388" y1="45" x2="388" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="388" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">8.0</text>
-                <!-- SXI 9.0 (x=494) -->
-                <line x1="494" y1="45" x2="494" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="494" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">9.0</text>
-                <!-- SXI 10.0 (x=600) -->
-                <line x1="600" y1="45" x2="600" y2="355" stroke="#c8d2fc" stroke-width="1.0" />
-                <text x="600" y="375" font-size="11" fill="#334155" text-anchor="middle" font-weight="600">10.0</text>
+                <!-- 5.0 (x=75) -->
+                <line x1="75" y1="30" x2="75" y2="370" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="75" y="390" font-size="11.5" fill="#334155" text-anchor="middle" font-weight="500">5.0</text>
+
+                <!-- 6.0 (x=187) -->
+                <line x1="187" y1="30" x2="187" y2="370" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="187" y="390" font-size="11.5" fill="#334155" text-anchor="middle" font-weight="500">6.0</text>
+
+                <!-- 7.0 (x=299) -->
+                <line x1="299" y1="30" x2="299" y2="370" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="299" y="390" font-size="11.5" fill="#334155" text-anchor="middle" font-weight="500">7.0</text>
+
+                <!-- 8.0 (x=411) -->
+                <line x1="411" y1="30" x2="411" y2="370" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="411" y="390" font-size="11.5" fill="#334155" text-anchor="middle" font-weight="500">8.0</text>
+
+                <!-- 9.0 (x=523) -->
+                <line x1="523" y1="30" x2="523" y2="370" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="523" y="390" font-size="11.5" fill="#334155" text-anchor="middle" font-weight="500">9.0</text>
+
+                <!-- 10.0 (x=635) -->
+                <line x1="635" y1="30" x2="635" y2="370" stroke="#e0e7ff" stroke-width="0.8" />
+                <text x="635" y="390" font-size="11.5" fill="#334155" text-anchor="middle" font-weight="500">10.0</text>
+
+                <!-- Main Solid Black Axis Lines -->
+                <line x1="75" y1="30" x2="75" y2="370" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="75" y1="370" x2="635" y2="370" stroke="#1e293b" stroke-width="1.2" />
+
+                <!-- Axis Tick Marks -->
+                <line x1="71" y1="65" x2="75" y2="65" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="71" y1="126" x2="75" y2="126" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="71" y1="187" x2="75" y2="187" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="71" y1="248" x2="75" y2="248" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="71" y1="309" x2="75" y2="309" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="75" y1="370" x2="75" y2="374" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="187" y1="370" x2="187" y2="374" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="299" y1="370" x2="299" y2="374" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="411" y1="370" x2="411" y2="374" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="523" y1="370" x2="523" y2="374" stroke="#1e293b" stroke-width="1.2" />
+                <line x1="635" y1="370" x2="635" y2="374" stroke="#1e293b" stroke-width="1.2" />
 
                 <!-- Y-Axis Label -->
-                <text x="-200" y="22" font-size="12" fill="#334155" font-weight="700" transform="rotate(-90)"
-                  text-anchor="middle">lead_time (days)</text>
+                <text x="-200" y="22" font-size="12" fill="#1e293b" font-weight="600" transform="rotate(-90)"
+                  text-anchor="middle">Delivery Lead Time (Days)</text>
                 <!-- X-Axis Label -->
-                <text x="335" y="402" font-size="12" fill="#334155" font-weight="700" text-anchor="middle">SXI</text>
+                <text x="355" y="415" font-size="12" fill="#1e293b" font-weight="600" text-anchor="middle">SXI</text>
 
-                <!-- Mustard Gold Correlation Line -->
-                <line x1="70" y1="40" x2="600" y2="225" stroke="#ca8a04" stroke-width="2.2" />
+                <!-- Golden Straight Correlation Line -->
+                <line x1="85" y1="65" x2="620" y2="238" stroke="#e5a53d" stroke-width="2.2" stroke-linecap="round" />
 
-                <!-- Cross Mark 1: Current (SXI=5.95, lead_time=9.0 Days) -> Blue Cross -->
-                <g transform="translate(171, 76)">
-                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#0000ff" stroke-width="3.2"
+                <!-- Cross 1: Current (SXI=5.95, lead_time=9.0 Days) -> Light Blue 'X' -->
+                <g transform="translate(181, 96)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#60a5fa" stroke-width="2.8"
                     stroke-linecap="round" />
-                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#0000ff" stroke-width="3.2"
-                    stroke-linecap="round" />
-                </g>
-
-                <!-- Cross Mark 2: Short-term (SXI=7.65, lead_time=7.0 Days) -> Magenta Cross -->
-                <g transform="translate(351, 138)">
-                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#c026d3" stroke-width="3.2"
-                    stroke-linecap="round" />
-                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#c026d3" stroke-width="3.2"
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#60a5fa" stroke-width="2.8"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross Mark 3: Mid-term (SXI=8.55, lead_time=6.0 Days) -> Black Cross -->
-                <g transform="translate(446, 169)">
-                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#000000" stroke-width="3.2"
+                <!-- Cross 2: Short-term 22.2% Decrease (SXI=7.65, lead_time=7.0 Days) -> Indigo 'X' -->
+                <g transform="translate(372, 156)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#6366f1" stroke-width="2.8"
                     stroke-linecap="round" />
-                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#000000" stroke-width="3.2"
-                    stroke-linecap="round" />
-                </g>
-
-                <!-- Cross Mark 4: Long-term (SXI=9.30, lead_time=5.0 Days) -> Green Cross -->
-                <g transform="translate(526, 200)">
-                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#15803d" stroke-width="3.2"
-                    stroke-linecap="round" />
-                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#15803d" stroke-width="3.2"
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#6366f1" stroke-width="2.8"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- LEGEND (Matching Reference Screenshot Layout) -->
-                <g transform="translate(630, 60)">
-                  <!-- 1. Correlation Line -->
-                  <line x1="0" y1="6" x2="20" y2="6" stroke="#ca8a04" stroke-width="2.5" />
-                  <text x="28" y="10" font-size="12" fill="#334155" font-weight="600">Correlation Line</text>
+                <!-- Cross 3: Mid-term 33.3% Decrease (SXI=8.55, lead_time=6.0 Days) -> Mint Green 'X' -->
+                <g transform="translate(473, 187)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#34d399" stroke-width="2.8"
+                    stroke-linecap="round" />
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#34d399" stroke-width="2.8"
+                    stroke-linecap="round" />
+                </g>
 
-                  <!-- 2. Current -->
-                  <g transform="translate(10, 32)">
-                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#0000ff" stroke-width="3" stroke-linecap="round" />
-                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#0000ff" stroke-width="3" stroke-linecap="round" />
-                  </g>
-                  <text x="28" y="36" font-size="12" fill="#334155" font-weight="600">Current</text>
+                <!-- Cross 4: Long-term 44.4% Decrease (SXI=9.30, lead_time=5.0 Days) -> Dark Green 'X' -->
+                <g transform="translate(557, 218)">
+                  <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#16a34a" stroke-width="2.8"
+                    stroke-linecap="round" />
+                  <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#16a34a" stroke-width="2.8"
+                    stroke-linecap="round" />
+                </g>
 
-                  <!-- 3. Short Term -->
-                  <g transform="translate(10, 58)">
-                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#c026d3" stroke-width="3" stroke-linecap="round" />
-                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#c026d3" stroke-width="3" stroke-linecap="round" />
-                  </g>
-                  <text x="28" y="62" font-size="12" fill="#334155" font-weight="600">Short Term 22.2% Decrease</text>
+                <!-- Clean Top-Right Legend Matching Reference Design -->
+                <g transform="translate(660, 45)">
+                  <!-- 1. Golden Line: Correlation Line -->
+                  <line x1="0" y1="6" x2="16" y2="6" stroke="#e5a53d" stroke-width="2.2" stroke-linecap="round" />
+                  <text x="24" y="10" font-size="11" fill="#334155" font-weight="500">Correlation Line</text>
 
-                  <!-- 4. Mid Term -->
-                  <g transform="translate(10, 84)">
-                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#000000" stroke-width="3" stroke-linecap="round" />
-                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#000000" stroke-width="3" stroke-linecap="round" />
+                  <!-- 2. Light Blue: Current -->
+                  <g transform="translate(8, 28)">
+                    <line x1="-4.5" y1="-4.5" x2="4.5" y2="4.5" stroke="#60a5fa" stroke-width="2.4"
+                      stroke-linecap="round" />
+                    <line x1="-4.5" y1="4.5" x2="4.5" y2="-4.5" stroke="#60a5fa" stroke-width="2.4"
+                      stroke-linecap="round" />
                   </g>
-                  <text x="28" y="88" font-size="12" fill="#334155" font-weight="600">Mid Term 33.3% Decrease</text>
+                  <text x="24" y="32" font-size="11" fill="#334155" font-weight="500">Current</text>
 
-                  <!-- 5. Long Term -->
-                  <g transform="translate(10, 110)">
-                    <line x1="-5" y1="-5" x2="5" y2="5" stroke="#15803d" stroke-width="3" stroke-linecap="round" />
-                    <line x1="-5" y1="5" x2="5" y2="-5" stroke="#15803d" stroke-width="3" stroke-linecap="round" />
+                  <!-- 3. Indigo: Short Term 22.2% Decrease -->
+                  <g transform="translate(8, 50)">
+                    <line x1="-4.5" y1="-4.5" x2="4.5" y2="4.5" stroke="#6366f1" stroke-width="2.4"
+                      stroke-linecap="round" />
+                    <line x1="-4.5" y1="5.5" x2="4.5" y2="-4.5" stroke="#6366f1" stroke-width="2.4"
+                      stroke-linecap="round" />
                   </g>
-                  <text x="28" y="114" font-size="12" fill="#334155" font-weight="600">Long Term 44.4% Decrease</text>
+                  <text x="24" y="54" font-size="11" fill="#334155" font-weight="500">Short Term 22.2% Decrease</text>
+
+                  <!-- 4. Mint Green: Mid Term 33.3% Decrease -->
+                  <g transform="translate(8, 72)">
+                    <line x1="-4.5" y1="-4.5" x2="4.5" y2="4.5" stroke="#34d399" stroke-width="2.4"
+                      stroke-linecap="round" />
+                    <line x1="-4.5" y1="5.5" x2="4.5" y2="-4.5" stroke="#34d399" stroke-width="2.4"
+                      stroke-linecap="round" />
+                  </g>
+                  <text x="24" y="76" font-size="11" fill="#334155" font-weight="500">Mid Term 33.3% Decrease</text>
+
+                  <!-- 5. Dark Green: Long Term 44.4% Decrease -->
+                  <g transform="translate(8, 94)">
+                    <line x1="-4.5" y1="-4.5" x2="4.5" y2="4.5" stroke="#16a34a" stroke-width="2.4"
+                      stroke-linecap="round" />
+                    <line x1="-4.5" y1="5.5" x2="4.5" y2="-4.5" stroke="#16a34a" stroke-width="2.4"
+                      stroke-linecap="round" />
+                  </g>
+                  <text x="24" y="98" font-size="11" fill="#334155" font-weight="500">Long Term 44.4% Decrease</text>
                 </g>
               </svg>
             </div>
@@ -5045,174 +5077,123 @@
             <div class="level-col-item">
               <span class="level-col-name">Short-term</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">7.65</span>
+                <span class="level-metric-lbl">Current Lead Time</span>
+                <span class="level-metric-val">9.0 Days</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected lead time</span>
+                <span class="level-metric-lbl">Target Lead Time</span>
                 <span class="level-metric-val">7.0 Days</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Reduction</span>
-                <span class="level-metric-val" style="color: #16a34a;">22.2% <span style="font-size: 11.5px; font-weight: 600;">(-2.0 Days)</span></span>
+                <span class="level-metric-lbl">Lead Time Reduction Rate</span>
+                <span class="level-metric-val" style="color: #16a34a;">&darr; 22.2% <span style="font-size: 11.5px; font-weight: 600;">(-2.0 Days)</span></span>
               </div>
               <div class="level-desc-box">
-                <strong>Short-term reduction:</strong> Prioritizes top on-time freight carriers to reduce average lead time from
-                9.0 to 7.0 days.
+                <strong>Short-term reduction:</strong> Reduce delivery lead time from 9.0 to 7.0 days. This represents a 22.2% Lead Time Reduction Rate from the current baseline.
               </div>
             </div>
 
             <div class="level-col-item">
               <span class="level-col-name">Mid-term</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">8.55</span>
+                <span class="level-metric-lbl">Current Lead Time</span>
+                <span class="level-metric-val">9.0 Days</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected lead time</span>
+                <span class="level-metric-lbl">Target Lead Time</span>
                 <span class="level-metric-val">6.0 Days</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Reduction</span>
-                <span class="level-metric-val" style="color: #16a34a;">33.3% <span style="font-size: 11.5px; font-weight: 600;">(-3.0 Days)</span></span>
+                <span class="level-metric-lbl">Lead Time Reduction Rate</span>
+                <span class="level-metric-val" style="color: #16a34a;">&darr; 33.3% <span style="font-size: 11.5px; font-weight: 600;">(-3.0 Days)</span></span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term reduction:</strong> Optimizes regional transit corridors and cross-docking to bring lead time
-                down to 6.0 days.
+                <strong>Mid-term reduction:</strong> Reduce delivery lead time from 9.0 to 6.0 days. This represents a 33.3% Lead Time Reduction Rate from the current baseline.
               </div>
             </div>
 
             <div class="level-col-item">
               <span class="level-col-name">Long-term</span>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">9.30</span>
+                <span class="level-metric-lbl">Current Lead Time</span>
+                <span class="level-metric-val">9.0 Days</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected lead time</span>
+                <span class="level-metric-lbl">Target Lead Time</span>
                 <span class="level-metric-val">5.0 Days</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Reduction</span>
-                <span class="level-metric-val" style="color: #16a34a;">44.4% <span style="font-size: 11.5px; font-weight: 600;">(-4.0 Days)</span></span>
+                <span class="level-metric-lbl">Lead Time Reduction Rate</span>
+                <span class="level-metric-val" style="color: #16a34a;">&darr; 44.4% <span style="font-size: 11.5px; font-weight: 600;">(-4.0 Days)</span></span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term reduction:</strong> Integrates direct dispatch scheduling across all supplier hubs to stabilize
-                lead times at 5.0 days.
+                <strong>Long-term reduction:</strong> Reduce delivery lead time from 9.0 to 5.0 days. This represents a 44.4% Lead Time Reduction Rate from the current baseline.
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 6. Model Performance & Current Business Status (Screenshot 0) -->
-        <div class="sxi-card-grid-2">
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                <path d="M2 17l10 5 10-5"></path>
-                <path d="M2 12l10 5 10-5"></path>
-              </svg>
-              <span>Model Performance</span>
-            </div>
-            <div class="sxi-metric-line">
-              <div>
-                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Accuracy (Score Precision)</div>
-                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">About 91 out of 100 shipments arrive precisely within the predicted delivery window.</div>
-              </div>
-              <span class="sxi-line-val" style="font-weight: 700; color: #16a34a; font-size: 15px;">91.5%</span>
-            </div>
-            <div class="sxi-metric-line">
-              <div>
-                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Correlation (R²)</div>
-                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">85.2% of real-world transit time movement is captured by the model.</div>
-              </div>
-              <span class="sxi-line-val" style="font-weight: 700; color: #2563eb; font-size: 15px;">0.85</span>
-            </div>
-            <div class="sxi-metric-line">
-              <div>
-                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Mean Absolute Error (MAE)</div>
-                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">The typical miss is only ±0.62 days (~15 hours) from warehouse dock arrival.</div>
-              </div>
-              <span class="sxi-line-val" style="font-weight: 700; color: #0f172a; font-size: 15px;">±0.62 days</span>
-            </div>
-            <div class="sxi-metric-line">
-              <div>
-                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Root Mean Squared Error (RMSE)</div>
-                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">Larger misses stay around 0.88 days, so extreme transit delays are limited.</div>
-              </div>
-              <span class="sxi-line-val" style="font-weight: 700; color: #0f172a; font-size: 15px;">0.88 days</span>
-            </div>
-            <div class="sxi-metric-line" style="border-bottom: none;">
-              <div>
-                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Within ±10%</div>
-                <div style="font-size: 11px; color: #64748b; margin-top: 2px;">86.2% of predicted lead times stay within 10% of the actual delivery timeline.</div>
-              </div>
-              <span class="sxi-line-val" style="font-weight: 700; color: #0f172a; font-size: 15px;">86.2%</span>
-            </div>
+        <!-- 6. Proposed Business Outcomes -->
+        <div class="sxi-white-card" style="margin-bottom: 24px; padding: 22px 28px;">
+          <div class="sxi-card-title-row" style="margin-bottom: 12px;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span style="font-size: 15px; font-weight: 700;">Proposed Business Outcomes</span>
           </div>
-
-          <div class="sxi-white-card">
-            <div class="sxi-card-title-row">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          <div class="sxi-metric-line">
+            <span class="sxi-line-label">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
               </svg>
-              <span>Proposed Business Outcomes</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
-                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                </svg>
-                Current SXI
-              </span>
-              <span class="sxi-line-val">5.95</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                </svg>
-                Current Lead Time
-              </span>
-              <span class="sxi-line-val">9.0 Days</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 14 14"></polyline>
-                </svg>
-                Target Lead Time
-              </span>
-              <span class="sxi-line-val sxi-val-green">7.0 Days</span>
-            </div>
-            <div class="sxi-metric-line">
-              <span class="sxi-line-label">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
-                  <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
-                  <polyline points="17 18 23 18 23 12"></polyline>
-                </svg>
-                Lead Time Reduction
-              </span>
-              <span class="sxi-line-val sxi-val-green">2.0 Days</span>
-            </div>
-            <div class="sxi-metric-line" style="border-bottom:none; padding-top:14px;">
-              <span class="sxi-line-label" style="align-items:flex-start;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
-                  style="margin-top:2px;">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-                Business Lens:
-              </span>
-              <span
-                style="font-size:12.5px; font-weight:700; color:#0f172a; text-align:right; max-width:65%;">Prioritizes
-                fast-transit carriers to reduce delivery lead time from 9.0 to 7.0 days across regional Distribution
-                Centers.</span>
-            </div>
+              Current SXI
+            </span>
+            <span class="sxi-line-val">5.95</span>
+          </div>
+          <div class="sxi-metric-line">
+            <span class="sxi-line-label">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+              Current Lead Time
+            </span>
+            <span class="sxi-line-val">9.0 Days</span>
+          </div>
+          <div class="sxi-metric-line">
+            <span class="sxi-line-label">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 14"></polyline>
+              </svg>
+              Target Lead Time
+            </span>
+            <span class="sxi-line-val sxi-val-green">7.0 Days</span>
+          </div>
+          <div class="sxi-metric-line">
+            <span class="sxi-line-label">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="8 12 12 16 16 12"></polyline>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+              </svg>
+              Lead Time Reduction Rate
+            </span>
+            <span class="sxi-line-val sxi-val-green">&darr; 22.2% (-2.0 Days)</span>
+          </div>
+          <div class="sxi-metric-line" style="border-bottom:none; padding-top:14px;">
+            <span class="sxi-line-label" style="align-items:flex-start;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+                style="margin-top:2px;">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              Business Lens:
+            </span>
+            <span
+              style="font-size:13px; font-weight:700; color:#0f172a; text-align:right; max-width:68%;">Reduce
+              delivery lead time by (-2.0 Days), moving from 9.0 Days to 7.0 Days, representing a &darr; 22.2% reduction
+              in delivery lead time.</span>
           </div>
         </div>
 
@@ -6296,9 +6277,90 @@
               the logistics team should review these three factors together, confirm carrier express lanes and warehouse
               dock booking slots, and proactively address potential transit delays with carriers when needed.</p>
             <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Pre-Dispatch Logistics
-              Check — Create a workflow that reviews supplier OTIF performance, delivery transit distance, and order
+              Check &mdash; Create a workflow that reviews supplier OTIF performance, delivery transit distance, and order
               batch volume before dispatch. This can help move the delivery lead time from 9.0 days toward the 7.0-day
               target.</p>
+          </div>
+        </div>
+
+        <!-- 10. Model Performance (Collapsible Technical Details at Bottom of Page) -->
+        <div class="sxi-white-card" style="margin-top: 20px; margin-bottom: 28px; padding: 24px 28px; background: #ffffff; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+          <!-- Header with Top-Right View Button -->
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <div style="width: 22px; height: 22px; border-radius: 50%; background: #eff6ff; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a10 10 0 0 1 10 10"></path>
+                </svg>
+              </div>
+              <span style="font-size: 14.5px; font-weight: 700; color: #334155;">Model Performance</span>
+            </div>
+            <button id="btn-toggle-leadtime-metrics" title="view more technical details" onclick="toggleLeadTimeMetrics()"
+              style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; border-radius: 6px; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: all 0.2s ease;">
+              <span id="txt-toggle-leadtime-metrics">View</span>
+              <svg id="icon-toggle-leadtime-metrics" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="transition: transform 0.2s ease;">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Correlation (R²) — Primary Metric (Always Visible) -->
+          <div style="margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid #f1f5f9;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 14.5px; font-weight: 700; color: #1e293b;">Correlation (R²)</span>
+              <span style="font-size: 16px; font-weight: 800; color: #2563eb;">0.85</span>
+            </div>
+            <div style="font-size: 12.5px; color: #64748b; margin-top: 4px; line-height: 1.5;">
+              The model explains 85.2% of the variation in delivery lead times across all shipments, with only 14.8% due to random transit delays.
+            </div>
+          </div>
+
+          <!-- Collapsible Extra Metrics (Revealed via View Button) -->
+          <div id="leadtime-extra-metrics" style="display: none; padding-top: 4px;">
+            <!-- Accuracy -->
+            <div style="margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #f1f5f9;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 14.5px; font-weight: 700; color: #1e293b;">Accuracy</span>
+                <span style="font-size: 16px; font-weight: 800; color: #16a34a;">91.5%</span>
+              </div>
+              <div style="font-size: 12.5px; color: #64748b; margin-top: 4px; line-height: 1.5;">
+                91.5% of shipments arrived within their predicted delivery window, while only 8.5% experienced minor delivery timing variance.
+              </div>
+            </div>
+
+            <!-- Mean Absolute Error (MAE) -->
+            <div style="margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #f1f5f9;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 14.5px; font-weight: 700; color: #1e293b;">Mean Absolute Error (MAE)</span>
+                <span style="font-size: 16px; font-weight: 800; color: #0f172a;">±0.62 Days</span>
+              </div>
+              <div style="font-size: 12.5px; color: #64748b; margin-top: 4px; line-height: 1.5;">
+                On average, the predicted delivery date is off by only ±0.62 days (~15 hours) from the actual warehouse dock arrival.
+              </div>
+            </div>
+
+            <!-- Root Mean Squared Error (RMSE) -->
+            <div style="margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid #f1f5f9;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 14.5px; font-weight: 700; color: #1e293b;">Root Mean Squared Error (RMSE)</span>
+                <span style="font-size: 16px; font-weight: 800; color: #0f172a;">0.88 Days</span>
+              </div>
+              <div style="font-size: 12.5px; color: #64748b; margin-top: 4px; line-height: 1.5;">
+                Even unexpected delivery delays stay within 0.88 days (~21 hours), preventing large forecasting surprises.
+              </div>
+            </div>
+
+            <!-- Within ±10% -->
+            <div style="margin-bottom: 6px;">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span style="font-size: 14.5px; font-weight: 700; color: #1e293b;">Within ±10%</span>
+                <span style="font-size: 16px; font-weight: 800; color: #0f172a;">86.2%</span>
+              </div>
+              <div style="font-size: 12.5px; color: #64748b; margin-top: 4px; line-height: 1.5;">
+                86.2% of all deliveries arrived within ±10% of their forecasted schedule (within ±0.7 to 0.9 days of target timeline).
+              </div>
+            </div>
           </div>
         </div>
 
@@ -6673,7 +6735,7 @@
                 <span class="level-metric-val">7.85</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
+                <span class="level-metric-lbl">Target Outcome</span>
                 <span class="level-metric-val">17.2%</span>
               </div>
               <div class="level-metric-row">
@@ -6681,8 +6743,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">20.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Short-term reduction:</strong> A 20.0% reduction brings Margin Leakage DOWN from 21.5% to about
-                17.2%. SXI moves from 6.30 to short SXI 7.85.
+                <strong>Short-term reduction:</strong> Reduce margin leakage from 21.5% to 17.2%. This represents a 20.0% Margin Leakage Reduction Rate from the current baseline.
               </div>
             </div>
 
@@ -6693,7 +6754,7 @@
                 <span class="level-metric-val">8.65</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
+                <span class="level-metric-lbl">Target Outcome</span>
                 <span class="level-metric-val">14.5%</span>
               </div>
               <div class="level-metric-row">
@@ -6701,8 +6762,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">32.5%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term reduction:</strong> A 32.5% reduction brings Margin Leakage DOWN to about
-                14.5%. SXI moves from short 7.85 to medium 8.65.
+                <strong>Mid-term reduction:</strong> Reduce margin leakage from 21.5% to 14.5%. This represents a 32.5% Margin Leakage Reduction Rate from the current baseline.
               </div>
             </div>
 
@@ -6713,7 +6773,7 @@
                 <span class="level-metric-val">9.40</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
+                <span class="level-metric-lbl">Target Outcome</span>
                 <span class="level-metric-val">11.8%</span>
               </div>
               <div class="level-metric-row">
@@ -6721,8 +6781,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">45.1%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term reduction:</strong> A 45.1% reduction brings Margin Leakage DOWN to about
-                11.8%. SXI moves from medium 8.65 to long 9.40.
+                <strong>Long-term reduction:</strong> Reduce margin leakage from 21.5% to 11.8%. This represents a 45.1% Margin Leakage Reduction Rate from the current baseline.
               </div>
             </div>
           </div>
@@ -6742,7 +6801,7 @@
             </div>
             <div class="sxi-metric-line">
               <div>
-                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Accuracy (Score Precision)</div>
+                <div class="sxi-line-label" style="font-weight: 600; color: #1e293b;">Accuracy</div>
                 <div style="font-size: 11px; color: #64748b; margin-top: 2px;">About 95 out of 100 invoice transactions are priced within planned gross margin corridors.</div>
               </div>
               <span class="sxi-line-val" style="font-weight: 700; color: #16a34a; font-size: 15px;">95.2%</span>
@@ -7836,7 +7895,7 @@
                 <span class="level-metric-val">7.26</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
+                <span class="level-metric-lbl">Target Outcome</span>
                 <span class="level-metric-val">66.0%</span>
               </div>
               <div class="level-metric-row">
@@ -7844,8 +7903,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">+20.0%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Short-term improvement:</strong> Intercepts high-defect batches at intake inspection and buffers replacement
-                stock to raise quality protection coverage to 66.0%.
+                <strong>Short-term improvement:</strong> Increase quality protection coverage from 55.0% to 66.0%. This represents a 20.0% Quality Protection Improvement Rate from the current baseline.
               </div>
             </div>
 
@@ -7856,7 +7914,7 @@
                 <span class="level-metric-val">8.15</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
+                <span class="level-metric-lbl">Target Outcome</span>
                 <span class="level-metric-val">78.0%</span>
               </div>
               <div class="level-metric-row">
@@ -7864,8 +7922,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">+41.8%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Mid-term improvement:</strong> Enforces mandatory quality pre-clearance with high-risk suppliers to improve
-                quality protection coverage to 78.0%.
+                <strong>Mid-term improvement:</strong> Increase quality protection coverage from 55.0% to 78.0%. This represents a 41.8% Quality Protection Improvement Rate from the current baseline.
               </div>
             </div>
 
@@ -7876,7 +7933,7 @@
                 <span class="level-metric-val">9.20</span>
               </div>
               <div class="level-metric-row">
-                <span class="level-metric-lbl">Projected outcome</span>
+                <span class="level-metric-lbl">Target Outcome</span>
                 <span class="level-metric-val">90.0%</span>
               </div>
               <div class="level-metric-row">
@@ -7884,8 +7941,7 @@
                 <span class="level-metric-val" style="color: #16a34a;">+63.6%</span>
               </div>
               <div class="level-desc-box">
-                <strong>Long-term:</strong> Integrates real-time supplier QA auditing across all 60 vendors to achieve
-                90.0% quality protection coverage.
+                <strong>Long-term improvement:</strong> Increase quality protection coverage from 55.0% to 90.0%. This represents a 63.6% Quality Protection Improvement Rate from the current baseline.
               </div>
             </div>
           </div>
@@ -7970,12 +8026,14 @@
           <div class="sxi-card-title-row"
             style="margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between;">
             <div style="display: flex; align-items: center; gap: 8px;">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
-                <path d="M4.93 4.93l14.14 14.14"></path>
+                <line x1="12" y1="12" x2="12" y2="2"></line>
+                <line x1="12" y1="12" x2="20.66" y2="17"></line>
+                <line x1="12" y1="12" x2="3.34" y2="17"></line>
               </svg>
-              <span style="font-size: 14px; font-weight: 700; color: #475569;">AUC / ROC</span>
+              <span style="font-size: 14px; font-weight: 700; color: #475569;">Area Under the Curve / Receiver Operating Characteristic</span>
             </div>
             <span
               style="background: #eff6ff; border: 1.5px solid #bfdbfe; color: #1e40af; font-size: 12.5px; font-weight: 800; padding: 4px 12px; border-radius: 6px;">AUC-ROC
@@ -8880,6 +8938,22 @@
       if (btn) btn.classList.add('active');
       const targetPane = document.getElementById('demand-tab-' + tabId);
       if (targetPane) targetPane.classList.add('active');
+    }
+
+    function toggleLeadTimeMetrics() {
+      const extra = document.getElementById('leadtime-extra-metrics');
+      const txt = document.getElementById('txt-toggle-leadtime-metrics');
+      const icon = document.getElementById('icon-toggle-leadtime-metrics');
+      if (!extra) return;
+      if (extra.style.display === 'none' || extra.style.display === '') {
+        extra.style.display = 'block';
+        if (txt) txt.textContent = 'Hide';
+        if (icon) icon.style.transform = 'rotate(180deg)';
+      } else {
+        extra.style.display = 'none';
+        if (txt) txt.textContent = 'View';
+        if (icon) icon.style.transform = 'rotate(0deg)';
+      }
     }
   </script>
 </body>
