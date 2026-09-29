@@ -4067,25 +4067,14 @@
               style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; font-size: 13.5px; line-height: 1.75; color: #334155;">
               <p style="margin: 0 0 6px 0;"><strong style="color: #0f172a;">Insight:</strong></p>
               <ul style="margin: 0 0 12px 0; padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 6px;"><strong>Current Inventory Stock-on-Hand:</strong> Warehouse inventory is
-                  critically low (248 units vs 13,163 ROP), leaving only 3.5 hours of operating stock.</li>
-                <li style="margin-bottom: 6px;"><strong>Daily Sales Burn Velocity:</strong> High sales velocity (1,718
-                  units/day) rapidly empties warehouse shelves before regular supplier shipments arrive.</li>
-                <li><strong>Supplier Delivery Lead Time Days:</strong> A 7-day supplier waiting window requires
-                  maintaining a dedicated buffer of 13,163 units.</li>
+                <li style="margin-bottom: 6px;"><strong>Current stock on hand (Inventory Position):</strong> When warehouse stock levels fall below the 13,163 Reorder Point, the risk of running out of stock increases significantly, putting customer orders at risk.</li>
+                <li style="margin-bottom: 6px;"><strong>Daily sales volume (Sales Velocity):</strong> High daily sales demand rapidly empties warehouse shelves. Monitoring sales rate ensures purchase orders are placed before stock runs out.</li>
+                <li><strong>Supplier delivery duration (Supplier Lead Time):</strong> Longer supplier delivery timelines require placing orders earlier so that new goods arrive before existing inventory is exhausted.</li>
               </ul>
-              <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Release scheduled
-                reorder purchase orders (13,150 units) immediately whenever warehouse inventory touches the Reorder
-                Point.</p>
-              <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Before stock
-                depletes, the procurement team should validate inventory levels against ROP, confirm lead-time demand,
-                and
-                release PO batches without manual reorder delays.</p>
-              <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Proactive Reorder
-                Trigger &mdash; Create a dedicated workflow that continuously checks live stock against ROP (13,163
-                units) and promptly releases purchase order batches. This cuts emergency reorder orders from 4,171 down
-                to 3,337 (a
-                20.0% risk reduction from 29.3% to 23.4%).</p>
+              <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Prioritize purchase order releases based on current stock levels, daily sales demand, and supplier delivery timelines. Release purchase orders promptly for high-velocity items before warehouse stock reaches critical levels.</p>
+              <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Business Impact:</strong> The business benefit is preventing stockout delays, ensuring uninterrupted customer fulfillment, protecting product availability, and avoiding expensive emergency expediting costs.</p>
+              <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion Method:</strong> The method first checks current inventory against the Reorder Point, then analyzes daily sales demand, and finally considers supplier delivery lead times. Orders showing higher stockout risk receive immediate review and order release priority.</p>
+              <p style="margin: 0;"><strong style="color: #0f172a;">Proposed Solution:</strong> Proactive Reorder Trigger: create an automated inventory monitoring workflow that flags low-stock items and releases purchase orders proactively. This cuts emergency reorders from 4,171 down to 3,337, reducing the stockout risk rate from 29.3% to 23.4% (a &darr; 20.0% reduction).</p>
             </div>
           </div>
 

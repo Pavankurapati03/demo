@@ -6261,25 +6261,14 @@
             style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 18px 20px; font-size: 13.5px; line-height: 1.75; color: #334155;">
             <p style="margin: 0 0 6px 0;"><strong style="color: #0f172a;">Insight:</strong></p>
             <ul style="margin: 0 0 12px 0; padding-left: 20px; list-style-type: disc;">
-              <li style="margin-bottom: 6px;"><strong>Supplier On-Time In-Full (OTIF):</strong> Low supplier OTIF scores
-                are associated with the current 9.0-day delivery lead time, highlighting vendors that require closer
-                fulfillment attention.</li>
-              <li style="margin-bottom: 6px;"><strong>Delivery Transit Distance (km):</strong> Long transit distances
-                over 250 km are associated with carrier transit delays, making shipping route distance an important
-                factor to review during dispatch planning.</li>
-              <li><strong>Order Batch Volume:</strong> Large order batch volumes are associated with the current
-                delivery lead time and should receive closer attention when scheduling dock unloading.</li>
+              <li style="margin-bottom: 6px;"><strong>Supplier On-Time In-Full (Supplier OTIF):</strong> Low supplier reliability scores are associated with delivery delays, highlighting vendors that require closer fulfillment attention.</li>
+              <li style="margin-bottom: 6px;"><strong>Delivery transit distance (Transit Distance km):</strong> Long transit distances over 250 km are associated with carrier transit delays, making shipping route distance an important factor to review during dispatch planning.</li>
+              <li><strong>Order batch size (Order Batch Volume):</strong> Large order batch sizes take longer to process and unload, requiring scheduled dock appointments to avoid bottlenecking.</li>
             </ul>
-            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Prioritize purchase orders
-              with low-OTIF suppliers, longer transit distances, or oversized batch volumes for proactive fulfillment
-              checks before dispatch.</p>
-            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion method:</strong> Before dispatch,
-              the logistics team should review these three factors together, confirm carrier express lanes and warehouse
-              dock booking slots, and proactively address potential transit delays with carriers when needed.</p>
-            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed solution:</strong> Pre-Dispatch Logistics
-              Check &mdash; Create a workflow that reviews supplier OTIF performance, delivery transit distance, and order
-              batch volume before dispatch. This can help move the delivery lead time from 9.0 days toward the 7.0-day
-              target.</p>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Action:</strong> Prioritize shipments based on supplier OTIF performance, delivery transit distance, and order batch volume. Give earlier attention to high-risk supplier routes and schedule dedicated dock slots before dispatch.</p>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Business Impact:</strong> The business benefit is faster delivery cycles, fewer transit delays, better warehouse dock utilization, and more reliable inventory arrival schedules.</p>
+            <p style="margin: 0 0 10px 0;"><strong style="color: #0f172a;">Suggestion Method:</strong> The method first considers supplier historical on-time performance, then checks shipping distance, and finally evaluates order batch volume. Shipments showing higher delay risk receive express routing priority.</p>
+            <p style="margin: 0;"><strong style="color: #0f172a;">Proposed Solution:</strong> Pre-Dispatch Logistics Check: create a dispatch review workflow that pairs high-volume shipments with top-performing carriers and reserves priority dock slots. This helps reduce delivery lead time from 9.0 days to 7.0 days (a &darr; 22.2% reduction).</p>
           </div>
         </div>
 
