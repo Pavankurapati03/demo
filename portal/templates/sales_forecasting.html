@@ -6,6 +6,35 @@
   <title>Sales Forecasting | Quantellix AI</title>
   <link rel="stylesheet" href="/static/css/styles.css?v=5.0&t=17894723">
   <link rel="icon" href="/static/images/quantellix-logo-white-nav.png" type="image/png">
+  <script>
+    (function () {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const rawParam = (urlParams.get('target') || urlParams.get('stage') || urlParams.get('solution') || window.location.hash.replace('#', '')).toLowerCase();
+        const tabMap = {
+          'overview': 'overview',
+          'target1': 'target1',
+          'target2': 'target2',
+          'e1': 'target1',
+          'e2': 'target2',
+          'forecast_sales_quantity': 'target1',
+          'sales_demand': 'target1',
+          'total_sales_value_raw': 'target2',
+          'sales_revenue': 'target2'
+        };
+        const activeKey = tabMap[rawParam] || (rawParam ? rawParam : 'target1');
+        const style = document.createElement('style');
+        style.id = 'dynamic-sales-view-style';
+        style.textContent = `
+          .sales-view { display: none !important; }
+          #view-${activeKey} { display: block !important; }
+        `;
+        document.head.appendChild(style);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  </script>
   <style>
     /* Drawer Menu Direct Override Styles */
     .menu-drawer {
@@ -2550,7 +2579,7 @@
               <span class="sf-bm-val">68.77%</span>
             </div>
             <div class="sf-build-metric">
-              <span class="sf-bm-lbl">Target Forecast Accuracy</span>
+              <span class="sf-bm-lbl">Target Forecast Accuracy AFTER +20.05%</span>
               <span class="sf-bm-val green">88.82%</span>
             </div>
           </div>
@@ -2972,7 +3001,7 @@
               <span class="sf-bm-val">31.23%</span>
             </div>
             <div class="sf-build-metric">
-              <span class="sf-bm-lbl">Target Error Difference</span>
+              <span class="sf-bm-lbl">Target Forecast Error AFTER -20.05%</span>
               <span class="sf-bm-val green">11.18%</span>
             </div>
           </div>
@@ -3320,6 +3349,14 @@
     }
 
     function switchSalesView(viewId, btn) {
+      if (!viewId) viewId = 'target1';
+      const dynamicStyle = document.getElementById('dynamic-sales-view-style');
+      if (dynamicStyle) {
+        dynamicStyle.textContent = `
+          .sales-view { display: none !important; }
+          #view-${viewId} { display: block !important; }
+        `;
+      }
       document.querySelectorAll('.dash-tab-pill').forEach(b => b.classList.remove('active'));
       if (btn) {
         btn.classList.add('active');
@@ -3336,16 +3373,28 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Direct deep-linking support via query parameters (?target=target1 or ?target=target2)
-    document.addEventListener('DOMContentLoaded', () => {
+    // Direct deep-linking support via query parameters
+    function initSalesView() {
       const urlParams = new URLSearchParams(window.location.search);
-      const targetParam = urlParams.get('target');
-      if (targetParam === 'target1') {
-        switchSalesView('target1', document.querySelectorAll('.dash-tab-pill')[1]);
-      } else if (targetParam === 'target2') {
-        switchSalesView('target2', document.querySelectorAll('.dash-tab-pill')[2]);
-      }
-    });
+      const rawParam = (urlParams.get('target') || urlParams.get('stage') || urlParams.get('solution') || window.location.hash.replace('#', '')).toLowerCase();
+      const tabMap = {
+        'overview': 'overview',
+        'target1': 'target1',
+        'target2': 'target2',
+        'e1': 'target1',
+        'e2': 'target2',
+        'forecast_sales_quantity': 'target1',
+        'sales_demand': 'target1',
+        'total_sales_value_raw': 'target2',
+        'sales_revenue': 'target2'
+      };
+      const activeKey = tabMap[rawParam] || (rawParam ? rawParam : 'target1');
+      switchSalesView(activeKey);
+    }
+
+    initSalesView();
+    document.addEventListener('DOMContentLoaded', initSalesView);
+    window.addEventListener('load', initSalesView);
   </script>
 </body>
 </html>
