@@ -2086,10 +2086,11 @@
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
-        <a href="/portal/marketplace/procurement?target=target4" class="menu-target-link" title="Ensure PO Compliance">
+        <a href="/portal/marketplace/procurement?target=target4" class="menu-target-link"
+          title="Reduce Non-Compliant PO Risk Rate">
           <div class="menu-target-name-wrap">
             <span class="menu-dot"></span>
-            <span class="menu-target-name">Ensure PO Compliance</span>
+            <span class="menu-target-name">Reduce Non-Compliant PO Risk Rate</span>
           </div>
           <span class="menu-target-price">$1000/Month</span>
         </a>
@@ -3429,34 +3430,35 @@
                 <text x="355" y="415" font-size="12" fill="#1e293b" font-weight="600" text-anchor="middle">SXI</text>
 
                 <!-- Golden Straight Correlation Line -->
-                <line x1="80" y1="78" x2="610" y2="325" stroke="#e5a53d" stroke-width="2.2" stroke-linecap="round" />
+                <line x1="75.0" y1="78.0" x2="504.8" y2="370.0" stroke="#e5a53d" stroke-width="2.2"
+                  stroke-linecap="round" />
 
                 <!-- Cross 1: Current (SXI=6.12, stockout=29.3%) -> Light Blue 'X' -->
-                <g transform="translate(92, 85)">
+                <g transform="translate(91.8, 89.4)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#60a5fa" stroke-width="2.8"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#60a5fa" stroke-width="2.8"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross 2: Short-term 20% Decrease (SXI=6.96, stockout=23.4%) -> Indigo 'X' -->
-                <g transform="translate(209, 143)">
+                <!-- Cross 2: Short-term 20% Decrease (SXI=6.72, stockout=23.4%) -> Indigo 'X' -->
+                <g transform="translate(176.2, 146.7)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#6366f1" stroke-width="2.8"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#6366f1" stroke-width="2.8"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross 3: Mid-term 50.2% Decrease (SXI=8.20, stockout=14.6%) -> Mint Green 'X' -->
-                <g transform="translate(383, 228)">
+                <!-- Cross 3: Mid-term 50.2% Decrease (SXI=7.62, stockout=14.6%) -> Mint Green 'X' -->
+                <g transform="translate(302.0, 232.2)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#34d399" stroke-width="2.8"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#34d399" stroke-width="2.8"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross 4: Long-term 80.2% Decrease (SXI=9.45, stockout=5.8%) -> Dark Green 'X' -->
-                <g transform="translate(558, 314)">
+                <!-- Cross 4: Long-term 80.2% Decrease (SXI=8.52, stockout=5.8%) -> Dark Green 'X' -->
+                <g transform="translate(427.8, 317.7)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#16a34a" stroke-width="2.8"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#16a34a" stroke-width="2.8"
@@ -3510,7 +3512,7 @@
           </div>
         </div>
 
-        <!-- 5. 3 Levels of Improvement (Screenshot 4) -->
+        <!-- 5. 3 Levels of Improvement -->
         <div class="sxi-levels-container">
           <div class="sxi-card-title-row">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2.2"
@@ -3525,7 +3527,7 @@
               <span class="level-col-name">Short-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">6.96</span>
+                <span class="level-metric-val">6.72</span>
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Current Stockout Rate</span>
@@ -3550,7 +3552,7 @@
               <span class="level-col-name">Mid-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">8.20</span>
+                <span class="level-metric-val">7.62</span>
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Current Stockout Rate</span>
@@ -3575,7 +3577,7 @@
               <span class="level-col-name">Long-term</span>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Target SXI</span>
-                <span class="level-metric-val">9.45</span>
+                <span class="level-metric-val">8.52</span>
               </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Current Stockout Rate</span>
@@ -3647,18 +3649,17 @@
             </span>
             <span class="sxi-line-val sxi-val-green">&darr; 20.0% (-2,583 units)</span>
           </div>
-          <div class="sxi-metric-line" style="border-bottom:none; padding-top:14px;">
-            <span class="sxi-line-label" style="align-items:flex-start;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
-                style="margin-top:2px;">
+          <div class="sxi-metric-line" style="padding: 16px 0; border-bottom: none;">
+            <span class="sxi-line-label" style="font-size: 14px; color: #334155; gap: 10px; align-items: flex-start;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
-              Business Lens:
+              Business Lens
             </span>
-            <span style="font-size:13px; font-weight:700; color:#0f172a; text-align:right; max-width:68%;">Reduce
-              stockouts by (-2,583 units), moving from 12,915 units to 10,332 units, representing a &darr; 20.0%
-              reduction
-              in stockouts, from 29.3% to 23.4%, protecting $264,000 in fulfilled customer orders.</span>
+            <span style="font-size: 13.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 68%;">Reduce
+              stockouts Quantity by (-2,583 units), moving from 12,915 units to 10,332 units, representing a &darr;
+              20.0% reduction in stockout rate, from 29.3% to 23.4%.</span>
           </div>
         </div>
 
@@ -5128,34 +5129,35 @@
                 <text x="355" y="415" font-size="12" fill="#1e293b" font-weight="600" text-anchor="middle">SXI</text>
 
                 <!-- Golden Straight Correlation Line -->
-                <line x1="85" y1="65" x2="620" y2="238" stroke="#e5a53d" stroke-width="2.2" stroke-linecap="round" />
+                <line x1="75.0" y1="61.9" x2="635.0" y2="243.9" stroke="#e5a53d" stroke-width="2.2"
+                  stroke-linecap="round" />
 
-                <!-- Cross 1: Current (SXI=5.95, lead_time=9.0 Days) -> Light Blue 'X' -->
-                <g transform="translate(181, 96)">
+                <!-- Cross 1: Current (SXI=5.95, lead_time=9.1 Days) -> Light Blue 'X' -->
+                <g transform="translate(181.4, 96.4)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#60a5fa" stroke-width="2.8"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#60a5fa" stroke-width="2.8"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross 2: Short-term 22.2% Decrease (SXI=7.65, lead_time=7.0 Days) -> Indigo 'X' -->
-                <g transform="translate(372, 156)">
+                <!-- Cross 2: Short-term 22.2% Decrease (SXI=7.62, lead_time=7.1 Days) -> Indigo 'X' -->
+                <g transform="translate(369.0, 157.4)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#6366f1" stroke-width="2.8"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#6366f1" stroke-width="2.8"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross 3: Mid-term 33.3% Decrease (SXI=8.55, lead_time=6.0 Days) -> Mint Green 'X' -->
-                <g transform="translate(473, 187)">
+                <!-- Cross 3: Mid-term 33.3% Decrease (SXI=8.46, lead_time=6.1 Days) -> Mint Green 'X' -->
+                <g transform="translate(462.8, 187.9)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#34d399" stroke-width="2.8"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#34d399" stroke-width="2.8"
                     stroke-linecap="round" />
                 </g>
 
-                <!-- Cross 4: Long-term 44.4% Decrease (SXI=9.30, lead_time=5.0 Days) -> Dark Green 'X' -->
-                <g transform="translate(557, 218)">
+                <!-- Cross 4: Long-term 44.4% Decrease (SXI=9.30, lead_time=5.1 Days) -> Dark Green 'X' -->
+                <g transform="translate(556.6, 218.4)">
                   <line x1="-5.5" y1="-5.5" x2="5.5" y2="5.5" stroke="#16a34a" stroke-width="2.8"
                     stroke-linecap="round" />
                   <line x1="-5.5" y1="5.5" x2="5.5" y2="-5.5" stroke="#16a34a" stroke-width="2.8"
@@ -5223,6 +5225,10 @@
             <div class="level-col-item">
               <span class="level-col-name">Short-term</span>
               <div class="level-metric-row">
+                <span class="level-metric-lbl">Target SXI</span>
+                <span class="level-metric-val">7.62</span>
+              </div>
+              <div class="level-metric-row">
                 <span class="level-metric-lbl">Current Lead Time</span>
                 <span class="level-metric-val">9.0 Days</span>
               </div>
@@ -5244,6 +5250,10 @@
             <div class="level-col-item">
               <span class="level-col-name">Mid-term</span>
               <div class="level-metric-row">
+                <span class="level-metric-lbl">Target SXI</span>
+                <span class="level-metric-val">8.46</span>
+              </div>
+              <div class="level-metric-row">
                 <span class="level-metric-lbl">Current Lead Time</span>
                 <span class="level-metric-val">9.0 Days</span>
               </div>
@@ -5264,6 +5274,10 @@
 
             <div class="level-col-item">
               <span class="level-col-name">Long-term</span>
+              <div class="level-metric-row">
+                <span class="level-metric-lbl">Target SXI</span>
+                <span class="level-metric-val">9.30</span>
+              </div>
               <div class="level-metric-row">
                 <span class="level-metric-lbl">Current Lead Time</span>
                 <span class="level-metric-val">9.0 Days</span>
@@ -5334,15 +5348,15 @@
             </span>
             <span class="sxi-line-val sxi-val-green">&darr; 22.2% (-2.0 Days)</span>
           </div>
-          <div class="sxi-metric-line" style="border-bottom:none; padding-top:14px;">
-            <span class="sxi-line-label" style="align-items:flex-start;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
-                style="margin-top:2px;">
+          <div class="sxi-metric-line" style="padding: 16px 0; border-bottom: none;">
+            <span class="sxi-line-label" style="font-size: 14px; color: #334155; gap: 10px; align-items: flex-start;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
-              Business Lens:
+              Business Lens
             </span>
-            <span style="font-size:13px; font-weight:700; color:#0f172a; text-align:right; max-width:68%;">Reduce
+            <span style="font-size: 13.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 68%;">Reduce
               delivery lead time by (-2.0 Days), moving from 9.0 Days to 7.0 Days, representing a &darr; 22.2% reduction
               in delivery lead time.</span>
           </div>
@@ -6307,13 +6321,19 @@
               <ul
                 style="margin: 0; padding-left: 18px; font-size: 12.5px; color: #334155; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;">
                 <li>
-                  <strong style="color: #1e40af;">Supplier OTIF &le; 85% (36.2% Driver):</strong> Suppliers with low on-time fulfillment scores cause over 65% of delivery delays. <strong>Recommendation:</strong> Direct purchase orders to suppliers with verified 85%+ on-time track records.
+                  <strong style="color: #1e40af;">Supplier OTIF &le; 85% (36.2% Driver):</strong> Suppliers with low
+                  on-time fulfillment scores cause over 65% of delivery delays. <strong>Recommendation:</strong> Direct
+                  purchase orders to suppliers with verified 85%+ on-time track records.
                 </li>
                 <li>
-                  <strong style="color: #1e40af;">Transit Distance &gt; 250 km (26.9% Driver):</strong> Long-distance highway corridors face unexpected traffic bottlenecks. <strong>Recommendation:</strong> Route shipments over 250 km through dedicated express carrier transit lanes.
+                  <strong style="color: #1e40af;">Transit Distance &gt; 250 km (26.9% Driver):</strong> Long-distance
+                  highway corridors face unexpected traffic bottlenecks. <strong>Recommendation:</strong> Route
+                  shipments over 250 km through dedicated express carrier transit lanes.
                 </li>
                 <li>
-                  <strong style="color: #1e40af;">Order Batch Volume &gt; 450 units (18.1% Driver):</strong> Extra-large shipments take twice as long to clear receiving docks. <strong>Recommendation:</strong> Split large orders into scheduled pallet batches to speed up warehouse receiving.
+                  <strong style="color: #1e40af;">Order Batch Volume &gt; 450 units (18.1% Driver):</strong> Extra-large
+                  shipments take twice as long to clear receiving docks. <strong>Recommendation:</strong> Split large
+                  orders into scheduled pallet batches to speed up warehouse receiving.
                 </li>
               </ul>
             </div>
@@ -7027,17 +7047,18 @@
             </span>
             <span class="sxi-line-val sxi-val-green">&darr; 20.0% (-1,720 orders)</span>
           </div>
-          <div class="sxi-metric-line" style="border-bottom:none; padding-top:14px;">
-            <span class="sxi-line-label" style="align-items:flex-start;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
-                style="margin-top:2px;">
+          <div class="sxi-metric-line" style="padding: 16px 0; border-bottom: none;">
+            <span class="sxi-line-label" style="font-size: 14px; color: #334155; gap: 10px; align-items: flex-start;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="margin-top: 2px;">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               </svg>
-              Business Lens:
+              Business Lens
             </span>
-            <span style="font-size:13px; font-weight:700; color:#0f172a; text-align:right; max-width:68%;">Reduce
-              margin leakage by (-1,720 orders), moving from 8,600 orders to 6,880 orders, representing a &darr; 20.0%
-              reduction in margin leakage, from 21.5% to 17.2%, protecting $32,665 in gross margin profit.</span>
+            <span style="font-size: 13.5px; font-weight: 700; color: #0f172a; text-align: right; max-width: 68%;">Reduce
+              margin leakage orders Quantity by (-1,720 orders), moving from 8,600 orders to 6,880 orders, representing
+              a &darr;
+              20.0% reduction in margin leakage rate, from 21.5% to 17.2%.</span>
           </div>
         </div>
 
@@ -7364,8 +7385,8 @@
                 <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
                 <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
               </svg>
-              <span style="font-size: 16px; font-weight: 700; color: #475569;">Decision Tree — Price & Margin
-                Logic</span>
+              <span style="font-size: 16px; font-weight: 700; color: #475569;">Target Decision Tree — Business
+                Interpretation</span>
             </div>
 
             <!-- Decision Tree SVG -->
@@ -7551,13 +7572,22 @@
               <ul
                 style="margin: 0; padding-left: 18px; font-size: 12.5px; color: #334155; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;">
                 <li>
-                  <strong style="color: #1e40af;">Modern Trade Channel Volume &gt; 35% (35.8% Driver):</strong> Supermarket bulk orders demand heavy promotional allowances, causing over 40% of margin leakage. <strong>Recommendation:</strong> Cap supermarket promotional allowances at a strict maximum of 10% and require higher minimum order quantities.
+                  <strong style="color: #1e40af;">Modern Trade Channel Volume &gt; 35% (35.8% Driver):</strong>
+                  Supermarket bulk orders demand heavy promotional allowances, causing over 40% of margin leakage.
+                  <strong>Recommendation:</strong> Cap supermarket promotional allowances at a strict maximum of 10% and
+                  require higher minimum order quantities.
                 </li>
                 <li>
-                  <strong style="color: #1e40af;">Wholesale Volume Discount Tier &gt; 10% (25.4% Driver):</strong> Deep distributor discounts erode realized price below the $6.24 threshold. <strong>Recommendation:</strong> Enforce an automated minimum price floor of $6.24 across all wholesale contracts to prevent unbudgeted spot overrides.
+                  <strong style="color: #1e40af;">Wholesale Volume Discount Tier &gt; 10% (25.4% Driver):</strong> Deep
+                  distributor discounts erode realized price below the $6.24 threshold. <strong>Recommendation:</strong>
+                  Enforce an automated minimum price floor of $6.24 across all wholesale contracts to prevent unbudgeted
+                  spot overrides.
                 </li>
                 <li>
-                  <strong style="color: #1e40af;">Quick Commerce Micro-Hub Markup &gt; 15% (19.2% Driver):</strong> 15-minute instant fulfillment orders maintain premium pricing resilience ($6.45/unit). <strong>Recommendation:</strong> Prioritize finished goods allocation to high-margin micro-fulfillment hubs supporting premium pricing.
+                  <strong style="color: #1e40af;">Quick Commerce Micro-Hub Markup &gt; 15% (19.2% Driver):</strong>
+                  15-minute instant fulfillment orders maintain premium pricing resilience ($6.45/unit).
+                  <strong>Recommendation:</strong> Prioritize finished goods allocation to high-margin micro-fulfillment
+                  hubs supporting premium pricing.
                 </li>
               </ul>
             </div>
